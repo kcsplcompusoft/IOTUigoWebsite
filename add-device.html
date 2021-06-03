@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Statistics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="assets/line-awesome.css" rel="stylesheet" type="text/css">
+    <link href="assets/bootstrap-select.css" rel="stylesheet" type="text/css">
+    <link href="assets/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="header">
+    <div class="logo">
+        <img src="assets/images/logo.svg" alt="" title="">
+    </div>
+    <div class="breadcrum">
+        <span><a href="#">Torrent Power</a></span>/
+        <span><a href="#">Sabarmati , Ahmedabad </a></span>/
+        <span>Devices</span>
+    </div>
+    <div class="header-right ml-auto">
+        <div class="search-btn"><input type="text" class="search-input" placeholder="Search..."> <button type="button" class="btn btn-light mr-0 btn-sm rounded-sm" ><i class="iot-search" ></i></button></div>
+        <div class="bell-btn">
+            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-primary btn-sm rounded-sm" ><i class="iot-bell" ></i> <span class="dot" ></span></button>
+            <div class="dropdown-menu">
+                <div class="notification-row">
+                    <div class="notification-colum">
+                        <h5>Luanch Admin</h5>
+                        <p>Just see the my new admin!</p>
+                        <span>9:30 AM</span>
+                    </div>
+                    <div class="notification-colum">
+                        <h5>Luanch Admin</h5>
+                        <p>Just see the my new admin!</p>
+                        <span>9:30 AM</span>
+                    </div>
+                    <div class="notification-colum">
+                        <h5>Luanch Admin</h5>
+                        <p>Just see the my new admin!</p>
+                        <span>9:30 AM</span>
+                    </div>
+                </div>
+                <a href="#" class="viewall-notification">Check all notifications <i class="las la-angle-right" ></i></a>
+            </div>
+        </div>
+        <div class="mr-btn">
+            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-light btn-sm rounded-sm" ><span class="text" >MR</span></button>
+            <div class="dropdown-menu">
+                <p class="companyname" >Torrent Power Pvt Ltd</p>
+                <div class="userprofile-row">
+                    <div class="userprofile-pic"><span class="text" >MR</span></div>
+                    <div class="userprofile-text">
+                        <h4>Michal Rana</h4>
+                        <p>micrana@gmail.com</p>
+                        <ul class="userprofile-link">
+                            <li><a href="#">My Profile</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#" class="userprofile-logout">Logout</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-wrapper">
+    <div class="aside-navigation">
+        <div class="corner-shap"></div>
+        <div class="navbar">
+            <ul>
+                <li><a href="dashboard.html" ><span class="menu-icon" ><i class="iot-home" ></i></span><span class="menu-text" >Dashboard</span></a> </li>
+                <li><a href="devices.html" class="active"  ><span class="menu-icon" ><i class="iot-wifi" ></i></span><span class="menu-text" >Devices</span></a> </li>
+                <li><a href="device-deployment.html"><span class="menu-icon" ><i class="iot-startup" ></i></span><span class="menu-text" >Device Deployment</span></a> </li>
+                <li><a href="monitor.html"><span class="menu-icon" ><i class="iot-eye" ></i></span><span class="menu-text" >Monitors</span></a> </li>
+                <li><a href="rule-engine.html"><span class="menu-icon" ><i class="iot-notification" ></i></span><span class="menu-text" >Rule Engine</span></a> </li>
+                <li><a href="#"><span class="menu-icon" ><i class="iot-masters" ></i></span><span class="menu-text" >Masters</span></a> </li>
+                <li><a href="#"><span class="menu-icon" ><i class="iot-configuration" ></i></span><span class="menu-text" >Configurations</span></a> </li>
+                <li><a href="#"><span class="menu-icon" ><i class="iot-reports" ></i></span><span class="menu-text" >Reports</span></a> </li>
+            </ul>
+        </div>
+        <div class="navigation-bottom">
+            <div class="powered-by text-center">
+                <p>Powered By</p>
+                <img src="assets/images/kcs-logo.svg" alt="" title="">
+            </div>
+            <a href="Javascript:void(0);" class="navigation-toggle"><span class="toggle-icon" ><i class="las la-angle-double-left"></i></span></a>
+        </div>
+    </div>
+    <div class="content-block">
+        <div class="page-head d-flex border-bottom align-items-center py-3">
+            <div class="image-bg rounded-sm bg-white">
+                <img src="assets/images/torrent-logo.png" alt="" title="">
+            </div>
+            <h2 class="pl-4" >Torrent Power</h2>
+            <div class="step-btn ml-auto pb-0">
+                <a href="#" class="cancel-btn">Cancel</a>
+                <a href="#" class="last-btn">Save Details</a>
+            </div>
+        </div>
+        <div class="work-space edit-company-info-page">
+            <h6 class="pb-3" >Add New Device</h6>
+            <div class="bg-white rounded-sm shadow-sm form-card pb-2">
+                <div class="row row-md">
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                            <label class="form-label" >Device Type</label>
+                            <select class="selectpicker boot-select" data-live-search="false">
+                                <option>Gateway</option>
+                                <option>Gateway</option>
+                                <option>Gateway</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                            <label class="form-label" >Device Unique Identity</label>
+                            <input type="text" name="" value="" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label class="form-label" >Device Description</label>
+                            <input type="text" name="" value="" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                            <label class="form-label" >Device Unique Name</label>
+                            <input type="text" name="" value="" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                            <label class="form-label" >Mac Address</label>
+                            <input type="text" name="" value="" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                            <label class="form-label" >Product Id</label>
+                            <input type="text" name="" value="" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                            <label class="form-label" >Vendor Id</label>
+                            <input type="text" name="" value="" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                            <label class="form-label" >Manufacture Id</label>
+                            <input type="text" name="" value="" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                            <label class="form-label" >Secret Key</label>
+                            <input type="text" name="" value="" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                            <label class="form-label" >Secret Password</label>
+                            <input type="text" name="" value="" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                            <label class="form-label" >Ip address</label>
+                            <input type="text" name="" value="" class="form-control">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="step-btn">
+                <a href="#" class="cancel-btn">Cancel</a>
+                <a href="#" class="last-btn">Save Details</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="assets/js/jquery-3.1.0.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/slick.js"></script>
+<script src="assets/js/bootstrap-datepicker.js"></script>
+<script src="assets/js/bootstrap-select.min.js"></script>
+<script src="assets/js/custom.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.boot-select').selectpicker();
+       
+    });
+</script>
+</body>
+</html>

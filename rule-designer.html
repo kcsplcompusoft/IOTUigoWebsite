@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Statistics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="assets/line-awesome.css" rel="stylesheet" type="text/css">
+    <link href="assets/datatables.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/bootstrap-select.css" rel="stylesheet" type="text/css">
+    <link href="assets/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="header">
+    <div class="logo">
+        <img src="assets/images/logo.svg" alt="" title="">
+    </div>
+    <div class="breadcrum">
+        <span><a href="#">Torrent Power</a></span>/
+        <span><a href="#">Sabarmati , Ahmedabad </a></span>/
+        <span>Rule Engine</span>
+    </div>
+    <div class="header-right ml-auto">
+        <div class="search-btn"><input type="text" class="search-input" placeholder="Search..."> <button type="button" class="btn btn-light mr-0 btn-sm rounded-sm" ><i class="iot-search" ></i></button></div>
+        <div class="bell-btn">
+            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-primary btn-sm rounded-sm" ><i class="iot-bell" ></i> <span class="dot" ></span></button>
+            <div class="dropdown-menu">
+                <div class="notification-row">
+                    <div class="notification-colum">
+                        <h5>Luanch Admin</h5>
+                        <p>Just see the my new admin!</p>
+                        <span>9:30 AM</span>
+                    </div>
+                    <div class="notification-colum">
+                        <h5>Luanch Admin</h5>
+                        <p>Just see the my new admin!</p>
+                        <span>9:30 AM</span>
+                    </div>
+                    <div class="notification-colum">
+                        <h5>Luanch Admin</h5>
+                        <p>Just see the my new admin!</p>
+                        <span>9:30 AM</span>
+                    </div>
+                </div>
+                <a href="#" class="viewall-notification">Check all notifications <i class="las la-angle-right" ></i></a>
+            </div>
+        </div>
+        <div class="mr-btn">
+            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-light btn-sm rounded-sm" ><span class="text" >MR</span></button>
+            <div class="dropdown-menu">
+                <p class="companyname" >Torrent Power Pvt Ltd</p>
+                <div class="userprofile-row">
+                    <div class="userprofile-pic"><span class="text" >MR</span></div>
+                    <div class="userprofile-text">
+                        <h4>Michal Rana</h4>
+                        <p>micrana@gmail.com</p>
+                        <ul class="userprofile-link">
+                            <li><a href="#">My Profile</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#" class="userprofile-logout">Logout</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-wrapper">
+    <div class="aside-navigation">
+        <div class="corner-shap"></div>
+        <div class="navbar">
+            <ul>
+                <li><a href="dashboard.html" ><span class="menu-icon" ><i class="iot-home" ></i></span><span class="menu-text" >Dashboard</span></a> </li>
+                <li><a href="devices.html" ><span class="menu-icon" ><i class="iot-wifi" ></i></span><span class="menu-text" >Devices</span></a> </li>
+                <li><a href="device-deployment.html"><span class="menu-icon" ><i class="iot-startup" ></i></span><span class="menu-text" >Device Deployment</span></a> </li>
+                <li><a href="monitor.html"><span class="menu-icon" ><i class="iot-eye" ></i></span><span class="menu-text" >Monitors</span></a> </li>
+                <li><a href="rule-engine.html"><span class="menu-icon" ><i class="iot-notification" ></i></span><span class="menu-text" >Rule Engine</span></a> </li>
+                <li><a href="#"><span class="menu-icon" ><i class="iot-masters" ></i></span><span class="menu-text" >Masters</span></a> </li>
+                <li><a href="#"><span class="menu-icon" ><i class="iot-configuration" ></i></span><span class="menu-text" >Configurations</span></a> </li>
+                <li><a href="#"><span class="menu-icon" ><i class="iot-reports" ></i></span><span class="menu-text" >Reports</span></a> </li>
+            </ul>
+        </div>
+        <div class="navigation-bottom">
+            <div class="powered-by text-center">
+                <p>Powered By</p>
+                <img src="assets/images/kcs-logo.svg" alt="" title="">
+            </div>
+            <a href="Javascript:void(0);" class="navigation-toggle"><span class="toggle-icon" ><i class="las la-angle-double-left"></i></span></a>
+        </div>
+    </div>
+    <div class="content-block">
+        <div class="page-head d-flex border-bottom align-items-center py-3">
+            <div class="image-bg rounded-sm bg-white">
+                <img src="assets/images/torrent-logo.png" alt="" title="">
+            </div>
+            <h2 class="pl-4" >Torrent Power</h2>
+            <div class="ml-auto">
+                <select class="selectpicker boot-select" data-live-search="false">
+                    <option>Sabarmati, Ahmedabad</option>
+                     <option>1</option>
+                     <option>2</option>
+                     <option>3</option>
+                 </select>
+            </div>
+        </div>
+        <div class="work-space device-page">
+            <h5 class="pb-3" >Rule Designer</h5>
+           <div class="ruledesigner-page">
+               <div class="bg-white cursor-pointer rounded-sm shadow-sm ruledesigner-head">
+                   <div class="form-group">
+                       <label class="form-label" >Rule Name</label>
+                       <input type="text" name="" value="" class="form-control">
+                   </div>
+               </div>
+               <div class="ruledesigner-body">
+                   <div class="ruledesigner-row">
+                        <div class="ruledesigner-card small">
+                           <h6>Gateway</h6>
+                           <div class="form-group">
+                               <label class="form-label" >Gateway ID</label>
+                               <select class="selectpicker boot-select" data-live-search="false">
+                                    <option>GpcbHillGatewayConfiguration</option>
+                                    <option>GpcbHillGatewayConfiguration</option>
+                                    <option>GpcbHillGatewayConfiguration</option>
+                                </select>
+                           </div>
+                           <span class="line"></span>
+                        </div>
+                        <div class="ruledesigner-card small">
+                            <h6>Device</h6>
+                            <div class="form-group">
+                                <label class="form-label" >Gateway ID</label>
+                                <select class="selectpicker boot-select" data-live-search="false">
+                                    <option>LeafDevice1</option>
+                                    <option>LeafDevice1</option>
+                                    <option>LeafDevice1</option>
+                                </select>
+                            </div>
+                            <span class="line"></span>
+                        </div>
+                        <div class="ruledesigner-card small">
+                            <h6>Logical Comparison</h6>
+                            <div class="form-group">
+                                <label class="form-label" >Send Email</label>
+                                <select class="selectpicker boot-select" data-live-search="false">
+                                     <option>ETP-BOD</option>
+                                     <option>ETP-BOD</option>
+                                     <option>ETP-BOD</option>
+                                 </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" >Condition</label>
+                                <select class="selectpicker boot-select" data-live-search="false">
+                                     <option>Greater Than</option>
+                                     <option>Greater Than</option>
+                                     <option>Greater Than</option>
+                                 </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" >Set Value</label>
+                                <select class="selectpicker boot-select" data-live-search="false">
+                                     <option>120</option>
+                                     <option>120</option>
+                                     <option>120</option>
+                                 </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" >Alert Type</label>
+                                <select class="selectpicker boot-select" data-live-search="false">
+                                     <option>Major</option>
+                                     <option>Major</option>
+                                     <option>Major</option>
+                                 </select>
+                            </div>
+                            <span class="line"></span>
+                        </div>
+                        <div class="ruledesigner-card">
+                            <h6>Add Email</h6>
+                            <div class="form-group">
+                                <label class="form-label" >Set Email</label>
+                                <input type="text" name="" data-toggle="modal" data-target="#set-email" value="sanket.shah@kcsitglobal.com" class="form-control set-email" >
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" >Send Email</label>
+                                <select class="selectpicker boot-select" data-live-search="false">
+                                    <option>smtp_credentials</option>
+                                </select>
+                            </div>
+                        </div>
+                   </div>
+               </div>
+               <div class="step-btn border-top ml-auto">
+                    <a href="#" class="cancel-btn">Cancel</a>
+                    <a href="#" class="last-btn">Save Rule</a>
+                </div>
+           </div>
+            
+        </div>
+        
+        
+    </div>
+</div>
+<div class="modal fade form-modal" id="set-email" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Email Configurations</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="las la-times"></i></button>
+        </div>
+        <div class="modal-body">
+            <div class="formmodal-row">
+                <div class="row row-md">
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <label class="form-label">Form Template</label>
+                            <input type="text" name="" value="" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <label class="form-label">To Template</label>
+                            <input type="text" name="" value="" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <label class="form-label">Cc</label>
+                            <input type="text" name="" value="" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <label class="form-label">Bcc</label>
+                            <input type="text" name="" value="" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <label class="form-label">Subject</label>
+                            <input type="text" name="" value="" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label class="form-label">Body</label>
+                            <textarea rows="2" class="form-control"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label class="form-label">Description</label>
+                            <textarea  rows="2" class="form-control"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="step-btn border-top ml-auto">
+                <a href="#" data-dismiss="modal" aria-label="Close" class="cancel-btn">Close</a>
+                <a href="#" class="last-btn">Save</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="assets/js/jquery-3.1.0.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/slick.js"></script>
+<script src="assets/js/bootstrap-datepicker.js"></script>
+<script src="assets/js/datatables.min.js"></script>
+<script src="assets/js/bootstrap-select.min.js"></script>
+<script src="assets/js/custom.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#ruleengine-table').DataTable( {
+        "paging":   false,
+        language: {
+            searchPlaceholder: "Filter by keyword"
+        },
+        "ordering": false,
+        "info":     false
+        });
+        
+        $('.alert-select').selectpicker();
+        $('.boot-select').selectpicker();
+    });
+</script>
+</body>
+</html>

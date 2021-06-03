@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Statistics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="assets/line-awesome.css" rel="stylesheet" type="text/css">
+    <link href="assets/datatables.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/bootstrap-select.css" rel="stylesheet" type="text/css">
+    <link href="assets/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="header">
+    <div class="logo">
+        <img src="assets/images/logo.svg" alt="" title="">
+    </div>
+    <div class="breadcrum">
+        <span><a href="#">Torrent Power</a></span>/
+        <span><a href="#">Sabarmati , Ahmedabad </a></span>/
+        <span>Device Deployment</span>
+    </div>
+    <div class="header-right ml-auto">
+        <div class="search-btn"><input type="text" class="search-input" placeholder="Search..."> <button type="button" class="btn btn-light mr-0 btn-sm rounded-sm" ><i class="iot-search" ></i></button></div>
+        <div class="bell-btn">
+            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-primary btn-sm rounded-sm" ><i class="iot-bell" ></i> <span class="dot" ></span></button>
+            <div class="dropdown-menu">
+                <div class="notification-row">
+                    <div class="notification-colum">
+                        <h5>Luanch Admin</h5>
+                        <p>Just see the my new admin!</p>
+                        <span>9:30 AM</span>
+                    </div>
+                    <div class="notification-colum">
+                        <h5>Luanch Admin</h5>
+                        <p>Just see the my new admin!</p>
+                        <span>9:30 AM</span>
+                    </div>
+                    <div class="notification-colum">
+                        <h5>Luanch Admin</h5>
+                        <p>Just see the my new admin!</p>
+                        <span>9:30 AM</span>
+                    </div>
+                </div>
+                <a href="#" class="viewall-notification">Check all notifications <i class="las la-angle-right" ></i></a>
+            </div>
+        </div>
+        <div class="mr-btn">
+            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-light btn-sm rounded-sm" ><span class="text" >MR</span></button>
+            <div class="dropdown-menu">
+                <p class="companyname" >Torrent Power Pvt Ltd</p>
+                <div class="userprofile-row">
+                    <div class="userprofile-pic"><span class="text" >MR</span></div>
+                    <div class="userprofile-text">
+                        <h4>Michal Rana</h4>
+                        <p>micrana@gmail.com</p>
+                        <ul class="userprofile-link">
+                            <li><a href="#">My Profile</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#" class="userprofile-logout">Logout</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-wrapper">
+    <div class="aside-navigation">
+        <div class="corner-shap"></div>
+        <div class="navbar">
+            <ul>
+                <li><a href="dashboard.html" ><span class="menu-icon" ><i class="iot-home" ></i></span><span class="menu-text" >Dashboard</span></a> </li>
+                <li><a href="devices.html" ><span class="menu-icon" ><i class="iot-wifi" ></i></span><span class="menu-text" >Devices</span></a> </li>
+                <li><a href="device-deployment.html" class="active" ><span class="menu-icon" ><i class="iot-startup" ></i></span><span class="menu-text" >Device Deployment</span></a> </li>
+                <li><a href="monitor.html"><span class="menu-icon" ><i class="iot-eye" ></i></span><span class="menu-text" >Monitors</span></a> </li>
+                <li><a href="rule-engine.html"><span class="menu-icon" ><i class="iot-notification" ></i></span><span class="menu-text" >Rule Engine</span></a> </li>
+                <li><a href="#"><span class="menu-icon" ><i class="iot-masters" ></i></span><span class="menu-text" >Masters</span></a> </li>
+                <li><a href="#"><span class="menu-icon" ><i class="iot-configuration" ></i></span><span class="menu-text" >Configurations</span></a> </li>
+                <li><a href="#"><span class="menu-icon" ><i class="iot-reports" ></i></span><span class="menu-text" >Reports</span></a> </li>
+            </ul>
+        </div>
+        <div class="navigation-bottom">
+            <div class="powered-by text-center">
+                <p>Powered By</p>
+                <img src="assets/images/kcs-logo.svg" alt="" title="">
+            </div>
+            <a href="Javascript:void(0);" class="navigation-toggle"><span class="toggle-icon" ><i class="las la-angle-double-left"></i></span></a>
+        </div>
+    </div>
+    <div class="content-block">
+        <div class="page-head d-flex border-bottom align-items-center py-3">
+            <div class="image-bg rounded-sm bg-white">
+                <img src="assets/images/torrent-logo.png" alt="" title="">
+            </div>
+            <h2 class="pl-4" >Torrent Power</h2>
+            <div class="ml-auto">
+                <select class="selectpicker boot-select" data-live-search="false">
+                    <option>Sabarmati, Ahmedabad</option>
+                     <option>1</option>
+                     <option>2</option>
+                     <option>3</option>
+                 </select>
+            </div>
+        </div>
+        <div class="work-space device-page">
+            <h5 class="pb-3" >Device Deployment</h5>
+            <div class="bg-white rounded-sm shadow-sm step-card">
+                <div class="wizard-block">
+                    <div class="wizard-left">
+                        <ul class="nav-tabs" role="tablist">
+                            <li role="presentation"><a href="#step1" class="active" data-toggle="tab" aria-controls="step1" role="tab">Connector</a></li>
+                            <li role="presentation" class="disabled" ><a href="#step2" data-toggle="tab" aria-controls="step2" role="tab">Leaf Device</a></li>
+                            <li role="presentation" class="disabled" ><a href="#step3" data-toggle="tab" aria-controls="step3" role="tab">MQTT</a></li>
+                            <li role="presentation" class="disabled" ><a href="#step4" data-toggle="tab" aria-controls="step4" role="tab">Database</a></li>
+                        </ul>
+                    </div>
+                    <div class="wizard-right tab-content">
+                        <div class="tab-pane active" role="tabpanel" id="step1">
+                            <div class="step-head border-bottom">
+                                <span class="step-count" >Step 1/4</span><h5>Connector</h5>
+                            </div>
+                            <div class="d-flex block-withbtn">
+                                <div class="withbtn-left pr-0">
+                                    <div class="row">
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <label class="form-label" >Industry Device Name</label>
+                                                <input type="text" name="" value="ToSaHilGateway5" class="form-control" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <label class="form-label" >Connector Configuration Name</label>
+                                                <input type="text" name="" value="" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <label class="form-label" >Connector Type</label>
+                                                <input type="text" name="" value="" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <label class="form-label" >Connector Configuration</label>
+                                                <a href="#" class="set-details" >Set Details</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 text-right">
+                                            <a href="#" class="btn btn-primary btn-icon rounded-md mt-0 ml-auto toplabel-space"><i class="las la-plus" ></i> Add Connector</a>
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                            <div class="common-datatable no-search">
+                                <table id="devices-table2" class="common-table" style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <td>Industry Device Name</td>
+                                            <td>Connector Configuration Name</td>
+                                            <td>Connector Type</td>
+                                            <td>Connector Parameters</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>ToSaAhHilGateway1</td>
+                                            <td><div class="item-icon-title-cell">
+                                                <div class="item-title">GPCBGateway Configuration 1</div>
+                                                <div class="item-menu">
+                                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                                        <i class="las la-ellipsis-h"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#"><i class="iot-view" ></i>View Template</a></li>
+                                                        <li><a href="#"><i class="iot-edit" ></i>Edit Template</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div></td>
+                                            <td>MQTT</td>
+                                            <td><a href="#" class="text-link">View</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>ToSaAhHilGateway2</td>
+                                            <td><div class="item-icon-title-cell">
+                                                <div class="item-title">GPCBGateway Configuration 1</div>
+                                                <div class="item-menu">
+                                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                                        <i class="las la-ellipsis-h"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#"><i class="iot-view" ></i>View Template</a></li>
+                                                        <li><a href="#"><i class="iot-edit" ></i>Edit Template</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div></td>
+                                            <td>MODBUS</td>
+                                            <td><a href="#" class="text-link">View</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>ToSaAhHilGateway3</td>
+                                            <td><div class="item-icon-title-cell">
+                                                <div class="item-title">GPCBGateway Configuration 1</div>
+                                                <div class="item-menu">
+                                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                                        <i class="las la-ellipsis-h"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#"><i class="iot-view" ></i>View Template</a></li>
+                                                        <li><a href="#"><i class="iot-edit" ></i>Edit Template</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div></td>
+                                            <td>OPCUA</td>
+                                            <td><a href="#" class="text-link">View</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="step-btn">
+                                <a href="#" class="cancel-btn">Cancel</a>
+                                <a href="#step2" prev-tab="step1" aria-controls="step2" data-toggle="tab" role="tab" aria-expanded="true" class="last-btn next-btn">Next</a>
+                            </div>
+                        </div>
+                        <div class="tab-pane" role="tabpanel" id="step2">
+                            <div class="step-head border-bottom">
+                                <span class="step-count" >Step 2/4</span><h5>Leaf Device</h5>
+                            </div>
+                            <div class="d-flex block-withbtn">
+                                <div class="withbtn-left pr-0">
+                                    <div class="row">
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <label class="form-label" >Industry Device Name</label>
+                                                <input type="text" name="" value="ToSaHilGateway5" class="form-control" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <label class="form-label" >Connector Configuration Name</label>
+                                                <input type="text" name="" value="GPCBGateway Configuration 1" class="form-control" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <label class="form-label" >Leaf Device</label>
+                                                <select class="selectpicker boot-select" data-live-search="false">
+                                                    <option>Leaf Device 4</option>
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <label class="form-label" >Template</label>
+                                                <select class="selectpicker boot-select" data-live-search="false">
+                                                    <option>GpcbHilTemplate 4</option>
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 text-right">
+                                            <a href="#" class="btn btn-primary btn-icon rounded-md mt-0 ml-auto toplabel-space"><i class="las la-plus" ></i> Add Template</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="common-datatable no-search">
+                                <table id="devices-table3" class="common-table" style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <td>Leaf Devices</td>
+                                            <td>Templates</td>
+                                            <td>Sensors</td>
+                                            <td>Actuators</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><div class="item-icon-title-cell">
+                                                <div class="item-title">Leaf Device 1</div>
+                                                <div class="item-menu">
+                                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                                        <i class="las la-ellipsis-h"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#"><i class="iot-edit" ></i>Edit Leaf Device</a></li>
+                                                        <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div></td>
+                                            <td><div class="item-icon-title-cell">
+                                                <div class="item-title">GpcbHilTemplate 1</div>
+                                                <div class="item-menu">
+                                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                                        <i class="las la-ellipsis-h"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#"><i class="iot-view" ></i>View Template</a></li>
+                                                        <li><a href="Javascript:void(0);" data-toggle="modal" data-target="#edittemplate"><i class="iot-edit" ></i>Edit Template</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div></td>
+                                            <td>2</td>
+                                            <td>2</td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="item-icon-title-cell">
+                                                <div class="item-title">Leaf Device 2</div>
+                                                <div class="item-menu">
+                                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                                        <i class="las la-ellipsis-h"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#"><i class="iot-edit" ></i>Edit Leaf Device</a></li>
+                                                        <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div></td>
+                                            <td><div class="item-icon-title-cell">
+                                                <div class="item-title">GpcbHilTemplate 1</div>
+                                                <div class="item-menu">
+                                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                                        <i class="las la-ellipsis-h"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#"><i class="iot-view" ></i>View Template</a></li>
+                                                        <li><a href="Javascript:void(0);" data-toggle="modal" data-target="#edittemplate"><i class="iot-edit" ></i>Edit Template</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div></td>
+                                            <td>5</td>
+                                            <td>5</td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="item-icon-title-cell">
+                                                <div class="item-title">Leaf Device 3</div>
+                                                <div class="item-menu">
+                                                    <button type="button" class="item-menu-click" >
+                                                        <i class="las la-ellipsis-h"></i>
+                                                    </button>
+                                                </div>
+                                            </div></td>
+                                            <td><div class="item-icon-title-cell">
+                                                <div class="item-title">GpcbHilTemplate 1</div>
+                                                <div class="item-menu">
+                                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                                        <i class="las la-ellipsis-h"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#"><i class="iot-view" ></i>View Template</a></li>
+                                                        <li><a href="Javascript:void(0);" data-toggle="modal" data-target="#edittemplate"><i class="iot-edit" ></i>Edit Template</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div></td>
+                                            <td>4</td>
+                                            <td>4</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="step-btn">
+                                <a href="#" class="cancel-btn">Cancel</a>
+                                <a href="#step3" prev-tab="step2" aria-controls="step3" data-toggle="tab" role="tab" aria-expanded="true" class="last-btn next-btn">Next</a>
+                            </div>
+                        </div>
+                        <div class="tab-pane" role="tabpanel" id="step3">
+                            <div class="step-head border-bottom">
+                                <span class="step-count" >Step 3/4</span><h5>MQTT</h5>
+                            </div>
+                            <div class="d-flex block-withbtn">
+                                <div class="withbtn-left pr-0">
+                                    <div class="row">
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <label class="form-label" >Industry Device Name</label>
+                                                <input type="text" name="" value="ToSaHilGateway5" class="form-control" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <label class="form-label" >Connector Configuration Name</label>
+                                                <input type="text" name="" value="GPCBGateway Configuration 1" class="form-control" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <label class="form-label" >Gateway MQTT Config. Name</label>
+                                                <input type="text" name="" value="" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <label class="form-label" >Host Address</label>
+                                                <input type="text" name="" value="" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <label class="form-label" >Port Address</label>
+                                                <input type="text" name="" value="" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <label class="form-label" >User Name</label>
+                                                <input type="text" name="" value="" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <label class="form-label" >Password</label>
+                                                <input type="text" name="" value="" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <label class="form-label" >Keep alive</label>
+                                                <select class="selectpicker boot-select" data-live-search="false">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 text-right">
+                                            <a href="#" class="btn btn-primary btn-icon rounded-md ml-auto mt-0 toplabel-space"><i class="las la-plus" ></i> Add MQTT</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="common-datatable no-search">
+                                <table id="devices-table4" class="common-table" style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <td>MQTT Configuration Name</td>
+                                            <td>Host Address</td>
+                                            <td>Port Address</td>
+                                            <td>User Name</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><div class="item-icon-title-cell">
+                                                <div class="item-title">GpcbHilMQTTConfig1</div>
+                                                <div class="item-menu">
+                                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                                        <i class="las la-ellipsis-h"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#"><i class="iot-edit" ></i>Edit MQTT Configuration</a></li>
+                                                        <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div></td>
+                                            <td>iot.kcspl.in</td>
+                                            <td>8883</td>
+                                            <td>krish</td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="item-icon-title-cell">
+                                                <div class="item-title">GpcbHilMQTTConfig1</div>
+                                                <div class="item-menu">
+                                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                                        <i class="las la-ellipsis-h"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#"><i class="iot-edit" ></i>Edit MQTT Configuration</a></li>
+                                                        <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div></td>
+                                            <td>iot.kcspl.in</td>
+                                            <td>8883</td>
+                                            <td>krish</td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="item-icon-title-cell">
+                                                <div class="item-title">GpcbHilMQTTConfig1</div>
+                                                <div class="item-menu">
+                                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                                        <i class="las la-ellipsis-h"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#"><i class="iot-edit" ></i>Edit MQTT Configuration</a></li>
+                                                        <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div></td>
+                                            <td>iot.kcspl.in</td>
+                                            <td>8883</td>
+                                            <td>krish</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="step-btn">
+                                <a href="#" class="cancel-btn">Cancel</a>
+                                <a href="#step4" prev-tab="step3" aria-controls="step4" data-toggle="tab" role="tab" aria-expanded="true" class="last-btn next-btn">Next</a>
+                            </div>
+                        </div>
+                        <div class="tab-pane" role="tabpanel" id="step4">
+                            <div class="step-head border-bottom">
+                                <span class="step-count" >Step 4/4</span><h5>Database</h5>
+                            </div>
+                            <div class="d-flex block-withbtn">
+                                <div class="withbtn-left pr-0">
+                                    <div class="row">
+                                        <div class="col-lg-2">
+                                            <div class="form-group">
+                                                <label class="form-label" >Industry Device Name</label>
+                                                <input type="text" name="" value="ToSaHilGateway5" class="form-control" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <div class="form-group">
+                                                <label class="form-label" >Connector Config. Name</label>
+                                                <input type="text" name="" value="GPCBGateway Configuration 1" class="form-control" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <div class="form-group">
+                                                <label class="form-label" >Database Type</label>
+                                                <input type="text" name="" value="" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <label class="form-label" >Database Config. Name</label>
+                                                <input type="text" name="" value="" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <div class="form-group">
+                                                <label class="form-label" >Database Name</label>
+                                                <input type="text" name="" value="" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <div class="form-group">
+                                                <label class="form-label" >Host</label>
+                                                <input type="text" name="" value="" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <div class="form-group">
+                                                <label class="form-label" >Port</label>
+                                                <input type="text" name="" value="" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <div class="form-group">
+                                                <label class="form-label" >Username</label>
+                                                <input type="text" name="" value="" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <div class="form-group">
+                                                <label class="form-label" >Password</label>
+                                                <input type="text" name="" value="" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 text-right">
+                                            <a href="#" class="btn btn-primary btn-icon rounded-md ml-auto mt-0 toplabel-space"><i class="las la-plus" ></i> Add Database</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="common-datatable no-search">
+                                <table id="devices-table5" class="common-table" style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <td>Database  Configuration Name</td>
+                                            <td>Database</td>
+                                            <td>Host Address</td>
+                                            <td>Port Address</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><div class="item-icon-title-cell">
+                                                <div class="item-title">ToSaAhDatabaseConfig1</div>
+                                                <div class="item-menu">
+                                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                                        <i class="las la-ellipsis-h"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#"><i class="iot-edit" ></i>Edit Database Configuration</a></li>
+                                                        <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div></td>
+                                            <td>edgeDB</td>
+                                            <td>iot.kcspl.in</td>
+                                            <td>27017</td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="item-icon-title-cell">
+                                                <div class="item-title">ToSaAhDatabaseConfig1</div>
+                                                <div class="item-menu">
+                                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                                        <i class="las la-ellipsis-h"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#"><i class="iot-edit" ></i>Edit Database Configuration</a></li>
+                                                        <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div></td>
+                                            <td>edgeDB</td>
+                                            <td>iot.kcspl.in</td>
+                                            <td>27017</td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="item-icon-title-cell">
+                                                <div class="item-title">ToSaAhDatabaseConfig1</div>
+                                                <div class="item-menu">
+                                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                                        <i class="las la-ellipsis-h"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#"><i class="iot-edit" ></i>Edit Database Configuration</a></li>
+                                                        <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div></td>
+                                            <td>edgeDB</td>
+                                            <td>iot.kcspl.in</td>
+                                            <td>27017</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="step-btn">
+                                <a href="#" class="cancel-btn">Cancel</a>
+                                <a href="#" data-toggle="modal" data-target="#process-complete" class="last-btn next-btn">Save</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        
+    </div>
+</div>
+
+<div class="modal fade rightview-modal" id="edittemplate" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">GpcbHilTemplate 3</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="las la-times"></i></button>
+        </div>
+        <div class="modal-body edittemplate-body">
+            <div class="common-tab">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link active" id="sensors-tab" data-toggle="tab" href="#sensors" role="tab" aria-controls="sensors" aria-selected="true">Sensors</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link" id="actuator-tab" data-toggle="tab" href="#actuator" role="tab" aria-controls="actuator" aria-selected="false">Actuator</a>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="sensors" role="tabpanel" aria-labelledby="sensors-tab">
+                        <div class="sensors-tab">
+                            <div class="formblock-row">
+                                <div class="row  row-md">
+                                    <div class="col-lg-2">
+                                        <div class="form-group">
+                                            <label class="form-label">Sensor Name</label>
+                                            <input type="text" name="" value="" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <div class="form-group">
+                                            <label class="form-label">Reference Name</label>
+                                            <input type="text" name="" value="" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <div class="form-group">
+                                            <label class="form-label">Select Parameter</label>
+                                            <select class="selectpicker boot-select" data-live-search="false">
+                                                <option>Select</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <div class="form-group">
+                                            <label class="form-label">Select Unit</label>
+                                            <select class="selectpicker boot-select" data-live-search="false">
+                                                <option>Select</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <div class="form-group">
+                                            <label class="form-label">Data Size</label>
+                                            <select class="selectpicker boot-select" data-live-search="false">
+                                                <option>Select</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <div class="form-group">
+                                            <label class="form-label">Modbus Register Address</label>
+                                            <input type="text" name="" value="" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <div class="form-group">
+                                            <label class="form-label">Low Low</label>
+                                            <input type="text" name="" value="" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <div class="form-group">
+                                            <label class="form-label">Low High</label>
+                                            <input type="text" name="" value="" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <div class="form-group">
+                                            <label class="form-label">High Low</label>
+                                            <input type="text" name="" value="" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <div class="form-group">
+                                            <label class="form-label">High High</label>
+                                            <input type="text" name="" value="" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 text-right">
+                                        <a href="#" class="btn btn-primary btn-icon display-inline rounded-md mt-0 ml-auto toplabel-space"><i class="las la-plus" ></i> Add Sensor</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="common-datatable no-search">
+                                <table id="sensors-table" class="common-table" style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <td><label class="table-checkbox"><input type="checkbox" name="" value=""><span></span> </label> </td>
+                                            <td>Sensor Name</td>
+                                            <td>Sensor Reference Name</td>
+                                            <td>Parameter</td>
+                                            <td>Unit</td>
+                                            <td>Data Size</td>
+                                            <td>Modbus Reg. No.</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><label class="table-checkbox"><input type="checkbox" name="" value=""><span></span> </label></td>
+                                            <td><div class="item-icon-title-cell">
+                                                <div class="item-title">CETP_Outlet-COD</div>
+                                                <div class="item-menu">
+                                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                                        <i class="las la-ellipsis-h"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                        <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div> </td>
+                                            <td>CETP_Outlet-COD</td>
+                                            <td>Voltage (Sensor)</td>
+                                            <td>Voltage (Sensor)</td>
+                                            <td>8</td>
+                                            <td>40002</td>
+                                        </tr>
+                                        <tr>
+                                            <td><label class="table-checkbox"><input type="checkbox" name="" value=""><span></span> </label></td>
+                                            <td><div class="item-icon-title-cell">
+                                                <div class="item-title">CETP_Outlet-COD</div>
+                                                <div class="item-menu">
+                                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                                        <i class="las la-ellipsis-h"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                        <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div> </td>
+                                            <td>CETP_Outlet-COD</td>
+                                            <td>Voltage (Sensor)</td>
+                                            <td>Voltage (Sensor)</td>
+                                            <td>8</td>
+                                            <td>40002</td>
+                                        </tr>
+                                        <tr>
+                                            <td><label class="table-checkbox"><input type="checkbox" name="" value=""><span></span> </label></td>
+                                            <td><div class="item-icon-title-cell">
+                                                <div class="item-title">CETP_Outlet-COD</div>
+                                                <div class="item-menu">
+                                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                                        <i class="las la-ellipsis-h"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                        <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div> </td>
+                                            <td>CETP_Outlet-COD</td>
+                                            <td>Voltage (Sensor)</td>
+                                            <td>Voltage (Sensor)</td>
+                                            <td>8</td>
+                                            <td>40002</td>
+                                        </tr>
+                                        <tr>
+                                            <td><label class="table-checkbox"><input type="checkbox" name="" value=""><span></span> </label></td>
+                                            <td><div class="item-icon-title-cell">
+                                                <div class="item-title">CETP_Outlet-COD</div>
+                                                <div class="item-menu">
+                                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                                        <i class="las la-ellipsis-h"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                        <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div> </td>
+                                            <td>CETP_Outlet-COD</td>
+                                            <td>Voltage (Sensor)</td>
+                                            <td>Voltage (Sensor)</td>
+                                            <td>8</td>
+                                            <td>40002</td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="actuator" role="tabpanel" aria-labelledby="actuator-tab">
+                        <div class="sensors-tab">
+                            <div class="formblock-row">
+                                <div class="row  row-md">
+                                    <div class="col-lg-2">
+                                        <div class="form-group">
+                                            <label class="form-label">Sensor Name</label>
+                                            <input type="text" name="" value="" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <div class="form-group">
+                                            <label class="form-label">Reference Name</label>
+                                            <input type="text" name="" value="" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <div class="form-group">
+                                            <label class="form-label">Select Parameter</label>
+                                            <select class="selectpicker boot-select" data-live-search="false">
+                                                <option>Select</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <div class="form-group">
+                                            <label class="form-label">Select Unit</label>
+                                            <select class="selectpicker boot-select" data-live-search="false">
+                                                <option>Select</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <div class="form-group">
+                                            <label class="form-label">Data Size</label>
+                                            <select class="selectpicker boot-select" data-live-search="false">
+                                                <option>Select</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <div class="form-group">
+                                            <label class="form-label">Modbus Register Address</label>
+                                            <input type="text" name="" value="" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <div class="form-group">
+                                            <label class="form-label">Low Low</label>
+                                            <input type="text" name="" value="" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <div class="form-group">
+                                            <label class="form-label">Low High</label>
+                                            <input type="text" name="" value="" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <div class="form-group">
+                                            <label class="form-label">High Low</label>
+                                            <input type="text" name="" value="" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <div class="form-group">
+                                            <label class="form-label">High High</label>
+                                            <input type="text" name="" value="" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 text-right">
+                                        <a href="#" class="btn btn-primary btn-icon display-inline rounded-md mt-0 ml-auto toplabel-space"><i class="las la-plus" ></i> Add Sensor</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="common-datatable no-search">
+                                <table id="actuator-table" class="common-table" style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <td><label class="table-checkbox"><input type="checkbox" name="" value=""><span></span> </label> </td>
+                                            <td>Sensor Name</td>
+                                            <td>Sensor Reference Name</td>
+                                            <td>Parameter</td>
+                                            <td>Unit</td>
+                                            <td>Data Size</td>
+                                            <td>Modbus Reg. No.</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><label class="table-checkbox"><input type="checkbox" name="" value=""><span></span> </label></td>
+                                            <td><div class="item-icon-title-cell">
+                                                <div class="item-title">CETP_Outlet-COD</div>
+                                                <div class="item-menu">
+                                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                                        <i class="las la-ellipsis-h"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                        <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div> </td>
+                                            <td>CETP_Outlet-COD</td>
+                                            <td>Voltage (Sensor)</td>
+                                            <td>Voltage (Sensor)</td>
+                                            <td>8</td>
+                                            <td>40002</td>
+                                        </tr>
+                                        <tr>
+                                            <td><label class="table-checkbox"><input type="checkbox" name="" value=""><span></span> </label></td>
+                                            <td><div class="item-icon-title-cell">
+                                                <div class="item-title">CETP_Outlet-COD</div>
+                                                <div class="item-menu">
+                                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                                        <i class="las la-ellipsis-h"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                        <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div> </td>
+                                            <td>CETP_Outlet-COD</td>
+                                            <td>Voltage (Sensor)</td>
+                                            <td>Voltage (Sensor)</td>
+                                            <td>8</td>
+                                            <td>40002</td>
+                                        </tr>
+                                        <tr>
+                                            <td><label class="table-checkbox"><input type="checkbox" name="" value=""><span></span> </label></td>
+                                            <td><div class="item-icon-title-cell">
+                                                <div class="item-title">CETP_Outlet-COD</div>
+                                                <div class="item-menu">
+                                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                                        <i class="las la-ellipsis-h"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                        <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div> </td>
+                                            <td>CETP_Outlet-COD</td>
+                                            <td>Voltage (Sensor)</td>
+                                            <td>Voltage (Sensor)</td>
+                                            <td>8</td>
+                                            <td>40002</td>
+                                        </tr>
+                                        <tr>
+                                            <td><label class="table-checkbox"><input type="checkbox" name="" value=""><span></span> </label></td>
+                                            <td><div class="item-icon-title-cell">
+                                                <div class="item-title">CETP_Outlet-COD</div>
+                                                <div class="item-menu">
+                                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                                        <i class="las la-ellipsis-h"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                        <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div> </td>
+                                            <td>CETP_Outlet-COD</td>
+                                            <td>Voltage (Sensor)</td>
+                                            <td>Voltage (Sensor)</td>
+                                            <td>8</td>
+                                            <td>40002</td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                        </div>
+                    </div>
+                  </div>
+
+              </div>
+              <div class="sensors-footer">
+                <div class="form-group">
+                    <label class="form-label" >Save Template As</label>
+                    <input type="text" name="" value="" class="form-control">
+                </div>
+                <button type="button" class="btn btn-light"><i class="las la-times"></i></button>
+                <button type="button" class="btn btn-primary btn-icon display-inline"><i class="las la-save"></i> Save</button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade completed-modal" id="process-complete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="las la-times"></i></button>
+        </div>
+        <div class="modal-body">
+            <i class="las la-check"></i>
+            <h4>Device deployment process completed successfully for</h4>
+            <div class="completed-row">
+                <div>
+                    <h5>Industry Device Name</h5>
+                    <p>ToSaHilGateway5</p>
+                </div>
+                <div>
+                    <h5>Connector Configuration Name</h5>
+                    <p>GPCBGateway Configuration 1</p>
+                </div>
+                <div>
+                    <h5>Connector Type</h5>
+                    <p>MQTT</p>
+                </div>
+            </div>
+            <div class="download-btn">
+                <a href="#" class="btn btn-icon btn-primary"><i class="las la-download"></i> Download JSON File</a>
+            </div>
+            <div class="text-center"><button type="button" class="close-btn" data-dismiss="modal" aria-label="Close" >Close</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="assets/js/jquery-3.1.0.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/slick.js"></script>
+<script src="assets/js/bootstrap-datepicker.js"></script>
+<script src="assets/js/datatables.min.js"></script>
+<script src="assets/js/bootstrap-select.min.js"></script>
+<script src="assets/js/custom.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#devices-table').DataTable( {
+        "paging":   false,
+        language: {
+            searchPlaceholder: "Filter by keyword"
+        },
+        "ordering": false,
+        "info":     false
+        });
+        $('#devices-table2').DataTable( {
+        "paging":   false,
+        "ordering": false,
+        "info":     false
+        });
+        $('#devices-table3').DataTable( {
+        "paging":   false,
+        "ordering": false,
+        "info":     false
+        });
+        $('#devices-table4').DataTable( {
+        "paging":   false,
+        "ordering": false,
+        "info":     false
+        });
+        $('#devices-table5').DataTable( {
+        "paging":   false,
+        "ordering": false,
+        "info":     false
+        });
+        $('#sensors-table').DataTable( {
+        "paging":   false,
+        "ordering": false,
+        "info":     false
+        });
+        $('#actuator-table').DataTable( {
+        "paging":   false,
+        "ordering": false,
+        "info":     false
+        });
+        
+        $('.recentlyupl-select').selectpicker({
+            noneSelectedText: 'Gateway Status'
+        });
+        $('.boot-select').selectpicker();
+    });
+</script>
+</body>
+</html>

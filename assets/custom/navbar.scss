@@ -1,0 +1,102 @@
+.aside-navigation {
+	width:295px; transition:width 0.3s ease; background:$color-white; padding:0px; height:calc(100vh - 86px); position:relative;
+    @include desktop{
+        width:235px; height:calc(100vh - 76px);
+    }
+    .corner-shap{
+        width:24px; height:24px; overflow:hidden; position: absolute; right:-24px; top:0px; transform:rotate(90deg);
+        &:before{content:""; width:200%; height:200%; display:block; border-radius:42%; position:absolute; bottom:0; left:0px; box-shadow:-12px 12px 0 0 $color-white;}
+        @include desktop{
+            width:18px; height:18px; right:-18px;
+            &:before{box-shadow:-9px 9px 0 0 $color-white;}
+        }
+    }
+    .navbar{
+        padding:30px 0px; margin:0px; display:block; height:calc(100% - 111px); overflow:auto;
+        @include desktop{
+            height:calc(100% - 76px); padding:12px 0px 25px;
+        }
+        ul{
+            li{
+                a{
+                    @include fontrem(16px, 24px); color:$color-black; position:relative; transform:all 0.3s ease; padding:8px 30px; display:flex; align-items:center;
+                    &::before{content:""; width:16px; height:3px; opacity:0; visibility:hidden; background:$color-Blue; transition:all 0.3s ease; position:absolute; right:24px; top:19px; }
+                    .menu-icon{
+                        display:block; padding-right:28px; padding-top:3px; width:54px;
+                        i{
+                            color:$color-black; font-size:22px;
+                            svg{display:block;}
+                         }
+                         @include desktop{
+                             width:38px; padding-right:15px;
+                             i{font-size:18px;}
+                             svg{width:20px;}
+                         }
+                    }
+                    &:hover{
+                        background:$color-btnLight;
+                    }
+                    &.active{
+                        color:$color-Blue; font-weight:700;
+                        .menu-icon i{color:$color-Blue;}
+                        &:before{opacity:1; visibility:visible;}
+                        svg path{stroke:$color-Blue;}
+                    }
+                    @include desktop{
+                        padding:4px 30px 4px 15px;
+                        &:before{right:9px; top:16px;}
+                    }
+                }
+            }
+        }
+    }
+    .navigation-bottom{
+        padding:30px 30px 30px; border-top:1px solid #BFCADE; height:111px; display:flex; flex-wrap:wrap; align-items:flex-end;
+        @include desktop{
+            height:76px; padding:15px 15px; display:flex; align-items:center;
+        }
+        .navigation-toggle{
+            color:$border-color2; margin-left:auto; @include fontrem(26px); padding:0px; line-height:30px; font-weight:300; display:flex; justify-content:center; align-items:center;
+            span{
+                width:calc(100% - 40px); text-align:center;
+                &.toggle-icon{
+                    width:40px; margin-left:auto; text-align:center; padding:5px 0;
+                    &:hover{background:$color-btnLight;}
+                }
+            }
+        }
+        .powered-by{
+            p{@include fontrem(14px, 20px); padding:0px 0 7px;}
+        }
+    }
+}
+.sidebar-open{
+    .aside-navigation {
+        width:50px;
+        .navbar{
+            ul{
+                li{
+                    a{
+                        padding:6px 12px;
+                        .menu-icon{
+                            padding-right:0px; text-align:center;
+                            svg{margin:0 auto;}
+                        } 
+                        .menu-text{display:none;}
+                        &:before{display:none;}
+                    }
+                }
+            }
+        }
+        .navigation-bottom{
+            padding:0 5px;
+            .navigation-toggle{
+                span{
+                    display:none;
+                    &.toggle-icon{display:block;}
+                }
+            }
+            .powered-by{display:none;}
+        }
+    }
+}
