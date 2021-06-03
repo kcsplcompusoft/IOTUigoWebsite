@@ -14,6 +14,7 @@
 
 <body>
 <div class="header">
+    <button type="button" class="menu-toggle"><i class="las la-bars"></i></button>
     <div class="logo">
         <img src="assets/images/logo.svg" alt="" title="">
     </div>
@@ -67,6 +68,7 @@
     </div>
 </div>
 <div class="content-wrapper">
+    <div class="navigation-overlay"></div>
     <div class="aside-navigation">
         <div class="corner-shap"></div>
         <div class="navbar">
@@ -107,12 +109,6 @@
         <div class="work-space device-page">
             <h5 class="pb-3" >Rule Designer</h5>
            <div class="ruledesigner-page">
-               <div class="bg-white cursor-pointer rounded-sm shadow-sm ruledesigner-head">
-                   <div class="form-group">
-                       <label class="form-label" >Rule Name</label>
-                       <input type="text" name="" value="" class="form-control">
-                   </div>
-               </div>
                <div class="ruledesigner-body">
                    <div class="ruledesigner-row">
                         <div class="ruledesigner-card small">
@@ -190,10 +186,17 @@
                         </div>
                    </div>
                </div>
-               <div class="step-btn border-top ml-auto">
-                    <a href="#" class="cancel-btn">Cancel</a>
-                    <a href="#" class="last-btn">Save Rule</a>
+               <div class="bg-white cursor-pointer rounded-sm shadow-sm ruledesigner-head">
+                    <div class="form-group">
+                        <label class="form-label" >Rule Name</label>
+                        <input type="text" name="" value="" class="form-control">
+                    </div>
+                    <div class="step-btn ml-auto">
+                        <a href="#" class="cancel-btn">Cancel</a>
+                        <a href="#" class="last-btn">Save Rule</a>
+                    </div>
                 </div>
+               
            </div>
             
         </div>
@@ -235,7 +238,7 @@
                             <input type="text" name="" value="" class="form-control">
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-8">
                         <div class="form-group">
                             <label class="form-label">Subject</label>
                             <input type="text" name="" value="" class="form-control">
