@@ -9995,6 +9995,11 @@ select.custom-select:focus {
     margin-bottom: 15px;
   }
 }
+@media (max-width: 991px) {
+  .form-group {
+    margin-bottom: 12px;
+  }
+}
 .form-group .form-label {
   padding: 0 0 8px;
   margin: 0px;
@@ -10046,7 +10051,7 @@ select.custom-select:focus {
     padding: 2px 10px;
   }
 }
-.form-group .form-control:read-only {
+.form-group input.form-control:read-only {
   background-color: #f2f5fa;
   cursor: not-allowed;
   pointer-events: none;
@@ -10226,8 +10231,8 @@ select.custom-select:focus {
 .switch-toggle span {
   width: 53px;
   height: 26px;
-  border: 1px solid #45AB21;
-  background: #E6FFDD;
+  border: 1px solid #c81f1f;
+  background: #fba3a3;
   border-radius: 26px;
   display: block;
   position: relative;
@@ -10237,19 +10242,19 @@ select.custom-select:focus {
   width: 20px;
   height: 20px;
   border-radius: 100%;
-  background: #45AB21;
+  background: #c81f1f;
   position: absolute;
   left: 3px;
   transition: left 0.3s ease;
   top: 2px;
 }
 .switch-toggle input[type=checkbox]:checked ~ span {
-  background: #fba3a3;
-  border-color: #c81f1f;
+  background: #E6FFDD;
+  border-color: #45AB21;
 }
 .switch-toggle input[type=checkbox]:checked ~ span:before {
   left: 28px;
-  background: #c81f1f;
+  background: #45AB21;
 }
 @media (max-width: 1440px) {
   .switch-toggle span {
@@ -11681,6 +11686,15 @@ a.bg9:hover {
     font-size: 50px;
   }
 }
+@media (max-width: 991px) {
+  .form-card .add-overview-card {
+    min-height: 48px;
+    border-radius: 4px !important;
+  }
+  .form-card .add-overview-card i {
+    font-size: 38px;
+  }
+}
 @media (max-width: 1600px) {
   .form-card {
     margin-bottom: 25px;
@@ -11695,6 +11709,16 @@ a.bg9:hover {
 
 .dataTables_filter {
   width: 400px;
+}
+@media (max-width: 1200px) {
+  .dataTables_filter {
+    width: 280px;
+  }
+}
+@media (max-width: 991px) {
+  .dataTables_filter {
+    width: 190px;
+  }
 }
 .dataTables_filter label {
   font-size: 0px;
@@ -11729,6 +11753,12 @@ a.bg9:hover {
   opacity: 1;
   color: #9E9FA1;
 }
+@media (max-width: 991px) {
+  .dataTables_filter label input {
+    font-size: 12px;
+    padding: 5px 10px 3px 24px !important;
+  }
+}
 
 .table-filter {
   display: flex;
@@ -11749,6 +11779,11 @@ a.bg9:hover {
 @media (max-width: 1440px) {
   .table-filter .bootstrap-select {
     width: 213px !important;
+  }
+}
+@media (max-width: 991px) {
+  .table-filter .bootstrap-select {
+    width: 170px !important;
   }
 }
 .table-filter .bootstrap-select .dropdown-toggle {
@@ -11781,6 +11816,20 @@ a.bg9:hover {
   width: 14px;
   height: 10px;
   border: none;
+}
+@media (max-width: 991px) {
+  .table-filter .bootstrap-select .dropdown-toggle {
+    height: 26px;
+  }
+  .table-filter .bootstrap-select .dropdown-toggle .filter-option {
+    padding: 3px 22px 3px 8px;
+    font-size: 11px;
+  }
+  .table-filter .bootstrap-select .dropdown-toggle:after {
+    top: 11px;
+    right: 7px;
+    width: 11px;
+  }
 }
 .table-filter .bootstrap-select .dropdown-menu {
   box-shadow: 0px 4px 13px rgba(0, 80, 164, 0.15);
@@ -11872,6 +11921,11 @@ a.bg9:hover {
     padding: 9px 10px 9px 20px;
   }
 }
+@media (max-width: 991px) {
+  .common-datatable .datatable-head {
+    padding-left: 11px;
+  }
+}
 .common-datatable .table-checkbox {
   width: 16px;
   height: 16px;
@@ -11931,6 +11985,13 @@ a.bg9:hover {
   .common-datatable.filter-search-minus .dataTables_filter {
     margin-top: -38px;
     margin-bottom: 10px;
+  }
+}
+@media (max-width: 991px) {
+  .common-datatable.filter-search-minus .dataTables_filter {
+    margin-top: -36px;
+    margin-bottom: 8px;
+    margin-left: 12px;
   }
 }
 .common-datatable.no-search .dataTables_filter {
@@ -12089,6 +12150,32 @@ a.bg9:hover {
   visibility: visible;
 }
 
+@media (max-width: 991px) {
+  .site-page .col-md-4 {
+    width: 50%;
+  }
+}
+
+.company-statistic-page .col-md-8 .col-md-3 {
+  width: 25%;
+}
+.company-statistic-page .col-md-6 {
+  width: 50%;
+}
+.company-statistic-page .col-md-4 {
+  width: 33.33%;
+}
+.company-statistic-page .activealerts-card {
+  width: 50%;
+  display: flex;
+}
+.company-statistic-page .activealerts-card > div {
+  width: 100%;
+}
+.company-statistic-page .chart-call {
+  width: 50%;
+}
+
 .project-overview-card {
   margin-bottom: 30px;
   width: 100%;
@@ -12219,6 +12306,24 @@ a.bg9:hover {
   }
   .project-overview-card .overview-card-bottom ul li .link-icon img {
     height: 22px;
+  }
+}
+@media (max-width: 991px) {
+  .project-overview-card .overview-card-bottom ul {
+    justify-content: space-around;
+  }
+  .project-overview-card .overview-card-bottom ul li {
+    width: auto;
+    padding: 0 9px;
+  }
+  .project-overview-card .overview-card-bottom ul li .placeholder {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .project-overview-card .overview-card-bottom ul li .link-icon {
+    opacity: 1;
+    visibility: visible;
+    font-size: 12px;
   }
 }
 .project-overview-card:hover .overview-card-bottom ul li {
@@ -12361,6 +12466,12 @@ a.bg9:hover {
     font-size: 28px;
   }
 }
+@media (max-width: 991px) {
+  .statistic-box .title {
+    margin: 0 0 12px;
+    min-height: 35px;
+  }
+}
 .statistic-box.bg-white .title {
   color: #000000;
 }
@@ -12373,6 +12484,11 @@ a.bg9:hover {
   .statistic-box .user-list {
     padding: 0px;
     margin-top: -8px;
+  }
+}
+@media (max-width: 991px) {
+  .statistic-box .user-list {
+    margin-top: 0px;
   }
 }
 .statistic-box .user-list li {
@@ -12415,6 +12531,15 @@ a.bg9:hover {
 @media (max-width: 1200px) {
   .statistic-box .user-list li {
     margin-right: 7px;
+  }
+}
+@media (max-width: 991px) {
+  .statistic-box .user-list li {
+    margin-right: 4px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 4px;
   }
 }
 
@@ -12546,6 +12671,11 @@ a.bg9:hover {
     padding: 20px;
   }
 }
+@media (max-width: 991px) {
+  .company-info-page .companyinfo-box {
+    padding: 15px;
+  }
+}
 .company-info-page .companyinfo-box .col-lg-9 {
   flex: 0 0 69%;
   max-width: 69%;
@@ -12615,6 +12745,11 @@ a.bg9:hover {
   .company-info-page .companyinfo-box .col-lg-9 .management-row .col-md-6 {
     padding-top: 0px;
     padding-bottom: 0px;
+  }
+}
+@media (max-width: 991px) {
+  .company-info-page .companyinfo-box .col-lg-9 .management-row .col-md-6 {
+    width: 50%;
   }
 }
 .company-info-page .companyinfo-box .col-lg-9 .management-row .col-md-6:first-child {

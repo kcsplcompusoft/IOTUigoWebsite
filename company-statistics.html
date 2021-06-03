@@ -156,8 +156,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="rounded-lg bg-white shadow-sm dashboard-card">
+                <div class="col-md-4 activealerts-card">
+                    <div class="rounded-lg bg-white shadow-sm mb-30 dashboard-card">
                         <div class="card-head">
                             <h6>Active Alerts </h6>
                         </div>
@@ -205,6 +205,24 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-md-4 chart-call">
+                    <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
+                        <h6>Device Deployment</h6>
+                        <div id="devicedeployment-chart"></div>
+                    </div>
+                </div>
+                <div class="col-md-4 chart-call">
+                    <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
+                        <h6>Device In Use</h6>
+                        <div id="devicesuse-chart"></div>
+                    </div>
+                </div>
+                <div class="col-md-4 chart-call">
+                    <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
+                        <h6>Alert Statistics</h6>
+                        <div id="alertstatics-chart"></div>
+                    </div>
+                </div>
                 <div class="col-md-4">
                     <a href="#" class="bg8 rounded-sm statistic-box mb-30">
                         <h6 class="title" >Gateways</h6>
@@ -242,11 +260,102 @@
 <script src="assets/js/slick.js"></script>
 <script src="assets/js/bootstrap-datepicker.js"></script>
 <script src="assets/js/bootstrap-select.min.js"></script>
+<script src="assets/js/apexcharts.js"></script>
 <script src="assets/js/custom.js"></script>
 <script>
     $(document).ready(function(){
         $('.selectpicker').selectpicker();
+
+        var devicedeploymentoptions = {
+          series: [70, 30],
+            chart: {
+            width: '100%',
+            height: 270,
+            type: 'pie',
+          },
+            legend: {
+                position: 'bottom'
+            },
+            colors: ['#00B9B6', '#D9E0EB'],
+            labels: ['Deployment Devices', 'Pending Devices']
+        };
+        var chart = new ApexCharts(document.querySelector("#devicedeployment-chart"), devicedeploymentoptions);
+        chart.render();
+
+
+        var devicesuseoptions = {
+          series: [58, 42],
+          chart: {
+            width: '100%',
+            height: 270,
+            type: 'donut',
+          },
+          legend: {
+                position: 'bottom'
+            },
+            colors: ['#00B9B6', '#91A1BC'],
+            labels: ['Device in Use', 'Device not in use']
        
+        };
+        var chart = new ApexCharts(document.querySelector("#devicesuse-chart"), devicesuseoptions);
+        chart.render();
+
+
+        // var alertstaticsoptions = {
+        //   series: [{
+        //     data: [1.5, 4.5, 7.5, 3.5, 5, 3, 2]
+        //    }],
+        //   chart: {
+        //   type: 'bar',
+        //   height: 225
+        // },
+        // plotOptions: {
+        //   bar: {
+        //     horizontal: false,
+        //     columnWidth: '55%',
+        //     endingShape: 'rounded'
+        //   },
+        // },
+        // dataLabels: {
+        //   enabled: false
+        // },
+        // colors: ['#0050A4'],
+        // xaxis: {
+        //   categories: ['M', 'T', 'W', 'T', 'F', 'S', 'D'],
+        // },
+        // fill: {
+        //   opacity: 1
+        // }
+        // };
+        // var chart = new ApexCharts(document.querySelector("#alertstatics-chart"), alertstaticsoptions);
+        // chart.render();
+
+        var alertstaticsoptions = {
+          series: [{
+          name: "STOCK ABC",
+          data: [1.5, 4.1, 7.5, 3.5, 5, 3, 2]
+        }],
+          chart: {
+          type: 'area',
+          height: 225,
+          zoom: {
+            enabled: false
+          }
+        },
+        dataLabels: {
+          enabled: false
+        },
+        stroke: {
+          curve: 'straight',
+          colors: ['#206bb2'],
+        },
+        
+        labels: ['M', 'T', 'W', 'T', 'F', 'S', 'D'],
+        
+        };
+
+        var chart = new ApexCharts(document.querySelector("#alertstatics-chart"), alertstaticsoptions);
+        chart.render();
     });
 </script>
 </body>

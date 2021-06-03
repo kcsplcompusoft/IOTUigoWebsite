@@ -138,6 +138,10 @@ a.bg9:hover{background:#0b9492;}
 			min-height:85px; border-width:1px; margin-top:6px !important;
 			i{font-size:50px;}
 		}
+		@include tablet{
+			min-height:48px; border-radius:4px !important;
+			i{font-size:38px;}
+		}
 	}
 	@include desktop-big{
 		margin-bottom:25px;
@@ -149,6 +153,12 @@ a.bg9:hover{background:#0b9492;}
 }
 .dataTables_filter{
 	width:400px;
+	@include tabletwide{
+		width:280px;
+	}
+	@include tablet{
+		width:190px;
+	}
 	label{
 		font-size:0px; margin:0px; display:block;
 		input{
@@ -157,6 +167,9 @@ a.bg9:hover{background:#0b9492;}
 			&::-webkit-input-placeholder{opacity:1; color:#9E9FA1;}
 			&:-webkit-placeholder{opacity:1; color:#9E9FA1;}
 			&:-moz-placeholder{opacity:1; color:#9E9FA1;}
+			@include tablet{
+				font-size:12px; padding:5px 10px 3px 24px !important;
+			}
 		}
 	}
 }
@@ -169,6 +182,9 @@ a.bg9:hover{background:#0b9492;}
 		@include desktop{
 			width:213px !important;
 		}
+		@include tablet{
+			width:170px !important;
+		}
 		.dropdown-toggle{
 			background:$color-white; border-radius:0px; padding:0px; height:30px;
 			&:focus{outline:none !important;}
@@ -178,6 +194,11 @@ a.bg9:hover{background:#0b9492;}
 			}
 			&:after{
 				background:url("images/arrow-down.svg") no-repeat left top; display:block; position:absolute; top:12px; right:11px; margin:0px; background-size:100% auto; width:14px; height:10px; border:none;
+			}
+			@include tablet{
+				height:26px;
+				.filter-option{padding:3px 22px 3px 8px; font-size:11px;}
+				&:after{top:11px; right:7px; width:11px;}
 			}
 		}
 		.dropdown-menu{
@@ -229,6 +250,9 @@ a.bg9:hover{background:#0b9492;}
 		@include desktop{
 			padding:9px 10px 9px 20px;
 		}
+		@include tablet{
+			padding-left:11px;
+		}
 	}
 	.table-checkbox{
 		width:16px; height:16px; display:inline-block; position:relative; margin:0; vertical-align:middle;
@@ -245,6 +269,9 @@ a.bg9:hover{background:#0b9492;}
 		.dataTables_filter{float:none; padding:0; text-align:left; margin-top:-42px; margin-left:20px; margin-bottom:12px;}
 		@include desktop{
 			.dataTables_filter{margin-top:-38px; margin-bottom:10px;}
+		}
+		@include tablet{
+			.dataTables_filter{margin-top:-36px; margin-bottom:8px; margin-left:12px;}
 		}
 	}
 	&.no-search{
@@ -331,10 +358,21 @@ a.bg9:hover{background:#0b9492;}
 	}
 }
 .site-page{
-	
+	@include tablet{
+		.col-md-4{width:50%;}
+	}
 }
 .company-statistic-page{
-	
+	.col-md-8{
+		.col-md-3{width:25%;}
+	}
+	.col-md-6{width:50%;}
+	.col-md-4{width:33.33%;}
+	.activealerts-card{
+		width:50%; display:flex;
+		> div{width:100%;}
+	}
+	.chart-call{width:50%;}
 }
 .project-overview-card{
 	margin-bottom:30px; width:100%;
@@ -390,6 +428,14 @@ a.bg9:hover{background:#0b9492;}
 						span{padding:2px 0 0;}
 						img{height:22px;}
 					}
+				}
+			}
+			@include tablet{
+				justify-content:space-around;
+				li{
+					width:auto; padding:0 9px;
+					.placeholder{opacity:0; visibility:hidden;}
+					.link-icon{opacity:1; visibility:visible; font-size:12px; }
 				}
 			}
 		}
@@ -478,6 +524,9 @@ a.bg9:hover{background:#0b9492;}
 		.title{margin:0 0 18px; font-weight:500;}
 		.link-icon{bottom:17px; right:17px; font-size:28px;}
 	}
+	@include tablet{
+		.title{margin:0 0 12px; min-height:35px;}
+	}
 	&.bg-white{
 		.title{color:$color-black;}
 	}
@@ -485,6 +534,9 @@ a.bg9:hover{background:#0b9492;}
 		display:flex; text-align:center; padding:0 0 4px;
 		@include desktop{
 			padding:0px; margin-top:-8px;
+		}
+		@include tablet{
+			margin-top:0px;
 		}
 		li{
 			width:50px; height:50px; margin-right:10px; line-height:50px; text-align:center; color:$color-Blue; border-radius:8px; overflow:hidden; background:$color-btnLight; font-weight:700;
@@ -498,6 +550,10 @@ a.bg9:hover{background:#0b9492;}
 			}
 			@include tabletwide{
 				margin-right:7px;
+			}
+			@include tablet{
+				margin-right:4px; width:30px; height:30px; line-height:30px; border-radius:4px;
+
 			}
 		}
 	}
@@ -567,6 +623,9 @@ a.bg9:hover{background:#0b9492;}
 		@include desktop{
 			padding:20px;
 		}
+		@include tablet{
+			padding:15px;
+		}
 		.col-lg-9{
 			flex:0 0 69%; max-width:69%; padding-top:15px; position:relative;
 			@include desktop-big{
@@ -597,6 +656,9 @@ a.bg9:hover{background:#0b9492;}
 					}
 					@include desktop{
 						padding-top:0px; padding-bottom:0px;
+					}
+					@include tablet{
+						width:50%;
 					}
 					&:first-child{border-right:1px solid $border-color;}
 					.management-contact{
