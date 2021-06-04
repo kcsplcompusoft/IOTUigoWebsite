@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $(".common-table").wrap("<div class='table-overflow' ></div>");
+    // setTimeout(function(){$(".common-table").wrap("<div class='table-overflow' ></div>")}, 500);;
 	$(".menu-toggle, .navigation-overlay").click(function(){
 		$("body").toggleClass("sidebar-open");
 	});

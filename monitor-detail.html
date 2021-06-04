@@ -93,8 +93,8 @@
                 <img src="assets/images/torrent-logo.png" alt="" title="">
             </div>
             <h2 class="pl-4" >Torrent Power</h2>
-            <div class="ml-auto">
-                <select class="selectpicker boot-select" data-live-search="false">
+            <div class="ml-auto selectpicker boot-select">
+                <select class="select form-control" data-live-search="false">
                     <option>Sabarmati, Ahmedabad</option>
                      <option>1</option>
                      <option>2</option>
@@ -125,7 +125,7 @@
                   <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="visualiser1" role="tabpanel" aria-labelledby="visualiser1-tab">
                         <div class="row row-md">
-                            <div class="col-md-4">
+                            <div class="col-sm-6 col-md-4">
                                 <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
                                     <h6>Water Lavel</h6>
                                     <div class="industrial tank size two" >
@@ -135,7 +135,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-sm-6 col-md-4">
                                 <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
                                     <h6>Temperature</h6>
                                     <div class="industrial thermometer size one">
@@ -145,7 +145,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-sm-6 col-md-4">
                                 <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
                                     <h6>Readout</h6>
                                     <div id="read1" class="industrial readout size two">
@@ -153,12 +153,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-sm-6 col-md-6">
                                 <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
                                     <h6>Device In Use</h6>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-sm-6 col-md-6">
                                 <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
                                     <h6>Device In Use</h6>
                                 </div>
@@ -186,7 +186,7 @@
 <script src="assets/js/custom.js"></script>
 <script>
     $(document).ready(function(){
-        $('.boot-select').selectpicker();
+        $('.boot-select .select').selectpicker();
         $('.alert-select').selectpicker();
 
         setTimeout(function() {

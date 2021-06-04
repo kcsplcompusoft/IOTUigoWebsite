@@ -24,6 +24,10 @@
             width:160px;
             img{max-width:154px;}
         }
+        @include phonewide{
+            width:110px;
+            img{max-width:105px;}
+        }
     }
     .breadcrum{
         display:flex; align-items:center; padding:0 0 0 12px;
@@ -38,10 +42,16 @@
         @include tabletwide{
             span{padding:0 5px;}
         }
+        @include phonewide{
+            display:none;
+        }
     }
     .header-right{
         display:flex; flex-wrap:wrap; align-items:center;
         .btn{font-size:20px; height:46px; position:relative; line-height:1; width:50px; padding-left:10px; padding-right:10px; margin-right:17px;}
+        @include phonewide{
+            .btn{margin-right:10px;}
+        }
         .dropdown-menu{
             border:none; border-radius:0 0 8px 8px;
         }
@@ -56,12 +66,19 @@
                 @include desktop{
                     .search-input{width:275px;}
                 }
+                @include phonewide{
+                    .search-input{width:220px; padding:0 15px;}
+                }
             }
             @include desktop{
                 .search-input{height:38px; line-height:38px; }
             }
             @include tabletwide{
                 .search-input{height:32px; line-height:32px; }
+            }
+            @include phonewide{
+                margin-right:10px;
+                .search-input{padding:0px; font-size:12px; }
             }
         }
         .bell-btn{

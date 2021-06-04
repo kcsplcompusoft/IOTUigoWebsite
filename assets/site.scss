@@ -38,6 +38,9 @@ h6, .h6{@include fontrem(20px, 24px); color:$color-black; font-weight:700; margi
 	@include desktop{
 		margin-top:24px;						
 	}
+	@include phonewide{
+		margin-top:0px;						
+	}
 }
 
 .bg1{background:#EF3436;}
@@ -104,9 +107,24 @@ a.bg9:hover{background:#0b9492;}
 .page-head{
 	padding:0 35px;
 	.image-bg{padding:16px 12px;}
-	.custom-select, .boot-select.bootstrap-select{
+	.custom-select, .boot-select .bootstrap-select{
 		min-width:265px; width:100% !important;
-		.dropdown-toggle{box-shadow:0px 4px 13px rgb(0 80 164 / 15%) !important;}
+		@include phonewide{
+			min-width:220px; margin-top:5px;
+		}
+		.dropdown-toggle{
+			box-shadow:0px 4px 13px rgb(0 80 164 / 15%) !important; 
+			@include phonewide{
+				height:30px; box-shadow:none !important;
+				&:after{
+					top:12px; width:12px;
+				}
+				.filter-option{
+					padding:5px 30px 6px 13px; font-size:12px;
+				}
+			}
+			
+		}
 		.dropdown-menu{
 			margin-top:-5px; border-radius:0 0 3px 3px; padding-top:4px;
 		}
@@ -114,6 +132,9 @@ a.bg9:hover{background:#0b9492;}
 	@include desktop{
 		padding:8px 20px 12px !important;
 		.image-bg{padding:6px 5px;}
+	}
+	@include phonewide{
+		padding:3px 20px 7px !important; flex-wrap:wrap;
 	}
 }
 .title-head{
@@ -175,6 +196,9 @@ a.bg9:hover{background:#0b9492;}
 }
 .table-filter{
 	display:flex; position:relative; z-index:5;
+	@include phonewide{
+		flex-wrap:wrap;
+	}
 	.custom-select{ border-left:1px solid #D3DDEE; width:330px; padding:5px 30px 5px 13px; box-shadow:none; border-radius:0px;}
 	
 	.bootstrap-select{
@@ -184,6 +208,9 @@ a.bg9:hover{background:#0b9492;}
 		}
 		@include tablet{
 			width:170px !important;
+		}
+		@include phonewide{
+			width:145px !important; margin-bottom:7px;
 		}
 		.dropdown-toggle{
 			background:$color-white; border-radius:0px; padding:0px; height:30px;
@@ -245,6 +272,9 @@ a.bg9:hover{background:#0b9492;}
 	@include desktop{
 		margin-bottom:17px;
 	}
+	@include phonewide{
+		border-radius:6px 6px 0 0;
+	}
 	.datatable-head{
 		display:flex; flex-wrap:wrap; padding:12px 10px 12px 20px;
 		@include desktop{
@@ -252,6 +282,9 @@ a.bg9:hover{background:#0b9492;}
 		}
 		@include tablet{
 			padding-left:11px;
+		}
+		@include phonewide{
+			padding-bottom:2px;
 		}
 	}
 	.table-checkbox{
@@ -263,7 +296,7 @@ a.bg9:hover{background:#0b9492;}
 		}
 		input[type="checkbox"]:checked ~ span:before{opacity:1; visibility:visible;}
 	}
-	
+	.dataTables_wrapper.no-footer .dataTables_scrollBody{border-bottom:none;}
 	.dataTables_filter{margin-left:20px; padding-top:8px; margin-bottom:8px; float:none; text-align:left;}
 	&.filter-search-minus{
 		.dataTables_filter{float:none; padding:0; text-align:left; margin-top:-42px; margin-left:20px; margin-bottom:12px;}
@@ -272,6 +305,9 @@ a.bg9:hover{background:#0b9492;}
 		}
 		@include tablet{
 			.dataTables_filter{margin-top:-36px; margin-bottom:8px; margin-left:12px;}
+		}
+		@include phonewide{
+			.dataTables_filter{margin-top:0px;}
 		}
 	}
 	&.no-search{
@@ -283,7 +319,7 @@ a.bg9:hover{background:#0b9492;}
 		&.no-footer{border-bottom:none;}
 		thead{
 			td{
-				background:#E2E6ED; padding:15px 25px; @include fontrem(18px,24px); font-weight:700; border:none; border-bottom:2px solid $border-color2;
+				background:#E2E6ED; white-space:nowrap; padding:15px 25px; @include fontrem(18px,24px); font-weight:700; border:none; border-bottom:2px solid $border-color2;
 				@include desktop{
 					padding:11px 8px; @include fontrem(16px,22px);
 				}
@@ -292,12 +328,12 @@ a.bg9:hover{background:#0b9492;}
 		tbody{
 			tr{
 				td{
-					padding:5px 25px; @include fontrem(14px,20px); font-weight:400;
+					padding:5px 25px; white-space:nowrap; @include fontrem(14px,20px); font-weight:400;
 					@include desktop{
 						padding:5px 8px;
 					}
 					.item-icon-title-cell{
-						display:flex; align-items:center;
+						display:flex; align-items:center; white-space:inherit;
 						.item-title{
 							width:calc(100% - 32px); padding-right:10px;
 							&.active{color:#45AB21;}
@@ -361,6 +397,9 @@ a.bg9:hover{background:#0b9492;}
 	@include tablet{
 		.col-md-4{width:50%;}
 	}
+	@include phonewide{
+		.col-md-4{width:100%;}
+	}
 }
 .company-statistic-page{
 	.col-md-8{
@@ -373,6 +412,15 @@ a.bg9:hover{background:#0b9492;}
 		> div{width:100%;}
 	}
 	.chart-call{width:50%;}
+	@include phonewide{
+		.col-md-8{
+			.col-md-3{width:50%;}
+		}
+		.col-md-6{width:100%;}
+		.col-md-4{width:100%;}
+		.activealerts-card{width:100%;}
+		.chart-call{width:100%;}
+	}
 }
 .project-overview-card{
 	margin-bottom:30px; width:100%;
@@ -497,6 +545,9 @@ a.bg9:hover{background:#0b9492;}
 	@include desktop{
 		margin-bottom:20px;
 	}
+	@include tablet{
+		i{font-size:50px;}
+	}
 	&:hover{
 		box-shadow: 0px 4px 13px rgba(0, 80, 164, 0.30) !important;
 	}
@@ -518,6 +569,9 @@ a.bg9:hover{background:#0b9492;}
 		@include desktop {
 			@include fontrem(50px, 40px);
 		}
+		@include phonewide {
+			@include fontrem(46px, 40px);
+		}
 	}
 	.link-icon{position:absolute; font-size:42px; right:25px; bottom:40px; color:$color-white;}
 	@include desktop{
@@ -526,6 +580,9 @@ a.bg9:hover{background:#0b9492;}
 	}
 	@include tablet{
 		.title{margin:0 0 12px; min-height:35px;}
+	}
+	@include phonewide{
+		.title{min-height:18px;}
 	}
 	&.bg-white{
 		.title{color:$color-black;}
@@ -600,6 +657,10 @@ a.bg9:hover{background:#0b9492;}
 			padding:0 20px;
 			li{padding:7px 0;}
 		}
+		@include phonewide{
+			padding-bottom:10px;
+			li{padding:5px 0;}
+		}
 	}
 }
 .dashboard-chart{
@@ -617,6 +678,10 @@ a.bg9:hover{background:#0b9492;}
 		.infopage-left{flex:0 0 76%; max-width:76%;}
 		.infopage-right{flex:0 0 24%; max-width:24%;}
 	}
+	@include phonewide{
+		.infopage-left{flex:0 0 100%; max-width:100%;}
+		.infopage-right{flex:0 0 100%; max-width:100%;}
+	}
 	.companyinfo-box{
 		padding:25px; width:100%;
 		.col-lg-3{flex:0 0 31%; max-width:31%;}
@@ -626,10 +691,19 @@ a.bg9:hover{background:#0b9492;}
 		@include tablet{
 			padding:15px;
 		}
+		@include phonewide{
+			.col-lg-3{
+				flex:0 0 100%; max-width:100%;
+				img{border-radius:8px; height:200px; object-fit:cover; width:100%;}
+			}
+		}
 		.col-lg-9{
 			flex:0 0 69%; max-width:69%; padding-top:15px; position:relative;
 			@include desktop-big{
 				padding-top:0px;
+			}
+			@include phonewide{
+				flex:0 0 100%; max-width:100%; margin-top:20px;
 			}
 			.edit-info{
 				position:absolute; right:12px; top:15px; color:$color-Blue; font-size:24px; border-radius:8px; width:50px; height:46px; padding:0px; text-align:center; line-height:46px;
@@ -684,6 +758,10 @@ a.bg9:hover{background:#0b9492;}
 	align-items:flex-start;
 	.withbtn-left{flex-grow:1; padding-right:20px;}
 	.btn{white-space:nowrap;}
+	@include phonewide{
+		display:block !important;
+		.withbtn-left{padding-right:0px;}
+	}
 }
 .step-card{
 	padding:48px 40px 0 40px; margin-bottom:30px;
@@ -695,6 +773,9 @@ a.bg9:hover{background:#0b9492;}
 	display:flex; flex-wrap:wrap;
 	.wizard-left{
 		width:13.7%; border-right:2px solid #E2E6ED;
+		@include tablet{
+			width:16.7%;
+		}
 		.nav-tabs{
 			border:none; 
 			li{
@@ -724,6 +805,9 @@ a.bg9:hover{background:#0b9492;}
 		}
 		@include leptop{
 			padding:0 0 0 35px;
+		}
+		@include tablet{
+			width:83.3%;
 		}
 		.tab-pane{
 			.step-head{
@@ -757,6 +841,9 @@ a.bg9:hover{background:#0b9492;}
 							@include tabletwide{
 								flex:0 0 33.33%; max-width:33.33%;
 							}
+							@include tablet{
+								flex:0 0 50%; max-width:50%;
+							}
 						}
 						.col-lg-4{
 							padding:0 10px; flex:0 0 40%; max-width:40%;
@@ -765,6 +852,9 @@ a.bg9:hover{background:#0b9492;}
 							}
 							@include tabletwide{
 								flex:0 0 33.33%; max-width:33.33%;
+							}
+							@include tablet{
+								flex:0 0 50%; max-width:50%;
 							}
 						}
 						.col-lg-3{
@@ -833,6 +923,9 @@ a.bg9:hover{background:#0b9492;}
 		@include desktop{
 			padding-bottom:15px;
 		}
+		@include tablet{
+			.col-lg-2{flex:0 0 25%; max-width:25%;}
+		}
 	}
 	
 }
@@ -858,6 +951,9 @@ a.bg9:hover{background:#0b9492;}
 		}
 		.ruledesigner-row{
 			display:flex; align-items:flex-start;
+			@include tablet{
+				flex-wrap:wrap;
+			}
 			.ruledesigner-card{
 				background:$color-white; position:relative; margin:0 30px; border:1px solid $color-Blue; border-radius:12px; width:373px; padding:17px 20px 0; box-shadow: 0px 4px 13px rgba(0, 80, 164, 0.15);
 				&.small{
@@ -889,6 +985,13 @@ a.bg9:hover{background:#0b9492;}
 					&:before{top:50px;}
 					&:after{top:50px;}
 					.line{top:53px; width:30px; right:-30px;}
+				}
+				@include tablet{
+					margin-bottom:30px;
+					&:before{display:none;}
+					&:after{display:none;}
+					.line{display:none;}
+					&:nth-child(3){margin-left:0px;}
 				}
 			}
 		}
@@ -936,4 +1039,9 @@ a.bg9:hover{background:#0b9492;}
 			padding-left:8px; padding-right:8px;
 		}
 	}
+}
+@include phonewide{
+	html{font-size:11px; line-height:18px;}
+	h2, .h2{@include fontrem(24px, 28px);}
+	.mb-30{margin-bottom:18px !important;}
 }

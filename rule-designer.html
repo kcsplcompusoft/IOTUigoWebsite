@@ -97,8 +97,8 @@
                 <img src="assets/images/torrent-logo.png" alt="" title="">
             </div>
             <h2 class="pl-4" >Torrent Power</h2>
-            <div class="ml-auto">
-                <select class="selectpicker boot-select" data-live-search="false">
+            <div class="ml-auto selectpicker boot-select">
+                <select class="select form-control" data-live-search="false">
                     <option>Sabarmati, Ahmedabad</option>
                      <option>1</option>
                      <option>2</option>
@@ -113,9 +113,9 @@
                    <div class="ruledesigner-row">
                         <div class="ruledesigner-card small">
                            <h6>Gateway</h6>
-                           <div class="form-group">
+                           <div class="form-group selectpicker boot-select">
                                <label class="form-label" >Gateway ID</label>
-                               <select class="selectpicker boot-select" data-live-search="false">
+                               <select class="select form-control" data-live-search="false">
                                     <option>GpcbHillGatewayConfiguration</option>
                                     <option>GpcbHillGatewayConfiguration</option>
                                     <option>GpcbHillGatewayConfiguration</option>
@@ -125,9 +125,9 @@
                         </div>
                         <div class="ruledesigner-card small">
                             <h6>Device</h6>
-                            <div class="form-group">
+                            <div class="form-group selectpicker boot-select">
                                 <label class="form-label" >Gateway ID</label>
-                                <select class="selectpicker boot-select" data-live-search="false">
+                                <select class="select form-control" data-live-search="false">
                                     <option>LeafDevice1</option>
                                     <option>LeafDevice1</option>
                                     <option>LeafDevice1</option>
@@ -137,33 +137,33 @@
                         </div>
                         <div class="ruledesigner-card small">
                             <h6>Logical Comparison</h6>
-                            <div class="form-group">
+                            <div class="form-group selectpicker boot-select">
                                 <label class="form-label" >Send Email</label>
-                                <select class="selectpicker boot-select" data-live-search="false">
+                                <select class="select form-control" data-live-search="false">
                                      <option>ETP-BOD</option>
                                      <option>ETP-BOD</option>
                                      <option>ETP-BOD</option>
                                  </select>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group selectpicker boot-select">
                                 <label class="form-label" >Condition</label>
-                                <select class="selectpicker boot-select" data-live-search="false">
+                                <select class="select form-control" data-live-search="false">
                                      <option>Greater Than</option>
                                      <option>Greater Than</option>
                                      <option>Greater Than</option>
                                  </select>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group selectpicker boot-select">
                                 <label class="form-label" >Set Value</label>
-                                <select class="selectpicker boot-select" data-live-search="false">
+                                <select class="select form-control" data-live-search="false">
                                      <option>120</option>
                                      <option>120</option>
                                      <option>120</option>
                                  </select>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group selectpicker boot-select">
                                 <label class="form-label" >Alert Type</label>
-                                <select class="selectpicker boot-select" data-live-search="false">
+                                <select class="select form-control" data-live-search="false">
                                      <option>Major</option>
                                      <option>Major</option>
                                      <option>Major</option>
@@ -177,9 +177,9 @@
                                 <label class="form-label" >Set Email</label>
                                 <input type="text" name="" data-toggle="modal" data-target="#set-email" value="sanket.shah@kcsitglobal.com" class="form-control set-email" >
                             </div>
-                            <div class="form-group">
+                            <div class="form-group selectpicker boot-select">
                                 <label class="form-label" >Send Email</label>
-                                <select class="selectpicker boot-select" data-live-search="false">
+                                <select class="select form-control" data-live-search="false">
                                     <option>smtp_credentials</option>
                                 </select>
                             </div>
@@ -281,12 +281,13 @@
         language: {
             searchPlaceholder: "Filter by keyword"
         },
+        "scrollX": true,
         "ordering": false,
         "info":     false
         });
         
         $('.alert-select').selectpicker();
-        $('.boot-select').selectpicker();
+        $('.boot-select .select').selectpicker();
     });
 </script>
 </body>

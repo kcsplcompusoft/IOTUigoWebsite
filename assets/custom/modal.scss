@@ -11,6 +11,7 @@
             @include tabletwide{
                 width:100%;
             }
+            
             .modal-content {
                 border: none; box-shadow:none; border-radius: 0px; padding:0px;
                 .modal-header{
@@ -36,6 +37,9 @@
             @include desktop{
                 max-width:750px;
             }
+            @include tablet{
+                max-width:680px;
+            }
             .modal-content {
                 border: none;
                 .modal-header{
@@ -50,6 +54,10 @@
                         padding:30px 20px 25px;
                         .la-check{width:100px; height:100px; line-height:100px; font-size:60px;}
                         h4{@include fontrem(26px,30px); padding:20px 0 25px;}
+                    }
+                    @include tablet{
+                        .la-check{width:70px; height:70px; line-height:70px; font-size:46px;}
+                        h4{@include fontrem(22px,26px);}
                     }
                     .completed-row{
                         border-top:1px solid $border-color; padding:25px 0; border-bottom:1px solid $border-color; display:flex; justify-content:space-around; text-align:center;
@@ -71,6 +79,12 @@
                             .btn{
                                 @include fontrem(22px, 26px); padding:12px 20px;
                                 i{font-size:22px; margin-top:-3px;}
+                            }
+                        }
+                        @include tablet{
+                            .btn{
+                                @include fontrem(16px, 20px); padding:10px 20px;
+                                i{font-size:18px; margin-top:-3px;}
                             }
                         }
                     }

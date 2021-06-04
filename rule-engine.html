@@ -97,8 +97,8 @@
                 <img src="assets/images/torrent-logo.png" alt="" title="">
             </div>
             <h2 class="pl-4" >Torrent Power</h2>
-            <div class="ml-auto">
-                <select class="selectpicker boot-select" data-live-search="false">
+            <div class="ml-auto selectpicker boot-select">
+                <select class="select form-control" data-live-search="false">
                     <option>Sabarmati, Ahmedabad</option>
                      <option>1</option>
                      <option>2</option>
@@ -401,12 +401,13 @@
         language: {
             searchPlaceholder: "Filter by keyword"
         },
+        "scrollX": true,
         "ordering": false,
         "info":     false
         });
         
         $('.alert-select').selectpicker();
-        $('.boot-select').selectpicker();
+        $('.boot-select .select').selectpicker();
     });
 </script>
 </body>

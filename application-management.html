@@ -110,9 +110,9 @@
                                 </div>
                             </div>
                             <div class="col-sm-6 col-md-3">
-                                <div class="form-group">
+                                <div class="form-group selectpicker boot-select">
                                     <label class="form-label" >Application Type</label>
-                                    <select class="selectpicker boot-select" data-live-search="false">
+                                    <select class="select form-control" data-live-search="false">
                                         <option>Select</option>
                                         <option>1</option>
                                         <option>2</option>
@@ -455,6 +455,7 @@
         language: {
             searchPlaceholder: "Filter by keyword"
         },
+        "scrollX": true,
         "ordering": false,
         "info":     false
         });
@@ -468,7 +469,7 @@
         $('.recentadd-select').selectpicker({
             noneSelectedText: 'Recently added'
         });
-        $('.boot-select').selectpicker();
+        $('.boot-select .select').selectpicker();
     });
 </script>
 </body>

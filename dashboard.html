@@ -95,8 +95,8 @@
                 <img src="assets/images/torrent-logo.png" alt="" title="">
             </div>
             <h2 class="pl-4" >Torrent Power</h2>
-            <div class="ml-auto">
-                <select class="selectpicker boot-select" data-live-search="false">
+            <div class="ml-auto selectpicker boot-select">
+                <select class="select form-control" data-live-search="false">
                     <option>Sabarmati, Ahmedabad</option>
                      <option>1</option>
                      <option>2</option>
@@ -257,7 +257,7 @@
 <script src="assets/js/custom.js"></script>
 <script>
     $(document).ready(function(){
-        $('.selectpicker').selectpicker();
+        $('.boot-select .select').selectpicker();
 
         var devicedeploymentoptions = {
           series: [70, 30],

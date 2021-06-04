@@ -97,8 +97,8 @@
                 <img src="assets/images/torrent-logo.png" alt="" title="">
             </div>
             <h2 class="pl-4" >Torrent Power</h2>
-            <div class="ml-auto">
-                <select class="selectpicker boot-select" data-live-search="false">
+            <div class="ml-auto selectpicker boot-select">
+                <select class="select form-control" data-live-search="false">
                     <option>Sabarmati, Ahmedabad</option>
                      <option>1</option>
                      <option>2</option>
@@ -109,13 +109,13 @@
         <div class="work-space device-page">
             <h5 class="pb-3" >Device Deployment</h5>
             <div class="bg-white rounded-sm form-card pb-2">
-                <div class="d-flex block-withbtn">
-                    <div class="withbtn-left">
+                <div class="d-flex block-withbtn align-items-end">
+                    <div class="withbtn-left ">
                         <div class="row row-md">
-                            <div class="col-md-4">
-                                <div class="form-group">
+                            <div class="col-sm-6 col-md-4">
+                                <div class="form-group selectpicker boot-select">
                                     <label class="form-label" >Device ID</label>
-                                    <select class="selectpicker boot-select" data-live-search="false">
+                                    <select class="select form-control" data-live-search="false">
                                         <option>Select  Device ID</option>
                                         <option>1</option>
                                         <option>2</option>
@@ -123,13 +123,13 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-sm-6 col-md-4">
                                 <div class="form-group">
                                     <label class="form-label" >Industry Device Name</label>
                                     <input type="text" name="" value="" class="form-control">
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-sm-6 col-md-4">
                                 <div class="form-group">
                                     <label class="form-label" >Device Key (Auto Generated)</label>
                                     <input type="text" name="" value="" class="form-control">
@@ -137,7 +137,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="#" class="btn btn-primary btn-icon rounded-md ml-auto toplabel-space"><i class="las la-plus"></i> Add Device</a>
+                    <div class="form-group"><a href="#" class="btn btn-primary btn-icon rounded-md ml-auto toplabel-space"><i class="las la-plus"></i> Add Device</a></div>
                 </div>
             </div>
             <div class="common-datatable filter-search-minus">
@@ -475,39 +475,45 @@
         language: {
             searchPlaceholder: "Filter by keyword"
         },
+        "scrollX": true,
         "ordering": false,
         "info":     false
         });
         $('#devices-table2').DataTable( {
         "paging":   false,
         "ordering": false,
+        "scrollX": true,
         "info":     false
         });
         $('#devices-table3').DataTable( {
         "paging":   false,
         "ordering": false,
+        "scrollX": true,
         "info":     false
         });
         $('#devices-table4').DataTable( {
         "paging":   false,
         "ordering": false,
+        "scrollX": true,
         "info":     false
         });
         $('#devices-table5').DataTable( {
         "paging":   false,
         "ordering": false,
+        "scrollX": true,
         "info":     false
         });
         $('#sensors-table').DataTable( {
         "paging":   false,
         "ordering": false,
+        "scrollX": true,
         "info":     false
         });
         
         $('.recentlyupl-select').selectpicker({
             noneSelectedText: 'Gateway Status'
         });
-        $('.boot-select').selectpicker();
+        $('.boot-select .select').selectpicker();
     });
 </script>
 </body>
