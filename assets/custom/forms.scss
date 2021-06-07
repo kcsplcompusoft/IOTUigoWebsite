@@ -1,0 +1,155 @@
+select.custom-select{
+    background:#fff url("images/arrow-down.svg") no-repeat right 15px center/14px 10px; border-radius:0px; font-size:14px; line-height:20px; border:none; color:$color-black;  box-shadow:none; width:100%; height:auto; border-radius:8px;  padding:10px 30px 10px 16px;
+    &:focus{outline:none;}
+}
+
+.form-group{
+	margin-bottom:22px;
+    @include desktop{
+        margin-bottom:15px;
+    }
+    @include tablet{
+        margin-bottom:12px;
+    }
+	.form-label{
+        padding:0 0 8px; margin:0px; font-size:14px; line-height:20px; @include Roboto-normal(); display:block; color:$color-black;
+        &.disabled{color:$color-grey;}
+        @include desktop{
+            padding:0 0 7px; font-size:13px; line-height:16px;
+        }
+    }
+    .form-control{ 
+        font-size:16px; line-height:22px; margin:0px;  box-shadow:none; background-color:$color-white; border-radius:4px; padding:9px 22px; height:auto;  color:$color-black; border:1px solid $border-color; width:100%;
+        &::-webkit-input-placeholder{ color:$color-darkGrey; opacity:1;}
+        &::-moz-placeholder{ color:$color-darkGrey; opacity:1;}
+        &:-moz-placeholder{ color:$color-darkGrey; opacity:1;}
+        @include desktop{
+            font-size:13px; padding:2px 10px
+        }
+    }
+    input.form-control:read-only{
+        background-color:$color-lightBlue; cursor: not-allowed; pointer-events:none;
+    }
+    input[type="file"].form-control{padding:0px; font-size:11px; line-height:20px;}
+    input.form-control:focus{ border-color:$color-Blue;}
+    select.custom-select{
+        border:1px solid $border-color; border-radius:4px; background-size:11px auto; font-size:16px; line-height:22px; box-shadow:none !important; padding:9px 30px 9px 16px;
+        &:focus{border-color:$color-Blue;}
+        @include desktop{
+            font-size:13px;
+            padding:2px 30px 2px 10px;
+        }
+    }
+    &.boot-select{
+        .bootstrap-select{
+            width:100% !important;
+            .dropdown-toggle{
+                height:42px; border-radius:4px; border:1px solid $border-color !important;
+                @include desktop{
+                    height:28px;
+                    &:after{top:10px; right:10px; width:12px;}
+                }
+                .filter-option{
+                    padding:10px 30px 10px 13px; font-size:16px; line-height:22px; color:$color-black;
+                    .filter-option-inner{padding-right:0px;}
+                    @include desktop{
+                        font-size:13px; line-height:22px; padding:2px 30px 2px 10px;
+                    }
+                }
+            }
+        }
+    }
+	textarea.form-control{
+        
+    }
+    
+}
+.boot-select{
+    .bootstrap-select{
+        padding:0px; margin:0; height:auto; background:none; border:none; box-shadow:none;
+        .dropdown-toggle{
+            background:$color-white !important; outline:none !important; border-radius: 8px; padding:0px; height:40px;
+            &:focus{outline:none !important;}
+            .filter-option{
+                padding:11px 30px 9px 13px; font-size:14px; line-height:20px; border:none; color:$color-black;
+            }
+            &:after{
+                background:url("images/arrow-down.svg") no-repeat left top; display:block; position:absolute; top:16px; right:13px; margin:0px; background-size:100% auto; width:14px; height:10px; border:none;
+            }
+            @include phonewide{
+                border-radius: 5px;
+            }
+        }
+        .dropdown-menu{
+            box-shadow:0px 11px 10px rgb(0 80 164 / 15%); border:none; border-radius:3px; margin-top:0px;
+            ul{
+                li{
+                    a{padding:5px 15px; line-height:20px; font-size:14px;}
+                    &.active{
+                        a{background:$color-btnLight; color:$color-black;}
+                    }
+                    @include desktop{
+                        a{font-size:13px; padding:4px 13px;}
+                    }
+                    @include phonewide{
+                        a{font-size:12px;}
+                    }
+                }
+            }
+        }
+    }
+}
+.custom-checkbox{
+    display: inline-block; position: relative; padding:12px 0 6px 44px; margin-bottom:0px; text-align: left; cursor: pointer; color:$color_darkGrey; font-size:14px; line-height:16px; font-weight:400;
+    > span {
+        border-radius:2px; border:2px solid $color-darkGrey;  position: absolute; top:0px; left:0; width:34px; height:34px; background:transparent;
+        &:after {content: '\e83b'; font-size:34px; line-height:30px; font-family: "fcbh_icons"; position: absolute; color:brand_color(); top:0; left:-2px; opacity:0; visibility:hidden; transition:all 0.3s ease; }
+    }
+    > input{
+		position: absolute; z-index: -1; opacity: 0;
+		&:checked ~ span:after {opacity:1; visibility:visible;}
+        &.error ~ span{ border-color: $color-error;}
+        &.error ~ span:after {  border-color:$color-error;}
+        &:disabled ~ span{ border-color:$color-lightGrey;}
+    }
+    &.disabled{
+        pointer-events:none; color:$color-mediumGrey;
+    }   
+}
+.step-btn{
+    display:flex; justify-content:flex-end; align-items:center; padding:10px 0 20px;
+    a{
+        @include fontrem(18px,22px); color:#636363; font-weight:500; padding:10px 28px;
+        &:last-child{padding-right:0px;}
+        &.last-btn{border-left:1px solid $border-color;}
+        &:hover{color:#00B9B6;}
+    }
+    @include desktop{
+        padding:0px 0 20px;
+        a{padding:6px 20px;}
+    }
+}
+.switch-toggle{
+    margin:0; cursor:pointer; display:flex; align-items:center;
+    input[type="checkbox"]{position:absolute; visibility:hidden; opacity:0;}
+    i{
+        font-style:normal;
+        &.active{margin-right:7px; color:#45AB21;}
+        &.inactive{margin-left:7px; color:#c81f1f;}
+    }
+    span{
+        width:53px; height:26px; border:1px solid #c81f1f; background:#fba3a3; border-radius:26px; display:block; position: relative;
+        &:before{content:""; width:20px; height:20px; border-radius:100%; background:#c81f1f; position:absolute; left:3px; transition:left 0.3s ease; top:2px;}
+    }
+    input[type="checkbox"]:checked ~ span{
+        background:#E6FFDD; border-color:#45AB21;
+        &:before{left:28px; background:#45AB21;}
+    }
+    @include desktop{
+        span{
+            width:46px; height:22px;
+            &:before{width:17px; height:17px; top:1px; left:2px; }
+        }
+        input[type="checkbox"]:checked ~ span:before{left:25px;}
+    }
+}

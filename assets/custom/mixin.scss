@@ -1,0 +1,10 @@
+@mixin fontrem($sizeValue, $lineheight: 0, $fontweight: 0) {
+  font-size: $sizeValue;
+  font-size: ($sizeValue / $rem-basefont) * 1rem;
+  @if $lineheight != 0 {
+      line-height: ($lineheight / $sizeValue) * 1;
+  }
+  @if $fontweight != 0 {
+      font-weight: $fontweight; 
+  }
+}

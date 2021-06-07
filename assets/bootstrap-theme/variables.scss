@@ -1,0 +1,97 @@
+$primary_color: #00B9B6;
+$secondary_color:#206bb2;
+//color:secondary_color(steel);
+// $secondary_color: (
+//   secondary: #AEEDF8,
+//   secondary2: #FFFF98,
+//   gradient: linear-gradient(90deg, #FFFF98 0%, #AEEDF8 90.1%)
+// );
+// @function secondary_color($key: secondary) {
+//   @return map-get($secondary_color, $key);
+// }
+$color-black: #000000;
+$color-darkGrey: #4D4D4D;
+$color-mediumGrey: #787878;
+$color-grey: #5b687e;
+$color-Blue: #0050A4;
+$color-lightBlue: #f2f5fa;
+$color-btnLight:#E2E9F5;
+$color-lightGrey: #CCCCCC;
+$color-offWhite: #F7F7F7;
+$color-white: #FFFFFF;
+$border-color:#D7E0EF;
+$border-color2:#91A1BC;
+
+$color-error: #D94B7E;
+$color-success: #31AE6B;
+
+
+// Quickly modify global styling by enabling or disabling optional features.
+$enable-caret:              true;
+$enable-rounded:            false;
+$enable-shadows:            true;
+$enable-gradients:          false;
+$enable-transitions:        true;
+$enable-hover-media-query:  false; // Deprecated, no longer affects any compiled CSS
+$enable-grid-classes:       true;
+$enable-print-styles:       true;
+
+$enable-responsive-font-sizes:	true;
+
+
+
+$easeInQuad: cubic-bezier(0.11, 0, 0.5, 0);
+$easeInSine: cubic-bezier(0.12, 0, 0.39, 0);
+$easeInOutSine: cubic-bezier(0.37, 0, 0.63, 1);
+$easeInOutQuad: cubic-bezier(0.45, 0, 0.55, 1);
+$easeOutCirc: cubic-bezier(0, 0.55, 0.45, 1);
+
+$easeTimeGen: 0.6s;
+
+
+$grid-breakpoints: (
+	xs: 0, // phone-only
+	sm: 600px, // tablet-portrait-up
+	md: 900px, // tablet-landscape-up
+	lg: 1200px, // desktop-up
+	xl: 1800px // big-desktop-up
+);
+
+$container-max-widths: (
+  sm: 768px,
+  lg: 1110px
+);
+
+$row-columns-custom: (
+	xs: 15px,
+	sm: 15px,
+	lg: 15px
+);
+
+// Links
+//
+// Style anchor elements.
+
+$link-decoration:                         none;
+$link-hover-color:                        none;
+$link-hover-decoration:                   none;
+
+$rem-basefont:16px;
+$font-size-base: 1rem; // Assumes the browser default, typically `16px`
+
+@mixin Roboto-normal() {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+@mixin Roboto-light() {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+@mixin Roboto-Medium() {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+@mixin Roboto-Bold() {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}

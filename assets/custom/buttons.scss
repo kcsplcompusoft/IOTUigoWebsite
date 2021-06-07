@@ -1,0 +1,64 @@
+.btn{
+	font-size: 12px;
+	background:none;
+	box-shadow:none !important;
+	color: $color-white;
+	display:inline-block;
+  	border-radius:8px;
+	line-height:16px;
+	@include Roboto-normal();
+	border: none !important;
+	padding:12px 20px 12px;
+	
+	&.btn-icon{
+		display:flex; align-items:center; padding:10px 15px; font-weight:500;
+		i{font-size:22px; margin-right:7px;}
+		@include desktop{
+			padding:5px 12px; border-radius:5px;
+			i{font-size:18px; margin-right:5px;}
+		}
+		&.display-inline{
+			display:inline-block; vertical-align:middle;
+			i{vertical-align:middle;}
+		}
+	}
+	&.only-icon{
+		display:flex; align-items:center; padding:10px 13px; font-weight:500;
+		i{font-size:24px; margin-right:0px;}
+		@include desktop{
+			padding:5px 9px;
+			i{font-size:18px;}
+		}
+	}
+	&.btn-primary{
+		background-color:$primary_color;
+		color:$color-white;
+		&:hover{
+			background-color:$secondary_color;
+			color:$color-white;
+		}
+	}
+	&.btn-secondary{
+		border:2px solid brand_color() !important;
+		color:brand_color();
+		padding:17px 18px 13px;
+	}
+	&.btn-light{
+		background-color:$color-btnLight;
+		color:$color-Blue;
+	}
+	&:hover{
+		color:brand_color();
+		background-color:brand_color(secondary);
+		border-color:brand_color(secondary) !important;
+	}
+	&:focus, &.focus{
+		color:brand_color();
+		background-color:brand_color(secondary);
+		border-color:brand_color(secondary) !important;
+		opacity:0.8; 
+	}
+	&.btn-ico{
+		i{font-size:34px; line-height:16px; display:inline-block; vertical-align:top; margin:-11px 8px -11px -9px;}
+	}
+}

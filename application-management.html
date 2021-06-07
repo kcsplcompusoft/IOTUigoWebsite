@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Statistics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="assets/line-awesome.css" rel="stylesheet" type="text/css">
+    <link href="assets/datatables.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/bootstrap-select.css" rel="stylesheet" type="text/css">
+    <link href="assets/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="header">
+    <button type="button" class="menu-toggle"><i class="las la-bars"></i></button>
+    <div class="logo">
+        <img src="assets/images/logo.svg" alt="" title="">
+    </div>
+    <div class="breadcrum">
+        <span><a href="#">Torrent Power</a></span>/
+        <span>Sites</span>
+    </div>
+    <div class="header-right ml-auto">
+        <div class="search-btn"><input type="text" class="search-input" placeholder="Search..."> <button type="button" class="btn btn-light mr-0 btn-sm rounded-sm" ><i class="iot-search" ></i></button></div>
+        <div class="bell-btn">
+            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-primary btn-sm rounded-sm" ><i class="iot-bell" ></i> <span class="dot" ></span></button>
+            <div class="dropdown-menu">
+                <div class="notification-row">
+                    <div class="notification-colum">
+                        <h5>Luanch Admin</h5>
+                        <p>Just see the my new admin!</p>
+                        <span>9:30 AM</span>
+                    </div>
+                    <div class="notification-colum">
+                        <h5>Luanch Admin</h5>
+                        <p>Just see the my new admin!</p>
+                        <span>9:30 AM</span>
+                    </div>
+                    <div class="notification-colum">
+                        <h5>Luanch Admin</h5>
+                        <p>Just see the my new admin!</p>
+                        <span>9:30 AM</span>
+                    </div>
+                </div>
+                <a href="#" class="viewall-notification">Check all notifications <i class="las la-angle-right" ></i></a>
+            </div>
+        </div>
+        <div class="mr-btn">
+            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-light btn-sm rounded-sm" ><span class="text" >MR</span></button>
+            <div class="dropdown-menu">
+                <p class="companyname" >Torrent Power Pvt Ltd</p>
+                <div class="userprofile-row">
+                    <div class="userprofile-pic"><span class="text" >MR</span></div>
+                    <div class="userprofile-text">
+                        <h4>Michal Rana</h4>
+                        <p>micrana@gmail.com</p>
+                        <ul class="userprofile-link">
+                            <li><a href="#">My Profile</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#" class="userprofile-logout">Logout</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-wrapper">
+    <div class="navigation-overlay"></div>
+    <div class="aside-navigation">
+        <div class="corner-shap"></div>
+        <div class="navbar">
+            <ul>
+                <li><a href="dashboard.html" ><span class="menu-icon" ><i class="iot-home" ></i></span><span class="menu-text" >Dashboard</span></a> </li>
+                <li><a href="devices.html" ><span class="menu-icon" ><i class="iot-wifi" ></i></span><span class="menu-text" >Devices</span></a> </li>
+                <li><a href="device-deployment.html" ><span class="menu-icon" ><i class="iot-startup" ></i></span><span class="menu-text" >Device Deployment</span></a> </li>
+                <li><a href="#"><span class="menu-icon" ><i class="iot-eye" ></i></span><span class="menu-text" >Monitors</span></a> </li>
+                <li><a href="#"><span class="menu-icon" ><i class="iot-notification" ></i></span><span class="menu-text" >Rule Engine</span></a> </li>
+                <li><a href="#"><span class="menu-icon" ><i class="iot-masters" ></i></span><span class="menu-text" >Masters</span></a> </li>
+                <li><a href="#"><span class="menu-icon" ><i class="iot-configuration" ></i></span><span class="menu-text" >Configurations</span></a> </li>
+                <li><a href="#"><span class="menu-icon" ><i class="iot-reports" ></i></span><span class="menu-text" >Reports</span></a> </li>
+            </ul>
+        </div>
+        <div class="navigation-bottom">
+            <div class="powered-by text-center">
+                <p>Powered By</p>
+                <img src="assets/images/kcs-logo.svg" alt="" title="">
+            </div>
+            <a href="Javascript:void(0);" class="navigation-toggle"><span class="toggle-icon" ><i class="las la-angle-double-left"></i></span></a>
+        </div>
+    </div>
+    <div class="content-block">
+        <div class="page-head d-flex border-bottom align-items-center py-3">
+            <div class="image-bg rounded-sm bg-white">
+                <img src="assets/images/torrent-logo.png" alt="" title="">
+            </div>
+            <h2 class="pl-4" >Torrent Power</h2>
+        </div>
+        <div class="work-space device-page">
+            <h5 class="pb-3" >Application Management</h5>
+            <div class="bg-white rounded-sm shadow-sm form-card pb-2">
+                <div class="d-flex block-withbtn">
+                    <div class="withbtn-left pr-0">
+                        <div class="row row-md">
+                            <div class="col-sm-6 col-md-3">
+                                <div class="form-group">
+                                    <label class="form-label" >File Name</label>
+                                    <input type="text" name="" value="" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="form-group selectpicker boot-select">
+                                    <label class="form-label" >Application Type</label>
+                                    <select class="select form-control" data-live-search="false">
+                                        <option>Select</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="col-sm-6 col-md-3">
+                                <div class="form-group">
+                                    <label class="form-label" >Upload File</label>
+                                    <input type="file" name="" value="" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="form-group">
+                                    <label class="form-label" >File Type</label>
+                                    <input type="text" name="" value="" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-9">
+                                <div class="form-group">
+                                    <label class="form-label" >Description</label>
+                                    <textarea rows="2" class="form-control"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="form-group">
+                                    <label class="form-label" >Status</label>
+                                    <label class="switch-toggle">
+                                        <input type="checkbox" name="" value=""> <i class="active" >Active</i> <span></span> <i class="inactive" >In Active</i>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 form-group text-right">
+                                <a href="#" class="btn btn-primary btn-icon rounded-md mt-0 display-inline toplabel-space"><i class="las la-plus"></i> Add Application</a>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="common-datatable filter-search-minus">
+                <div class="datatable-head">
+                    <div class="table-filter ml-auto">
+                        <select class="selectpicker apptype-select" multiple data-live-search="true">
+                            <option>Edge</option>
+                            <option>Edge</option>
+                            <option>Edge</option>
+                        </select>
+                        <select class="selectpicker filetype-select" multiple data-live-search="true">
+                            <option>Executable</option>
+                            <option>Executable</option>
+                            <option>Executable</option>
+                        </select>
+                        <select class="selectpicker recentadd-select" multiple data-live-search="false">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </div>
+                </div>
+                <table id="appmanagement-table" class="common-table" style="width:100%">
+                    <thead>
+                        <tr>
+                            <td>ID</td>
+                            <td>File Name</td>
+                            <td>App Type</td>
+                            <td>File Version</td>
+                            <td>File Type</td>
+                            <td>Created On</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>UID0001</td>
+                            <td><div class="item-icon-title-cell">
+                                <div class="item-title">IIOTEdgeV0.4_Stable_v2	</div>
+                                <div class="item-menu">
+                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                        <i class="las la-ellipsis-h"></i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                        <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                        <li><a href="#"><i class="iot-download" ></i>Download</a></li>
+                                        <li><a href="#"><i class="iot-configure" ></i>Device Key</a></li>
+                                        <li><a href="#"><i class="iot-configure" ></i>Email Log</a></li>
+                                        
+                                    </ul>
+                                </div>
+                            </div> </td>
+                            <td>Edge</td>
+                            <td>0.0.5</td>
+                            <td>Executable</td>
+                            <td>April 13, 2021, 9:04 a.m.</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>UID0001</td>
+                            <td><div class="item-icon-title-cell">
+                                <div class="item-title">IIOTEdgeV0.4_Stable_v2	</div>
+                                <div class="item-menu">
+                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                        <i class="las la-ellipsis-h"></i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                        <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                        <li><a href="#"><i class="iot-download" ></i>Download</a></li>
+                                        <li><a href="#"><i class="iot-configure" ></i>Device Key</a></li>
+                                        <li><a href="#"><i class="iot-configure" ></i>Email Log</a></li>
+                                        
+                                    </ul>
+                                </div>
+                            </div> </td>
+                            <td>Edge</td>
+                            <td>0.0.5</td>
+                            <td>Executable</td>
+                            <td>April 13, 2021, 9:04 a.m.</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>UID0001</td>
+                            <td><div class="item-icon-title-cell">
+                                <div class="item-title">IIOTEdgeV0.4_Stable_v2	</div>
+                                <div class="item-menu">
+                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                        <i class="las la-ellipsis-h"></i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                        <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                        <li><a href="#"><i class="iot-download" ></i>Download</a></li>
+                                        <li><a href="#"><i class="iot-configure" ></i>Device Key</a></li>
+                                        <li><a href="#"><i class="iot-configure" ></i>Email Log</a></li>
+                                        
+                                    </ul>
+                                </div>
+                            </div> </td>
+                            <td>Edge</td>
+                            <td>0.0.5</td>
+                            <td>Executable</td>
+                            <td>April 13, 2021, 9:04 a.m.</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>UID0001</td>
+                            <td><div class="item-icon-title-cell">
+                                <div class="item-title">IIOTEdgeV0.4_Stable_v2	</div>
+                                <div class="item-menu">
+                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                        <i class="las la-ellipsis-h"></i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                        <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                        <li><a href="#"><i class="iot-download" ></i>Download</a></li>
+                                        <li><a href="#"><i class="iot-configure" ></i>Device Key</a></li>
+                                        <li><a href="#"><i class="iot-configure" ></i>Email Log</a></li>
+                                        
+                                    </ul>
+                                </div>
+                            </div> </td>
+                            <td>Edge</td>
+                            <td>0.0.5</td>
+                            <td>Executable</td>
+                            <td>April 13, 2021, 9:04 a.m.</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>UID0001</td>
+                            <td><div class="item-icon-title-cell">
+                                <div class="item-title">IIOTEdgeV0.4_Stable_v2	</div>
+                                <div class="item-menu">
+                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                        <i class="las la-ellipsis-h"></i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                        <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                        <li><a href="#"><i class="iot-download" ></i>Download</a></li>
+                                        <li><a href="#"><i class="iot-configure" ></i>Device Key</a></li>
+                                        <li><a href="#"><i class="iot-configure" ></i>Email Log</a></li>
+                                        
+                                    </ul>
+                                </div>
+                            </div> </td>
+                            <td>Edge</td>
+                            <td>0.0.5</td>
+                            <td>Executable</td>
+                            <td>April 13, 2021, 9:04 a.m.</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>UID0001</td>
+                            <td><div class="item-icon-title-cell">
+                                <div class="item-title">IIOTEdgeV0.4_Stable_v2	</div>
+                                <div class="item-menu">
+                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                        <i class="las la-ellipsis-h"></i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                        <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                        <li><a href="#"><i class="iot-download" ></i>Download</a></li>
+                                        <li><a href="#"><i class="iot-configure" ></i>Device Key</a></li>
+                                        <li><a href="#"><i class="iot-configure" ></i>Email Log</a></li>
+                                        
+                                    </ul>
+                                </div>
+                            </div> </td>
+                            <td>Edge</td>
+                            <td>0.0.5</td>
+                            <td>Executable</td>
+                            <td>April 13, 2021, 9:04 a.m.</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>UID0001</td>
+                            <td><div class="item-icon-title-cell">
+                                <div class="item-title">IIOTEdgeV0.4_Stable_v2	</div>
+                                <div class="item-menu">
+                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                        <i class="las la-ellipsis-h"></i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                        <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                        <li><a href="#"><i class="iot-download" ></i>Download</a></li>
+                                        <li><a href="#"><i class="iot-configure" ></i>Device Key</a></li>
+                                        <li><a href="#"><i class="iot-configure" ></i>Email Log</a></li>
+                                        
+                                    </ul>
+                                </div>
+                            </div> </td>
+                            <td>Edge</td>
+                            <td>0.0.5</td>
+                            <td>Executable</td>
+                            <td>April 13, 2021, 9:04 a.m.</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>UID0001</td>
+                            <td><div class="item-icon-title-cell">
+                                <div class="item-title">IIOTEdgeV0.4_Stable_v2	</div>
+                                <div class="item-menu">
+                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                        <i class="las la-ellipsis-h"></i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                        <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                        <li><a href="#"><i class="iot-download" ></i>Download</a></li>
+                                        <li><a href="#"><i class="iot-configure" ></i>Device Key</a></li>
+                                        <li><a href="#"><i class="iot-configure" ></i>Email Log</a></li>
+                                        
+                                    </ul>
+                                </div>
+                            </div> </td>
+                            <td>Edge</td>
+                            <td>0.0.5</td>
+                            <td>Executable</td>
+                            <td>April 13, 2021, 9:04 a.m.</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>UID0001</td>
+                            <td><div class="item-icon-title-cell">
+                                <div class="item-title">IIOTEdgeV0.4_Stable_v2	</div>
+                                <div class="item-menu">
+                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                        <i class="las la-ellipsis-h"></i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                        <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                        <li><a href="#"><i class="iot-download" ></i>Download</a></li>
+                                        <li><a href="#"><i class="iot-configure" ></i>Device Key</a></li>
+                                        <li><a href="#"><i class="iot-configure" ></i>Email Log</a></li>
+                                        
+                                    </ul>
+                                </div>
+                            </div> </td>
+                            <td>Edge</td>
+                            <td>0.0.5</td>
+                            <td>Executable</td>
+                            <td>April 13, 2021, 9:04 a.m.</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>UID0001</td>
+                            <td><div class="item-icon-title-cell">
+                                <div class="item-title">IIOTEdgeV0.4_Stable_v2	</div>
+                                <div class="item-menu">
+                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                        <i class="las la-ellipsis-h"></i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                        <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                        <li><a href="#"><i class="iot-download" ></i>Download</a></li>
+                                        <li><a href="#"><i class="iot-configure" ></i>Device Key</a></li>
+                                        <li><a href="#"><i class="iot-configure" ></i>Email Log</a></li>
+                                        
+                                    </ul>
+                                </div>
+                            </div> </td>
+                            <td>Edge</td>
+                            <td>0.0.5</td>
+                            <td>Executable</td>
+                            <td>April 13, 2021, 9:04 a.m.</td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+        
+        
+    </div>
+</div>
+
+
+<script src="assets/js/jquery-3.1.0.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/slick.js"></script>
+<script src="assets/js/bootstrap-datepicker.js"></script>
+<script src="assets/js/datatables.min.js"></script>
+<script src="assets/js/bootstrap-select.min.js"></script>
+<script src="assets/js/custom.js"></script>
+<script>
+    $(document).ready(function(){
+        
+        $('#appmanagement-table').DataTable( {
+        "paging":   false,
+        language: {
+            searchPlaceholder: "Filter by keyword"
+        },
+        "scrollX": true,
+        "ordering": false,
+        "info":     false
+        });
+        
+        $('.apptype-select').selectpicker({
+            noneSelectedText: 'App Type'
+        });
+        $('.filetype-select').selectpicker({
+            noneSelectedText: 'File Type'
+        });
+        $('.recentadd-select').selectpicker({
+            noneSelectedText: 'Recently added'
+        });
+        $('.boot-select .select').selectpicker();
+    });
+</script>
+</body>
+</html>

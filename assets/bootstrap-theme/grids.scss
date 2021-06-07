@@ -1,0 +1,33 @@
+// $container-custom and $row-columns-custom can be found in variables.scss file
+
+@mixin resized-rows-columns($row-columns: $row-columns-custom) {
+	@each $breakpoint, $size in $row-columns {
+		@include media-breakpoint-up($breakpoint) {
+			.row {
+				margin-left: -$size;
+				margin-right: -$size;
+			}
+			[class^='col'],
+			[class*=' col'] {
+				padding-left: $size;
+				padding-right: $size;
+			}
+		}
+	}
+}
+@mixin clear-no-gutters() {
+	@include resized-rows-columns;
+}
+
+@include resized-rows-columns();
+
+.no-gutters {
+	margin-right: 0;
+	margin-left: 0;
+
+	> .col,
+	> [class*="col-"] {
+		padding-right: 0;
+		padding-left: 0;
+	}
+}

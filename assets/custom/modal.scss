@@ -1,0 +1,151 @@
+.modal{
+    &.rightview-modal{
+        .modal-dialog{
+            margin:0; width:1500px; height:100%; overflow:auto; max-width: 100%; float: right; background: $color-white; transform:translate(100px, 0px);
+            @include desktop{
+                width:1180px;
+            }
+            @include leptop{
+                width:1080px;
+            }
+            @include tabletwide{
+                width:100%;
+            }
+            
+            .modal-content {
+                border: none; box-shadow:none; border-radius: 0px; padding:0px;
+                .modal-header{
+                    padding:45px 35px 20px; position:relative; border:none; display:block;
+                    .close{width:24px; height:24px; position:absolute; cursor: pointer; z-index:5; right:34px; top:45px; margin:0px; padding:0px; opacity:1; background:none; border:none; font-size:22px; line-height:24px; text-align:center; color:$color-black;}
+                    @include desktop{
+                        padding:23px 20px 16px;
+                        .close{right:19px; top:27px;}
+                    }
+                }
+                .modal-body{
+                    display:block; padding:0px;
+                }
+            }
+        }
+        &.show{
+            .modal-dialog{transform:none;}
+        }
+    }
+    &.completed-modal{
+        .modal-dialog{
+            max-width:1035px;
+            @include desktop{
+                max-width:750px;
+            }
+            @include tablet{
+                max-width:680px;
+            }
+            .modal-content {
+                border: none;
+                .modal-header{
+                    position:relative; padding:0; border:none;
+                    .close{width:24px; height:24px; position:absolute; cursor: pointer; z-index:5; right:20px; top:20px; margin:0px; padding:0px; opacity:1; background:none; border:none; font-size:22px; line-height:24px; text-align:center; color:$color-black;}
+                }
+                .modal-body{
+                    padding:50px 20px 40px;
+                    .la-check{width:130px; height:130px; font-size:80px; color:$color-white; background:$color-Blue; border-radius:100%; display:block; line-height:130px; text-align:center; margin:0 auto;}
+                    h4{@include fontrem(30px,34px); font-weight:400; color:$color-black;  margin:0px; text-align:center; padding:30px 0 35px;}
+                    @include desktop{
+                        padding:30px 20px 25px;
+                        .la-check{width:100px; height:100px; line-height:100px; font-size:60px;}
+                        h4{@include fontrem(26px,30px); padding:20px 0 25px;}
+                    }
+                    @include tablet{
+                        .la-check{width:70px; height:70px; line-height:70px; font-size:46px;}
+                        h4{@include fontrem(22px,26px);}
+                    }
+                    @include phonewide{
+                        padding:20px 20px 25px;
+                    }
+                    .completed-row{
+                        border-top:1px solid $border-color; padding:25px 0; border-bottom:1px solid $border-color; display:flex; justify-content:space-around; text-align:center;
+                        h5{@include fontrem(18px, 24px); color:$color-black; font-weight:700; padding:0 0 15px;}
+                        p{font-size:14px; line-height:20px; color:$color-black; padding:0px;}
+                        @include desktop{
+                            padding:15px 0;
+                            h5{@include fontrem(16px, 22px); padding:0 0 7px;}
+                        }
+                        @include phonewide{
+                            flex-wrap:wrap; 
+                            > div{width:100%; padding-bottom:7px;}
+                            h5{@include fontrem(20px, 24px); padding:0 0 3px;}
+                            p{font-size:13px;}
+                        }
+                    }
+                    .download-btn{
+                        text-align:center; padding:30px 0 25px;
+                        .btn{
+                            @include fontrem(30px, 34px); margin:0 7px; padding:17px 36px; font-weight:700; border-radius:8px; display:inline-block; vertical-align:middle;
+                            i{font-size:34px; color:$color-white; vertical-align:top; margin-top:-5px;}
+                        }
+                        @include desktop{
+                            padding:25px 0 15px;
+                            .btn{
+                                @include fontrem(22px, 26px); padding:12px 20px;
+                                i{font-size:22px; margin-top:-3px;}
+                            }
+                        }
+                        @include tablet{
+                            .btn{
+                                @include fontrem(16px, 20px); padding:10px 20px;
+                                i{font-size:18px; margin-top:-3px;}
+                            }
+                        }
+                        @include phonewide{
+                            padding:16px 0 12px;
+                            .btn{
+                                padding:10px 12px; margin:0 4px;
+                            }
+                        }
+                    }
+                    .close-btn{@include fontrem(18px, 24px); color:$color-black; padding:10px 20px; min-width:120px; text-align:center; font-weight:700; display:inline-block; cursor: pointer; background:none !important; border:none !important; }
+                }
+            }
+        }
+        &.processview{
+            .modal-dialog .modal-content .modal-body h4{
+                @include fontrem(30px,34px); padding-top:10px;
+                @include phonewide{
+                    @include fontrem(24px,28px); text-align:left; padding-top:0px; padding-bottom:14px;
+                }
+            }
+            
+        }
+    }
+    &.form-modal{
+        .modal-dialog{
+            max-width:850px;
+            @include desktop{
+                width:750px;
+            }
+            @include phonewide{
+                max-width:680px; width:auto;
+            }
+            .modal-content {
+                border: none; box-shadow:none; border-radius: 0px; padding:0px;
+                .modal-header{
+                    padding:23px 30px 20px; position:relative; border:none; display:block;
+                    .close{width:24px; height:24px; position:absolute; cursor: pointer; z-index:5; right:34px; top:45px; margin:0px; padding:0px; opacity:1; background:none; border:none; font-size:22px; line-height:24px; text-align:center; color:$color-black;}
+                    @include desktop{
+                        padding:23px 20px 16px;
+                        .close{right:19px; top:27px;}
+                    }
+                }
+                .modal-body{
+                    display:block; padding:0px;
+                    .formmodal-row{padding:0 30px 0px;}
+                    .step-btn{padding:20px 30px;}
+                    @include desktop{
+                        .formmodal-row{padding:0 20px 0px;}
+                        .step-btn{padding:15px 20px;}
+                    }
+                }
+            }
+        }
+    }
+}
