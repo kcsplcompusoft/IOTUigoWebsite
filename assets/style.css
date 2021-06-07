@@ -12904,6 +12904,7 @@ a.bg9:hover {
 
 .dashboard-chart {
   padding: 25px 15px 15px;
+  width: 100%;
 }
 .dashboard-chart h6 {
   padding: 0 0 12px;
@@ -13764,6 +13765,27 @@ a.bg9:hover {
   background: #FFFFFF;
   padding: 30px 30px 0px;
   border-radius: 0 0 12px 12px;
+}
+.monitorsdetail-row .tab-content .tab-pane .row > div {
+  display: flex;
+}
+.monitorsdetail-row .tab-content .tab-pane .industrial {
+  margin: 0 auto;
+  box-shadow: none;
+}
+.monitorsdetail-row .tab-content .tab-pane .industrial.tank.size.two .tick {
+  height: 4px !important;
+}
+.monitorsdetail-row .tab-content .tab-pane .industrial.tank.size.two .tick .scale {
+  font-size: calc(6pt * 2);
+  top: -8px;
+}
+.monitorsdetail-row .tab-content .tab-pane .industrial.readout {
+  width: 100% !important;
+}
+.monitorsdetail-row .tab-content .tab-pane .industrial.readout > .meter {
+  text-align: center;
+  font-size: calc(48pt * 2);
 }
 @media (max-width: 1440px) {
   .monitorsdetail-row .tab-content {

@@ -672,7 +672,7 @@ a.bg9:hover{background:#0b9492;}
 	}
 }
 .dashboard-chart{
-	padding:25px 15px 15px; 
+	padding:25px 15px 15px; width:100%;
 	h6{padding:0 0 12px;}
 	@include desktop{
 		padding:15px 15px 15px;
@@ -1084,6 +1084,26 @@ a.bg9:hover{background:#0b9492;}
 	}
 	.tab-content{
 		background:$color-white; padding:30px 30px 0px; border-radius:0 0 12px 12px;
+		.tab-pane{
+			.row{
+				> div{display:flex;}
+			}
+			.industrial{
+				margin:0 auto; box-shadow:none;
+				&.tank.size.two{
+					.tick{
+						height:4px !important;
+						.scale{font-size:calc(6pt * 2); top:-8px;}
+					}
+				}
+				&.readout{
+					width:100% !important;
+					> .meter{
+						text-align:center; font-size:calc(48pt * 2);
+					}
+				}
+			}
+		}
 		@include desktop{
 			padding:20px 17px 0px;
 		}
