@@ -1,0 +1,145 @@
+.navigation-overlay{background:rgba(0,0,0,.2); opacity:0; transition:all 0.3s ease; visibility:hidden; position:fixed; left:0px; z-index:6; top:0px; width:100%; height:100%;}
+.aside-navigation {
+	width:295px; transition:all 0.3s ease; background:$color-white; padding:0px; height:calc(100vh - 86px); position:relative;
+    @include desktop{
+        width:235px; height:calc(100vh - 76px);
+    }
+    @include tabletwide{
+        left:-235px; height:100vh; position:absolute; top:0px; z-index:9;
+    }
+    .corner-shap{
+        width:24px; height:24px; overflow:hidden; position: absolute; right:-24px; top:0px; transform:rotate(90deg);
+        &:before{content:""; width:200%; height:200%; display:block; border-radius:42%; position:absolute; bottom:0; left:0px; box-shadow:-12px 12px 0 0 $color-white;}
+        @include desktop{
+            width:18px; height:18px; right:-18px;
+            &:before{box-shadow:-9px 9px 0 0 $color-white;}
+        }
+        @include tabletwide{
+            display:none;
+        }
+    }
+    .navbar{
+        padding:30px 0px; margin:0px; display:block; height:calc(100% - 111px); overflow:auto;
+        @include desktop{
+            height:calc(100% - 76px); padding:12px 0px 25px;
+        }
+        ul{
+            li{
+                position:relative;
+                > a{
+                    @include fontrem(16px, 24px); color:$color-black; position:relative; transform:all 0.3s ease; padding:8px 30px; display:flex; align-items:center;
+                    &::before{content:""; width:16px; height:3px; opacity:0; visibility:hidden; background:$color-Blue; transition:all 0.3s ease; position:absolute; right:24px; top:19px; }
+                    .menu-icon{
+                        display:block; padding-right:23px; padding-top:3px; width:49px;
+                        i{
+                            color:$color-black; font-size:22px;
+                            svg{display:block;}
+                         }
+                         @include desktop{
+                             width:33px; padding-right:10px;
+                             i{font-size:18px;}
+                             svg{width:20px;}
+                         }
+                    }
+                    &:hover{
+                        background:$color-btnLight;
+                    }
+                    &.active{
+                        color:$color-Blue; font-weight:700;
+                        .menu-icon i{color:$color-Blue;}
+                        &:before{opacity:1; visibility:visible;}
+                        svg path{stroke:$color-Blue;}
+                    }
+                    @include desktop{
+                        padding:4px 30px 4px 15px;
+                        &:before{right:9px; top:16px;}
+                    }
+                }
+                .submenu-arrow{
+                    width:28px; height:28px; cursor:pointer; line-height:28px; transition:all 0.3s ease; font-size:20px; text-align:center; position:absolute; right:10px; top:10px; z-index:2;
+                    @include desktop{
+                        font-size:17px; top:3px; right:4px;
+                    }
+                }
+                .sub-menu{
+                    background:#E2E6ED; padding:10px 0px 10px 69px; display:none;
+                    @include desktop{
+                        padding:10px 0px 10px 39px;
+                    }
+                    li{
+                        a{
+                            font-size:14px; line-height:20px; font-weight:500; background:none !important; color:$color-black; padding:5px 10px; display:block;
+                            &:hover, &.active{ color:$color-Blue;}
+                        }
+                        @include desktop{
+                            a{padding:3px 10px; font-size:12px;}
+                        }
+                    }
+                }
+                &.show-submenu{
+                    .submenu-arrow{transform:rotate(90deg);}
+                    .sub-menu{display:block;}
+                }
+            }
+        }
+    }
+    .navigation-bottom{
+        padding:30px 30px 30px; border-top:1px solid #BFCADE; height:111px; display:flex; flex-wrap:wrap; align-items:flex-end;
+        @include desktop{
+            height:76px; padding:15px 15px; display:flex; align-items:center;
+        }
+        .navigation-toggle{
+            color:$border-color2; margin-left:auto; @include fontrem(26px); padding:0px; line-height:30px; font-weight:300; display:flex; justify-content:center; align-items:center;
+            span{
+                width:calc(100% - 40px); text-align:center;
+                &.toggle-icon{
+                    width:40px; margin-left:auto; text-align:center; padding:5px 0;
+                    &:hover{background:$color-btnLight;}
+                }
+            }
+        }
+        .powered-by{
+            p{@include fontrem(14px, 20px); padding:0px 0 7px;}
+        }
+    }
+}
+.sidebar-open{
+    @media (min-width:1201px){
+        .aside-navigation {
+            width:50px;
+            .navbar{
+                ul{
+                    li{
+                        a{
+                            padding:6px 12px;
+                            .menu-icon{
+                                padding-right:0px; text-align:center;
+                                svg{margin:0 auto;}
+                            } 
+                            .menu-text{display:none;}
+                            &:before{display:none;}
+                        }
+                        .submenu-arrow{display:none;}
+                    }
+                }
+            }
+            .navigation-bottom{
+                padding:0 5px;
+                .navigation-toggle{
+                    span{
+                        display:none;
+                        &.toggle-icon{display:block;}
+                    }
+                }
+                .powered-by{display:none;}
+            }
+        }
+    }
+    .aside-navigation {
+        left:0px;
+    }
+    @include tabletwide{
+        .navigation-overlay{opacity:1; visibility:visible;}
+    }
+    
+}

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Statistics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="assets/line-awesome.css" rel="stylesheet" type="text/css">
+    <link href="assets/datatables.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/bootstrap-select.css" rel="stylesheet" type="text/css">
+    <link href="assets/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="header">
+    <button type="button" class="menu-toggle"><i class="las la-bars"></i></button>
+    <div class="logo">
+        <img src="assets/images/logo.svg" alt="" title="">
+    </div>
+    <div class="breadcrum">
+        <span><a href="#">Torrent Power</a></span>/
+        <span><a href="#">Sabarmati , Ahmedabad </a></span>/
+        <span>Devices</span>
+    </div>
+    <div class="header-right ml-auto">
+        <div class="search-btn"><input type="text" class="search-input" placeholder="Search..."> <button type="button" class="btn btn-light mr-0 btn-sm rounded-sm" ><i class="iot-search" ></i></button></div>
+        <div class="bell-btn">
+            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-primary btn-sm rounded-sm" ><i class="iot-bell" ></i> <span class="dot" ></span></button>
+            <div class="dropdown-menu">
+                <div class="notification-row">
+                    <div class="notification-colum">
+                        <h5>Luanch Admin</h5>
+                        <p>Just see the my new admin!</p>
+                        <span>9:30 AM</span>
+                    </div>
+                    <div class="notification-colum">
+                        <h5>Luanch Admin</h5>
+                        <p>Just see the my new admin!</p>
+                        <span>9:30 AM</span>
+                    </div>
+                    <div class="notification-colum">
+                        <h5>Luanch Admin</h5>
+                        <p>Just see the my new admin!</p>
+                        <span>9:30 AM</span>
+                    </div>
+                </div>
+                <a href="#" class="viewall-notification">Check all notifications <i class="las la-angle-right" ></i></a>
+            </div>
+        </div>
+        <div class="mr-btn">
+            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-light btn-sm rounded-sm" ><span class="text" >MR</span></button>
+            <div class="dropdown-menu">
+                <p class="companyname" >Torrent Power Pvt Ltd</p>
+                <div class="userprofile-row">
+                    <div class="userprofile-pic"><span class="text" >MR</span></div>
+                    <div class="userprofile-text">
+                        <h4>Michal Rana</h4>
+                        <p>micrana@gmail.com</p>
+                        <ul class="userprofile-link">
+                            <li><a href="#">My Profile</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#" class="userprofile-logout">Logout</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-wrapper">
+    <div class="navigation-overlay"></div>
+    <div class="aside-navigation">
+        <div class="corner-shap"></div>
+        <div class="navbar">
+            <ul>
+                <li><a href="dashboard.html" ><span class="menu-icon" ><i class="iot-home" ></i></span><span class="menu-text" >Dashboard</span></a> </li>
+                <li><a href="devices.html" class="active"  ><span class="menu-icon" ><i class="iot-wifi" ></i></span><span class="menu-text" >Devices</span></a> </li>
+                <li><a href="device-deployment.html"><span class="menu-icon" ><i class="iot-startup" ></i></span><span class="menu-text" >Device Deployment</span></a> </li>
+                <li><a href="monitor.html"><span class="menu-icon" ><i class="iot-eye" ></i></span><span class="menu-text" >Monitors</span></a> </li>
+                <li><a href="rule-engine.html"><span class="menu-icon" ><i class="iot-notification" ></i></span><span class="menu-text" >Rule Engine</span></a> </li>
+                <li>
+                    <a href="#"><span class="menu-icon" ><i class="iot-masters" ></i></span><span class="menu-text" >Masters</span></a> <i class="submenu-arrow las la-angle-right" ></i>
+                    <ul class="sub-menu">
+                        <li><a href="#">Industry Type</a></li>
+                        <li><a href="#">Site Category</a></li>
+                        <li><a href="#">Department Category</a></li>
+                        <li><a href="#">User Type</a></li>
+                        <li><a href="#">Zones</a></li>
+                        <li><a href="#">Document Type</a></li>
+                        <li><a href="#">Alert Type</a></li>
+                        <li><a href="#">Protocols</a></li>
+                        <li><a href="#">Parameter</a></li>
+                        <li><a href="#">Unit</a></li>
+                        <li><a href="#">Connector</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><span class="menu-icon" ><i class="iot-configuration" ></i></span><span class="menu-text" >Configurations</span></a> <i class="submenu-arrow las la-angle-right" ></i>
+                    <ul class="sub-menu">
+                        <li><a href="#">Menu Configurations</a></li>
+                        <li><a href="#">System Configuraiton</a></li>
+                        <li><a href="#">SMTP Email Configuration</a></li>
+                        <li><a href="#">Application Management</a></li>
+                        <li><a href="#">Simulator</a></li>
+                        <li><a href="#">User Management</a></li>
+                        <li><a href="#">Roles & Rights</a></li>
+                        <li><a href="#">Monitor Bundle</a></li>
+                        <li><a href="#">Monitor Widget</a></li>
+                    </ul>
+                 </li>
+                <li><a href="#"><span class="menu-icon" ><i class="iot-reports" ></i></span><span class="menu-text" >Reports</span></a> </li>
+            </ul>
+        </div>
+        <div class="navigation-bottom">
+            <div class="powered-by text-center">
+                <p>Powered By</p>
+                <img src="assets/images/kcs-logo.svg" alt="" title="">
+            </div>
+            <a href="Javascript:void(0);" class="navigation-toggle"><span class="toggle-icon" ><i class="las la-angle-double-left"></i></span></a>
+        </div>
+    </div>
+    <div class="content-block">
+        <div class="page-head d-flex border-bottom align-items-center py-3">
+            <div class="image-bg rounded-sm bg-white">
+                <img src="assets/images/torrent-logo.png" alt="" title="">
+            </div>
+            <h2 class="pl-4" >Torrent Power</h2>
+            <div class="ml-auto selectpicker boot-select">
+                <select class="select form-control" data-live-search="false">
+                    <option>Sabarmati, Ahmedabad</option>
+                     <option>1</option>
+                     <option>2</option>
+                     <option>3</option>
+                 </select>
+            </div>
+        </div>
+        <div class="work-space device-page">
+            <div class="d-flex align-items-center title-head">
+                <h6 class="pb-0" >Comapany Details</h6>
+                <a href="add-device.html" class="btn btn-primary btn-icon ml-auto"><i class="las la-plus"></i> Add New Device</a>
+            </div>
+            <div class="common-datatable filter-search-minus">
+                <div class="datatable-head">
+                    <div class="table-filter ml-auto">
+                        <select class="selectpicker devicetype-select" multiple data-live-search="true">
+                            <option>Gateway</option>
+                            <option>Leaf Device</option>
+                            <option>Slave Device</option>
+                        </select>
+                        <select class="selectpicker recentlyupl-select" multiple data-live-search="false">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </div>
+                </div>
+                <table id="devices-table" class="common-table" style="width:100%">
+                    <thead>
+                        <tr>
+                            <td>Device ID</td>
+                            <td>Device Unique Name</td>
+                            <td>Device Type</td>
+                            <td>Mac Address</td>
+                            <td>Product ID</td>
+                            <td>Vendor ID</td>
+                            <td>Manufacture ID</td>
+                            <td>Date & Time</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>DTP0001</td>
+                            <td><div class="item-icon-title-cell">
+                                <div class="item-title">GPCB-GSFCL-LeafDevice2</div>
+                                <div class="item-menu">
+                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                        <i class="las la-ellipsis-h"></i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                        <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                    </ul>
+                                </div>
+                            </div> </td>
+                            <td>Gateway</td>
+                            <td>4c:ed:fb:b7:1c:19</td>
+                            <td>LD:1221</td>
+                            <td>VD:1221</td>
+                            <td>LD:1221</td>
+                            <td>Oct. 15, 2020, 10:39 p.m.</td>
+                        </tr>
+                        <tr>
+                            <td>DTP0001</td>
+                            <td><div class="item-icon-title-cell">
+                                <div class="item-title">GPCB-GSFCL-LeafDevice2</div>
+                                <div class="item-menu">
+                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                        <i class="las la-ellipsis-h"></i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                        <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                    </ul>
+                                </div>
+                            </div> </td>
+                            <td>Gateway</td>
+                            <td>4c:ed:fb:b7:1c:19</td>
+                            <td>LD:1221</td>
+                            <td>VD:1221</td>
+                            <td>LD:1221</td>
+                            <td>Oct. 15, 2020, 10:39 p.m.</td>
+                        </tr>
+                        <tr>
+                            <td>DTP0001</td>
+                            <td><div class="item-icon-title-cell">
+                                <div class="item-title">GPCB-GSFCL-LeafDevice2</div>
+                                <div class="item-menu">
+                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                        <i class="las la-ellipsis-h"></i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                        <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                    </ul>
+                                </div>
+                            </div> </td>
+                            <td>Gateway</td>
+                            <td>4c:ed:fb:b7:1c:19</td>
+                            <td>LD:1221</td>
+                            <td>VD:1221</td>
+                            <td>LD:1221</td>
+                            <td>Oct. 15, 2020, 10:39 p.m.</td>
+                        </tr>
+                        <tr>
+                            <td>DTP0001</td>
+                            <td><div class="item-icon-title-cell">
+                                <div class="item-title">GPCB-GSFCL-LeafDevice2</div>
+                                <div class="item-menu">
+                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                        <i class="las la-ellipsis-h"></i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                        <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                    </ul>
+                                </div>
+                            </div> </td>
+                            <td>Gateway</td>
+                            <td>4c:ed:fb:b7:1c:19</td>
+                            <td>LD:1221</td>
+                            <td>VD:1221</td>
+                            <td>LD:1221</td>
+                            <td>Oct. 15, 2020, 10:39 p.m.</td>
+                        </tr>
+                        <tr>
+                            <td>DTP0001</td>
+                            <td><div class="item-icon-title-cell">
+                                <div class="item-title">GPCB-GSFCL-LeafDevice2</div>
+                                <div class="item-menu">
+                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                        <i class="las la-ellipsis-h"></i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                        <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                    </ul>
+                                </div>
+                            </div> </td>
+                            <td>Gateway</td>
+                            <td>4c:ed:fb:b7:1c:19</td>
+                            <td>LD:1221</td>
+                            <td>VD:1221</td>
+                            <td>LD:1221</td>
+                            <td>Oct. 15, 2020, 10:39 p.m.</td>
+                        </tr>
+                        <tr>
+                            <td>DTP0001</td>
+                            <td><div class="item-icon-title-cell">
+                                <div class="item-title">GPCB-GSFCL-LeafDevice2</div>
+                                <div class="item-menu">
+                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                        <i class="las la-ellipsis-h"></i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                        <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                    </ul>
+                                </div>
+                            </div> </td>
+                            <td>Gateway</td>
+                            <td>4c:ed:fb:b7:1c:19</td>
+                            <td>LD:1221</td>
+                            <td>VD:1221</td>
+                            <td>LD:1221</td>
+                            <td>Oct. 15, 2020, 10:39 p.m.</td>
+                        </tr>
+                        <tr>
+                            <td>DTP0001</td>
+                            <td><div class="item-icon-title-cell">
+                                <div class="item-title">GPCB-GSFCL-LeafDevice2</div>
+                                <div class="item-menu">
+                                    <button type="button" class="item-menu-click" >
+                                        <i class="las la-ellipsis-h"></i>
+                                    </button>
+                                </div>
+                            </div> </td>
+                            <td>Gateway</td>
+                            <td>4c:ed:fb:b7:1c:19</td>
+                            <td>LD:1221</td>
+                            <td>VD:1221</td>
+                            <td>LD:1221</td>
+                            <td>Oct. 15, 2020, 10:39 p.m.</td>
+                        </tr>
+                        <tr>
+                            <td>DTP0001</td>
+                            <td><div class="item-icon-title-cell">
+                                <div class="item-title">GPCB-GSFCL-LeafDevice2</div>
+                                <div class="item-menu">
+                                    <button type="button" class="item-menu-click" >
+                                        <i class="las la-ellipsis-h"></i>
+                                    </button>
+                                </div>
+                            </div> </td>
+                            <td>Gateway</td>
+                            <td>4c:ed:fb:b7:1c:19</td>
+                            <td>LD:1221</td>
+                            <td>VD:1221</td>
+                            <td>LD:1221</td>
+                            <td>Oct. 15, 2020, 10:39 p.m.</td>
+                        </tr>
+                        <tr>
+                            <td>DTP0001</td>
+                            <td><div class="item-icon-title-cell">
+                                <div class="item-title">GPCB-GSFCL-LeafDevice2</div>
+                                <div class="item-menu">
+                                    <button type="button" class="item-menu-click" >
+                                        <i class="las la-ellipsis-h"></i>
+                                    </button>
+                                </div>
+                            </div> </td>
+                            <td>Gateway</td>
+                            <td>4c:ed:fb:b7:1c:19</td>
+                            <td>LD:1221</td>
+                            <td>VD:1221</td>
+                            <td>LD:1221</td>
+                            <td>Oct. 15, 2020, 10:39 p.m.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="assets/js/jquery-3.1.0.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/slick.js"></script>
+<script src="assets/js/bootstrap-datepicker.js"></script>
+<script src="assets/js/datatables.min.js"></script>
+<script src="assets/js/bootstrap-select.min.js"></script>
+<script src="assets/js/custom.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#devices-table').DataTable( {
+        "paging":   false,
+        language: {
+            searchPlaceholder: "Filter by keyword"
+        },
+        "scrollX": true,
+        "ordering": false,
+        "info":     false
+        });
+        $('.devicetype-select').selectpicker({
+            noneSelectedText: 'Device Type'
+        });
+        $('.recentlyupl-select').selectpicker({
+            noneSelectedText: 'Recently Updated'
+        });
+        $('.boot-select .select').selectpicker();
+    });
+</script>
+</body>
+</html>
