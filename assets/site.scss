@@ -1096,11 +1096,28 @@ a.bg9:hover{background:#0b9492;}
 						.scale{font-size:calc(6pt * 2); top:-8px;}
 					}
 				}
+				&.tank{
+					background:#E2E9F5;
+					> .meter{background:#486BA0;}
+				}
 				&.readout{
-					width:100% !important;
+					width:100% !important; padding-top:24px; background:#E2E9F5;
 					> .meter{
-						text-align:center; font-size:calc(48pt * 2);
+						text-align:center; font-size:calc(48pt * 2); color:$color-Blue !important;
+						> .digit{text-shadow:none !important;}
 					}
+				}
+				&.gauge{
+					background:#E2E9F5;
+					.ticks{
+						> .tick{background:linear-gradient(top, $color-Blue 20%, rgba(0, 0, 0, 0) 20%); background:-webkit-linear-gradient(top, $color-Blue 20%, rgba(0, 0, 0, 0) 20%);}
+					}
+				}
+			}
+			.head-withoption{
+				display:flex; flex-wrap:wrap;
+				h6{
+					span{display:block; @include fontrem(16px,20px); color:#46494B; font-weight:500;}
 				}
 			}
 		}
