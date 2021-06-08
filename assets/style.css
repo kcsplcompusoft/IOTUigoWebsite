@@ -13780,12 +13780,43 @@ a.bg9:hover {
   font-size: calc(6pt * 2);
   top: -8px;
 }
+.monitorsdetail-row .tab-content .tab-pane .industrial.tank {
+  background: #E2E9F5;
+}
+.monitorsdetail-row .tab-content .tab-pane .industrial.tank > .meter {
+  background: #486BA0;
+}
 .monitorsdetail-row .tab-content .tab-pane .industrial.readout {
   width: 100% !important;
+  padding-top: 24px;
+  background: #E2E9F5;
 }
 .monitorsdetail-row .tab-content .tab-pane .industrial.readout > .meter {
   text-align: center;
   font-size: calc(48pt * 2);
+  color: #0050A4 !important;
+}
+.monitorsdetail-row .tab-content .tab-pane .industrial.readout > .meter > .digit {
+  text-shadow: none !important;
+}
+.monitorsdetail-row .tab-content .tab-pane .industrial.gauge {
+  background: #E2E9F5;
+}
+.monitorsdetail-row .tab-content .tab-pane .industrial.gauge .ticks > .tick {
+  background: linear-gradient(top, #0050A4 20%, rgba(0, 0, 0, 0) 20%);
+  background: -webkit-linear-gradient(top, #0050A4 20%, rgba(0, 0, 0, 0) 20%);
+}
+.monitorsdetail-row .tab-content .tab-pane .head-withoption {
+  display: flex;
+  flex-wrap: wrap;
+}
+.monitorsdetail-row .tab-content .tab-pane .head-withoption h6 span {
+  display: block;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: #46494B;
+  font-weight: 500;
 }
 @media (max-width: 1440px) {
   .monitorsdetail-row .tab-content {

@@ -137,11 +137,11 @@
                             </div>
                             <div class="col-sm-6 col-md-4">
                                 <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
-                                    <h6>Temperature</h6>
-                                    <div class="industrial thermometer size one">
-                                        <span class="ticks" data-amount="10"></span>
+                                    <h6>Pressure</h6>
+                                    <div class="industrial gauge size two">
+                                        <span class="ticks" data-amount="8" data-scale-freq="1"></span>
                                         <div class="space"></div>
-                                        <div class="meter danger"></div>
+                                        <div class="meter"></div>
                                     </div>
                                 </div>
                             </div>
@@ -155,18 +155,149 @@
                             </div>
                             <div class="col-sm-6 col-md-6">
                                 <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
-                                    <h6>Device In Use</h6>
+                                     <div class="head-withoption">
+                                        <h6><span>ETP-BOD</span> LeafDevice1</h6>
+                                     </div>   
+                                     <canvas class="d-block mx-auto" data-type="radial-gauge"
+                                        data-width="250"
+                                        data-height="250"
+                                        data-units="°C"
+                                        data-title="Temperature"
+                                        data-min-value="-50"
+                                        data-max-value="50"
+                                        data-major-ticks="[-50,-40,-30,-20,-10,0,10,20,30,40,50]"
+                                        data-minor-ticks="2"
+                                        data-stroke-ticks="true"
+                                        data-highlights='[ {"from": -50, "to": 0, "color": "#6d8bb9"},
+                                            {"from": 0, "to": 50, "color": "#e75f5f"} ]'
+                                        data-ticks-angle="225"
+                                        data-start-angle="67.5"
+                                        data-color-major-ticks="#fff"
+                                        data-color-minor-ticks="#fff"
+                                        data-color-title="#fff"
+                                        data-color-units="#fff"
+                                        data-color-numbers="#fff"
+                                        data-color-plate="#486BA0"
+                                        data-border-shadow-width="0"
+                                        data-borders="true"
+                                        data-needle-type="arrow"
+                                        data-needle-width="2"
+                                        data-needle-circle-size="7"
+                                        data-needle-circle-outer="true"
+                                        data-needle-circle-inner="false"
+                                        data-animation-duration="1500"
+                                        data-animation-rule="linear"
+                                        data-color-border-outer="#486BA0"
+                                        data-color-border-outer-end="#486BA0"
+                                        data-color-border-middle="#486BA0"
+                                        data-color-border-middle-end="#486BA0"
+                                        data-color-border-inner="#486BA0"
+                                        data-color-border-inner-end="#486BA0"
+                                        data-color-needle-shadow-down="#486BA0"
+                                        data-color-needle-circle-outer="#fff"
+                                        data-color-needle-circle-outer-end="#fff"
+                                        data-color-needle-circle-inner="#486BA0"
+                                        data-color-needle-circle-inner-end="#486BA0"
+                                        data-value-box-border-radius="0"
+                                        data-color-value-box-rect="#486BA0"
+                                        data-color-value-box-rect-end="#486BA0"
+                                        data-color-Value-Box-Background="#fff"
+                                        data-color-Needle="#e75f5f"
+                                        data-color-Needle-End="#e75f5f"
+                                        data-color-Needle-Shadow-Up="false"
+                                        data-color-Needle-Shadow-Down="false"
+                                    ></canvas>
                                 </div>
                             </div>
                             <div class="col-sm-6 col-md-6">
                                 <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
-                                    <h6>Device In Use</h6>
+                                     <div class="head-withoption">
+                                        <h6><span>ETP-BOD</span> LeafDevice1</h6>
+                                     </div>   
+                                    <canvas class="d-block mx-auto" data-height="250"
+                                        data-color-Needle="#e75f5f"
+                                        data-color-Needle-End="#e75f5f"
+                                        data-color-Needle-Shadow-Up="false"
+                                        data-color-Needle-Shadow-Down="false"
+                                         data-color-plate="#fff" data-value-Box-Stroke="2" data-color-Value-Box-Shadow="false" data-border-shadow-width="0" data-borders="false" data-type="radial-gauge"></canvas>
                                 </div>
                             </div>
+                            
                         </div>
                     </div>
                     <div class="tab-pane fade" id="visualiser2" role="tabpanel" aria-labelledby="visualiser2-tab">
-                        
+                        <div class="row row-md">
+                            <div class="col-sm-6 col-md-6">
+                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
+                                     <div class="head-withoption">
+                                        <h6><span>ETP-BOD</span> LeafDevice1</h6>
+                                     </div>   
+                                     <canvas class="d-block mx-auto" data-type="radial-gauge"
+                                     data-width="300"
+                                     data-height="300"
+                                     data-units="Km/h"
+                                     data-min-value="0"
+                                     data-max-value="220"
+                                     data-major-ticks="0,20,40,60,80,100,120,140,160,180,200,220"
+                                     data-minor-ticks="2"
+                                     data-stroke-ticks="true"
+                                     data-highlights='[
+                                         {"from": 160, "to": 220, "color": "#e75f5f"}
+                                     ]'
+                                     data-color-plate="#fff"
+                                     data-color-Needle="#e75f5f"
+                                     data-color-Needle-End="#e75f5f"
+                                     data-color-Needle-Shadow-Up="false"
+                                     data-color-Needle-Shadow-Down="false"
+                                     data-value-Box-Stroke="2"
+                                     data-border-shadow-width="0"
+                                     data-borders="false"
+                                     data-needle-type="arrow"
+                                     data-needle-width="2"
+                                     data-needle-circle-size="7"
+                                     data-needle-circle-outer="true"
+                                     data-needle-circle-inner="false"
+                                     data-animation-duration="1500"
+                                     data-animation-rule="linear"
+                                 ></canvas>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6">
+                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
+                                     <div class="head-withoption">
+                                        <h6><span>ETP-BOD</span> LeafDevice1</h6>
+                                     </div>   
+                                     <canvas class="d-block mx-auto" data-type="linear-gauge"
+                                        data-width="120"
+                                        data-height="400"
+                                        data-units="°C"
+                                        data-min-value="0"
+                                        data-start-angle="90"
+                                        data-ticks-angle="180"
+                                        data-value-box="false"
+                                        data-max-value="220"
+                                        data-major-ticks="0,20,40,60,80,100,120,140,160,180,200,220"
+                                        data-minor-ticks="2"
+                                        data-stroke-ticks="true"
+                                        data-highlights='[ {"from": 100, "to": 220, "color": "#e75f5f"} ]'
+                                        data-color-plate="#fff"
+                                        data-color-Bar-Progress="#0050A4"
+                                        data-border-shadow-width="0"
+                                        data-borders="false"
+                                        data-needle-type="arrow"
+                                        data-needle-width="2"
+                                        data-needle-circle-size="7"
+                                        data-needle-circle-outer="true"
+                                        data-needle-circle-inner="false"
+                                        data-animation-duration="1500"
+                                        data-animation-rule="linear"
+                                        data-bar-width="10"
+                                        data-value="35"
+                                    ></canvas>
+                                </div>
+                            </div>
+                            
+                        </div>
                     </div>
                     <div class="tab-pane fade" id="visualiser3" role="tabpanel" aria-labelledby="visualiser3-tab">
                         
@@ -183,6 +314,7 @@
 <script src="assets/js/bootstrap-datepicker.js"></script>
 <script src="assets/js/bootstrap-select.min.js"></script>
 <script src="assets/js/industrial.js"></script>
+<script src="assets/js/gauge.min.js"></script>
 <script src="assets/js/custom.js"></script>
 <script>
     $(document).ready(function(){
@@ -215,6 +347,100 @@
             $("#start_intro").click(function() {
                 introJs().start();
             });
+            
+            var gauge = new RadialGauge({
+                renderTo: 'canvas-id'
+            }).draw();
+
+            var gauge = new RadialGauge({
+            renderTo: 'canvas-id',
+            width: 300,
+            height: 300,
+            units: "Km/h",
+            minValue: 0,
+            maxValue: 220,
+            majorTicks: [
+                "0",
+                "20",
+                "40",
+                "60",
+                "80",
+                "100",
+                "120",
+                "140",
+                "160",
+                "180",
+                "200",
+                "220"
+            ],
+            minorTicks: 2,
+            strokeTicks: true,
+            highlights: [
+                {
+                    "from": 160,
+                    "to": 220,
+                    "color": "rgba(200, 50, 50, .75)"
+                }
+            ],
+            colorPlate: "#fff",
+            borderShadowWidth: 0,
+            borders: false,
+            needleType: "arrow",
+            needleWidth: 2,
+            needleCircleSize: 7,
+            needleCircleOuter: true,
+            needleCircleInner: false,
+            animationDuration: 1500,
+            animationRule: "linear"
+        }).draw();
+
+        var gauge = new LinearGauge({
+        renderTo: 'canvas-id',
+        width: 120,
+        height: 400,
+        units: "°C",
+        minValue: 0,
+        startAngle: 90,
+        ticksAngle: 180,
+        valueBox: false,
+        maxValue: 220,
+        majorTicks: [
+            "0",
+            "20",
+            "40",
+            "60",
+            "80",
+            "100",
+            "120",
+            "140",
+            "160",
+            "180",
+            "200",
+            "220"
+        ],
+        minorTicks: 2,
+        strokeTicks: true,
+        highlights: [
+            {
+                "from": 100,
+                "to": 220,
+                "color": "rgba(200, 50, 50, .75)"
+            }
+        ],
+        colorPlate: "#fff",
+        borderShadowWidth: 0,
+        borders: false,
+        needleType: "arrow",
+        needleWidth: 2,
+        needleCircleSize: 7,
+        needleCircleOuter: true,
+        needleCircleInner: false,
+        animationDuration: 1500,
+        animationRule: "linear",
+        barWidth: 10,
+        value: 35
+    }).draw();
+        
     });
 </script>
 </body>
