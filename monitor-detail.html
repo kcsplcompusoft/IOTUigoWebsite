@@ -74,8 +74,36 @@
                 <li><a href="device-deployment.html"><span class="menu-icon" ><i class="iot-startup" ></i></span><span class="menu-text" >Device Deployment</span></a> </li>
                 <li><a href="monitor.html" class="active" ><span class="menu-icon" ><i class="iot-eye" ></i></span><span class="menu-text" >Monitors</span></a> </li>
                 <li><a href="rule-engine.html"><span class="menu-icon" ><i class="iot-notification" ></i></span><span class="menu-text" >Rule Engine</span></a> </li>
-                <li><a href="#"><span class="menu-icon" ><i class="iot-masters" ></i></span><span class="menu-text" >Masters</span></a> </li>
-                <li><a href="#"><span class="menu-icon" ><i class="iot-configuration" ></i></span><span class="menu-text" >Configurations</span></a> </li>
+                <li>
+                    <a href="#"><span class="menu-icon" ><i class="iot-masters" ></i></span><span class="menu-text" >Masters</span></a> <i class="submenu-arrow las la-angle-right" ></i>
+                    <ul class="sub-menu">
+                        <li><a href="#">Industry Type</a></li>
+                        <li><a href="#">Site Category</a></li>
+                        <li><a href="#">Department Category</a></li>
+                        <li><a href="#">User Type</a></li>
+                        <li><a href="#">Zones</a></li>
+                        <li><a href="#">Document Type</a></li>
+                        <li><a href="#">Alert Type</a></li>
+                        <li><a href="#">Protocols</a></li>
+                        <li><a href="#">Parameter</a></li>
+                        <li><a href="#">Unit</a></li>
+                        <li><a href="#">Connector</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><span class="menu-icon" ><i class="iot-configuration" ></i></span><span class="menu-text" >Configurations</span></a> <i class="submenu-arrow las la-angle-right" ></i>
+                    <ul class="sub-menu">
+                        <li><a href="#">Menu Configurations</a></li>
+                        <li><a href="#">System Configuraiton</a></li>
+                        <li><a href="#">SMTP Email Configuration</a></li>
+                        <li><a href="#">Application Management</a></li>
+                        <li><a href="#">Simulator</a></li>
+                        <li><a href="#">User Management</a></li>
+                        <li><a href="#">Roles & Rights</a></li>
+                        <li><a href="#">Monitor Bundle</a></li>
+                        <li><a href="#">Monitor Widget</a></li>
+                    </ul>
+                 </li>
                 <li><a href="#"><span class="menu-icon" ><i class="iot-reports" ></i></span><span class="menu-text" >Reports</span></a> </li>
             </ul>
         </div>
@@ -153,6 +181,39 @@
                                     </div>
                                 </div>
                             </div>
+                            
+                            <div class="col-sm-6 col-md-6">
+                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
+                                     <div class="head-withoption">
+                                        <h6><span>ETP-BOD</span> LeafDevice1</h6>
+                                     </div>   
+                                    <canvas class="d-block mx-auto" data-height="250"
+                                        data-color-Needle="#e75f5f"
+                                        data-color-Needle-End="#e75f5f"
+                                        data-color-Value-Box-Background="#e2e9f5"
+                                        data-color-Needle-Shadow-Up="false"
+                                        data-color-Needle-Shadow-Down="false"
+                                         data-color-plate="#fff" data-value-Box-Stroke="2" data-color-Value-Box-Shadow="false" data-border-shadow-width="0" data-borders="false" data-type="radial-gauge"></canvas>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6">
+                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
+                                     <div class="head-withoption">
+                                        <h6><span>ETP-BOD</span> LeafDevice1</h6>
+                                     </div>
+                                     <canvas class="zeroconfi-right d-block mx-auto"
+                                      data-color-Bar-Progress="#0050A4"
+                                      data-color-Bar="#e2e9f5"
+                                      data-value-box="false"
+                                      data-border-shadow-width="0"
+                                      data-borders="false"
+                                      data-type="linear-gauge"></canvas> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="visualiser2" role="tabpanel" aria-labelledby="visualiser2-tab">
+                        <div class="row row-md">
                             <div class="col-sm-6 col-md-6">
                                 <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
                                      <div class="head-withoption">
@@ -214,24 +275,6 @@
                                      <div class="head-withoption">
                                         <h6><span>ETP-BOD</span> LeafDevice1</h6>
                                      </div>   
-                                    <canvas class="d-block mx-auto" data-height="250"
-                                        data-color-Needle="#e75f5f"
-                                        data-color-Needle-End="#e75f5f"
-                                        data-color-Needle-Shadow-Up="false"
-                                        data-color-Needle-Shadow-Down="false"
-                                         data-color-plate="#fff" data-value-Box-Stroke="2" data-color-Value-Box-Shadow="false" data-border-shadow-width="0" data-borders="false" data-type="radial-gauge"></canvas>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="visualiser2" role="tabpanel" aria-labelledby="visualiser2-tab">
-                        <div class="row row-md">
-                            <div class="col-sm-6 col-md-6">
-                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
-                                     <div class="head-withoption">
-                                        <h6><span>ETP-BOD</span> LeafDevice1</h6>
-                                     </div>   
                                      <canvas class="d-block mx-auto" data-type="radial-gauge"
                                      data-width="300"
                                      data-height="300"
@@ -247,6 +290,7 @@
                                      data-color-plate="#fff"
                                      data-color-Needle="#e75f5f"
                                      data-color-Needle-End="#e75f5f"
+                                     data-color-Value-Box-Background="#e2e9f5"
                                      data-color-Needle-Shadow-Up="false"
                                      data-color-Needle-Shadow-Down="false"
                                      data-value-Box-Stroke="2"
@@ -282,6 +326,7 @@
                                         data-highlights='[ {"from": 100, "to": 220, "color": "#e75f5f"} ]'
                                         data-color-plate="#fff"
                                         data-color-Bar-Progress="#0050A4"
+                                        data-color-Bar="#e2e9f5"
                                         data-border-shadow-width="0"
                                         data-borders="false"
                                         data-needle-type="arrow"
@@ -349,6 +394,10 @@
             });
             
             var gauge = new RadialGauge({
+                renderTo: 'canvas-id'
+            }).draw();
+
+            var gauge = new LinearGauge({
                 renderTo: 'canvas-id'
             }).draw();
 

@@ -1064,7 +1064,7 @@ a.bg9:hover{background:#0b9492;}
 .monitorsdetail-row{
 	padding:20px 0 0;
 	@include desktop{
-		padding:8px 0 0;
+		padding:8px 0 20px;
 	}
 	.nav-tabs{
 		border:none;
@@ -1079,11 +1079,12 @@ a.bg9:hover{background:#0b9492;}
 				@include phonewide{
 					width:160px; font-size:12px;
 				}
+				&.active{background:#e3e9f5;}
 			}
 		}
 	}
 	.tab-content{
-		background:$color-white; padding:30px 30px 0px; border-radius:0 0 12px 12px;
+		background:#e3e9f5; padding:30px 30px 0px; border-radius:0 12px 12px 12px;
 		.tab-pane{
 			.row{
 				> div{display:flex;}
@@ -1092,13 +1093,13 @@ a.bg9:hover{background:#0b9492;}
 				margin:0 auto; box-shadow:none;
 				&.tank.size.two{
 					.tick{
-						height:4px !important;
-						.scale{font-size:calc(6pt * 2); top:-8px;}
+						height:3px !important; background:$color-Blue;
+						.scale{font-size:calc(5pt * 2); font-weight:400; top:-8px;}
 					}
 				}
 				&.tank{
-					background:#E2E9F5;
-					> .meter{background:#486BA0;}
+					background:#e2e8f4; width:90px;
+					> .meter{background:#c7d5ef;}
 				}
 				&.readout{
 					width:100% !important; padding-top:24px; background:#E2E9F5;
@@ -1110,10 +1111,14 @@ a.bg9:hover{background:#0b9492;}
 				&.gauge{
 					background:#E2E9F5;
 					.ticks{
-						> .tick{background:linear-gradient(top, $color-Blue 20%, rgba(0, 0, 0, 0) 20%); background:-webkit-linear-gradient(top, $color-Blue 20%, rgba(0, 0, 0, 0) 20%);}
+						> .tick{
+							width:1.7% !important; background:linear-gradient(top, $color-Blue 17%, rgba(0, 0, 0, 0) 17%); background:-webkit-linear-gradient(top, $color-Blue 17%, rgba(0, 0, 0, 0) 17%);
+							> .scale{font-size:calc(5pt * 2); top:18%; margin-left:-5px;}
+						}
 					}
 				}
 			}
+			.zeroconfi-right{width:340px !important; height:auto !important;}
 			.head-withoption{
 				display:flex; flex-wrap:wrap;
 				h6{
