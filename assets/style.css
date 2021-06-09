@@ -10557,6 +10557,9 @@ select.custom-select:focus {
   .sidebar-open .aside-navigation {
     width: 50px;
   }
+  .sidebar-open .aside-navigation .navbar {
+    overflow: visible;
+  }
   .sidebar-open .aside-navigation .navbar ul li a {
     padding: 6px 12px;
   }
@@ -10576,6 +10579,20 @@ select.custom-select:focus {
   .sidebar-open .aside-navigation .navbar ul li .submenu-arrow {
     display: none;
   }
+  .sidebar-open .aside-navigation .navbar ul li .sub-menu {
+    position: absolute;
+    z-index: 9;
+    left: 100%;
+    top: -50px;
+    padding-left: 15px;
+    border-radius: 6px;
+    width: 200px;
+    background: #fff;
+    box-shadow: 0px 4px 13px rgba(0, 80, 164, 0.15);
+  }
+  .sidebar-open .aside-navigation .navbar ul li:hover > .sub-menu {
+    display: block;
+  }
   .sidebar-open .aside-navigation .navigation-bottom {
     padding: 0 5px;
   }
@@ -10584,6 +10601,9 @@ select.custom-select:focus {
   }
   .sidebar-open .aside-navigation .navigation-bottom .navigation-toggle span.toggle-icon {
     display: block;
+  }
+  .sidebar-open .aside-navigation .navigation-bottom .la-angle-double-left:before {
+    content: "";
   }
   .sidebar-open .aside-navigation .navigation-bottom .powered-by {
     display: none;
@@ -13718,7 +13738,7 @@ a.bg9:hover {
 }
 @media (max-width: 1440px) {
   .monitorsdetail-row {
-    padding: 8px 0 0;
+    padding: 8px 0 20px;
   }
 }
 .monitorsdetail-row .nav-tabs {
@@ -13761,10 +13781,13 @@ a.bg9:hover {
     font-size: 12px;
   }
 }
+.monitorsdetail-row .nav-tabs li a.active {
+  background: #e3e9f5;
+}
 .monitorsdetail-row .tab-content {
-  background: #FFFFFF;
+  background: #e3e9f5;
   padding: 30px 30px 0px;
-  border-radius: 0 0 12px 12px;
+  border-radius: 0 12px 12px 12px;
 }
 .monitorsdetail-row .tab-content .tab-pane .row > div {
   display: flex;
@@ -13774,17 +13797,20 @@ a.bg9:hover {
   box-shadow: none;
 }
 .monitorsdetail-row .tab-content .tab-pane .industrial.tank.size.two .tick {
-  height: 4px !important;
+  height: 3px !important;
+  background: #0050A4;
 }
 .monitorsdetail-row .tab-content .tab-pane .industrial.tank.size.two .tick .scale {
-  font-size: calc(6pt * 2);
+  font-size: calc(5pt * 2);
+  font-weight: 400;
   top: -8px;
 }
 .monitorsdetail-row .tab-content .tab-pane .industrial.tank {
-  background: #E2E9F5;
+  background: #e2e8f4;
+  width: 90px;
 }
 .monitorsdetail-row .tab-content .tab-pane .industrial.tank > .meter {
-  background: #486BA0;
+  background: #c7d5ef;
 }
 .monitorsdetail-row .tab-content .tab-pane .industrial.readout {
   width: 100% !important;
@@ -13803,8 +13829,18 @@ a.bg9:hover {
   background: #E2E9F5;
 }
 .monitorsdetail-row .tab-content .tab-pane .industrial.gauge .ticks > .tick {
-  background: linear-gradient(top, #0050A4 20%, rgba(0, 0, 0, 0) 20%);
-  background: -webkit-linear-gradient(top, #0050A4 20%, rgba(0, 0, 0, 0) 20%);
+  width: 1.7% !important;
+  background: linear-gradient(top, #0050A4 17%, rgba(0, 0, 0, 0) 17%);
+  background: -webkit-linear-gradient(top, #0050A4 17%, rgba(0, 0, 0, 0) 17%);
+}
+.monitorsdetail-row .tab-content .tab-pane .industrial.gauge .ticks > .tick > .scale {
+  font-size: calc(5pt * 2);
+  top: 18%;
+  margin-left: -5px;
+}
+.monitorsdetail-row .tab-content .tab-pane .zeroconfi-right {
+  width: 340px !important;
+  height: auto !important;
 }
 .monitorsdetail-row .tab-content .tab-pane .head-withoption {
   display: flex;

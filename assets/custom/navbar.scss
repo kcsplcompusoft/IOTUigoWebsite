@@ -108,6 +108,7 @@
         .aside-navigation {
             width:50px;
             .navbar{
+                overflow:visible;
                 ul{
                     li{
                         a{
@@ -120,6 +121,10 @@
                             &:before{display:none;}
                         }
                         .submenu-arrow{display:none;}
+                        .sub-menu{
+                            position: absolute; z-index: 9; left: 100%; top: -50px; padding-left:15px; border-radius:6px; width: 200px; background: #fff; box-shadow: 0px 4px 13px rgba(0, 80, 164, 0.15)
+                        }
+                        &:hover > .sub-menu{display:block;}
                     }
                 }
             }
@@ -131,6 +136,7 @@
                         &.toggle-icon{display:block;}
                     }
                 }
+                .la-angle-double-left:before{content: "\f101";}
                 .powered-by{display:none;}
             }
         }
