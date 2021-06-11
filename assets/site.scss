@@ -291,13 +291,20 @@ a.bg9:hover{background:#0b9492;}
 		}
 	}
 	.table-checkbox{
-		width:16px; height:16px; display:inline-block; position:relative; margin:0; vertical-align:middle;
+		width:22px; height:22px; display:inline-block; position:relative; margin:0; vertical-align:middle; cursor:pointer;
 		input[type="checkbox"]{position:absolute; opacity:0; visibility:hidden;}
 		span{
-			position:absolute; left:0; top:0px; background:$color-white; border:1px solid #ABB5C5; width:16px; height:16px;
-			&:before{content:"\f00c"; font-family:'Line Awesome Free'; position:absolute; left:0px; top:-1px; opacity:0; visibility:hidden; transition:all 0.3s ease; font-weight:900; color:$border-color2; font-size:14px; line-height:16px;}
+			position:absolute; left:0; top:0px; background:$color-white; border:1px solid #97A4BA; width:22px; height:22px; border-radius:3px;
+			&:before{content:"\f00c"; font-family:'Line Awesome Free'; position:absolute; left:1px; top:2px; opacity:0; visibility:hidden; transition:all 0.3s ease; font-weight:900; color:$border-color2; font-size:16px; line-height:16px;}
 		}
 		input[type="checkbox"]:checked ~ span:before{opacity:1; visibility:visible;}
+		@include desktop{
+			width:16px; height:16px; 
+			span{
+				width:16px; height:16px; border-radius:2px;
+				&:before{left:0px; top:-1px; font-size:14px;}
+			}
+		}
 	}
 	.dataTables_wrapper.no-footer .dataTables_scrollBody{border-bottom:none;}
 	.dataTables_filter{margin-left:20px; padding-top:8px; margin-bottom:8px; float:none; text-align:left;}
@@ -316,17 +323,25 @@ a.bg9:hover{background:#0b9492;}
 	&.no-search{
 		.dataTables_filter{display:none !important;}
 	}
+	.dataTables_scroll{
+		.dataTables_scrollHead{display:none !important;}
+	}
 }
 .common-table{
 	&.dataTable{
 		&.no-footer{border-bottom:none;}
 		thead{
-			td{
-				background:#E2E6ED; white-space:nowrap; padding:15px 25px; @include fontrem(18px,24px); font-weight:700; border:none; border-bottom:2px solid $border-color2;
-				@include desktop{
-					padding:11px 8px; @include fontrem(16px,22px);
+			tr{
+				height:auto !important;
+				td{
+					background:#E2E6ED; height:auto !important; white-space:nowrap; padding:15px 25px !important; @include fontrem(18px,24px); font-weight:700; border:none; border-bottom:2px solid $border-color2 !important;
+					@include desktop{
+						padding:11px 8px !important; @include fontrem(16px,22px);
+					}
+					> div{height:auto !important;}
 				}
 			}
+			
 		}
 		tbody{
 			tr{
@@ -1134,6 +1149,64 @@ a.bg9:hover{background:#0b9492;}
 		}
 	}
 }
+.usermanage-page{
+	padding-top:0px;
+	.wizard-left{
+		padding-top:30px;
+		@include desktop{
+			padding-top:25px;
+		}
+		.nav-tabs{
+			li{
+				padding:20px 0;
+				a{
+					&:before{display:none !important;}
+					&.active:before{content:"\f152"; font-family:'Line Awesome Free'; background:transparent; width:auto; height:auto; font-weight:900; font-size:28px; padding:0px; border:none; display:block !important;  position:absolute; right:-14px; top:-4px; transition:all 0.3s ease; color:$primary_color;}
+				}
+			}
+		}
+	}
+	.wizard-right{
+		
+		.tab-pane{
+			.usermanage-head{
+				display:flex; flex-wrap:wrap; align-items:center; padding:30px 0 15px;
+				h5{
+					span{font-weight:400; border-right:1px solid $border-color; padding-right:15px; margin-right:15px;}
+				}
+				.step-btn{margin-left: auto; border-top:none; padding:0px;}
+				@include desktop{
+					padding:15px 0 10px;
+				}
+			}
+		}
+	}
+}
+.radio-list{
+	.custom-radio{margin-right:32px;}
+}
+.userdetail-row{
+	display:flex; flex-wrap:wrap; padding:28px 0 0;
+	@include desktop{
+		padding:15px 0 0;
+	}
+	.userdetail-left{
+		width:calc(100% - 258px); padding-right:100px;
+		h5{border-bottom:1px solid $border-color; padding:0 0 15px; margin-bottom:30px; margin-top:13px;}
+		@include desktop{
+			padding-right:30px;
+			h5{padding:0 0 6px; margin-bottom:15px; margin-top:5px;}
+		}
+	}
+	.userdetail-right{
+		width:258px; background:$color-lightBlue; height:290px; position:relative; margin:20px 0 22px;
+		.user-img{max-width:100%; max-height:100%; margin:0 auto; display:block;}
+		.uploadimg{
+			position:absolute; left:50%; margin-left:-22px; bottom:-22px; text-align:center; line-height:44px; background:$color-white; box-shadow: 0px 4px 21px rgba(0, 0, 0, 0.25); width:44px; height:44px; border-radius:100%;
+		}
+	}
+}
+
 
 @include desktop-big {
 	html{font-size:14px; line-height:20px;}
