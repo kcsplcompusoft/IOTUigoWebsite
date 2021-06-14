@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Statistics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="assets/line-awesome.css" rel="stylesheet" type="text/css">
+    <link href="assets/bootstrap-select.css" rel="stylesheet" type="text/css">
+    <link href="assets/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="header">
+    <button type="button" class="menu-toggle"><i class="las la-bars"></i></button>
+    <div class="logo">
+        <img src="assets/images/logo.svg" alt="" title="">
+    </div>
+    <div class="breadcrum">
+        <span><a href="#">Torrent Power</a></span>/
+        <span>Sites</span>
+    </div>
+    <div class="header-right ml-auto">
+        <div class="search-btn"><input type="text" class="search-input" placeholder="Search..."> <button type="button" class="btn btn-light mr-0 btn-sm rounded-sm" ><i class="iot-search" ></i></button></div>
+        <div class="bell-btn">
+            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-primary btn-sm rounded-sm" ><i class="iot-bell" ></i> <span class="dot" ></span></button>
+            <div class="dropdown-menu">
+                <div class="notification-row">
+                    <div class="notification-colum">
+                        <h5>Luanch Admin</h5>
+                        <p>Just see the my new admin!</p>
+                        <span>9:30 AM</span>
+                    </div>
+                    <div class="notification-colum">
+                        <h5>Luanch Admin</h5>
+                        <p>Just see the my new admin!</p>
+                        <span>9:30 AM</span>
+                    </div>
+                    <div class="notification-colum">
+                        <h5>Luanch Admin</h5>
+                        <p>Just see the my new admin!</p>
+                        <span>9:30 AM</span>
+                    </div>
+                </div>
+                <a href="#" class="viewall-notification">Check all notifications <i class="las la-angle-right" ></i></a>
+            </div>
+        </div>
+        <div class="mr-btn">
+            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-light btn-sm rounded-sm" ><span class="text" >MR</span></button>
+            <div class="dropdown-menu">
+                <p class="companyname" >Torrent Power Pvt Ltd</p>
+                <div class="userprofile-row">
+                    <div class="userprofile-pic"><span class="text" >MR</span></div>
+                    <div class="userprofile-text">
+                        <h4>Michal Rana</h4>
+                        <p>micrana@gmail.com</p>
+                        <ul class="userprofile-link">
+                            <li><a href="#">My Profile</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#" class="userprofile-logout">Logout</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-wrapper">
+    <div class="navigation-overlay"></div>
+    <div class="aside-navigation">
+        <div class="corner-shap"></div>
+        <div class="navbar">
+            <ul>
+                <li><a href="company-home.html" ><span class="menu-icon" ><i class="iot-sites" ></i></span><span class="menu-text" >Sites</span></a> </li>
+                <li><a href="company-statistics.html"><span class="menu-icon pt-0" >
+                    <i><svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 0.961548V24.0385H24.0769" stroke="black" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3.46344 14.0688H7.79036V23.8404H3.46344V14.0688ZM10.375 10.1423H14.7019V23.8404H10.375V10.1423ZM17.2865 4.69376H21.6134V23.8404H17.2865V4.69376Z" stroke="black" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></i>
+                </span><span class="menu-text" >Statistics</span></a> </li>
+                <li><a href="company-info.html" class="active" ><span class="menu-icon" ><i class="iot-information" ></i></span><span class="menu-text" >Company Information</span></a> </li>
+                <li><a href="#"><span class="menu-icon" ><i class="iot-masters" ></i></span><span class="menu-text" >Masters</span></a> </li>
+                <li><a href="#"><span class="menu-icon" ><i class="iot-configuration" ></i></span><span class="menu-text" >Configurations</span></a> </li>
+                <li><a href="#"><span class="menu-icon" ><i class="iot-reports" ></i></span><span class="menu-text" >Reports</span></a> </li>
+            </ul>
+        </div>
+        <div class="navigation-bottom">
+            <div class="powered-by text-center">
+                <p>Powered By</p>
+                <img src="assets/images/kcs-logo.svg" alt="" title="">
+            </div>
+            <a href="Javascript:void(0);" class="navigation-toggle"><span class="toggle-icon" ><i class="las la-angle-double-left"></i></span></a>
+        </div>
+    </div>
+    <div class="content-block">
+        <div class="page-head d-flex border-bottom align-items-center py-3">
+            <div class="image-bg rounded-sm bg-white">
+                <img src="assets/images/torrent-logo.png" alt="" title="">
+            </div>
+            <h2 class="pl-4" >Torrent Power</h2>
+            <div class="ml-auto selectpicker boot-select">
+                <select class="select form-control" data-live-search="false">
+                    <option>User Management</option>
+                     <option>Masters</option>
+                     <option>Configurations</option>
+                 </select>
+            </div>
+        </div>
+        <div class="work-space company-info-page">
+            <div class="companymanagement-page">
+                <div class="infopage-left d-flex">
+                    <div class="bg-white rounded-sm shadow-sm companyinfo-box mb-30">
+                        <div class="row row-md">
+                            <div class="col-lg-3">
+                                <img src="assets/images/company-img.jpg" alt="" title="">
+                            </div>
+                            <div class="col-lg-9">
+                                <div class="text">
+                                    <h6 class="pb-2" >Sabarmati , Ahmedabad</h6>
+                                    <p>Thermal Power Station, Sabarmati, Ahmedabad - 380005, Near Chimanbhai Patel Bridge</p>
+                                </div>
+                                <div class="management-row border-top">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h6>Mr. Sudhir Mehta</h6>
+                                            <p>(Chairman Emeritus)</p>
+                                            <div class="management-contact">
+                                                <p class="call" ><strong>Phone</strong> 9825098250</p>
+                                                <p><strong>Email</strong> me@email.com</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h6>Mr. Pankaj Patel</h6>
+                                            <p>(Independent Director)</p>
+                                            <div class="management-contact">
+                                                <p class="call" ><strong>Phone</strong> 9825098250</p>
+                                                <p><strong>Email</strong> me@email.com</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h6>Mr. Alok Mistri</h6>
+                                            <p>(Independent Director)</p>
+                                            <div class="management-contact">
+                                                <p class="call" ><strong>Phone</strong> 9825098250</p>
+                                                <p><strong>Email</strong> me@email.com</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="edit-company-info.html" class="btn btn-light btn-sm edit-info"><i class="iot-edit"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h5 class="pb-3" >Company Sites</h5>
+                <div class="site-page">
+                    <div class="row row-md">
+                        <div class="col-md-4 d-flex">
+                            <div class="project-overview-card bg-white cursor-pointer rounded-lg shadow-sm">
+                                <div class="overview-card-content">
+                                    <h6>Sabarmati , Ahmedabad</h6>
+                                    <p>Thermal Power Station, Sabarmati, Ahmedabad - 380005, Near Chimanbhai Patel Bridge</p>
+                                    <i class="topright-logo" ><img src="assets/images/torrent-logo.png" alt="" title=""></i>
+                                </div>
+                                <div class="overview-card-bottom border-top">
+                                    <ul>
+                                        <li>
+                                            <span class="placeholder" ></span>
+                                            <a class="link-icon" href="#">
+                                                <img src="assets/images/device.svg" alt="" title="">
+                                                <span>Devices</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <span class="placeholder" ></span>
+                                            <a class="link-icon" href="#">
+                                                <img src="assets/images/startup.svg" alt="" title="">
+                                                <span>Deployment</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <span class="placeholder" ></span>
+                                            <a class="link-icon" href="#">
+                                                <img src="assets/images/eye.svg" alt="" title="">
+                                                <span>Monitors</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <span class="placeholder" ></span>
+                                            <a class="link-icon" href="#">
+                                                <img src="assets/images/sun.svg" alt="" title="">
+                                                <span>Alerts</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 d-flex">
+                            <div class="project-overview-card bg-white cursor-pointer rounded-lg shadow-sm">
+                                <div class="overview-card-content">
+                                    <h6>Sabarmati , Ahmedabad</h6>
+                                    <p>Thermal Power Station, Sabarmati, Ahmedabad - 380005, Near Chimanbhai Patel Bridge</p>
+                                    <i class="topright-logo" ><img src="assets/images/torrent-logo.png" alt="" title=""></i>
+                                </div>
+                                <div class="overview-card-bottom border-top">
+                                    <ul>
+                                        <li>
+                                            <span class="placeholder" ></span>
+                                            <a class="link-icon" href="#">
+                                                <img src="assets/images/device.svg" alt="" title="">
+                                                <span>Devices</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <span class="placeholder" ></span>
+                                            <a class="link-icon" href="#">
+                                                <img src="assets/images/startup.svg" alt="" title="">
+                                                <span>Deployment</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <span class="placeholder" ></span>
+                                            <a class="link-icon" href="#">
+                                                <img src="assets/images/eye.svg" alt="" title="">
+                                                <span>Monitors</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <span class="placeholder" ></span>
+                                            <a class="link-icon" href="#">
+                                                <img src="assets/images/sun.svg" alt="" title="">
+                                                <span>Alerts</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 d-flex">
+                            <div class="project-overview-card bg-white cursor-pointer rounded-lg shadow-sm">
+                                <div class="overview-card-content">
+                                    <h6>Sabarmati , Ahmedabad</h6>
+                                    <p>Thermal Power Station, Sabarmati, Ahmedabad - 380005, Near Chimanbhai Patel Bridge</p>
+                                    <i class="topright-logo" ><img src="assets/images/torrent-logo.png" alt="" title=""></i>
+                                </div>
+                                <div class="overview-card-bottom border-top">
+                                    <ul>
+                                        <li>
+                                            <span class="placeholder" ></span>
+                                            <a class="link-icon" href="#">
+                                                <img src="assets/images/device.svg" alt="" title="">
+                                                <span>Devices</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <span class="placeholder" ></span>
+                                            <a class="link-icon" href="#">
+                                                <img src="assets/images/startup.svg" alt="" title="">
+                                                <span>Deployment</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <span class="placeholder" ></span>
+                                            <a class="link-icon" href="#">
+                                                <img src="assets/images/eye.svg" alt="" title="">
+                                                <span>Monitors</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <span class="placeholder" ></span>
+                                            <a class="link-icon" href="#">
+                                                <img src="assets/images/sun.svg" alt="" title="">
+                                                <span>Alerts</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 d-flex">
+                            <div class="project-overview-card bg-white cursor-pointer rounded-lg shadow-sm">
+                                <div class="overview-card-content">
+                                    <h6>Sabarmati , Ahmedabad</h6>
+                                    <p>Thermal Power Station, Sabarmati, Ahmedabad - 380005, Near Chimanbhai Patel Bridge</p>
+                                    <i class="topright-logo" ><img src="assets/images/torrent-logo.png" alt="" title=""></i>
+                                </div>
+                                <div class="overview-card-bottom border-top">
+                                    <ul>
+                                        <li>
+                                            <span class="placeholder" ></span>
+                                            <a class="link-icon" href="#">
+                                                <img src="assets/images/device.svg" alt="" title="">
+                                                <span>Devices</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <span class="placeholder" ></span>
+                                            <a class="link-icon" href="#">
+                                                <img src="assets/images/startup.svg" alt="" title="">
+                                                <span>Deployment</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <span class="placeholder" ></span>
+                                            <a class="link-icon" href="#">
+                                                <img src="assets/images/eye.svg" alt="" title="">
+                                                <span>Monitors</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <span class="placeholder" ></span>
+                                            <a class="link-icon" href="#">
+                                                <img src="assets/images/sun.svg" alt="" title="">
+                                                <span>Alerts</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 d-flex">
+                            <div class="project-overview-card bg-white cursor-pointer rounded-lg shadow-sm">
+                                <div class="overview-card-content">
+                                    <h6>Sabarmati , Ahmedabad</h6>
+                                    <p>Thermal Power Station, Sabarmati, Ahmedabad - 380005, Near Chimanbhai Patel Bridge</p>
+                                    <i class="topright-logo" ><img src="assets/images/torrent-logo.png" alt="" title=""></i>
+                                </div>
+                                <div class="overview-card-bottom border-top">
+                                    <ul>
+                                        <li>
+                                            <span class="placeholder" ></span>
+                                            <a class="link-icon" href="#">
+                                                <img src="assets/images/device.svg" alt="" title="">
+                                                <span>Devices</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <span class="placeholder" ></span>
+                                            <a class="link-icon" href="#">
+                                                <img src="assets/images/startup.svg" alt="" title="">
+                                                <span>Deployment</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <span class="placeholder" ></span>
+                                            <a class="link-icon" href="#">
+                                                <img src="assets/images/eye.svg" alt="" title="">
+                                                <span>Monitors</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <span class="placeholder" ></span>
+                                            <a class="link-icon" href="#">
+                                                <img src="assets/images/sun.svg" alt="" title="">
+                                                <span>Alerts</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 d-flex">
+                            <a href="#" class="add-overview-card cursor-pointer rounded-lg shadow-sm">
+                                <i class="las la-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="assets/js/jquery-3.1.0.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/slick.js"></script>
+<script src="assets/js/bootstrap-datepicker.js"></script>
+<script src="assets/js/bootstrap-select.min.js"></script>
+<script src="assets/js/custom.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.boot-select .select').selectpicker();
+       
+    });
+</script>
+</body>
+</html>
