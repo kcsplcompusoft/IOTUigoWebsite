@@ -58,6 +58,40 @@ select.custom-select{
                 }
             }
         }
+        &.with-checkbox{
+            .bootstrap-select{
+                .dropdown-menu{
+                    ul{
+                        li{
+                            a{padding:5px 15px; line-height:20px; font-size:14px; display:flex; align-items:flex-start; flex-wrap:wrap;}
+                            .check-mark{
+                                width:18px; height:18px; border:1px solid $border-color2; display:block !important; position:static !important;
+                                &:after{margin:0px 0 0 5px; width:6px; height:12px; border-width:0 2px 2px 0; opacity:0; visibility:hidden; transition:all 0.3s ease;}
+                            }
+                            .check-mark + .text{margin:0px; width:calc(100% - 20px); padding-left:10px;}
+                            &.active{
+                                a{background:$color-btnLight; color:$color-black;}
+                            }
+                            &.disabled{
+                                .check-mark{opacity:0;}
+                            }
+                            &.selected{
+                                .check-mark{
+                                    &:after{opacity:1; visibility:visible; }
+                                }
+                            }
+                            @include desktop{
+                                a{font-size:13px; padding:4px 15px;}
+                                .check-mark{
+                                    width:16px; height:16px; margin:2px 0 0;
+                                    &:after{margin:1px 0 0 5px; width:5px; height:10px;}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 	textarea.form-control{
         
