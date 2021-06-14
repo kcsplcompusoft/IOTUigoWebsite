@@ -295,7 +295,7 @@ a.bg9:hover{background:#0b9492;}
 		input[type="checkbox"]{position:absolute; opacity:0; visibility:hidden;}
 		span{
 			position:absolute; left:0; top:0px; background:$color-white; border:1px solid #97A4BA; width:22px; height:22px; border-radius:3px;
-			&:before{content:"\f00c"; font-family:'Line Awesome Free'; position:absolute; left:1px; top:2px; opacity:0; visibility:hidden; transition:all 0.3s ease; font-weight:900; color:$border-color2; font-size:16px; line-height:16px;}
+			&:before{content:"\f00c"; font-family:'Line Awesome Free'; position:absolute; left:1px; top:2px; opacity:0; visibility:hidden; transition:all 0.3s ease; font-weight:900; color:$secondary_color; font-size:16px; line-height:16px;}
 		}
 		input[type="checkbox"]:checked ~ span:before{opacity:1; visibility:visible;}
 		@include desktop{
@@ -339,6 +339,10 @@ a.bg9:hover{background:#0b9492;}
 						padding:11px 8px !important; @include fontrem(16px,22px);
 					}
 					> div{height:auto !important;}
+					.dataTables_sizing{
+						.table-checkbox{display:block; margin:2px auto 0;}
+					}
+					
 				}
 			}
 			
@@ -707,7 +711,10 @@ a.bg9:hover{background:#0b9492;}
 	}
 	.companyinfo-box{
 		padding:25px; width:100%;
-		.col-lg-3{flex:0 0 31%; max-width:31%;}
+		.col-lg-3{
+			flex:0 0 31%; max-width:31%;
+			img{width:100%;}
+		}
 		@include desktop{
 			padding:20px;
 		}
@@ -752,12 +759,15 @@ a.bg9:hover{background:#0b9492;}
 						padding-top:12px;
 					}
 					@include desktop{
-						padding-top:0px; padding-bottom:0px;
+						padding-top:0px; padding-bottom:0px; margin-top:4px; margin-bottom:4px;
 					}
 					@include tablet{
 						width:50%;
 					}
-					&:first-child{border-right:1px solid $border-color;}
+					@include phonewide{
+						flex:0 0 100%; max-width:100%; border-right:none !important;
+					}
+					&:nth-child(odd){border-right:1px solid $border-color;}
 					.management-contact{
 						padding:25px 0 0; display:flex; flex-wrap:wrap;
 						@include desktop-big{
@@ -766,11 +776,36 @@ a.bg9:hover{background:#0b9492;}
 						@include desktop{
 							padding-top:10px;
 						}
+						@include phonewide{
+							padding-top:5px;
+						}
 						p{
 							padding-bottom:7px;
 							&.call{min-width:150px;}
 							strong{display:block;}
 						} 
+					}
+				}
+			}
+		}
+	}
+	.companymanagement-page{
+		.infopage-left{flex:0 0 100% !important; max-width:100% !important;}
+		.companyinfo-box{
+			.col-lg-3{flex:0 0 25%; max-width:25%;}
+			.col-lg-9{flex:0 0 75%; max-width:75%;}
+			@include phonewide{
+				.col-lg-3{flex:0 0 100%; max-width:100%;}
+				.col-lg-9{flex:0 0 100%; max-width:100%;}
+			}
+			.management-row{
+				.col-md-6{
+					flex:0 0 33.33%; max-width:33.33%; border-right:1px solid $border-color;
+					&:last-child{
+						border-right:none;
+					}
+					@include phonewide{
+						flex:0 0 100%; max-width:100%; border-right:none !important;
 					}
 				}
 			}
@@ -1025,8 +1060,10 @@ a.bg9:hover{background:#0b9492;}
 			}
 			.ruledesigner-card{
 				background:$color-white; position:relative; margin:0 30px; border:1px solid $color-Blue; border-radius:12px; width:373px; padding:17px 20px 0; box-shadow: 0px 4px 13px rgba(0, 80, 164, 0.15);
-				&.small{
-					width:308px;
+				&.small{width:308px;}
+				@include phonewide{
+					width:100%; max-width:100%;
+					&.small{width:100%; max-width:100%; margin-right:0px;}
 				}
 				&.bg-card{
 					background:$primary_color;
@@ -1067,7 +1104,7 @@ a.bg9:hover{background:#0b9492;}
 					&:before{display:block; top:auto; bottom:-4px; left:50%; right:auto; margin-left:-4px;}
 					&:after{display:block; top:-4px; left:50%; right:auto; margin-left:-4px;}
 					.line{display:block; top:auto; bottom:-29px; margin-left:-0.5px; right:auto; left:50%; height:30px; width:1px;}
-					&:last-child{margin-right:15px;}
+					&:last-child{margin-right:0px;}
 				}
 			}
 		}
@@ -1087,21 +1124,18 @@ a.bg9:hover{background:#0b9492;}
 	.nav-tabs{
 		border:none;
 		li{
-			border:none; margin:0px;
-			a{
-				@include fontrem(16px,20px); color:#46494B; font-weight:500; padding:16px 10px; border-radius:12px 12px 0 0; text-align:center; border:none; margin:0px; width:270px;
+			border:none; margin:0px; position:relative;
+			> a{
+				@include fontrem(16px,20px); color:#46494B; font-weight:500; padding:16px 41px 16px 20px; border-radius:12px 12px 0 0; text-align:left; border:none; margin:0px; width:270px;
 				i{font-size:28px; line-height:14px; vertical-align:bottom; margin-left:4px; color:$border-color2;}
 				@include desktop{
-					padding:13px 10px 11px; width:200px; border-radius:8px 8px 0 0;
+					padding:13px 41px 11px 20px; width:200px; border-radius:8px 8px 0 0;
 				}
 				@include phonewide{
-					width:130px; font-size:12px; padding:11px 10px 9px;
+					width:160px; font-size:12px; padding:11px 41px 9px 20px;
 				}
 				&.active{background:#e3e9f5;}
 			}
-		}
-		@include phonewide{
-			flex-wrap:nowrap; margin-bottom:10px; overflow:auto;
 		}
 	}
 	.tab-content{
@@ -1152,7 +1186,7 @@ a.bg9:hover{background:#0b9492;}
 				}
 			}
 			.zeroconfi-right{
-				width:340px !important; height:auto !important;
+				width:370px !important; height:auto !important;
 				@include tablet{
 					width:100% !important;
 				}
@@ -1191,13 +1225,12 @@ a.bg9:hover{background:#0b9492;}
 			li{
 				padding:20px 0;
 				a{
-					&:before{display:none !important;}
-					&.active:before{content:"\f152"; font-family:'Line Awesome Free'; background:transparent; width:auto; height:auto; font-weight:900; font-size:28px; padding:0px; border:none; display:block !important;  position:absolute; right:-14px; top:-4px; transition:all 0.3s ease; color:$primary_color;}
+					&:before{top:-1px;}
 				}
 				@include phonewide{
 					padding:0px;
 					a{
-						&.active:before{top:-17px; left:50%; margin-left:-14px;}
+						&:before{top:-14px;}
 					}
 				}
 			}
@@ -1219,6 +1252,18 @@ a.bg9:hover{background:#0b9492;}
 				}
 				@include phonewide{
 					.step-btn{margin-top:6px;}
+				}
+			}
+			.rolerights-table{
+				.common-table.dataTable{
+					thead{
+						tr td{
+							padding:10px 25px !important;
+							@include desktop{
+								padding:7px 8px !important;
+							}
+						}
+					}
 				}
 			}
 		}
@@ -1261,6 +1306,46 @@ a.bg9:hover{background:#0b9492;}
 		}
 		@include phonewide{
 			width:230px; height:210px; margin:0 auto 30px; order:1;
+		}
+	}
+}
+.monitors-edit{
+	position:relative;
+	button{background:none; border:none; cursor: pointer; font-size:28px; line-height:28px; color:$border-color2; padding:0px; margin:0px;}
+	.dropdown-menu{
+		border: 1px solid #C8D2E2; left:auto !important; top:100% !important; transform:none !important; right:0px; float:none; padding:8px 0; box-shadow: 0px 7px 11px rgba(42, 62, 97, 0.11); min-width:130px;
+		@include desktop{
+			padding:5px 0;
+		}
+		li{
+			a{
+				@include fontrem(16px,20px); white-space:nowrap; color:$color-black; font-weight:400; padding:7px 22px 7px 17px; display:flex; align-items:center; width:100%; 
+				&:hover{color:#00B9B6; background:#f4f7fd;}
+				i{@include fontrem(20px); margin-right:10px;}
+				@include desktop{
+					padding:5px 18px 5px 15px;
+				}
+			}
+		}
+	}
+}
+.monitorstab-edit{
+	position:absolute; right:11px; top:6px;
+	button{background:none; border:none; cursor: pointer; font-size:28px; line-height:28px; color:$border-color2; padding:0px; margin:0px;}
+	.dropdown-menu{
+		border: 1px solid #C8D2E2; left:auto !important; top:100% !important; transform:none !important; right:0px; float:none; padding:8px 0; box-shadow: 0px 7px 11px rgba(42, 62, 97, 0.11); min-width:130px;
+		@include desktop{
+			padding:5px 0;
+		}
+		li{
+			a{
+				@include fontrem(16px,20px); white-space:nowrap; color:$color-black; font-weight:400; padding:7px 22px 7px 17px; display:flex; align-items:center; width:100%; 
+				&:hover{color:#00B9B6; background:#f4f7fd;}
+				i{@include fontrem(20px); margin-right:10px;}
+				@include desktop{
+					padding:5px 18px 5px 15px;
+				}
+			}
 		}
 	}
 }
