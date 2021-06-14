@@ -141,13 +141,34 @@
             <div class="monitorsdetail-row">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
-                      <a class="nav-link active" id="visualiser1-tab" data-toggle="tab" href="#visualiser1" role="tab" aria-controls="visualiser1" aria-selected="true">Visualiser 1 <i class="las la-ellipsis-h" ></i></a>
+                      <a class="nav-link active" id="visualiser1-tab" data-toggle="tab" href="#visualiser1" role="tab" aria-controls="visualiser1" aria-selected="true">Visualiser 1 </a>
+                      <div class="monitorstab-edit">
+                        <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="las la-ellipsis-h" ></i></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                            <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                        </ul>
+                      </div>
                     </li>
                     <li class="nav-item" role="presentation">
-                      <a class="nav-link" id="visualiser2-tab" data-toggle="tab" href="#visualiser2" role="tab" aria-controls="visualiser2" aria-selected="false">Visualiser 2 <i class="las la-ellipsis-h" ></i></a>
+                      <a class="nav-link" id="visualiser2-tab" data-toggle="tab" href="#visualiser2" role="tab" aria-controls="visualiser2" aria-selected="false">Visualiser 2</a>
+                      <div class="monitorstab-edit">
+                        <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="las la-ellipsis-h" ></i></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                            <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                        </ul>
+                      </div>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="visualiser3-tab" data-toggle="tab" href="#visualiser3" role="tab" aria-controls="visualiser3" aria-selected="false">Visualiser 3 <i class="las la-ellipsis-h" ></i></a>
+                        <a class="nav-link" id="visualiser3-tab" data-toggle="tab" href="#visualiser3" role="tab" aria-controls="visualiser3" aria-selected="false">Visualiser 3</a>
+                        <div class="monitorstab-edit">
+                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="las la-ellipsis-h" ></i></button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                            </ul>
+                          </div>
                       </li>
                   </ul>
                   <div class="tab-content" id="myTabContent">
@@ -155,7 +176,19 @@
                         <div class="row row-md">
                             <div class="col-sm-6 col-md-4">
                                 <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
-                                    <h6>Water Lavel</h6>
+                                    <div class="head-withoption">
+                                        <h6><span>ETP-BOD</span> Water Lavel</h6>
+                                        <div class="monitors-edit ml-auto">
+                                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="las la-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Clone</a></li>
+                                            </ul>
+                                        </div>
+                                     </div>
                                     <div class="industrial tank size two" >
                                         <span class="ticks" data-amount="4" data-scale-freq="1"></span>
                                         <div class="space"></div>
@@ -165,7 +198,19 @@
                             </div>
                             <div class="col-sm-6 col-md-4">
                                 <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
-                                    <h6>Pressure</h6>
+                                    <div class="head-withoption">
+                                        <h6><span>ETP-BOD</span> Pressure</h6>
+                                        <div class="monitors-edit ml-auto">
+                                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="las la-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Clone</a></li>
+                                            </ul>
+                                        </div>
+                                     </div>
                                     <div class="industrial gauge size two">
                                         <span class="ticks" data-amount="8" data-scale-freq="1"></span>
                                         <div class="space"></div>
@@ -175,7 +220,19 @@
                             </div>
                             <div class="col-sm-6 col-md-4">
                                 <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
-                                    <h6>Readout</h6>
+                                    <div class="head-withoption">
+                                        <h6><span>ETP-BOD</span> Readout</h6>
+                                        <div class="monitors-edit ml-auto">
+                                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="las la-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Clone</a></li>
+                                            </ul>
+                                        </div>
+                                     </div>
                                     <div id="read1" class="industrial readout size two">
                                         <div class="meter green" data-digits="4"></div>
                                     </div>
@@ -186,12 +243,23 @@
                                 <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
                                      <div class="head-withoption">
                                         <h6><span>ETP-BOD</span> LeafDevice1</h6>
+                                        <div class="monitors-edit ml-auto">
+                                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="las la-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Clone</a></li>
+                                            </ul>
+                                        </div>
                                      </div>   
                                     <canvas class="d-block mx-auto" data-height="250"
                                         data-color-Needle="#e75f5f"
                                         data-color-Needle-End="#e75f5f"
                                         data-color-Value-Box-Background="#e2e9f5"
                                         data-color-Needle-Shadow-Up="false"
+                                        data-font-Numbers-Size="20"
                                         data-color-Needle-Shadow-Down="false"
                                          data-color-plate="#fff" data-value-Box-Stroke="2" data-color-Value-Box-Shadow="false" data-border-shadow-width="0" data-borders="false" data-type="radial-gauge"></canvas>
                                 </div>
@@ -200,11 +268,22 @@
                                 <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
                                      <div class="head-withoption">
                                         <h6><span>ETP-BOD</span> LeafDevice1</h6>
+                                        <div class="monitors-edit ml-auto">
+                                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="las la-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Clone</a></li>
+                                            </ul>
+                                        </div>
                                      </div>
                                      <canvas class="zeroconfi-right d-block mx-auto"
                                       data-color-Bar-Progress="#0050A4"
                                       data-color-Bar="#e2e9f5"
                                       data-value-box="false"
+                                      data-font-Numbers-Size="13"
                                       data-border-shadow-width="0"
                                       data-borders="false"
                                       data-type="linear-gauge"></canvas> 
@@ -218,6 +297,16 @@
                                 <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
                                      <div class="head-withoption">
                                         <h6><span>ETP-BOD</span> LeafDevice1</h6>
+                                        <div class="monitors-edit ml-auto">
+                                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="las la-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Clone</a></li>
+                                            </ul>
+                                        </div>
                                      </div>   
                                      <canvas class="d-block mx-auto" data-type="radial-gauge"
                                         data-width="250"
@@ -267,6 +356,7 @@
                                         data-color-Needle-End="#e75f5f"
                                         data-color-Needle-Shadow-Up="false"
                                         data-color-Needle-Shadow-Down="false"
+                                        data-font-Numbers-Size="16"
                                     ></canvas>
                                 </div>
                             </div>
@@ -274,8 +364,18 @@
                                 <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
                                      <div class="head-withoption">
                                         <h6><span>ETP-BOD</span> LeafDevice1</h6>
+                                        <div class="monitors-edit ml-auto">
+                                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="las la-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Clone</a></li>
+                                            </ul>
+                                        </div>
                                      </div>   
-                                     <canvas class="d-block mx-auto" data-type="radial-gauge"
+                                     <canvas class="d-block mx-auto"  data-type="radial-gauge"
                                      data-width="300"
                                      data-height="300"
                                      data-units="Km/h"
@@ -303,6 +403,7 @@
                                      data-needle-circle-inner="false"
                                      data-animation-duration="1500"
                                      data-animation-rule="linear"
+                                     data-font-Numbers-Size="16"
                                  ></canvas>
                                 </div>
                             </div>
@@ -310,6 +411,16 @@
                                 <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
                                      <div class="head-withoption">
                                         <h6><span>ETP-BOD</span> LeafDevice1</h6>
+                                        <div class="monitors-edit ml-auto">
+                                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="las la-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Clone</a></li>
+                                            </ul>
+                                        </div>
                                      </div>   
                                      <canvas class="d-block mx-auto" data-type="linear-gauge"
                                         data-width="120"
@@ -349,6 +460,16 @@
                                 <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
                                      <div class="head-withoption">
                                         <h6><span>ETP-BOD</span> LeafDevice1</h6>
+                                        <div class="monitors-edit ml-auto">
+                                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="las la-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Clone</a></li>
+                                            </ul>
+                                        </div>
                                      </div>   
                                      <canvas  class="d-block mx-auto" data-type="radial-gauge"
                                         data-width="300"
@@ -379,6 +500,7 @@
                                         data-color-Needle-Shadow-Down="false"
                                         data-animation-duration="1500"
                                         data-animation-rule="linear"
+                                        data-font-Numbers-Size="16"
                                     ></canvas>
                                 </div>
                             </div>
@@ -390,6 +512,16 @@
                                 <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
                                      <div class="head-withoption">
                                         <h6><span>ETP-BOD</span> LeafDevice1</h6>
+                                        <div class="monitors-edit ml-auto">
+                                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="las la-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Clone</a></li>
+                                            </ul>
+                                        </div>
                                      </div>   
                                      <canvas  class="d-block mx-auto temperaturex-w" data-type="linear-gauge"
                                         data-width="400"
@@ -433,6 +565,16 @@
                                 <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
                                      <div class="head-withoption">
                                         <h6><span>ETP-BOD</span> LeafDevice1</h6>
+                                        <div class="monitors-edit ml-auto">
+                                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="las la-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Clone</a></li>
+                                            </ul>
+                                        </div>
                                      </div>   
                                      <canvas  class="d-block mx-auto" data-type="radial-gauge"
                                         data-min-value="0"
