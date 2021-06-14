@@ -1081,6 +1081,9 @@ a.bg9:hover{background:#0b9492;}
 	@include desktop{
 		padding:8px 0 20px;
 	}
+	@include tabletwide{
+		padding:8px 0 0px;
+	}
 	.nav-tabs{
 		border:none;
 		li{
@@ -1092,10 +1095,13 @@ a.bg9:hover{background:#0b9492;}
 					padding:13px 10px 11px; width:200px; border-radius:8px 8px 0 0;
 				}
 				@include phonewide{
-					width:160px; font-size:12px;
+					width:130px; font-size:12px; padding:11px 10px 9px;
 				}
 				&.active{background:#e3e9f5;}
 			}
+		}
+		@include phonewide{
+			flex-wrap:nowrap; margin-bottom:10px; overflow:auto;
 		}
 	}
 	.tab-content{
@@ -1131,9 +1137,31 @@ a.bg9:hover{background:#0b9492;}
 							> .scale{font-size:calc(5pt * 2); top:18%; margin-left:-5px;}
 						}
 					}
+					@include desktop{
+						width:100%;
+					}
+					@include tabletwide{
+						height:165px;
+					}
+					@include tablet{
+						height:185px;
+					}
+					@include phonewide{
+						height:175px;
+					}
 				}
 			}
-			.zeroconfi-right{width:340px !important; height:auto !important;}
+			.zeroconfi-right{
+				width:340px !important; height:auto !important;
+				@include tablet{
+					width:100% !important;
+				}
+			}
+			.temperaturex-w{
+				@include tablet{
+					width:100% !important; height:auto !important;
+				}
+			}
 			.head-withoption{
 				display:flex; flex-wrap:wrap;
 				h6{
@@ -1156,6 +1184,9 @@ a.bg9:hover{background:#0b9492;}
 		@include desktop{
 			padding-top:25px;
 		}
+		@include phonewide{
+			padding-top:0px; margin-top:30px;
+		}
 		.nav-tabs{
 			li{
 				padding:20px 0;
@@ -1163,11 +1194,19 @@ a.bg9:hover{background:#0b9492;}
 					&:before{display:none !important;}
 					&.active:before{content:"\f152"; font-family:'Line Awesome Free'; background:transparent; width:auto; height:auto; font-weight:900; font-size:28px; padding:0px; border:none; display:block !important;  position:absolute; right:-14px; top:-4px; transition:all 0.3s ease; color:$primary_color;}
 				}
+				@include phonewide{
+					padding:0px;
+					a{
+						&.active:before{top:-17px; left:50%; margin-left:-14px;}
+					}
+				}
 			}
 		}
 	}
 	.wizard-right{
-		
+		@include phonewide{
+			padding-top:0px;
+		}
 		.tab-pane{
 			.usermanage-head{
 				display:flex; flex-wrap:wrap; align-items:center; padding:30px 0 15px;
@@ -1178,8 +1217,14 @@ a.bg9:hover{background:#0b9492;}
 				@include desktop{
 					padding:15px 0 10px;
 				}
+				@include phonewide{
+					.step-btn{margin-top:6px;}
+				}
 			}
 		}
+	}
+	@include tablet{
+		h5, .h5{font-size:15px;}
 	}
 }
 .radio-list{
@@ -1197,12 +1242,25 @@ a.bg9:hover{background:#0b9492;}
 			padding-right:30px;
 			h5{padding:0 0 6px; margin-bottom:15px; margin-top:5px;}
 		}
+		@include phonewide{
+			width:100%; padding-right:0px; order:2;
+		}
 	}
 	.userdetail-right{
 		width:258px; background:$color-lightBlue; height:290px; position:relative; margin:20px 0 22px;
-		.user-img{max-width:100%; max-height:100%; margin:0 auto; display:block;}
+		.user-img{
+			max-width:100%; max-height:100%; margin:0 auto; display:block; position:relative; top:50%; transform:translateY(-50%);
+
+		}
 		.uploadimg{
 			position:absolute; left:50%; margin-left:-22px; bottom:-22px; text-align:center; line-height:44px; background:$color-white; box-shadow: 0px 4px 21px rgba(0, 0, 0, 0.25); width:44px; height:44px; border-radius:100%;
+			@include phonewide{
+				width:38px; height:38px; line-height:38px; bottom:-19px;
+				img{max-width:12px;}
+			}
+		}
+		@include phonewide{
+			width:230px; height:210px; margin:0 auto 30px; order:1;
 		}
 	}
 }
