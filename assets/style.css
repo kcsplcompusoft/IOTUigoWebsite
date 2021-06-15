@@ -10394,6 +10394,100 @@ select.custom-select:focus {
   }
 }
 
+.file-upload {
+  display: block;
+  text-align: center;
+  cursor: pointer;
+}
+.file-upload .file-select {
+  display: block;
+  border-radius: 4px;
+  font-size: 14px;
+  display: flex;
+  cursor: pointer;
+  border: 1px solid #D7E0EF;
+  color: #000000;
+  cursor: pointer;
+  height: 42px;
+  line-height: 40px;
+  text-align: left;
+  background: #FFFFFF;
+  overflow: hidden;
+  position: relative;
+}
+.file-upload .file-select .file-select-button {
+  padding: 0 10px;
+  display: inline-block;
+  position: relative;
+  font-size: 13px;
+  cursor: pointer;
+}
+.file-upload .file-select .file-select-button:before {
+  content: "";
+  height: calc(100% - 8px);
+  background: #D7E0EF;
+  width: 1px;
+  position: absolute;
+  right: 0px;
+  top: 4px;
+}
+.file-upload .file-select .file-select-name {
+  display: inline-block;
+  width: calc(100% - 93px);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding: 0 10px;
+}
+.file-upload .file-select input[type=file] {
+  z-index: 100;
+  cursor: pointer;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.file-upload .file-select.file-select-disabled {
+  opacity: 0.65;
+}
+.file-upload .file-select.file-select-disabled:hover {
+  cursor: default;
+  display: block;
+  border: 2px solid #dce4ec;
+  color: #34495e;
+  cursor: pointer;
+  margin-top: 5px;
+  text-align: left;
+  background: #FFFFFF;
+  overflow: hidden;
+  position: relative;
+}
+.file-upload .file-select.file-select-disabled:hover .file-select-button {
+  background: #dce4ec;
+  color: #666666;
+  padding: 0 10px;
+  display: inline-block;
+}
+.file-upload .file-select.file-select-disabled:hover .file-select-name {
+  display: inline-block;
+  padding: 0 10px;
+}
+@media (max-width: 1440px) {
+  .file-upload .file-select {
+    height: 28px;
+    line-height: 26px;
+    font-size: 12px;
+  }
+  .file-upload .file-select .file-select-button {
+    font-size: 12px;
+  }
+  .file-upload .file-select .file-select-name {
+    width: calc(100% - 83px);
+  }
+}
+
 .navigation-overlay {
   background: rgba(0, 0, 0, 0.2);
   opacity: 0;
