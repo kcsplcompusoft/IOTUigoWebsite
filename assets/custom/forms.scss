@@ -201,3 +201,27 @@ select.custom-select{
         input[type="checkbox"]:checked ~ span:before{left:25px;}
     }
 }
+
+.file-upload{
+    display:block;text-align:center; cursor:pointer;
+    .file-select{
+        display:block; border-radius:4px; font-size:14px; display:flex; cursor:pointer; border: 1px solid $border-color;color: $color-black;cursor:pointer;height:42px;line-height:40px;text-align:left;background:#FFFFFF;overflow:hidden;position:relative;
+        .file-select-button{
+            padding:0 10px;display:inline-block;position:relative; font-size:13px; cursor:pointer;
+            &:before{content:""; height:calc(100% - 8px); background:$border-color; width:1px; position:absolute; right:0px; top:4px; }
+        }
+        .file-select-name{display:inline-block; width:calc(100% - 93px); text-overflow:ellipsis; overflow:hidden; padding:0 10px;}
+        input[type=file]{z-index:100;cursor:pointer;position:absolute;height:100%;width:100%;top:0;left:0;opacity:0;filter:alpha(opacity=0);}
+        &.file-select-disabled{opacity:0.65;}
+        &.file-select-disabled:hover{
+            cursor:default;display:block;border: 2px solid #dce4ec;color: #34495e;cursor:pointer;margin-top:5px;text-align:left;background:#FFFFFF;overflow:hidden;position:relative;
+            .file-select-button{background:#dce4ec;color:#666666;padding:0 10px;display:inline-block;}
+            .file-select-name{display:inline-block;padding:0 10px;}
+        }
+        @include desktop{
+            height:28px; line-height:26px; font-size:12px;
+            .file-select-button{font-size:12px;}
+            .file-select-name{width:calc(100% - 83px);}
+        }
+    }
+}
