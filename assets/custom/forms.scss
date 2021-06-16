@@ -137,7 +137,7 @@ select.custom-select{
     display: inline-block; position: relative; padding:12px 0 6px 44px; margin-bottom:0px; text-align: left; cursor: pointer; color:$color_darkGrey; font-size:14px; line-height:16px; font-weight:400;
     > span {
         border-radius:2px; border:2px solid $color-darkGrey;  position: absolute; top:0px; left:0; width:34px; height:34px; background:transparent;
-        &:after {content: '\e83b'; font-size:34px; line-height:30px; font-family: "fcbh_icons"; position: absolute; color:$secondary_color; top:0; left:-2px; opacity:0; visibility:hidden; transition:all 0.3s ease; }
+        &:after {content:"\f00c"; font-family:'Line Awesome Free'; font-weight:900; font-size:34px; line-height:30px; position: absolute; color:$secondary_color; top:0; left:-2px; opacity:0; visibility:hidden; transition:all 0.3s ease; }
     }
     > input{
 		position: absolute; z-index: -1; opacity: 0;

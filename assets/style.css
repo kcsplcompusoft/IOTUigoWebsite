@@ -9730,54 +9730,70 @@ h3 {
   content: "";
 }
 
+.iot-statistics:before {
+  content: "";
+}
+
 .iot-sites:before {
   content: "";
 }
 
 .iot-eye:before {
-  content: "";
+  content: "";
 }
 
 .iot-home:before {
-  content: "";
+  content: "";
 }
 
 .iot-notification:before {
-  content: "";
+  content: "";
 }
 
 .iot-startup:before {
-  content: "";
+  content: "";
 }
 
 .iot-wifi:before {
-  content: "";
+  content: "";
 }
 
 .iot-bell:before {
-  content: "";
+  content: "";
   color: #fff;
 }
 
 .iot-configuration:before {
-  content: "";
-}
-
-.iot-information:before {
   content: "";
 }
 
-.iot-masters:before {
+.iot-information:before {
   content: "";
 }
 
-.iot-reports:before {
+.iot-masters:before {
   content: "";
 }
 
-.iot-search:before {
+.iot-reports:before {
   content: "";
+}
+
+.iot-search:before {
+  content: "";
   color: #0050a4;
+}
+
+.iot-device-key:before {
+  content: "";
+}
+
+.iot-email-log:before {
+  content: "";
+}
+
+.iot-Copy:before {
+  content: "";
 }
 
 .row {
@@ -10213,10 +10229,11 @@ select.custom-select:focus {
   background: transparent;
 }
 .custom-checkbox > span:after {
-  content: "";
+  content: "";
+  font-family: "Line Awesome Free";
+  font-weight: 900;
   font-size: 34px;
   line-height: 30px;
-  font-family: "fcbh_icons";
   position: absolute;
   color: #206bb2;
   top: 0;
@@ -14159,6 +14176,10 @@ a.bg9:hover {
   .monitorsdetail-row .tab-content .tab-pane .industrial.gauge {
     height: 175px;
   }
+}
+.monitorsdetail-row .tab-content .tab-pane .segment-display {
+  width: 100% !important;
+  height: auto !important;
 }
 .monitorsdetail-row .tab-content .tab-pane .zeroconfi-right {
   width: 370px !important;
