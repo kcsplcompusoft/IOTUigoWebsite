@@ -1185,6 +1185,9 @@ a.bg9:hover{background:#0b9492;}
 					}
 				}
 			}
+			.segment-display{
+				width:100% !important; height:auto !important;
+			}
 			.zeroconfi-right{
 				width:370px !important; height:auto !important;
 				@include tablet{
