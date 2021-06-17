@@ -1144,17 +1144,21 @@ a.bg9:hover{background:#0b9492;}
 			.row{
 				> div{display:flex;}
 			}
+			.map-home{margin-top:0px !important;}
 			.industrial{
 				margin:0 auto; box-shadow:none;
 				&.tank.size.two{
 					.tick{
-						height:3px !important; background:$color-Blue;
-						.scale{font-size:calc(5pt * 2); font-weight:400; top:-8px;}
+						height:2% !important;
+						.scale{font-size:calc(6pt * 2); font-weight:600;}
 					}
 				}
 				&.tank{
-					background:#e2e8f4; width:90px;
-					> .meter{background:#c7d5ef;}
+					width:90px;
+				}
+				&.thermometer{
+					height:calc(100px * 2); width:calc(20px * 1.5);
+					.tick{height:2% !important;}
 				}
 				&.readout{
 					width:100% !important; padding-top:24px; background:#E2E9F5;
@@ -1164,11 +1168,10 @@ a.bg9:hover{background:#0b9492;}
 					}
 				}
 				&.gauge{
-					background:#E2E9F5;
 					.ticks{
 						> .tick{
-							width:1.7% !important; background:linear-gradient(top, $color-Blue 17%, rgba(0, 0, 0, 0) 17%); background:-webkit-linear-gradient(top, $color-Blue 17%, rgba(0, 0, 0, 0) 17%);
-							> .scale{font-size:calc(5pt * 2); top:18%; margin-left:-5px;}
+							width:1.7% !important; background:linear-gradient(top, $color-black 17%, rgba(0, 0, 0, 0) 17%); background:-webkit-linear-gradient(top, $color-black 17%, rgba(0, 0, 0, 0) 17%);
+							> .scale{font-size:calc(6pt * 2); font-weight:600; top:18%; margin-left:-5px;}
 						}
 					}
 					@include desktop{
@@ -1185,8 +1188,9 @@ a.bg9:hover{background:#0b9492;}
 					}
 				}
 			}
+			
 			.segment-display{
-				width:100% !important; height:auto !important;
+				width:100% !important; height:auto !important; border:4px solid $color-black; padding:0 20px;
 			}
 			.zeroconfi-right{
 				width:370px !important; height:auto !important;
