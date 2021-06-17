@@ -185,7 +185,7 @@
                                             <ul class="dropdown-menu">
                                                 <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
                                                 <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
-                                                <li><a href="#"><i class="iot-delete" ></i>Clone</a></li>
+                                                <li><a href="#"><i class="iot-Copy" ></i>Clone</a></li>
                                             </ul>
                                         </div>
                                      </div>
@@ -207,7 +207,7 @@
                                             <ul class="dropdown-menu">
                                                 <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
                                                 <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
-                                                <li><a href="#"><i class="iot-delete" ></i>Clone</a></li>
+                                                <li><a href="#"><i class="iot-Copy" ></i>Clone</a></li>
                                             </ul>
                                         </div>
                                      </div>
@@ -221,7 +221,7 @@
                             <div class="col-sm-6 col-md-4">
                                 <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
                                     <div class="head-withoption">
-                                        <h6><span>ETP-BOD</span> Readout</h6>
+                                        <h6><span>ETP-BOD</span> Segment</h6>
                                         <div class="monitors-edit ml-auto">
                                             <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <i class="las la-ellipsis-v"></i>
@@ -229,13 +229,13 @@
                                             <ul class="dropdown-menu">
                                                 <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
                                                 <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
-                                                <li><a href="#"><i class="iot-delete" ></i>Clone</a></li>
+                                                <li><a href="#"><i class="iot-Copy" ></i>Clone</a></li>
                                             </ul>
                                         </div>
                                      </div>
-                                    <div id="read1" class="industrial readout size two">
-                                        <div class="meter green" data-digits="4"></div>
-                                    </div>
+                                     <canvas id="display" class="segment-display" width="300" height="180">
+                                        Your browser is unfortunately not supported.
+                                      </canvas>
                                 </div>
                             </div>
                             
@@ -250,7 +250,7 @@
                                             <ul class="dropdown-menu">
                                                 <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
                                                 <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
-                                                <li><a href="#"><i class="iot-delete" ></i>Clone</a></li>
+                                                <li><a href="#"><i class="iot-Copy" ></i>Clone</a></li>
                                             </ul>
                                         </div>
                                      </div>   
@@ -275,7 +275,7 @@
                                             <ul class="dropdown-menu">
                                                 <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
                                                 <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
-                                                <li><a href="#"><i class="iot-delete" ></i>Clone</a></li>
+                                                <li><a href="#"><i class="iot-Copy" ></i>Clone</a></li>
                                             </ul>
                                         </div>
                                      </div>
@@ -304,7 +304,7 @@
                                             <ul class="dropdown-menu">
                                                 <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
                                                 <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
-                                                <li><a href="#"><i class="iot-delete" ></i>Clone</a></li>
+                                                <li><a href="#"><i class="iot-Copy" ></i>Clone</a></li>
                                             </ul>
                                         </div>
                                      </div>   
@@ -371,7 +371,7 @@
                                             <ul class="dropdown-menu">
                                                 <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
                                                 <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
-                                                <li><a href="#"><i class="iot-delete" ></i>Clone</a></li>
+                                                <li><a href="#"><i class="iot-Copy" ></i>Clone</a></li>
                                             </ul>
                                         </div>
                                      </div>   
@@ -418,7 +418,7 @@
                                             <ul class="dropdown-menu">
                                                 <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
                                                 <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
-                                                <li><a href="#"><i class="iot-delete" ></i>Clone</a></li>
+                                                <li><a href="#"><i class="iot-Copy" ></i>Clone</a></li>
                                             </ul>
                                         </div>
                                      </div>   
@@ -467,7 +467,7 @@
                                             <ul class="dropdown-menu">
                                                 <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
                                                 <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
-                                                <li><a href="#"><i class="iot-delete" ></i>Clone</a></li>
+                                                <li><a href="#"><i class="iot-Copy" ></i>Clone</a></li>
                                             </ul>
                                         </div>
                                      </div>   
@@ -504,10 +504,6 @@
                                     ></canvas>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="visualiser3" role="tabpanel" aria-labelledby="visualiser3-tab">
-                        <div class="row row-md">
                             <div class="col-sm-6 col-md-6">
                                 <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
                                      <div class="head-withoption">
@@ -519,7 +515,7 @@
                                             <ul class="dropdown-menu">
                                                 <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
                                                 <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
-                                                <li><a href="#"><i class="iot-delete" ></i>Clone</a></li>
+                                                <li><a href="#"><i class="iot-Copy" ></i>Clone</a></li>
                                             </ul>
                                         </div>
                                      </div>   
@@ -572,7 +568,7 @@
                                             <ul class="dropdown-menu">
                                                 <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
                                                 <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
-                                                <li><a href="#"><i class="iot-delete" ></i>Clone</a></li>
+                                                <li><a href="#"><i class="iot-Copy" ></i>Clone</a></li>
                                             </ul>
                                         </div>
                                      </div>   
@@ -621,6 +617,82 @@
                             </div>
                         </div>
                     </div>
+                    <div class="tab-pane fade" id="visualiser3" role="tabpanel" aria-labelledby="visualiser3-tab">
+                        <div class="row row-md">
+                            <div class="col-sm-6 col-md-6">
+                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
+                                     <div class="head-withoption">
+                                        <h6><span>ETP-BOD</span> LeafDevice1</h6>
+                                        <div class="monitors-edit ml-auto">
+                                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="las la-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                <li><a href="#"><i class="iot-Copy" ></i>Clone</a></li>
+                                            </ul>
+                                        </div>
+                                     </div>
+                                     <div id="linechart-chart1"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6">
+                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
+                                     <div class="head-withoption">
+                                        <h6><span>ETP-BOD</span> LeafDevice1</h6>
+                                        <div class="monitors-edit ml-auto">
+                                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="las la-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                <li><a href="#"><i class="iot-Copy" ></i>Clone</a></li>
+                                            </ul>
+                                        </div>
+                                     </div>
+                                     <div id="linechart-chart2"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6">
+                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
+                                     <div class="head-withoption">
+                                        <h6><span>ETP-BOD</span> LeafDevice1</h6>
+                                        <div class="monitors-edit ml-auto">
+                                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="las la-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                <li><a href="#"><i class="iot-Copy" ></i>Clone</a></li>
+                                            </ul>
+                                        </div>
+                                     </div>
+                                     <div id="arealine-chart1"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6">
+                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
+                                     <div class="head-withoption">
+                                        <h6><span>ETP-BOD</span> LeafDevice1</h6>
+                                        <div class="monitors-edit ml-auto">
+                                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="las la-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                <li><a href="#"><i class="iot-Copy" ></i>Clone</a></li>
+                                            </ul>
+                                        </div>
+                                     </div>
+                                     <div id="arealine-chart2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                   </div>
             </div>
         </div>
@@ -632,8 +704,15 @@
 <script src="assets/js/slick.js"></script>
 <script src="assets/js/bootstrap-datepicker.js"></script>
 <script src="assets/js/bootstrap-select.min.js"></script>
+<script src="assets/js/vue.min.js"></script>
+<script src="assets/js/apexcharts.js"></script>
+<script src="assets/js/vue-apexcharts.js"></script>
 <script src="assets/js/industrial.js"></script>
 <script src="assets/js/gauge.min.js"></script>
+<!--[if lt IE 9]>
+  <script type="text/javascript" src="assets/js/excanvas.js"></script>
+<![endif]-->
+<script type="text/javascript" src="assets/js/segment-display.js"></script>
 <script src="assets/js/custom.js"></script>
 <script>
     $(document).ready(function(){
@@ -811,6 +890,151 @@
 
         
     });
+</script>
+<script type="text/javascript">
+
+    var display = new SegmentDisplay("display");
+    display.pattern         = "##:##:##";
+    display.displayAngle    = 6;
+    display.digitHeight     = 20;
+    display.digitWidth      = 14;
+    display.digitDistance   = 2.5;
+    display.segmentWidth    = 2;
+    display.segmentDistance = 0.3;
+    display.segmentCount    = 7;
+    display.cornerType      = 3;
+    display.colorOn         = "#0050A4";
+    display.colorOff        = "#E2E9F5";
+    display.draw();
+  
+  </script>
+<script type="text/javascript">
+    var linechart = {
+          series: [{
+            name: "Desktops",
+            data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
+        }],
+          chart: {
+          height: 350,
+          type: 'line',
+          zoom: {
+            enabled: false
+          }
+        },
+        colors: ['#0050A4'],
+        dataLabels: {
+          enabled: false
+        },
+        stroke: {
+          curve: 'straight'
+        },
+        grid: {
+          row: {
+            colors: ['#f3f3f3', 'transparent'],
+            opacity: 0.5
+          },
+        },
+        xaxis: {
+          categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#linechart-chart1"), linechart);
+        chart.render();
+</script>
+<script type="text/javascript">
+    var linechar2 = {
+          series: [{
+          data: [34, 44, 54, 21, 12, 43, 33, 23, 66, 66, 58]
+        }],
+          chart: {
+          type: 'line',
+          zoom: {
+            enabled: false
+          },
+          height: 350
+        },
+        colors: ['#0050A4'],
+        stroke: {
+          curve: 'stepline',
+        },
+        dataLabels: {
+          enabled: false
+        },
+        markers: {
+          hover: {
+            sizeOffset: 4
+          }
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#linechart-chart2"), linechar2);
+        chart.render();
+</script>
+<script type="text/javascript">
+    var arealinechart1 = {
+        series: [{
+        name: "STOCK ABC",
+        data: [1.5, 4.1, 7.5, 3.5, 5, 3, 2]
+    }],
+        chart: {
+        type: 'area',
+        height: 350,
+        zoom: {
+        enabled: false
+        }
+    },
+    dataLabels: {
+        enabled: false
+    },
+    stroke: {
+        curve: 'straight',
+        colors: ['#0050A4'],
+    },
+    
+    labels: ['M', 'T', 'W', 'T', 'F', 'S', 'D'],
+    
+    };
+
+    var chart = new ApexCharts(document.querySelector("#arealine-chart1"), arealinechart1);
+    chart.render();
+</script>
+<script type="text/javascript">
+    var arealinechart2 = {
+          series: [{
+          name: 'series1',
+          data: [31, 40, 28, 51, 42, 109, 100]
+        }, {
+          name: 'series2',
+          data: [11, 32, 45, 32, 34, 52, 41]
+        }],
+          chart: {
+          height: 350,
+          zoom: {
+            enabled: false
+          },
+          type: 'area'
+        },
+        dataLabels: {
+          enabled: false
+        },
+        stroke: {
+          curve: 'smooth',
+          colors: ['#0050A4','#00B9B6'],
+        },
+        xaxis: {
+          type: 'datetime',
+          categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+        },
+        tooltip: {
+          x: {
+            format: 'dd/MM/yy HH:mm'
+          },
+        },
+        };
+
+        var chart = new ApexCharts(document.querySelector("#arealine-chart2"), arealinechart2);
+        chart.render();
 </script>
 </body>
 </html>

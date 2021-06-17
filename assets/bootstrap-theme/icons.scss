@@ -40,41 +40,53 @@
 .iot-delete:before {
   content: "\e904";
 }
+.iot-statistics:before {
+  content: "\e905";
+}
 .iot-sites:before {
   content: "\e906";
 }
 .iot-eye:before {
-  content: "\e908";
+  content: "\e907";
 }
 .iot-home:before {
-  content: "\e909";
+  content: "\e908";
 }
 .iot-notification:before {
-  content: "\e90a";
+  content: "\e909";
 }
 .iot-startup:before {
-  content: "\e90b";
+  content: "\e90a";
 }
 .iot-wifi:before {
-  content: "\e90c";
+  content: "\e90b";
 }
 .iot-bell:before {
-  content: "\e905";
+  content: "\e90c";
   color: #fff;
 }
 .iot-configuration:before {
-  content: "\e907";
-}
-.iot-information:before {
   content: "\e90d";
 }
-.iot-masters:before {
+.iot-information:before {
   content: "\e90e";
 }
-.iot-reports:before {
+.iot-masters:before {
   content: "\e90f";
 }
-.iot-search:before {
+.iot-reports:before {
   content: "\e910";
+}
+.iot-search:before {
+  content: "\e911";
   color: #0050a4;
+}
+.iot-device-key:before {
+  content: "\e912";
+}
+.iot-email-log:before {
+  content: "\e913";
+}
+.iot-Copy:before {
+  content: "\e914";
 }
