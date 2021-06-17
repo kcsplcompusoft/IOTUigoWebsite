@@ -1155,10 +1155,20 @@ a.bg9:hover{background:#0b9492;}
 				}
 				&.tank{
 					width:90px;
+					.tick{
+						&:last-child > .scale{top:-238%}
+					}
 				}
 				&.thermometer{
-					height:calc(100px * 2); width:calc(20px * 1.5);
-					.tick{height:2% !important;}
+					height:calc(100px * 2); width:calc(15px * 2);
+					.tick{
+						height:2% !important;
+						&:last-child > .scale{top:-195%}
+					}
+					
+				}
+				&.led{
+					position:relative; top:50%; transform:translateY(-50%); margin-top:-20px;
 				}
 				&.readout{
 					width:100% !important; padding-top:24px; background:#E2E9F5;
@@ -1191,6 +1201,9 @@ a.bg9:hover{background:#0b9492;}
 			
 			.segment-display{
 				width:100% !important; height:auto !important; border:4px solid $color-black; padding:0 20px;
+			}
+			.segment-display2{
+				width:100% !important; height:auto !important; background:$color-black; border:4px solid $color-darkGrey; padding:0 20px;
 			}
 			.zeroconfi-right{
 				width:370px !important; height:auto !important;
