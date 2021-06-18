@@ -9,6 +9,7 @@
     <link href="assets/line-awesome.css" rel="stylesheet" type="text/css">
     <link href="assets/bootstrap-select.css" rel="stylesheet" type="text/css">
     <link href="assets/industrial.css" rel="stylesheet" type="text/css">
+    <link href="assets/leaflet.css" rel="stylesheet" type="text/css">
     <link href="assets/style.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -177,7 +178,7 @@
                             <div class="col-sm-6 col-md-4">
                                 <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
                                     <div class="head-withoption">
-                                        <h6><span>ETP-BOD</span> Water Lavel</h6>
+                                        <h6><span>ETP-BOD</span> Water Level</h6>
                                         <div class="monitors-edit ml-auto">
                                             <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <i class="las la-ellipsis-v"></i>
@@ -193,6 +194,48 @@
                                         <span class="ticks" data-amount="4" data-scale-freq="1"></span>
                                         <div class="space"></div>
                                         <div class="meter"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
+                                    <div class="head-withoption">
+                                        <h6><span>ETP-BOD</span> Temperature</h6>
+                                        <div class="monitors-edit ml-auto">
+                                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="las la-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                <li><a href="#"><i class="iot-Copy" ></i>Clone</a></li>
+                                            </ul>
+                                        </div>
+                                     </div>
+                                     <div class="industrial thermometer size one">
+                                        <span class="ticks" data-amount="7" data-scale-freq="1"></span>
+                                        <div class="space"></div>
+                                        <div class="meter danger"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
+                                    <div class="head-withoption">
+                                        <h6><span>ETP-BOD</span> LED</h6>
+                                        <div class="monitors-edit ml-auto">
+                                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="las la-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                <li><a href="#"><i class="iot-Copy" ></i>Clone</a></li>
+                                            </ul>
+                                        </div>
+                                     </div>
+                                     <div class="industrial led size two">
+                                        <div class="meter red"></div>
                                     </div>
                                 </div>
                             </div>
@@ -238,7 +281,254 @@
                                       </canvas>
                                 </div>
                             </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
+                                    <div class="head-withoption">
+                                        <h6><span>ETP-BOD</span> Segment</h6>
+                                        <div class="monitors-edit ml-auto">
+                                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="las la-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                <li><a href="#"><i class="iot-Copy" ></i>Clone</a></li>
+                                            </ul>
+                                        </div>
+                                     </div>
+                                     <canvas id="display2" class="segment-display2" width="300" height="180">
+                                        Your browser is unfortunately not supported.
+                                      </canvas>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
+                                    <div class="head-withoption">
+                                        <h6><span>ETP-BOD</span> Segment</h6>
+                                        <div class="monitors-edit ml-auto">
+                                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="las la-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                <li><a href="#"><i class="iot-Copy" ></i>Clone</a></li>
+                                            </ul>
+                                        </div>
+                                     </div>
+                                     <canvas id="display3" class="segment-display2" width="300" height="180">
+                                        Your browser is unfortunately not supported.
+                                      </canvas>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
+                                    <div class="head-withoption">
+                                        <h6><span>ETP-BOD</span> Segment</h6>
+                                        <div class="monitors-edit ml-auto">
+                                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="las la-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                <li><a href="#"><i class="iot-Copy" ></i>Clone</a></li>
+                                            </ul>
+                                        </div>
+                                     </div>
+                                     <canvas class="w-100" id="gauge340"></canvas>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
+                                    <div class="head-withoption">
+                                        <h6><span>ETP-BOD</span> Segment</h6>
+                                        <div class="monitors-edit ml-auto">
+                                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="las la-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                <li><a href="#"><i class="iot-Copy" ></i>Clone</a></li>
+                                            </ul>
+                                        </div>
+                                     </div>
+                                     <canvas class="w-100" id="gauge180"></canvas>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
+                                    <div class="head-withoption">
+                                        <h6><span>ETP-BOD</span> Segment</h6>
+                                        <div class="monitors-edit ml-auto">
+                                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="las la-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                <li><a href="#"><i class="iot-Copy" ></i>Clone</a></li>
+                                            </ul>
+                                        </div>
+                                     </div>
+                                     <canvas class="w-100" id="gauge270"></canvas>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
+                                    <div class="head-withoption">
+                                        <h6><span>ETP-BOD</span> Segment</h6>
+                                        <div class="monitors-edit ml-auto">
+                                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="las la-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                <li><a href="#"><i class="iot-Copy" ></i>Clone</a></li>
+                                            </ul>
+                                        </div>
+                                     </div>
+                                     <canvas class="w-100" id="gauge240"></canvas>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
+                                    <div class="head-withoption">
+                                        <h6><span>ETP-BOD</span> Segment</h6>
+                                        <div class="monitors-edit ml-auto">
+                                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="las la-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                <li><a href="#"><i class="iot-Copy" ></i>Clone</a></li>
+                                            </ul>
+                                        </div>
+                                     </div>
+                                     <canvas class="w-100" id="gauge45"></canvas>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
+                                    <div class="head-withoption">
+                                        <h6><span>ETP-BOD</span> Segment</h6>
+                                        <div class="monitors-edit ml-auto">
+                                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="las la-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                <li><a href="#"><i class="iot-Copy" ></i>Clone</a></li>
+                                            </ul>
+                                        </div>
+                                     </div>
+                                     <canvas class="w-100" id="gauge90"></canvas>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12">
+                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
+                                     <div class="head-withoption">
+                                        <h6><span>ETP-BOD</span> Map</h6>
+                                        <div class="monitors-edit ml-auto">
+                                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="las la-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                <li><a href="#"><i class="iot-Copy" ></i>Clone</a></li>
+                                            </ul>
+                                        </div>
+                                     </div>
+                                     <div id="map" class="map map-home" style="height: 300px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="visualiser2" role="tabpanel" aria-labelledby="visualiser2-tab">
+                        <div class="row row-md">
+                            <div class="col-sm-6 col-md-6">
+                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
+                                     <div class="head-withoption">
+                                        <h6><span>ETP-BOD</span> LeafDevice1</h6>
+                                        <div class="monitors-edit ml-auto">
+                                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="las la-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                <li><a href="#"><i class="iot-Copy" ></i>Clone</a></li>
+                                            </ul>
+                                        </div>
+                                     </div>
+                                     <div id="linechart-chart1"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6">
+                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
+                                     <div class="head-withoption">
+                                        <h6><span>ETP-BOD</span> LeafDevice1</h6>
+                                        <div class="monitors-edit ml-auto">
+                                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="las la-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                <li><a href="#"><i class="iot-Copy" ></i>Clone</a></li>
+                                            </ul>
+                                        </div>
+                                     </div>
+                                     <div id="linechart-chart2"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6">
+                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
+                                     <div class="head-withoption">
+                                        <h6><span>ETP-BOD</span> LeafDevice1</h6>
+                                        <div class="monitors-edit ml-auto">
+                                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="las la-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                <li><a href="#"><i class="iot-Copy" ></i>Clone</a></li>
+                                            </ul>
+                                        </div>
+                                     </div>
+                                     <div id="arealine-chart1"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6">
+                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
+                                     <div class="head-withoption">
+                                        <h6><span>ETP-BOD</span> LeafDevice1</h6>
+                                        <div class="monitors-edit ml-auto">
+                                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="las la-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                <li><a href="#"><i class="iot-Copy" ></i>Clone</a></li>
+                                            </ul>
+                                        </div>
+                                     </div>
+                                     <div id="arealine-chart2"></div>
+                                </div>
+                            </div>
                             
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="visualiser3" role="tabpanel" aria-labelledby="visualiser3-tab">
+                        <!-- <div class="row row-md">
                             <div class="col-sm-6 col-md-6">
                                 <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
                                      <div class="head-withoption">
@@ -289,10 +579,6 @@
                                       data-type="linear-gauge"></canvas> 
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="visualiser2" role="tabpanel" aria-labelledby="visualiser2-tab">
-                        <div class="row row-md">
                             <div class="col-sm-6 col-md-6">
                                 <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
                                      <div class="head-withoption">
@@ -615,83 +901,7 @@
                                     ></canvas>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="visualiser3" role="tabpanel" aria-labelledby="visualiser3-tab">
-                        <div class="row row-md">
-                            <div class="col-sm-6 col-md-6">
-                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
-                                     <div class="head-withoption">
-                                        <h6><span>ETP-BOD</span> LeafDevice1</h6>
-                                        <div class="monitors-edit ml-auto">
-                                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class="las la-ellipsis-v"></i>
-                                            </button>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
-                                                <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
-                                                <li><a href="#"><i class="iot-Copy" ></i>Clone</a></li>
-                                            </ul>
-                                        </div>
-                                     </div>
-                                     <div id="linechart-chart1"></div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6">
-                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
-                                     <div class="head-withoption">
-                                        <h6><span>ETP-BOD</span> LeafDevice1</h6>
-                                        <div class="monitors-edit ml-auto">
-                                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class="las la-ellipsis-v"></i>
-                                            </button>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
-                                                <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
-                                                <li><a href="#"><i class="iot-Copy" ></i>Clone</a></li>
-                                            </ul>
-                                        </div>
-                                     </div>
-                                     <div id="linechart-chart2"></div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6">
-                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
-                                     <div class="head-withoption">
-                                        <h6><span>ETP-BOD</span> LeafDevice1</h6>
-                                        <div class="monitors-edit ml-auto">
-                                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class="las la-ellipsis-v"></i>
-                                            </button>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
-                                                <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
-                                                <li><a href="#"><i class="iot-Copy" ></i>Clone</a></li>
-                                            </ul>
-                                        </div>
-                                     </div>
-                                     <div id="arealine-chart1"></div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6">
-                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
-                                     <div class="head-withoption">
-                                        <h6><span>ETP-BOD</span> LeafDevice1</h6>
-                                        <div class="monitors-edit ml-auto">
-                                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class="las la-ellipsis-v"></i>
-                                            </button>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
-                                                <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
-                                                <li><a href="#"><i class="iot-Copy" ></i>Clone</a></li>
-                                            </ul>
-                                        </div>
-                                     </div>
-                                     <div id="arealine-chart2"></div>
-                                </div>
-                            </div>
-                        </div>
+                        </div> -->
                     </div>
                   </div>
             </div>
@@ -708,12 +918,228 @@
 <script src="assets/js/apexcharts.js"></script>
 <script src="assets/js/vue-apexcharts.js"></script>
 <script src="assets/js/industrial.js"></script>
+<!-- <script src="assets/js/gauge-new.min.js"></script> -->
 <script src="assets/js/gauge.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet-src.js"></script>
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
 <!--[if lt IE 9]>
   <script type="text/javascript" src="assets/js/excanvas.js"></script>
 <![endif]-->
 <script type="text/javascript" src="assets/js/segment-display.js"></script>
 <script src="assets/js/custom.js"></script>
+<script type="text/javascript">
+    var opts340 = {
+        angle: -0.42, // The span of the gauge arc
+        lineWidth: 0.26, // The line thickness
+        radiusScale: 0.9, // Relative radius
+        pointer: {
+            length: 0.57, // // Relative to gauge radius
+            strokeWidth: 0.026, // The thickness
+            color: '#000000' // Fill color
+        },
+        staticLabels: {
+            font: "16px sans-serif",  // Specifies font
+            labels: [0, 10, 20, 30, 40, 50],  // Print labels at these values
+            color: "#000000",  // Optional: Label text color
+            fractionDigits: 0  // Optional: Numerical precision. 0=round off.
+        },
+        staticZones: [
+            {strokeStyle: "#33ffbd", min: 0, max: 10}, // Red from 100 to 130
+            {strokeStyle: "#75ff33", min: 10, max: 20}, // Yellow
+            {strokeStyle: "#dbff33", min: 20, max: 30}, // Green
+            {strokeStyle: "#ffbd33", min: 30, max: 40}, // Yellow
+            {strokeStyle: "#ff0000", min: 40, max: 50}  // Red
+        ],
+        limitMax: false,     // If false, max value increases automatically if value > maxValue
+        limitMin: false,     // If true, the min value of the gauge will be fixed
+        highDpiSupport: true,     // High resolution support
+        
+    
+    };
+    var target340 = document.getElementById('gauge340'); // your canvas element
+    var gauge340 = new Gauge(target340).setOptions(opts340); // create sexy gauge!
+    gauge340.maxValue = 50; // set max gauge value
+    gauge340.setMinValue(0);  // Prefer setter over gauge.minValue = 0
+    gauge340.animationSpeed = 32; // set animation speed (32 is default value)
+    gauge340.set(50); // set actual value 
+    
+    
+    var opts180 = {
+        angle: 0, 
+        lineWidth: 0.26, 
+        radiusScale: 0.9,
+        pointer: {
+            length: 0.57, 
+            strokeWidth: 0.026, 
+            color: '#000000' 
+        },
+        staticLabels: {
+            font: "16px sans-serif", 
+            labels: [0, 20, 40, 60, 80, 100],  
+            color: "#000000", 
+            fractionDigits: 0 
+        },
+        staticZones: [
+            {strokeStyle: "#33ffbd", min: 0, max: 20}, 
+            {strokeStyle: "#75ff33", min: 20, max: 40}, 
+            {strokeStyle: "#dbff33", min: 40, max: 60}, 
+            {strokeStyle: "#ffbd33", min: 60, max: 80}, 
+            {strokeStyle: "#ff0000", min: 80, max: 100}  
+        ],
+        limitMax: false,    
+        limitMin: false,    
+        highDpiSupport: true,    
+        
+    
+    };
+    var target180 = document.getElementById('gauge180'); 
+    var gauge180 = new Gauge(target180).setOptions(opts180); 
+    gauge180.maxValue = 100;
+    gauge180.setMinValue(0); 
+    gauge180.animationSpeed = 32;
+    gauge180.set(100);
+
+
+    var opts270 = {
+        angle: -0.3, 
+        lineWidth: 0.26, 
+        radiusScale: 0.9,
+        pointer: {
+            length: 0.57, 
+            strokeWidth: 0.026, 
+            color: '#000000' 
+        },
+        staticLabels: {
+            font: "16px sans-serif", 
+            labels: [0, 20, 40, 60, 80, 100],  
+            color: "#000000", 
+            fractionDigits: 0 
+        },
+        staticZones: [
+            {strokeStyle: "#33ffbd", min: 0, max: 20}, 
+            {strokeStyle: "#75ff33", min: 20, max: 40}, 
+            {strokeStyle: "#dbff33", min: 40, max: 60}, 
+            {strokeStyle: "#ffbd33", min: 60, max: 80}, 
+            {strokeStyle: "#ff0000", min: 80, max: 100}  
+        ],
+        limitMax: false,    
+        limitMin: false,    
+        highDpiSupport: true,    
+        
+    
+    };
+    var target270 = document.getElementById('gauge270'); 
+    var gauge270 = new Gauge(target270).setOptions(opts270); 
+    gauge270.maxValue = 100;
+    gauge270.setMinValue(0); 
+    gauge270.animationSpeed = 32;
+    gauge270.set(100);
+
+    var opts240 = {
+        angle: -0.2, 
+        lineWidth: 0.26, 
+        radiusScale: 0.9,
+        pointer: {
+            length: 0.57, 
+            strokeWidth: 0.026, 
+            color: '#000000' 
+        },
+        staticLabels: {
+            font: "16px sans-serif", 
+            labels: [0, 20, 40, 60, 80, 100],  
+            color: "#000000", 
+            fractionDigits: 0 
+        },
+        staticZones: [
+            {strokeStyle: "#33ffbd", min: 0, max: 20}, 
+            {strokeStyle: "#75ff33", min: 20, max: 40}, 
+            {strokeStyle: "#dbff33", min: 40, max: 60}, 
+            {strokeStyle: "#ffbd33", min: 60, max: 80}, 
+            {strokeStyle: "#ff0000", min: 80, max: 100}  
+        ],
+        limitMax: false,    
+        limitMin: false,    
+        highDpiSupport: true,    
+        
+    
+    };
+    var target240 = document.getElementById('gauge240'); 
+    var gauge240 = new Gauge(target240).setOptions(opts240); 
+    gauge240.maxValue = 100;
+    gauge240.setMinValue(0); 
+    gauge240.animationSpeed = 32;
+    gauge240.set(100);
+
+    var opts45 = {
+        angle: 0.3, 
+        lineWidth: 0.26, 
+        radiusScale: 0.9,
+        pointer: {
+            length: 0.57, 
+            strokeWidth: 0.026, 
+            color: '#000000' 
+        },
+        staticLabels: {
+            font: "16px sans-serif", 
+            labels: [0, 20, 40, 60, 80, 100],  
+            color: "#000000", 
+            fractionDigits: 0 
+        },
+        staticZones: [
+            {strokeStyle: "#33ffbd", min: 0, max: 20}, 
+            {strokeStyle: "#75ff33", min: 20, max: 40}, 
+            {strokeStyle: "#dbff33", min: 40, max: 60}, 
+            {strokeStyle: "#ffbd33", min: 60, max: 80}, 
+            {strokeStyle: "#ff0000", min: 80, max: 100}  
+        ],
+        limitMax: false,    
+        limitMin: false,    
+        highDpiSupport: true,    
+        
+    
+    };
+    var target45 = document.getElementById('gauge45'); 
+    var gauge45 = new Gauge(target45).setOptions(opts45); 
+    gauge45.maxValue = 100;
+    gauge45.setMinValue(0); 
+    gauge45.animationSpeed = 32;
+    gauge45.set(100);
+
+    var opts90 = {
+        angle: 0.1, 
+        lineWidth: 0.26, 
+        radiusScale: 0.9,
+        pointer: {
+            length: 0.57, 
+            strokeWidth: 0.026, 
+            color: '#000000' 
+        },
+        staticLabels: {
+            font: "16px sans-serif", 
+            labels: [0, 20, 40, 60, 80, 100],  
+            color: "#000000", 
+            fractionDigits: 0 
+        },
+        staticZones: [
+            {strokeStyle: "#33ffbd", min: 0, max: 20}, 
+            {strokeStyle: "#75ff33", min: 20, max: 40}, 
+            {strokeStyle: "#dbff33", min: 40, max: 60}, 
+            {strokeStyle: "#ffbd33", min: 60, max: 80}, 
+            {strokeStyle: "#ff0000", min: 80, max: 100}  
+        ],
+        limitMax: false,    
+        limitMin: false,    
+        highDpiSupport: true,    
+        
+    
+    };
+    var target90 = document.getElementById('gauge90'); 
+    var gauge90 = new Gauge(target90).setOptions(opts90); 
+    gauge90.maxValue = 100;
+    gauge90.setMinValue(0); 
+    gauge90.animationSpeed = 32;
+    gauge90.set(100);
+</script>
 <script>
     $(document).ready(function(){
         $('.boot-select .select').selectpicker();
@@ -746,167 +1172,32 @@
                 introJs().start();
             });
             
-            var gauge = new RadialGauge({
-                renderTo: 'canvas-id'
-            }).draw();
-
-            var gauge = new LinearGauge({
-                renderTo: 'canvas-id'
-            }).draw();
-
-            var gauge = new RadialGauge({
-            renderTo: 'canvas-id',
-            width: 300,
-            height: 300,
-            units: "Km/h",
-            minValue: 0,
-            maxValue: 220,
-            majorTicks: [
-                "0",
-                "20",
-                "40",
-                "60",
-                "80",
-                "100",
-                "120",
-                "140",
-                "160",
-                "180",
-                "200",
-                "220"
-            ],
-            minorTicks: 2,
-            strokeTicks: true,
-            highlights: [
-                {
-                    "from": 160,
-                    "to": 220,
-                    "color": "rgba(200, 50, 50, .75)"
-                }
-            ],
-            colorPlate: "#fff",
-            borderShadowWidth: 0,
-            borders: false,
-            needleType: "arrow",
-            needleWidth: 2,
-            needleCircleSize: 7,
-            needleCircleOuter: true,
-            needleCircleInner: false,
-            animationDuration: 1500,
-            animationRule: "linear"
-        }).draw();
-
-        var gauge = new LinearGauge({
-        renderTo: 'canvas-id',
-        width: 120,
-        height: 400,
-        units: "°C",
-        minValue: 0,
-        startAngle: 90,
-        ticksAngle: 180,
-        valueBox: false,
-        maxValue: 220,
-        majorTicks: [
-            "0",
-            "20",
-            "40",
-            "60",
-            "80",
-            "100",
-            "120",
-            "140",
-            "160",
-            "180",
-            "200",
-            "220"
-        ],
-        minorTicks: 2,
-        strokeTicks: true,
-        highlights: [
-            {
-                "from": 100,
-                "to": 220,
-                "color": "rgba(200, 50, 50, .75)"
-            }
-        ],
-        colorPlate: "#fff",
-        borderShadowWidth: 0,
-        borders: false,
-        needleType: "arrow",
-        needleWidth: 2,
-        needleCircleSize: 7,
-        needleCircleOuter: true,
-        needleCircleInner: false,
-        animationDuration: 1500,
-        animationRule: "linear",
-        barWidth: 10,
-        value: 35
-    }).draw();
-        
-        var gauge = new RadialGauge({
-            renderTo: 'canvas-id',
-            width: 300,
-            height: 300,
-            units: "Km/h",
-            minValue: 0,
-            startAngle: 90,
-            ticksAngle: 180,
-            valueBox: false,
-            maxValue: 220,
-            majorTicks: [
-                "0",
-                "20",
-                "40",
-                "60",
-                "80",
-                "100",
-                "120",
-                "140",
-                "160",
-                "180",
-                "200",
-                "220"
-            ],
-            minorTicks: 2,
-            strokeTicks: true,
-            highlights: [
-                {
-                    "from": 160,
-                    "to": 220,
-                    "color": "rgba(200, 50, 50, .75)"
-                }
-            ],
-            colorPlate: "#fff",
-            borderShadowWidth: 0,
-            borders: false,
-            needleType: "arrow",
-            needleWidth: 2,
-            needleCircleSize: 7,
-            needleCircleOuter: true,
-            needleCircleInner: false,
-            animationDuration: 1500,
-            animationRule: "linear"
-        }).draw();
+            
 
         
     });
 </script>
 <script type="text/javascript">
-
-    var display = new SegmentDisplay("display");
-    display.pattern         = "##:##:##";
-    display.displayAngle    = 6;
-    display.digitHeight     = 20;
-    display.digitWidth      = 14;
-    display.digitDistance   = 2.5;
-    display.segmentWidth    = 2;
-    display.segmentDistance = 0.3;
-    display.segmentCount    = 7;
-    display.cornerType      = 3;
-    display.colorOn         = "#0050A4";
-    display.colorOff        = "#E2E9F5";
-    display.draw();
-  
+    function segment(id,on,off){
+        var display = new SegmentDisplay(id);
+        display.pattern         = "#####";
+        display.displayAngle    = 6;
+        display.digitHeight     = 20;
+        display.digitWidth      = 14;
+        display.digitDistance   = 2.5;
+        display.segmentWidth    = 2;
+        display.segmentDistance = 0.3;
+        display.segmentCount    = 7;
+        display.cornerType      = 3;
+        display.setValue('85241.52');
+        display.colorOn         = on;
+        display.colorOff        = off;
+        display.draw();
+        return display;
+    }
+    display = segment("display","#000000","#ffffff");
+    display2 = segment("display2","#ff0000","#000000");
+    display3 = segment("display3","#ffffff","#000000");
   </script>
 <script type="text/javascript">
     var linechart = {
@@ -1019,7 +1310,7 @@
           enabled: false
         },
         stroke: {
-          curve: 'smooth',
+          curve: 'stepline',
           colors: ['#0050A4','#00B9B6'],
         },
         xaxis: {
@@ -1036,5 +1327,168 @@
         var chart = new ApexCharts(document.querySelector("#arealine-chart2"), arealinechart2);
         chart.render();
 </script>
+<script>
+	
+    var mapOptions = {
+          center: [23.2587, 72.1924],
+          zoom: 7.3
+      }
+      // Creating a map object
+      //var map = L.map('map').setView([51.505, -0.09], 13);
+      var map = new L.map('map', mapOptions);
+
+      // Creating a Layer object
+      googleHybrid = L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}',{
+        maxZoom: 20,
+        subdomains:['mt0','mt1','mt2','mt3']
+      }).addTo(map);
+</script>
+<!-- <script type="text/javascript">
+    $(document).ready(function(){
+        
+            var gauge = new RadialGauge({
+                    renderTo: 'canvas-id'
+                }).draw();
+
+                var gauge = new LinearGauge({
+                    renderTo: 'canvas-id'
+                }).draw();
+
+                var gauge = new RadialGauge({
+                renderTo: 'canvas-id',
+                width: 300,
+                height: 300,
+                units: "Km/h",
+                minValue: 0,
+                maxValue: 220,
+                majorTicks: [
+                    "0",
+                    "20",
+                    "40",
+                    "60",
+                    "80",
+                    "100",
+                    "120",
+                    "140",
+                    "160",
+                    "180",
+                    "200",
+                    "220"
+                ],
+                minorTicks: 2,
+                strokeTicks: true,
+                highlights: [
+                    {
+                        "from": 160,
+                        "to": 220,
+                        "color": "rgba(200, 50, 50, .75)"
+                    }
+                ],
+                colorPlate: "#fff",
+                borderShadowWidth: 0,
+                borders: false,
+                needleType: "arrow",
+                needleWidth: 2,
+                needleCircleSize: 7,
+                needleCircleOuter: true,
+                needleCircleInner: false,
+                animationDuration: 1500,
+                animationRule: "linear"
+            }).draw();
+
+            var gauge = new LinearGauge({
+            renderTo: 'canvas-id',
+            width: 120,
+            height: 400,
+            units: "°C",
+            minValue: 0,
+            startAngle: 90,
+            ticksAngle: 180,
+            valueBox: false,
+            maxValue: 220,
+            majorTicks: [
+                "0",
+                "20",
+                "40",
+                "60",
+                "80",
+                "100",
+                "120",
+                "140",
+                "160",
+                "180",
+                "200",
+                "220"
+            ],
+            minorTicks: 2,
+            strokeTicks: true,
+            highlights: [
+                {
+                    "from": 100,
+                    "to": 220,
+                    "color": "rgba(200, 50, 50, .75)"
+                }
+            ],
+            colorPlate: "#fff",
+            borderShadowWidth: 0,
+            borders: false,
+            needleType: "arrow",
+            needleWidth: 2,
+            needleCircleSize: 7,
+            needleCircleOuter: true,
+            needleCircleInner: false,
+            animationDuration: 1500,
+            animationRule: "linear",
+            barWidth: 10,
+            value: 35
+        }).draw();
+            
+            var gauge = new RadialGauge({
+                renderTo: 'canvas-id',
+                width: 300,
+                height: 300,
+                units: "Km/h",
+                minValue: 0,
+                startAngle: 90,
+                ticksAngle: 180,
+                valueBox: false,
+                maxValue: 220,
+                majorTicks: [
+                    "0",
+                    "20",
+                    "40",
+                    "60",
+                    "80",
+                    "100",
+                    "120",
+                    "140",
+                    "160",
+                    "180",
+                    "200",
+                    "220"
+                ],
+                minorTicks: 2,
+                strokeTicks: true,
+                highlights: [
+                    {
+                        "from": 160,
+                        "to": 220,
+                        "color": "rgba(200, 50, 50, .75)"
+                    }
+                ],
+                colorPlate: "#fff",
+                borderShadowWidth: 0,
+                borders: false,
+                needleType: "arrow",
+                needleWidth: 2,
+                needleCircleSize: 7,
+                needleCircleOuter: true,
+                needleCircleInner: false,
+                animationDuration: 1500,
+                animationRule: "linear"
+            }).draw();
+        
+    });
+</script> -->
 </body>
 </html>

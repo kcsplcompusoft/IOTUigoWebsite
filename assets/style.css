@@ -14111,25 +14111,41 @@ a.bg9:hover {
 .monitorsdetail-row .tab-content .tab-pane .row > div {
   display: flex;
 }
+.monitorsdetail-row .tab-content .tab-pane .map-home {
+  margin-top: 0px !important;
+}
 .monitorsdetail-row .tab-content .tab-pane .industrial {
   margin: 0 auto;
   box-shadow: none;
 }
 .monitorsdetail-row .tab-content .tab-pane .industrial.tank.size.two .tick {
-  height: 3px !important;
-  background: #0050A4;
+  height: 2% !important;
 }
 .monitorsdetail-row .tab-content .tab-pane .industrial.tank.size.two .tick .scale {
-  font-size: calc(5pt * 2);
-  font-weight: 400;
-  top: -8px;
+  font-size: calc(6pt * 2);
+  font-weight: 600;
 }
 .monitorsdetail-row .tab-content .tab-pane .industrial.tank {
-  background: #e2e8f4;
   width: 90px;
 }
-.monitorsdetail-row .tab-content .tab-pane .industrial.tank > .meter {
-  background: #c7d5ef;
+.monitorsdetail-row .tab-content .tab-pane .industrial.tank .tick:last-child > .scale {
+  top: -238%;
+}
+.monitorsdetail-row .tab-content .tab-pane .industrial.thermometer {
+  height: calc(100px * 2);
+  width: calc(15px * 2);
+}
+.monitorsdetail-row .tab-content .tab-pane .industrial.thermometer .tick {
+  height: 2% !important;
+}
+.monitorsdetail-row .tab-content .tab-pane .industrial.thermometer .tick:last-child > .scale {
+  top: -195%;
+}
+.monitorsdetail-row .tab-content .tab-pane .industrial.led {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: -20px;
 }
 .monitorsdetail-row .tab-content .tab-pane .industrial.readout {
   width: 100% !important;
@@ -14144,16 +14160,14 @@ a.bg9:hover {
 .monitorsdetail-row .tab-content .tab-pane .industrial.readout > .meter > .digit {
   text-shadow: none !important;
 }
-.monitorsdetail-row .tab-content .tab-pane .industrial.gauge {
-  background: #E2E9F5;
-}
 .monitorsdetail-row .tab-content .tab-pane .industrial.gauge .ticks > .tick {
   width: 1.7% !important;
-  background: linear-gradient(top, #0050A4 17%, rgba(0, 0, 0, 0) 17%);
-  background: -webkit-linear-gradient(top, #0050A4 17%, rgba(0, 0, 0, 0) 17%);
+  background: linear-gradient(top, #000000 17%, rgba(0, 0, 0, 0) 17%);
+  background: -webkit-linear-gradient(top, #000000 17%, rgba(0, 0, 0, 0) 17%);
 }
 .monitorsdetail-row .tab-content .tab-pane .industrial.gauge .ticks > .tick > .scale {
-  font-size: calc(5pt * 2);
+  font-size: calc(6pt * 2);
+  font-weight: 600;
   top: 18%;
   margin-left: -5px;
 }
@@ -14180,6 +14194,15 @@ a.bg9:hover {
 .monitorsdetail-row .tab-content .tab-pane .segment-display {
   width: 100% !important;
   height: auto !important;
+  border: 4px solid #000000;
+  padding: 0 20px;
+}
+.monitorsdetail-row .tab-content .tab-pane .segment-display2 {
+  width: 100% !important;
+  height: auto !important;
+  background: #000000;
+  border: 4px solid #4D4D4D;
+  padding: 0 20px;
 }
 .monitorsdetail-row .tab-content .tab-pane .zeroconfi-right {
   width: 370px !important;
