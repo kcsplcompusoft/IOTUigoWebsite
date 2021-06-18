@@ -14128,12 +14128,24 @@ a.bg9:hover {
 .monitorsdetail-row .tab-content .tab-pane .industrial.tank {
   width: 90px;
 }
+.monitorsdetail-row .tab-content .tab-pane .industrial.tank .tick:last-child > .scale {
+  top: -238%;
+}
 .monitorsdetail-row .tab-content .tab-pane .industrial.thermometer {
   height: calc(100px * 2);
-  width: calc(20px * 1.5);
+  width: calc(15px * 2);
 }
 .monitorsdetail-row .tab-content .tab-pane .industrial.thermometer .tick {
   height: 2% !important;
+}
+.monitorsdetail-row .tab-content .tab-pane .industrial.thermometer .tick:last-child > .scale {
+  top: -195%;
+}
+.monitorsdetail-row .tab-content .tab-pane .industrial.led {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: -20px;
 }
 .monitorsdetail-row .tab-content .tab-pane .industrial.readout {
   width: 100% !important;
@@ -14183,6 +14195,13 @@ a.bg9:hover {
   width: 100% !important;
   height: auto !important;
   border: 4px solid #000000;
+  padding: 0 20px;
+}
+.monitorsdetail-row .tab-content .tab-pane .segment-display2 {
+  width: 100% !important;
+  height: auto !important;
+  background: #000000;
+  border: 4px solid #4D4D4D;
   padding: 0 20px;
 }
 .monitorsdetail-row .tab-content .tab-pane .zeroconfi-right {
