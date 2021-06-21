@@ -1205,6 +1205,9 @@ a.bg9:hover{background:#0b9492;}
 			.segment-display2{
 				width:100% !important; height:auto !important; background:$color-black; border:4px solid $color-darkGrey; padding:0 20px;
 			}
+			.segment-display3{
+				width:100% !important; height:auto !important; background:$color-green; border:4px solid $color-darkGrey; padding:0 20px;
+			}
 			.zeroconfi-right{
 				width:370px !important; height:auto !important;
 				@include tablet{
