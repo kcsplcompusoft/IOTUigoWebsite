@@ -137,7 +137,7 @@
                     <h6 class="pb-0" >Speed Monitor</h6>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 </div>
-                <a href="#" class="btn btn-primary ml-auto btn-icon"><i class="las la-plus"></i> New Visualiser</a>
+                <a href="#" class="btn btn-primary ml-auto btn-icon" data-toggle="modal" data-target="#exampleModal"><i class="las la-plus"></i> New Visualiser</a>
             </div>
             <div class="monitorsdetail-row">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -298,7 +298,7 @@
                                      </div>
                                      <canvas id="display2" class="segment-display2" width="300" height="180">
                                         Your browser is unfortunately not supported.
-                                      </canvas>
+                                     </canvas>
                                 </div>
                             </div>
                             <div class="col-sm-6 col-md-4">
@@ -357,6 +357,11 @@
                                         </div>
                                      </div>
                                      <canvas class="w-100" id="gauge340"></canvas>
+                                     <div class="canvas-value">
+                                         <canvas id="display5" class="segment-display2" width="100" height="50">
+                                            Your browser is unfortunately not supported.
+                                         </canvas>
+                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-6 col-md-4">
@@ -375,6 +380,11 @@
                                         </div>
                                      </div>
                                      <canvas class="w-100" id="gauge180"></canvas>
+                                     <div class="canvas-value">
+                                         <canvas id="display6" class="segment-display2" width="100" height="50">
+                                            Your browser is unfortunately not supported.
+                                         </canvas>
+                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-6 col-md-4">
@@ -393,6 +403,11 @@
                                         </div>
                                      </div>
                                      <canvas class="w-100" id="gauge270"></canvas>
+                                     <div class="canvas-value">
+                                         <canvas id="display7" class="segment-display2" width="100" height="50">
+                                            Your browser is unfortunately not supported.
+                                         </canvas>
+                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-6 col-md-4">
@@ -411,6 +426,11 @@
                                         </div>
                                      </div>
                                      <canvas class="w-100" id="gauge240"></canvas>
+                                     <div class="canvas-value">
+                                         <canvas id="display8" class="segment-display2" width="100" height="50">
+                                            Your browser is unfortunately not supported.
+                                         </canvas>
+                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-6 col-md-4">
@@ -429,6 +449,11 @@
                                         </div>
                                      </div>
                                      <canvas class="w-100" id="gauge45"></canvas>
+                                     <div class="canvas-value">
+                                         <canvas id="display9" class="segment-display2" width="100" height="50">
+                                            Your browser is unfortunately not supported.
+                                         </canvas>
+                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-6 col-md-4">
@@ -447,6 +472,11 @@
                                         </div>
                                      </div>
                                      <canvas class="w-100" id="gauge90"></canvas>
+                                     <div class="canvas-value">
+                                         <canvas id="display10" class="segment-display2" width="100" height="50">
+                                            Your browser is unfortunately not supported.
+                                         </canvas>
+                                     </div>
                                 </div>
                             </div>
                             
@@ -999,6 +1029,32 @@
         </div>
     </div>
 </div>
+
+<div class="add-widgetModal">
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h6 class="modal-title" id="exampleModalLabel">Create Widget</h6>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group selectpicker boot-select">
+                <label class="form-label" >Select Widget</label>
+                <select class="select form-control" data-live-search="false">
+                    <option></option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </div>  
+          </div>
+        </div>
+      </div>
+    </div>
+
 <script src="assets/js/jquery-3.1.0.js"></script>
 <script src="assets/js/popper.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
@@ -1351,6 +1407,12 @@
     display2 = segment("display2","#ff0000","#000000");
     display3 = segment("display3","#ffffff","#000000");
     display4 = segment("display4","#75fe34","#000000");
+    display5 = segment("display5","#ff0000","#000000");
+    display6 = segment("display6","#ff0000","#000000");
+    display7 = segment("display7","#ff0000","#000000");
+    display8 = segment("display8","#ff0000","#000000");
+    display9 = segment("display9","#ff0000","#000000");
+    display10 = segment("display10","#ff0000","#000000");
   </script>
 <script type="text/javascript">
     var linechart = {
