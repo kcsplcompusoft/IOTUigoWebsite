@@ -14231,6 +14231,15 @@ a.bg9:hover {
   color: #46494B;
   font-weight: 500;
 }
+.monitorsdetail-row .tab-content .tab-pane .canvas-value {
+  margin: auto;
+  text-align: center;
+  margin-top: 10px;
+}
+.monitorsdetail-row .tab-content .tab-pane .canvas-value .segment-display2 {
+  width: 100px !important;
+  height: 40px !important;
+}
 @media (max-width: 1440px) {
   .monitorsdetail-row .tab-content {
     padding: 20px 17px 0px;
@@ -14522,6 +14531,31 @@ a.bg9:hover {
   .monitorstab-edit .dropdown-menu li a {
     padding: 5px 18px 5px 15px;
   }
+}
+
+.add-widgetModal .form-group.boot-select .bootstrap-select .dropdown-toggle {
+  height: 38px;
+}
+.add-widgetModal .form-group.boot-select .bootstrap-select .dropdown-toggle .filter-option {
+  padding: 6px 30px 6px 10px;
+}
+.add-widgetModal .form-group.boot-select .bootstrap-select .dropdown-toggle:after {
+  top: 15px;
+}
+
+.modal-content {
+  border-radius: 0.3rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+.modal-content .close span {
+  font-size: 25px;
+}
+.modal-content .modal-body {
+  padding: 1.5rem 1rem 1rem 1rem;
+}
+
+.modal-dialog {
+  margin: 3rem auto;
 }
 
 @media (max-width: 1600px) {
