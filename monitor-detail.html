@@ -479,7 +479,78 @@
                                      </div>
                                 </div>
                             </div>
-
+                            
+                            
+                            <div class="col-sm-6 col-md-4">
+                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
+                                     <div class="head-withoption">
+                                        <h6><span>ETP-BOD</span> LeafDevice1</h6>
+                                        <div class="monitors-edit ml-auto">
+                                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="las la-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                <li><a href="#"><i class="iot-Copy" ></i>Clone</a></li>
+                                            </ul>
+                                        </div>
+                                     </div>   
+                                     <canvas class="d-block mx-auto" data-type="radial-gauge"
+                                        data-width="250"
+                                        data-height="250"
+                                        data-units="°C"
+                                        data-title="Temperature"
+                                        data-min-value="-50"
+                                        data-max-value="50"
+                                        data-major-ticks="[-50,-40,-30,-20,-10,0,10,20,30,40,50]"
+                                        data-minor-ticks="2"
+                                        data-stroke-ticks="true"
+                                        data-highlights='[ {"from": -50, "to": 0, "color": "#6d8bb9"},
+                                            {"from": 0, "to": 50, "color": "#e75f5f"} ]'
+                                        data-ticks-angle="225"
+                                        data-start-angle="67.5"
+                                        data-color-major-ticks="#fff"
+                                        data-color-minor-ticks="#fff"
+                                        data-color-title="#fff"
+                                        data-color-units="#fff"
+                                        data-color-numbers="#fff"
+                                        data-color-plate="#486BA0"
+                                        data-border-shadow-width="0"
+                                        data-borders="true"
+                                        data-needle-type="arrow"
+                                        data-needle-width="2"
+                                        data-needle-circle-size="7"
+                                        data-needle-circle-outer="true"
+                                        data-needle-circle-inner="false"
+                                        data-animation-duration="1500"
+                                        data-animation-rule="linear"
+                                        data-color-border-outer="#486BA0"
+                                        data-color-border-outer-end="#486BA0"
+                                        data-color-border-middle="#486BA0"
+                                        data-color-border-middle-end="#486BA0"
+                                        data-color-border-inner="#486BA0"
+                                        data-color-border-inner-end="#486BA0"
+                                        data-color-needle-shadow-down="#486BA0"
+                                        data-color-needle-circle-outer="#fff"
+                                        data-color-needle-circle-outer-end="#fff"
+                                        data-color-needle-circle-inner="#486BA0"
+                                        data-color-needle-circle-inner-end="#486BA0"
+                                        data-value-box-border-radius="0"
+                                        data-font-value-Size= "34"
+                                        data-color-value-Text= "#000000"
+                                        data-color-value-box-rect="#486BA0"
+                                        data-color-value-box-rect-end="#486BA0"
+                                        data-color-Value-Box-Background="#fff"
+                                        data-color-Needle="#e75f5f"
+                                        data-color-Needle-End="#e75f5f"
+                                        data-color-Needle-Shadow-Up="false"
+                                        data-color-Needle-Shadow-Down="false"
+                                        data-font-Numbers-Size="20"
+                                    ></canvas>
+                                </div>
+                            </div>
+                            
                             <div class="col-sm-12">
                                 <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
                                      <div class="head-withoption">
@@ -994,7 +1065,7 @@
 <script src="assets/js/apexcharts.js"></script>
 <script src="assets/js/vue-apexcharts.js"></script>
 <script src="assets/js/industrial.js"></script>
-<!-- <script src="assets/js/gauge-new.min.js"></script> -->
+<script src="assets/js/gauge-new.min.js"></script>
 <script src="assets/js/gauge.min.js"></script>
 <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet-src.js"></script>
 <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
@@ -1027,7 +1098,7 @@
             {strokeStyle: "#ff0000", min: 40, max: 50}  // Red
         ],
         renderTicks: {
-            divisions: 5,
+            divisions: 10,
             divWidth: 1.1,
             divLength: 0.7,
             divColor: '#000000',
@@ -1073,7 +1144,7 @@
             {strokeStyle: "#ff0000", min: 80, max: 100}  
         ],
         renderTicks: {
-            divisions: 5,
+            divisions: 10,
             divWidth: 1.1,
             divLength: 0.7,
             divColor: '#000000',
@@ -1119,7 +1190,7 @@
             {strokeStyle: "#ff0000", min: 80, max: 100}  
         ],
         renderTicks: {
-            divisions: 5,
+            divisions: 10,
             divWidth: 1.1,
             divLength: 0.7,
             divColor: '#000000',
@@ -1164,7 +1235,7 @@
             {strokeStyle: "#ff0000", min: 80, max: 100}  
         ],
         renderTicks: {
-            divisions: 5,
+            divisions: 10,
             divWidth: 1.1,
             divLength: 0.7,
             divColor: '#000000',
@@ -1197,19 +1268,19 @@
         },
         staticLabels: {
             font: "16px sans-serif", 
-            labels: [0, 20, 40, 60, 80, 100],  
+            labels: [0, 10, 20, 30, 40, 50],  
             color: "#000000", 
             fractionDigits: 0 
         },
         staticZones: [
-            {strokeStyle: "#33ffbd", min: 0, max: 20}, 
-            {strokeStyle: "#75ff33", min: 20, max: 40}, 
-            {strokeStyle: "#dbff33", min: 40, max: 60}, 
-            {strokeStyle: "#ffbd33", min: 60, max: 80}, 
-            {strokeStyle: "#ff0000", min: 80, max: 100}  
+            {strokeStyle: "#33ffbd", min: 0, max: 10}, 
+            {strokeStyle: "#75ff33", min: 10, max: 20}, 
+            {strokeStyle: "#dbff33", min: 20, max: 30}, 
+            {strokeStyle: "#ffbd33", min: 30, max: 40}, 
+            {strokeStyle: "#ff0000", min: 40, max: 50}  
         ],
         renderTicks: {
-            divisions: 5,
+            divisions: 10,
             divWidth: 1.1,
             divLength: 0.7,
             divColor: '#000000',
@@ -1226,10 +1297,10 @@
     };
     var target45 = document.getElementById('gauge45'); 
     var gauge45 = new Gauge(target45).setOptions(opts45); 
-    gauge45.maxValue = 100;
+    gauge45.maxValue = 50;
     gauge45.setMinValue(0); 
     gauge45.animationSpeed = 32;
-    gauge45.set(100);
+    gauge45.set(50);
 
     var opts90 = {
         angle: 0.1, 
@@ -1254,7 +1325,7 @@
             {strokeStyle: "#ff0000", min: 80, max: 100}  
         ],
         renderTicks: {
-            divisions: 5,
+            divisions: 10,
             divWidth: 1.1,
             divLength: 0.7,
             divColor: '#000000',
@@ -1487,152 +1558,14 @@
         subdomains:['mt0','mt1','mt2','mt3']
       }).addTo(map);
 </script>
-<!-- <script type="text/javascript">
+<script type="text/javascript">
     $(document).ready(function(){
         
-            var gauge = new RadialGauge({
+        var gauge = new RadialGauge({
                     renderTo: 'canvas-id'
                 }).draw();
 
-                var gauge = new LinearGauge({
-                    renderTo: 'canvas-id'
-                }).draw();
-
-                var gauge = new RadialGauge({
-                renderTo: 'canvas-id',
-                width: 300,
-                height: 300,
-                units: "Km/h",
-                minValue: 0,
-                maxValue: 220,
-                majorTicks: [
-                    "0",
-                    "20",
-                    "40",
-                    "60",
-                    "80",
-                    "100",
-                    "120",
-                    "140",
-                    "160",
-                    "180",
-                    "200",
-                    "220"
-                ],
-                minorTicks: 2,
-                strokeTicks: true,
-                highlights: [
-                    {
-                        "from": 160,
-                        "to": 220,
-                        "color": "rgba(200, 50, 50, .75)"
-                    }
-                ],
-                colorPlate: "#fff",
-                borderShadowWidth: 0,
-                borders: false,
-                needleType: "arrow",
-                needleWidth: 2,
-                needleCircleSize: 7,
-                needleCircleOuter: true,
-                needleCircleInner: false,
-                animationDuration: 1500,
-                animationRule: "linear"
-            }).draw();
-
-            var gauge = new LinearGauge({
-            renderTo: 'canvas-id',
-            width: 120,
-            height: 400,
-            units: "°C",
-            minValue: 0,
-            startAngle: 90,
-            ticksAngle: 180,
-            valueBox: false,
-            maxValue: 220,
-            majorTicks: [
-                "0",
-                "20",
-                "40",
-                "60",
-                "80",
-                "100",
-                "120",
-                "140",
-                "160",
-                "180",
-                "200",
-                "220"
-            ],
-            minorTicks: 2,
-            strokeTicks: true,
-            highlights: [
-                {
-                    "from": 100,
-                    "to": 220,
-                    "color": "rgba(200, 50, 50, .75)"
-                }
-            ],
-            colorPlate: "#fff",
-            borderShadowWidth: 0,
-            borders: false,
-            needleType: "arrow",
-            needleWidth: 2,
-            needleCircleSize: 7,
-            needleCircleOuter: true,
-            needleCircleInner: false,
-            animationDuration: 1500,
-            animationRule: "linear",
-            barWidth: 10,
-            value: 35
-        }).draw();
-            
-            var gauge = new RadialGauge({
-                renderTo: 'canvas-id',
-                width: 300,
-                height: 300,
-                units: "Km/h",
-                minValue: 0,
-                startAngle: 90,
-                ticksAngle: 180,
-                valueBox: false,
-                maxValue: 220,
-                majorTicks: [
-                    "0",
-                    "20",
-                    "40",
-                    "60",
-                    "80",
-                    "100",
-                    "120",
-                    "140",
-                    "160",
-                    "180",
-                    "200",
-                    "220"
-                ],
-                minorTicks: 2,
-                strokeTicks: true,
-                highlights: [
-                    {
-                        "from": 160,
-                        "to": 220,
-                        "color": "rgba(200, 50, 50, .75)"
-                    }
-                ],
-                colorPlate: "#fff",
-                borderShadowWidth: 0,
-                borders: false,
-                needleType: "arrow",
-                needleWidth: 2,
-                needleCircleSize: 7,
-                needleCircleOuter: true,
-                needleCircleInner: false,
-                animationDuration: 1500,
-                animationRule: "linear"
-            }).draw();
-        
     });
-</script> -->
+</script>
 </body>
 </html>
