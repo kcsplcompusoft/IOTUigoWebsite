@@ -14238,7 +14238,9 @@ a.bg9:hover {
 }
 .monitorsdetail-row .tab-content .tab-pane .canvas-value .segment-display2 {
   width: 100px !important;
-  height: 40px !important;
+  height: 50px !important;
+  border-width: 2px;
+  padding: 0 10px;
 }
 @media (max-width: 1440px) {
   .monitorsdetail-row .tab-content {
