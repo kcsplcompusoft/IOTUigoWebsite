@@ -1222,6 +1222,18 @@ a.bg9:hover{background:#0b9492;}
 					span{display:block; @include fontrem(16px,20px); color:#46494B; font-weight:500;}
 				}
 			}
+
+			.canvas-value {
+				margin: auto;
+			    text-align: center;
+			    margin-top: 10px;
+				.segment-display2 {
+					width: 100px !important;
+    				height: 50px !important;
+					border-width:2px;
+					padding:0 10px;
+				}
+			}
 		}
 		@include desktop{
 			padding:20px 17px 0px;
@@ -1370,6 +1382,43 @@ a.bg9:hover{background:#0b9492;}
 	}
 }
 
+.add-widgetModal {
+	.form-group.boot-select {
+			.bootstrap-select {
+				.dropdown-toggle {
+					height: 38px;
+
+					.filter-option {
+						padding: 6px 30px 6px 10px;
+					}
+
+					&:after {
+						top: 15px;
+					}
+				}
+			}
+		
+	}
+}
+
+.modal-content {
+	border-radius: .3rem;		
+	box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 20%);
+
+	.close {
+		span {
+			font-size: 25px;
+		}
+	}
+
+	.modal-body {
+		padding: 1.5rem 1rem 1rem 1rem;
+	}
+}
+
+.modal-dialog {
+	margin: 3rem auto;
+}
 
 @include desktop-big {
 	html{font-size:14px; line-height:20px;}

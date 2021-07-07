@@ -10,6 +10,7 @@
     <link href="assets/bootstrap-select.css" rel="stylesheet" type="text/css">
     <link href="assets/industrial.css" rel="stylesheet" type="text/css">
     <link href="assets/leaflet.css" rel="stylesheet" type="text/css">
+    <link href="assets/gridstack.min.css" rel="stylesheet" type="text/css">
     <link href="assets/style.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -97,9 +98,9 @@
                         <li><a href="#">Menu Configurations</a></li>
                         <li><a href="#">System Configuraiton</a></li>
                         <li><a href="#">SMTP Email Configuration</a></li>
-                        <li><a href="#">Application Management</a></li>
+                        <li><a href="application-management.html">Application Management</a></li>
                         <li><a href="#">Simulator</a></li>
-                        <li><a href="#">User Management</a></li>
+                        <li><a href="user-management.html">User Management</a></li>
                         <li><a href="#">Roles & Rights</a></li>
                         <li><a href="#">Monitor Bundle</a></li>
                         <li><a href="#">Monitor Widget</a></li>
@@ -137,7 +138,7 @@
                     <h6 class="pb-0" >Speed Monitor</h6>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 </div>
-                <a href="#" class="btn btn-primary ml-auto btn-icon"><i class="las la-plus"></i> New Visualiser</a>
+                <a href="#" class="btn btn-primary ml-auto btn-icon" data-toggle="modal" data-target="#exampleModal"><i class="las la-plus"></i> New Visualiser</a>
             </div>
             <div class="monitorsdetail-row">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -174,9 +175,9 @@
                   </ul>
                   <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="visualiser1" role="tabpanel" aria-labelledby="visualiser1-tab">
-                        <div class="row row-md">
-                            <div class="col-sm-6 col-md-4">
-                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
+                        <div class="grid-stack">
+                            <div class="grid-stack-item" data-gs-x="0" data-gs-y="0" gs-w="4" gs-h="4">
+                                <div class="grid-stack-item-content rounded-lg bg-white shadow-sm dashboard-chart">
                                     <div class="head-withoption">
                                         <h6><span>ETP-BOD</span> Water Level</h6>
                                         <div class="monitors-edit ml-auto">
@@ -197,8 +198,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6 col-md-4">
-                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
+                            <div class="grid-stack-item" data-gs-x="2" data-gs-y="0" gs-w="4" gs-h="4">
+                                <div class="grid-stack-item-content rounded-lg bg-white shadow-sm dashboard-chart">
                                     <div class="head-withoption">
                                         <h6><span>ETP-BOD</span> Temperature</h6>
                                         <div class="monitors-edit ml-auto">
@@ -219,8 +220,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6 col-md-4">
-                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
+                            <div class="grid-stack-item" data-gs-x="0" data-gs-y="2" gs-w="4" gs-h="4">
+                                <div class="grid-stack-item-content rounded-lg bg-white shadow-sm dashboard-chart">
                                     <div class="head-withoption">
                                         <h6><span>ETP-BOD</span> LED</h6>
                                         <div class="monitors-edit ml-auto">
@@ -239,8 +240,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6 col-md-4">
-                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
+                            <div class="grid-stack-item" data-gs-x="0" data-gs-y="2" gs-w="4" gs-h="4">
+                                <div class="grid-stack-item-content rounded-lg bg-white shadow-sm dashboard-chart">
                                     <div class="head-withoption">
                                         <h6><span>ETP-BOD</span> Pressure</h6>
                                         <div class="monitors-edit ml-auto">
@@ -261,8 +262,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6 col-md-4">
-                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
+                            <div class="grid-stack-item" data-gs-x="0" data-gs-y="2" gs-w="4" gs-h="4">
+                                <div class="grid-stack-item-content rounded-lg bg-white shadow-sm dashboard-chart">
                                     <div class="head-withoption">
                                         <h6><span>ETP-BOD</span> Segment</h6>
                                         <div class="monitors-edit ml-auto">
@@ -281,8 +282,8 @@
                                       </canvas>
                                 </div>
                             </div>
-                            <div class="col-sm-6 col-md-4">
-                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
+                            <div class="grid-stack-item" data-gs-x="0" data-gs-y="2" gs-w="4" gs-h="4">
+                                <div class="grid-stack-item-content rounded-lg bg-white shadow-sm dashboard-chart">
                                     <div class="head-withoption">
                                         <h6><span>ETP-BOD</span> Segment</h6>
                                         <div class="monitors-edit ml-auto">
@@ -298,11 +299,11 @@
                                      </div>
                                      <canvas id="display2" class="segment-display2" width="300" height="180">
                                         Your browser is unfortunately not supported.
-                                      </canvas>
+                                     </canvas>
                                 </div>
                             </div>
-                            <div class="col-sm-6 col-md-4">
-                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
+                            <div class="grid-stack-item" data-gs-x="0" data-gs-y="2" gs-w="4" gs-h="4">
+                                <div class="grid-stack-item-content rounded-lg bg-white shadow-sm dashboard-chart">
                                     <div class="head-withoption">
                                         <h6><span>ETP-BOD</span> Segment</h6>
                                         <div class="monitors-edit ml-auto">
@@ -321,8 +322,28 @@
                                       </canvas>
                                 </div>
                             </div>
-                            <div class="col-sm-6 col-md-4">
-                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
+                            <div class="grid-stack-item" data-gs-x="0" data-gs-y="2" gs-w="4" gs-h="4">
+                                <div class="grid-stack-item-content rounded-lg bg-white shadow-sm dashboard-chart">
+                                    <div class="head-withoption">
+                                        <h6><span>ETP-BOD</span> Segment</h6>
+                                        <div class="monitors-edit ml-auto">
+                                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="las la-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                <li><a href="#"><i class="iot-Copy" ></i>Clone</a></li>
+                                            </ul>
+                                        </div>
+                                     </div>
+                                     <canvas id="display4" class="segment-display2" width="300" height="180">
+                                        Your browser is unfortunately not supported.
+                                      </canvas>
+                                </div>
+                            </div>
+                            <div class="grid-stack-item" data-gs-x="0" data-gs-y="2" gs-w="4" gs-h="4">
+                                <div class="grid-stack-item-content rounded-lg bg-white shadow-sm dashboard-chart">
                                     <div class="head-withoption">
                                         <h6><span>ETP-BOD</span> Segment</h6>
                                         <div class="monitors-edit ml-auto">
@@ -337,10 +358,15 @@
                                         </div>
                                      </div>
                                      <canvas class="w-100" id="gauge340"></canvas>
+                                     <div class="canvas-value">
+                                         <canvas id="display5" class="segment-display2" width="100" height="50">
+                                            Your browser is unfortunately not supported.
+                                         </canvas>
+                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6 col-md-4">
-                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
+                            <div class="grid-stack-item" data-gs-x="0" data-gs-y="2" gs-w="4" gs-h="4">
+                                <div class="grid-stack-item-content rounded-lg bg-white shadow-sm dashboard-chart">
                                     <div class="head-withoption">
                                         <h6><span>ETP-BOD</span> Segment</h6>
                                         <div class="monitors-edit ml-auto">
@@ -355,10 +381,15 @@
                                         </div>
                                      </div>
                                      <canvas class="w-100" id="gauge180"></canvas>
+                                     <div class="canvas-value">
+                                         <canvas id="display6" class="segment-display2" width="100" height="50">
+                                            Your browser is unfortunately not supported.
+                                         </canvas>
+                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6 col-md-4">
-                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
+                            <div class="grid-stack-item" data-gs-x="0" data-gs-y="2" gs-w="4" gs-h="4">
+                                <div class="grid-stack-item-content rounded-lg bg-white shadow-sm dashboard-chart">
                                     <div class="head-withoption">
                                         <h6><span>ETP-BOD</span> Segment</h6>
                                         <div class="monitors-edit ml-auto">
@@ -373,10 +404,15 @@
                                         </div>
                                      </div>
                                      <canvas class="w-100" id="gauge270"></canvas>
+                                     <div class="canvas-value">
+                                         <canvas id="display7" class="segment-display2" width="100" height="50">
+                                            Your browser is unfortunately not supported.
+                                         </canvas>
+                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6 col-md-4">
-                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
+                            <div class="grid-stack-item" data-gs-x="0" data-gs-y="2" gs-w="4" gs-h="4">
+                                <div class="grid-stack-item-content rounded-lg bg-white shadow-sm dashboard-chart">
                                     <div class="head-withoption">
                                         <h6><span>ETP-BOD</span> Segment</h6>
                                         <div class="monitors-edit ml-auto">
@@ -391,10 +427,15 @@
                                         </div>
                                      </div>
                                      <canvas class="w-100" id="gauge240"></canvas>
+                                     <div class="canvas-value">
+                                         <canvas id="display8" class="segment-display2" width="100" height="50">
+                                            Your browser is unfortunately not supported.
+                                         </canvas>
+                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6 col-md-4">
-                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
+                            <div class="grid-stack-item" data-gs-x="0" data-gs-y="2" gs-w="4" gs-h="4">
+                                <div class="grid-stack-item-content rounded-lg bg-white shadow-sm dashboard-chart">
                                     <div class="head-withoption">
                                         <h6><span>ETP-BOD</span> Segment</h6>
                                         <div class="monitors-edit ml-auto">
@@ -409,10 +450,15 @@
                                         </div>
                                      </div>
                                      <canvas class="w-100" id="gauge45"></canvas>
+                                     <div class="canvas-value">
+                                         <canvas id="display9" class="segment-display2" width="100" height="50">
+                                            Your browser is unfortunately not supported.
+                                         </canvas>
+                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6 col-md-4">
-                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
+                            <div class="grid-stack-item" data-gs-x="0" data-gs-y="2" gs-w="4" gs-h="4">
+                                <div class="grid-stack-item-content rounded-lg bg-white shadow-sm dashboard-chart">
                                     <div class="head-withoption">
                                         <h6><span>ETP-BOD</span> Segment</h6>
                                         <div class="monitors-edit ml-auto">
@@ -427,12 +473,85 @@
                                         </div>
                                      </div>
                                      <canvas class="w-100" id="gauge90"></canvas>
+                                     <div class="canvas-value">
+                                         <canvas id="display10" class="segment-display2" width="100" height="50">
+                                            Your browser is unfortunately not supported.
+                                         </canvas>
+                                     </div>
                                 </div>
                             </div>
-
-                            <div class="col-sm-12">
-                                <div class="rounded-lg bg-white shadow-sm dashboard-chart mb-30">
-                                     <div class="head-withoption">
+                            <div class="grid-stack-item" data-gs-x="0" data-gs-y="2" gs-w="4" gs-h="4">
+                                <div class="grid-stack-item-content rounded-lg bg-white shadow-sm dashboard-chart">
+                                    <div class="head-withoption">
+                                        <h6><span>ETP-BOD</span> LeafDevice1</h6>
+                                        <div class="monitors-edit ml-auto">
+                                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="las la-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                <li><a href="#"><i class="iot-Copy" ></i>Clone</a></li>
+                                            </ul>
+                                        </div>
+                                     </div>   
+                                     <canvas class="d-block mx-auto" data-type="radial-gauge"
+                                        data-width="250"
+                                        data-height="250"
+                                        data-units="°C"
+                                        data-title="Temperature"
+                                        data-min-value="-50"
+                                        data-max-value="50"
+                                        data-major-ticks="[-50,-40,-30,-20,-10,0,10,20,30,40,50]"
+                                        data-minor-ticks="2"
+                                        data-stroke-ticks="true"
+                                        data-highlights='[ {"from": -50, "to": 0, "color": "#6d8bb9"},
+                                            {"from": 0, "to": 50, "color": "#e75f5f"} ]'
+                                        data-ticks-angle="225"
+                                        data-start-angle="67.5"
+                                        data-color-major-ticks="#fff"
+                                        data-color-minor-ticks="#fff"
+                                        data-color-title="#fff"
+                                        data-color-units="#fff"
+                                        data-color-numbers="#fff"
+                                        data-color-plate="#486BA0"
+                                        data-border-shadow-width="0"
+                                        data-borders="true"
+                                        data-needle-type="arrow"
+                                        data-needle-width="2"
+                                        data-needle-circle-size="7"
+                                        data-needle-circle-outer="true"
+                                        data-needle-circle-inner="false"
+                                        data-animation-duration="1500"
+                                        data-animation-rule="linear"
+                                        data-color-border-outer="#486BA0"
+                                        data-color-border-outer-end="#486BA0"
+                                        data-color-border-middle="#486BA0"
+                                        data-color-border-middle-end="#486BA0"
+                                        data-color-border-inner="#486BA0"
+                                        data-color-border-inner-end="#486BA0"
+                                        data-color-needle-shadow-down="#486BA0"
+                                        data-color-needle-circle-outer="#fff"
+                                        data-color-needle-circle-outer-end="#fff"
+                                        data-color-needle-circle-inner="#486BA0"
+                                        data-color-needle-circle-inner-end="#486BA0"
+                                        data-value-box-border-radius="0"
+                                        data-font-value-Size= "34"
+                                        data-color-value-Text= "#000000"
+                                        data-color-value-box-rect="#486BA0"
+                                        data-color-value-box-rect-end="#486BA0"
+                                        data-color-Value-Box-Background="#fff"
+                                        data-color-Needle="#e75f5f"
+                                        data-color-Needle-End="#e75f5f"
+                                        data-color-Needle-Shadow-Up="false"
+                                        data-color-Needle-Shadow-Down="false"
+                                        data-font-Numbers-Size="20"
+                                    ></canvas>
+                                </div>
+                            </div>
+                            <div class="grid-stack-item" data-gs-x="0" data-gs-y="2" gs-w="12" gs-h="5">
+                                <div class="grid-stack-item-content rounded-lg bg-white shadow-sm dashboard-chart">
+                                    <div class="head-withoption">
                                         <h6><span>ETP-BOD</span> Map</h6>
                                         <div class="monitors-edit ml-auto">
                                             <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -445,10 +564,11 @@
                                             </ul>
                                         </div>
                                      </div>
-                                     <div id="map" class="map map-home" style="height: 300px;"></div>
+                                     <div id="map" class="map map-home" style="height: 340px;"></div>
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
                     <div class="tab-pane fade" id="visualiser2" role="tabpanel" aria-labelledby="visualiser2-tab">
                         <div class="row row-md">
@@ -908,7 +1028,34 @@
         </div>
     </div>
 </div>
+
+
+    <div class="modal fade add-widgetModal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h6 class="modal-title" id="exampleModalLabel">Create Widget</h6>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group selectpicker boot-select">
+                <label class="form-label" >Select Widget</label>
+                <select class="select form-control" data-live-search="false">
+                    <option></option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </div>  
+          </div>
+        </div>
+      </div>
+    </div>
+
 <script src="assets/js/jquery-3.1.0.js"></script>
+<script src="assets/js/gridstack-jq.js"></script>
 <script src="assets/js/popper.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/slick.js"></script>
@@ -918,7 +1065,7 @@
 <script src="assets/js/apexcharts.js"></script>
 <script src="assets/js/vue-apexcharts.js"></script>
 <script src="assets/js/industrial.js"></script>
-<!-- <script src="assets/js/gauge-new.min.js"></script> -->
+<script src="assets/js/gauge-new.min.js"></script>
 <script src="assets/js/gauge.min.js"></script>
 <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet-src.js"></script>
 <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
@@ -928,13 +1075,18 @@
 <script type="text/javascript" src="assets/js/segment-display.js"></script>
 <script src="assets/js/custom.js"></script>
 <script type="text/javascript">
+    var grid = GridStack.init({
+        minRow: 1
+        });
+</script>
+<script type="text/javascript">
     var opts340 = {
         angle: -0.42, // The span of the gauge arc
         lineWidth: 0.26, // The line thickness
         radiusScale: 0.9, // Relative radius
         pointer: {
             length: 0.57, // // Relative to gauge radius
-            strokeWidth: 0.026, // The thickness
+            strokeWidth: 0.040, // The thickness
             color: '#000000' // Fill color
         },
         staticLabels: {
@@ -950,6 +1102,16 @@
             {strokeStyle: "#ffbd33", min: 30, max: 40}, // Yellow
             {strokeStyle: "#ff0000", min: 40, max: 50}  // Red
         ],
+        renderTicks: {
+            divisions: 10,
+            divWidth: 1.1,
+            divLength: 0.7,
+            divColor: '#000000',
+            subDivisions: 3,
+            subLength: 0.5,
+            subWidth: 0.6,
+            subColor: '#000000'
+        },
         limitMax: false,     // If false, max value increases automatically if value > maxValue
         limitMin: false,     // If true, the min value of the gauge will be fixed
         highDpiSupport: true,     // High resolution support
@@ -970,7 +1132,7 @@
         radiusScale: 0.9,
         pointer: {
             length: 0.57, 
-            strokeWidth: 0.026, 
+            strokeWidth: 0.040, 
             color: '#000000' 
         },
         staticLabels: {
@@ -986,6 +1148,16 @@
             {strokeStyle: "#ffbd33", min: 60, max: 80}, 
             {strokeStyle: "#ff0000", min: 80, max: 100}  
         ],
+        renderTicks: {
+            divisions: 10,
+            divWidth: 1.1,
+            divLength: 0.7,
+            divColor: '#000000',
+            subDivisions: 3,
+            subLength: 0.5,
+            subWidth: 0.6,
+            subColor: '#000000'
+        },
         limitMax: false,    
         limitMin: false,    
         highDpiSupport: true,    
@@ -1006,7 +1178,7 @@
         radiusScale: 0.9,
         pointer: {
             length: 0.57, 
-            strokeWidth: 0.026, 
+            strokeWidth: 0.040, 
             color: '#000000' 
         },
         staticLabels: {
@@ -1022,6 +1194,16 @@
             {strokeStyle: "#ffbd33", min: 60, max: 80}, 
             {strokeStyle: "#ff0000", min: 80, max: 100}  
         ],
+        renderTicks: {
+            divisions: 10,
+            divWidth: 1.1,
+            divLength: 0.7,
+            divColor: '#000000',
+            subDivisions: 3,
+            subLength: 0.5,
+            subWidth: 0.6,
+            subColor: '#000000'
+        },
         limitMax: false,    
         limitMin: false,    
         highDpiSupport: true,    
@@ -1041,7 +1223,7 @@
         radiusScale: 0.9,
         pointer: {
             length: 0.57, 
-            strokeWidth: 0.026, 
+            strokeWidth: 0.040, 
             color: '#000000' 
         },
         staticLabels: {
@@ -1057,6 +1239,16 @@
             {strokeStyle: "#ffbd33", min: 60, max: 80}, 
             {strokeStyle: "#ff0000", min: 80, max: 100}  
         ],
+        renderTicks: {
+            divisions: 10,
+            divWidth: 1.1,
+            divLength: 0.7,
+            divColor: '#000000',
+            subDivisions: 3,
+            subLength: 0.5,
+            subWidth: 0.6,
+            subColor: '#000000'
+        },
         limitMax: false,    
         limitMin: false,    
         highDpiSupport: true,    
@@ -1076,22 +1268,32 @@
         radiusScale: 0.9,
         pointer: {
             length: 0.57, 
-            strokeWidth: 0.026, 
+            strokeWidth: 0.040, 
             color: '#000000' 
         },
         staticLabels: {
             font: "16px sans-serif", 
-            labels: [0, 20, 40, 60, 80, 100],  
+            labels: [0, 10, 20, 30, 40, 50],  
             color: "#000000", 
             fractionDigits: 0 
         },
         staticZones: [
-            {strokeStyle: "#33ffbd", min: 0, max: 20}, 
-            {strokeStyle: "#75ff33", min: 20, max: 40}, 
-            {strokeStyle: "#dbff33", min: 40, max: 60}, 
-            {strokeStyle: "#ffbd33", min: 60, max: 80}, 
-            {strokeStyle: "#ff0000", min: 80, max: 100}  
+            {strokeStyle: "#33ffbd", min: 0, max: 10}, 
+            {strokeStyle: "#75ff33", min: 10, max: 20}, 
+            {strokeStyle: "#dbff33", min: 20, max: 30}, 
+            {strokeStyle: "#ffbd33", min: 30, max: 40}, 
+            {strokeStyle: "#ff0000", min: 40, max: 50}  
         ],
+        renderTicks: {
+            divisions: 10,
+            divWidth: 1.1,
+            divLength: 0.7,
+            divColor: '#000000',
+            subDivisions: 3,
+            subLength: 0.5,
+            subWidth: 0.6,
+            subColor: '#000000'
+        },
         limitMax: false,    
         limitMin: false,    
         highDpiSupport: true,    
@@ -1100,10 +1302,10 @@
     };
     var target45 = document.getElementById('gauge45'); 
     var gauge45 = new Gauge(target45).setOptions(opts45); 
-    gauge45.maxValue = 100;
+    gauge45.maxValue = 50;
     gauge45.setMinValue(0); 
     gauge45.animationSpeed = 32;
-    gauge45.set(100);
+    gauge45.set(50);
 
     var opts90 = {
         angle: 0.1, 
@@ -1111,7 +1313,7 @@
         radiusScale: 0.9,
         pointer: {
             length: 0.57, 
-            strokeWidth: 0.026, 
+            strokeWidth: 0.040, 
             color: '#000000' 
         },
         staticLabels: {
@@ -1127,6 +1329,17 @@
             {strokeStyle: "#ffbd33", min: 60, max: 80}, 
             {strokeStyle: "#ff0000", min: 80, max: 100}  
         ],
+        renderTicks: {
+            divisions: 10,
+            divWidth: 1.1,
+            divLength: 0.7,
+            divColor: '#000000',
+            subDivisions: 3,
+            subLength: 0.5,
+            subWidth: 0.6,
+            subColor: '#000000'
+        },
+
         limitMax: false,    
         limitMin: false,    
         highDpiSupport: true,    
@@ -1140,32 +1353,36 @@
     gauge90.animationSpeed = 32;
     gauge90.set(100);
 </script>
-<script>
+<script type="text/javascript">
     $(document).ready(function(){
+        
         $('.boot-select .select').selectpicker();
-        $('.alert-select').selectpicker();
+	    $('.alert-select').selectpicker();
 
         setTimeout(function() {
-            $(".industrial").industrial({});
-            },250);
+                    $(".industrial").industrial({});
+                },250);
 
-            words = ["good", "evil", "money", "INT", "JS", "lisp", "C++", "C", "java", "nomer", "0xDE", "YAY!", "anims", "death", "BTC"];
+                words = ["good", "evil", "money", "INT", "JS", "lisp", "C++", "C", "java", "nomer", "0xDE", "YAY!", "anims", "death", "BTC"];
 
-            setInterval(function() {
-                $(".industrial.tank, .industrial.thermometer, .industrial.gauge").each(function() {
-                    $(this).industrial(Math.floor(Math.random()*100));
-                });
-                $(".industrial.led").each(function() {
-                    $(this).industrial(Math.random() > .5);
-                });
-                $("#read1").each(function() {
-                    $(this).industrial(Math.floor(Math.random()*10000));
-                });
-                $("#read2").each(function() {
-                    index = Math.floor(Math.random()*words.length);
-                    $(this).industrial(words[index]);
-                });
-            }, 4000);
+                setInterval(function() {
+                    $(".industrial.tank, .industrial.thermometer, .industrial.gauge").each(function() {
+                        $(this).industrial(Math.floor(Math.random()*100));
+                    });
+                    $(".industrial.led").each(function() {
+                        $(this).industrial(Math.random() > .5);
+                    });
+                    $("#read1").each(function() {
+                        $(this).industrial(Math.floor(Math.random()*10000));
+                    });
+                    $("#read2").each(function() {
+                        index = Math.floor(Math.random()*words.length);
+                        $(this).industrial(words[index]);
+                    });
+                }, 4000);
+        
+
+        
 
             // Also init our introjs!
             $("#start_intro").click(function() {
@@ -1198,6 +1415,13 @@
     display = segment("display","#000000","#ffffff");
     display2 = segment("display2","#ff0000","#000000");
     display3 = segment("display3","#ffffff","#000000");
+    display4 = segment("display4","#75fe34","#000000");
+    display5 = segment("display5","#ff0000","#000000");
+    display6 = segment("display6","#ff0000","#000000");
+    display7 = segment("display7","#ff0000","#000000");
+    display8 = segment("display8","#ff0000","#000000");
+    display9 = segment("display9","#ff0000","#000000");
+    display10 = segment("display10","#ff0000","#000000");
   </script>
 <script type="text/javascript">
     var linechart = {
@@ -1346,148 +1570,10 @@
 <!-- <script type="text/javascript">
     $(document).ready(function(){
         
-            var gauge = new RadialGauge({
+        var gauge = new RadialGauge({
                     renderTo: 'canvas-id'
                 }).draw();
 
-                var gauge = new LinearGauge({
-                    renderTo: 'canvas-id'
-                }).draw();
-
-                var gauge = new RadialGauge({
-                renderTo: 'canvas-id',
-                width: 300,
-                height: 300,
-                units: "Km/h",
-                minValue: 0,
-                maxValue: 220,
-                majorTicks: [
-                    "0",
-                    "20",
-                    "40",
-                    "60",
-                    "80",
-                    "100",
-                    "120",
-                    "140",
-                    "160",
-                    "180",
-                    "200",
-                    "220"
-                ],
-                minorTicks: 2,
-                strokeTicks: true,
-                highlights: [
-                    {
-                        "from": 160,
-                        "to": 220,
-                        "color": "rgba(200, 50, 50, .75)"
-                    }
-                ],
-                colorPlate: "#fff",
-                borderShadowWidth: 0,
-                borders: false,
-                needleType: "arrow",
-                needleWidth: 2,
-                needleCircleSize: 7,
-                needleCircleOuter: true,
-                needleCircleInner: false,
-                animationDuration: 1500,
-                animationRule: "linear"
-            }).draw();
-
-            var gauge = new LinearGauge({
-            renderTo: 'canvas-id',
-            width: 120,
-            height: 400,
-            units: "°C",
-            minValue: 0,
-            startAngle: 90,
-            ticksAngle: 180,
-            valueBox: false,
-            maxValue: 220,
-            majorTicks: [
-                "0",
-                "20",
-                "40",
-                "60",
-                "80",
-                "100",
-                "120",
-                "140",
-                "160",
-                "180",
-                "200",
-                "220"
-            ],
-            minorTicks: 2,
-            strokeTicks: true,
-            highlights: [
-                {
-                    "from": 100,
-                    "to": 220,
-                    "color": "rgba(200, 50, 50, .75)"
-                }
-            ],
-            colorPlate: "#fff",
-            borderShadowWidth: 0,
-            borders: false,
-            needleType: "arrow",
-            needleWidth: 2,
-            needleCircleSize: 7,
-            needleCircleOuter: true,
-            needleCircleInner: false,
-            animationDuration: 1500,
-            animationRule: "linear",
-            barWidth: 10,
-            value: 35
-        }).draw();
-            
-            var gauge = new RadialGauge({
-                renderTo: 'canvas-id',
-                width: 300,
-                height: 300,
-                units: "Km/h",
-                minValue: 0,
-                startAngle: 90,
-                ticksAngle: 180,
-                valueBox: false,
-                maxValue: 220,
-                majorTicks: [
-                    "0",
-                    "20",
-                    "40",
-                    "60",
-                    "80",
-                    "100",
-                    "120",
-                    "140",
-                    "160",
-                    "180",
-                    "200",
-                    "220"
-                ],
-                minorTicks: 2,
-                strokeTicks: true,
-                highlights: [
-                    {
-                        "from": 160,
-                        "to": 220,
-                        "color": "rgba(200, 50, 50, .75)"
-                    }
-                ],
-                colorPlate: "#fff",
-                borderShadowWidth: 0,
-                borders: false,
-                needleType: "arrow",
-                needleWidth: 2,
-                needleCircleSize: 7,
-                needleCircleOuter: true,
-                needleCircleInner: false,
-                animationDuration: 1500,
-                animationRule: "linear"
-            }).draw();
-        
     });
 </script> -->
 </body>
