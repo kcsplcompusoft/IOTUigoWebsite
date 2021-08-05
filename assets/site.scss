@@ -1208,7 +1208,7 @@ a.bg9:hover{background:#0b9492;}
 			.zeroconfi-right{
 				width:370px !important; height:auto !important;
 				@include tablet{
-					width:100% !important;
+					width:100% !important; 
 				}
 			}
 			.temperaturex-w{
@@ -1400,6 +1400,73 @@ a.bg9:hover{background:#0b9492;}
 		
 	}
 }
+
+.envelope {
+	background:#0F0F0F;
+	position: relative;
+	box-shadow: inset 0 0 5px 5px #000;
+	border-radius:50%;
+
+	.speedNobe{
+		position:absolute;
+		width:100%;
+		z-index:10;	
+		transition: all 1s;
+		div{
+			background: #48a3cb;
+			position: absolute;
+			height: 100%;
+			top: 0;
+		}	
+	}
+	.speedPosition {
+		position: absolute;
+		color: #FFF;
+		text-align: center;
+		line-height: 80PX;
+		font-family:arial;
+		font-size: 30px;
+		font-weight:bold;
+		border-radius: 50%;
+		background: #191919;
+		box-shadow: 0 0 3px 3px black;
+	}
+	.numb,.nob{
+		transition: opacity 1s;	
+		position: absolute;
+		opacity: 0.5;
+	}
+	.nob{
+		
+		background:#eee;
+		box-shadow: 0 0 2px 1px #eee;
+		&.bright{
+			opacity: 1;
+		}
+		&.danger{
+			background:#FF113A !important;
+			box-shadow: 0 0 2px 1px #FF113A;
+		}
+	}
+	.numb{
+		
+		color:#eee;
+		text-align: left;
+		overflow: hidden;
+		opacity: 0.5;
+		font-family: arial;
+		font-size: 16px;
+		font-weight: bold;
+		&.bright{
+			opacity: 1;
+		}
+		&.danger{
+			color: #FF113A;
+			background: none !important;
+		}
+	}
+}
+
 
 .modal-content {
 	border-radius: .3rem;		
