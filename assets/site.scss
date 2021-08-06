@@ -1208,7 +1208,7 @@ a.bg9:hover{background:#0b9492;}
 			.zeroconfi-right{
 				width:370px !important; height:auto !important;
 				@include tablet{
-					width:100% !important;
+					width:100% !important; 
 				}
 			}
 			.temperaturex-w{
@@ -1400,6 +1400,85 @@ a.bg9:hover{background:#0b9492;}
 		
 	}
 }
+
+.envelope {
+	background:#ffffff;
+	position: relative;
+	box-shadow: none;
+	border: 5px solid #00AEEF;
+	border-radius:50%;
+	margin: 0 auto;
+
+	.speedNobe{
+		position:absolute;
+		width:100%;
+		z-index:10;	
+		transition: all 1s;
+		div{
+			background: #00B9B6;
+			position: absolute;
+			height: 100%;
+			top: 0;
+		}	
+	}
+	.speedPosition {
+		position: absolute;
+		color: #0e82be;
+		text-align: center;
+		line-height: 80PX;
+		font-family:arial;
+		font-size: 30px;
+		font-weight:bold;
+		border-radius: 50%;
+		background: transparent;
+		box-shadow: none;
+		top: 50% !important;
+    	left: 50% !important;
+    	transform: translate(-50%, -50%);
+	}
+	.numb,.nob{
+		transition: opacity 1s;	
+		position: absolute;
+		opacity: 0.5;
+	}
+	.nob{
+		
+		background:#00AEEF;
+		box-shadow: none;
+		margin-left: -5px;
+		margin-top: -5px;
+		&.bright{
+			opacity: 1;
+		}
+		&.danger{
+			background:#00AEEF !important;
+			box-shadow: none;
+		}
+		&.midNob{
+			background:#CCCBCB !important;
+		}
+	}
+	.numb{
+		
+		color:#4E4F4F;
+		text-align: left;
+		overflow: hidden;
+		opacity: 1;
+		font-family: arial;
+		font-size: 14px;
+		font-weight: bold;
+		margin-left: -8px;
+		margin-top: -1px;
+		&.bright{
+			opacity: 1;
+		}
+		&.danger{
+			color: #4E4F4F;
+			background: none !important;
+		}
+	}
+}
+
 
 .modal-content {
 	border-radius: .3rem;		

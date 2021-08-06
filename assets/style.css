@@ -14545,6 +14545,81 @@ a.bg9:hover {
   top: 15px;
 }
 
+.envelope {
+  background: #ffffff;
+  position: relative;
+  box-shadow: none;
+  border: 5px solid #00AEEF;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.envelope .speedNobe {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  transition: all 1s;
+}
+.envelope .speedNobe div {
+  background: #00B9B6;
+  position: absolute;
+  height: 100%;
+  top: 0;
+}
+.envelope .speedPosition {
+  position: absolute;
+  color: #0e82be;
+  text-align: center;
+  line-height: 80PX;
+  font-family: arial;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: none;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%);
+}
+.envelope .numb, .envelope .nob {
+  transition: opacity 1s;
+  position: absolute;
+  opacity: 0.5;
+}
+.envelope .nob {
+  background: #00AEEF;
+  box-shadow: none;
+  margin-left: -5px;
+  margin-top: -5px;
+}
+.envelope .nob.bright {
+  opacity: 1;
+}
+.envelope .nob.danger {
+  background: #00AEEF !important;
+  box-shadow: none;
+}
+.envelope .nob.midNob {
+  background: #CCCBCB !important;
+}
+.envelope .numb {
+  color: #4E4F4F;
+  text-align: left;
+  overflow: hidden;
+  opacity: 1;
+  font-family: arial;
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: -8px;
+  margin-top: -1px;
+}
+.envelope .numb.bright {
+  opacity: 1;
+}
+.envelope .numb.danger {
+  color: #4E4F4F;
+  background: none !important;
+}
+
 .modal-content {
   border-radius: 0.3rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
