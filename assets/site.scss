@@ -1402,10 +1402,12 @@ a.bg9:hover{background:#0b9492;}
 }
 
 .envelope {
-	background:#0F0F0F;
+	background:#ffffff;
 	position: relative;
-	box-shadow: inset 0 0 5px 5px #000;
+	box-shadow: none;
+	border: 5px solid #00AEEF;
 	border-radius:50%;
+	margin: 0 auto;
 
 	.speedNobe{
 		position:absolute;
@@ -1413,7 +1415,7 @@ a.bg9:hover{background:#0b9492;}
 		z-index:10;	
 		transition: all 1s;
 		div{
-			background: #48a3cb;
+			background: #00B9B6;
 			position: absolute;
 			height: 100%;
 			top: 0;
@@ -1421,15 +1423,18 @@ a.bg9:hover{background:#0b9492;}
 	}
 	.speedPosition {
 		position: absolute;
-		color: #FFF;
+		color: #0e82be;
 		text-align: center;
 		line-height: 80PX;
 		font-family:arial;
 		font-size: 30px;
 		font-weight:bold;
 		border-radius: 50%;
-		background: #191919;
-		box-shadow: 0 0 3px 3px black;
+		background: transparent;
+		box-shadow: none;
+		top: 50% !important;
+    	left: 50% !important;
+    	transform: translate(-50%, -50%);
 	}
 	.numb,.nob{
 		transition: opacity 1s;	
@@ -1438,30 +1443,37 @@ a.bg9:hover{background:#0b9492;}
 	}
 	.nob{
 		
-		background:#eee;
-		box-shadow: 0 0 2px 1px #eee;
+		background:#00AEEF;
+		box-shadow: none;
+		margin-left: -5px;
+		margin-top: -5px;
 		&.bright{
 			opacity: 1;
 		}
 		&.danger{
-			background:#FF113A !important;
-			box-shadow: 0 0 2px 1px #FF113A;
+			background:#00AEEF !important;
+			box-shadow: none;
+		}
+		&.midNob{
+			background:#CCCBCB !important;
 		}
 	}
 	.numb{
 		
-		color:#eee;
+		color:#4E4F4F;
 		text-align: left;
 		overflow: hidden;
-		opacity: 0.5;
+		opacity: 1;
 		font-family: arial;
-		font-size: 16px;
+		font-size: 14px;
 		font-weight: bold;
+		margin-left: -8px;
+		margin-top: -1px;
 		&.bright{
 			opacity: 1;
 		}
 		&.danger{
-			color: #FF113A;
+			color: #4E4F4F;
 			background: none !important;
 		}
 	}
