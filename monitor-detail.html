@@ -605,10 +605,11 @@
 
                                            data-needle-Start="20" 
                                            data-highlights="[
-                                          { &quot;from&quot;: 0, &quot;to&quot;: 40, &quot;color&quot;: &quot;rgba(77,77,77,1)&quot; },
-                                          { &quot;from&quot;: 40, &quot;to&quot;: 80, &quot;color&quot;: &quot;rgba(51,160,0,1)&quot; },
-                                          { &quot;from&quot;: 80, &quot;to&quot;: 140, &quot;color&quot;: &quot;rgba(245,189,51,1)&quot; },
-                                          { &quot;from&quot;: 140, &quot;to&quot;: 200, &quot;color&quot;: &quot;rgba(237,34,1,1)&quot; }
+                                          { &quot;from&quot;: 0, &quot;to&quot;: 40, &quot;color&quot;: &quot;#339900&quot; },
+                                          { &quot;from&quot;: 40, &quot;to&quot;: 80, &quot;color&quot;: &quot;#99cc33&quot; },
+                                          { &quot;from&quot;: 80, &quot;to&quot;: 120, &quot;color&quot;: &quot;#ffcc00&quot; },
+                                          { &quot;from&quot;: 120, &quot;to&quot;: 160, &quot;color&quot;: &quot;#ff9966&quot; },
+                                          { &quot;from&quot;: 160, &quot;to&quot;: 200, &quot;color&quot;: &quot;#cc3300&quot; }
                                           ]" 
                                           data-color-plate="#dddddd" 
                                           data-color-major-ticks="#fff" 
@@ -688,10 +689,11 @@
                                             data-color-Value-Box-Background="#231f37"
 
                                             data-highlights="[
-                                            { &quot;from&quot;: 0, &quot;to&quot;: 40, &quot;color&quot;: &quot;rgba(77,77,77,1)&quot; },
-                                            { &quot;from&quot;: 40, &quot;to&quot;: 80, &quot;color&quot;: &quot;rgba(51,160,0,1)&quot; },
-                                            { &quot;from&quot;: 80, &quot;to&quot;: 140, &quot;color&quot;: &quot;rgba(245,189,51,1)&quot; },
-                                            { &quot;from&quot;: 140, &quot;to&quot;: 200, &quot;color&quot;: &quot;rgba(237,34,1,1)&quot; }
+                                            { &quot;from&quot;: 0, &quot;to&quot;: 40, &quot;color&quot;: &quot;#339900&quot; },
+                                          { &quot;from&quot;: 40, &quot;to&quot;: 80, &quot;color&quot;: &quot;#99cc33&quot; },
+                                          { &quot;from&quot;: 80, &quot;to&quot;: 120, &quot;color&quot;: &quot;#ffcc00&quot; },
+                                          { &quot;from&quot;: 120, &quot;to&quot;: 160, &quot;color&quot;: &quot;#ff9966&quot; },
+                                          { &quot;from&quot;: 160, &quot;to&quot;: 200, &quot;color&quot;: &quot;#cc3300&quot; }
                                             ]" 
                                                 
                                             data-color-title="#fff"
@@ -725,6 +727,188 @@
                                         </div>
                                      </div>   
                                      <input type='hidden' id="accelerating" />
+                                </div>
+                            </div>
+                            <div class="grid-stack-item" data-gs-x="0" data-gs-y="2" gs-w="4" gs-h="4">
+                                <div class="grid-stack-item-content rounded-lg bg-white shadow-sm dashboard-chart">
+                                    <div class="head-withoption">
+                                        <h6><span>ETP-BOD</span> Segment</h6>
+                                        <div class="monitors-edit ml-auto">
+                                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="las la-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                <li><a href="#"><i class="iot-Copy" ></i>Clone</a></li>
+                                            </ul>
+                                        </div>
+                                     </div>
+                                     <canvas class="w-100" id="gauge100"></canvas>
+                                     <div class="canvas-value">
+                                         <canvas id="display11" class="segment-display2" width="100" height="50">
+                                            Your browser is unfortunately not supported.
+                                         </canvas>
+                                     </div>
+                                </div>
+                            </div>
+                            <div class="grid-stack-item" data-gs-x="0" data-gs-y="2" gs-w="4" gs-h="4">
+                                <div class="grid-stack-item-content rounded-lg bg-white shadow-sm dashboard-chart">
+                                    <div class="head-withoption">
+                                        <h6><span>ETP-BOD</span> LeafDevice1</h6>
+                                        <div class="monitors-edit ml-auto">
+                                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="las la-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                <li><a href="#"><i class="iot-Copy" ></i>Clone</a></li>
+                                            </ul>
+                                        </div>
+                                     </div>   
+                                     <div class="redial-guage">
+                                        <canvas class="d-block mx-auto" 
+                                           data-type="radial-gauge"
+                                           data-width="250" 
+                                           data-height="250" 
+                                           data-units="Km/h" 
+                                           data-title="false" 
+                                           data-value="58" 
+                                           data-animate-on-init="true" 
+                                           data-animated-value="true" 
+                                           data-min-value="0" 
+                                           data-max-value="200" 
+                                           data-major-ticks="0,20,40,60,80,100,120,140,160,180,200" data-minor-ticks="2" 
+                                           data-stroke-ticks="true"
+                                           data-color-Value-Box-Background="#000000"
+                                           data-value-box-stroke="0"
+                                           data-value-box-width = "30%"
+                                           data-value-box-border-radius="0"
+                                           data-font-value-Size= "30"
+                                           data-color-value-Text= "#ffffff" 
+                                           
+                                           data-needle-type="arrow"
+                                           data-needle-width="4"
+                                           data-needle-circle-size="10"
+                                           data-needle-circle-outer="true"
+                                           data-needle-circle-inner="false"
+                                           data-color-needle-circle-outer="#333333"
+                                           data-color-needle-circle-outer-end="#333333"
+                                           data-color-needle-circle-inner="#333333"
+                                           data-color-needle-circle-inner-end="#333333"
+                                           data-color-Needle="#333333"
+                                           data-color-Needle-End="#333333"
+                                           data-color-needle-Shadow-Up="false"
+                                           data-color-needle-Shadow-Down="false"
+                                           data-needle-Shadow="false"
+
+                                           data-needle-Start="20" 
+                                           data-highlights="[
+                                          { &quot;from&quot;: 0, &quot;to&quot;: 40, &quot;color&quot;: &quot;#cc3300&quot; },
+                                          { &quot;from&quot;: 40, &quot;to&quot;: 80, &quot;color&quot;: &quot;#ff9966&quot; },
+                                          { &quot;from&quot;: 80, &quot;to&quot;: 120, &quot;color&quot;: &quot;#ffcc00&quot; },
+                                          { &quot;from&quot;: 120, &quot;to&quot;: 160, &quot;color&quot;: &quot;#99cc33&quot; },
+                                          { &quot;from&quot;: 160, &quot;to&quot;: 200, &quot;color&quot;: &quot;#339900&quot; }
+                                          ]" 
+                                          data-color-plate="#dddddd" 
+                                          data-color-major-ticks="#fff" 
+                                          data-color-minor-ticks="#fff"
+                                          data-color-title="#000"
+                                          data-color-units="#000"
+                                          data-color-numbers="#000" 
+                                           
+                                           
+                                          data-value-box="true" 
+                                          data-animation-rule="bounce" 
+                                          data-animation-duration="500" 
+                                          data-border-outer-width="0" 
+                                          data-border-middle-width="0" 
+                                          data-border-inner-width="0" 
+                                          data-border-shadow-width="0"
+                                          
+                                          
+
+                                          width="250" height="250">
+                                              
+                                          </canvas>
+                                   </div>
+                                </div>
+                            </div>
+                            <div class="grid-stack-item" data-gs-x="0" data-gs-y="2" gs-w="4" gs-h="4">
+                                <div class="grid-stack-item-content rounded-lg bg-white shadow-sm dashboard-chart">
+                                    <div class="head-withoption">
+                                        <h6><span>ETP-BOD</span> LeafDevice1</h6>
+                                        <div class="monitors-edit ml-auto">
+                                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="las la-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                                <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                                <li><a href="#"><i class="iot-Copy" ></i>Clone</a></li>
+                                            </ul>
+                                        </div>
+                                     </div>   
+                                     <div class="redialColor-guage">
+                                        <canvas class="d-block mx-auto" data-type="radial-gauge" data-width="250" 
+                                            data-height="250" 
+                                            data-units="Km/h" 
+                                            data-title="false" 
+                                            data-value="58" 
+                                            data-animate-on-init="true" 
+                                            data-animated-value="true" 
+                                            data-min-value="0" 
+                                            data-max-value="200" 
+                                            data-major-ticks="0,20,40,60,80,100,120,140,160,180,200" data-minor-ticks="2" 
+                                            data-highlights-width="100"
+                                            
+                                            data-needle-type="arrow"
+                                            data-needle-width="4"
+                                            data-needle-circle-size="10"
+                                            data-color-needle-circle-outer="#231f37"
+                                            data-color-needle-circle-outer-end="#231f37"
+                                            data-color-needle-circle-inner="#ffffff"
+                                            data-color-needle-circle-inner-end="#ffffff"
+                                            data-color-Needle="#ffffff"
+                                            data-color-Needle-End="#ffffff"
+                                            data-color-needle-Shadow-Up="false"
+                                            data-color-needle-Shadow-Down="false"
+                                            data-needle-Shadow="false"
+
+                                            data-stroke-ticks="true"
+                                            data-color-major-ticks="#fff" 
+                                            data-color-minor-ticks="#fff"
+                                            data-color-plate="#231f37"
+
+                                            data-value-box-stroke="1"
+                                            data-value-box-width = "30%"
+                                            data-value-box-border-radius="0"
+                                            data-font-value-Size= "30"
+                                            data-color-value-Text= "#ffffff"
+                                            data-color-Value-Box-Background="#231f37"
+
+                                            data-highlights="[
+                                            { &quot;from&quot;: 0, &quot;to&quot;: 40, &quot;color&quot;: &quot;#cc3300&quot; },
+                                            { &quot;from&quot;: 40, &quot;to&quot;: 80, &quot;color&quot;: &quot;#ff9966&quot; },
+                                            { &quot;from&quot;: 80, &quot;to&quot;: 120, &quot;color&quot;: &quot;#ffcc00&quot; },
+                                            { &quot;from&quot;: 120, &quot;to&quot;: 160, &quot;color&quot;: &quot;#99cc33&quot; },
+                                            { &quot;from&quot;: 160, &quot;to&quot;: 200, &quot;color&quot;: &quot;#339900&quot; }
+                                            ]" 
+                                                
+                                            data-color-title="#fff"
+                                            data-color-units="transparent" 
+                                            data-color-numbers="#ffffff" 
+                                            data-color-needle-start="rgba(255, 255, 255, 1)" data-color-needle-end="rgba(255, 255, 255, 1)" 
+                                            data-value-box="true" 
+                                            data-animation-rule="bounce" 
+                                            data-animation-duration="500" 
+                                            data-border-outer-width="0" 
+                                            data-border-middle-width="0" 
+                                            data-border-inner-width="0" width="250" height="250">
+                                               
+                                        </canvas>
+                                </div>
                                 </div>
                             </div>
                             <div class="grid-stack-item" data-gs-x="0" data-gs-y="2" gs-w="12" gs-h="5">
@@ -1275,11 +1459,11 @@
             fractionDigits: 0  // Optional: Numerical precision. 0=round off.
         },
         staticZones: [
-            {strokeStyle: "#33ffbd", min: 0, max: 10}, // Red from 100 to 130
-            {strokeStyle: "#75ff33", min: 10, max: 20}, // Yellow
-            {strokeStyle: "#dbff33", min: 20, max: 30}, // Green
-            {strokeStyle: "#ffbd33", min: 30, max: 40}, // Yellow
-            {strokeStyle: "#ff0000", min: 40, max: 50}  // Red
+            {strokeStyle: "#339900", min: 0, max: 10}, // Red from 100 to 130
+            {strokeStyle: "#99cc33", min: 10, max: 20}, // Yellow
+            {strokeStyle: "#ffcc00", min: 20, max: 30}, // Green
+            {strokeStyle: "#ff9966", min: 30, max: 40}, // Yellow
+            {strokeStyle: "#cc3300", min: 40, max: 50}  // Red
         ],
         renderTicks: {
             divisions: 10,
@@ -1321,11 +1505,11 @@
             fractionDigits: 0 
         },
         staticZones: [
-            {strokeStyle: "#33ffbd", min: 0, max: 20}, 
-            {strokeStyle: "#75ff33", min: 20, max: 40}, 
-            {strokeStyle: "#dbff33", min: 40, max: 60}, 
-            {strokeStyle: "#ffbd33", min: 60, max: 80}, 
-            {strokeStyle: "#ff0000", min: 80, max: 100}  
+            {strokeStyle: "#339900", min: 0, max: 20}, 
+            {strokeStyle: "#99cc33", min: 20, max: 40}, 
+            {strokeStyle: "#ffcc00", min: 40, max: 60}, 
+            {strokeStyle: "#ff9966", min: 60, max: 80}, 
+            {strokeStyle: "#cc3300", min: 80, max: 100}  
         ],
         renderTicks: {
             divisions: 10,
@@ -1367,11 +1551,11 @@
             fractionDigits: 0 
         },
         staticZones: [
-            {strokeStyle: "#33ffbd", min: 0, max: 20}, 
-            {strokeStyle: "#75ff33", min: 20, max: 40}, 
-            {strokeStyle: "#dbff33", min: 40, max: 60}, 
-            {strokeStyle: "#ffbd33", min: 60, max: 80}, 
-            {strokeStyle: "#ff0000", min: 80, max: 100}  
+            {strokeStyle: "#339900", min: 0, max: 20}, 
+            {strokeStyle: "#99cc33", min: 20, max: 40}, 
+            {strokeStyle: "#ffcc00", min: 40, max: 60}, 
+            {strokeStyle: "#ff9966", min: 60, max: 80}, 
+            {strokeStyle: "#cc3300", min: 80, max: 100}  
         ],
         renderTicks: {
             divisions: 10,
@@ -1412,11 +1596,11 @@
             fractionDigits: 0 
         },
         staticZones: [
-            {strokeStyle: "#33ffbd", min: 0, max: 20}, 
-            {strokeStyle: "#75ff33", min: 20, max: 40}, 
-            {strokeStyle: "#dbff33", min: 40, max: 60}, 
-            {strokeStyle: "#ffbd33", min: 60, max: 80}, 
-            {strokeStyle: "#ff0000", min: 80, max: 100}  
+            {strokeStyle: "#339900", min: 0, max: 20}, 
+            {strokeStyle: "#99cc33", min: 20, max: 40}, 
+            {strokeStyle: "#ffcc00", min: 40, max: 60}, 
+            {strokeStyle: "#ff9966", min: 60, max: 80}, 
+            {strokeStyle: "#cc3300", min: 80, max: 100}  
         ],
         renderTicks: {
             divisions: 10,
@@ -1457,11 +1641,11 @@
             fractionDigits: 0 
         },
         staticZones: [
-            {strokeStyle: "#33ffbd", min: 0, max: 10}, 
-            {strokeStyle: "#75ff33", min: 10, max: 20}, 
-            {strokeStyle: "#dbff33", min: 20, max: 30}, 
-            {strokeStyle: "#ffbd33", min: 30, max: 40}, 
-            {strokeStyle: "#ff0000", min: 40, max: 50}  
+            {strokeStyle: "#339900", min: 0, max: 10}, 
+            {strokeStyle: "#99cc33", min: 10, max: 20}, 
+            {strokeStyle: "#ffcc00", min: 20, max: 30}, 
+            {strokeStyle: "#ff9966", min: 30, max: 40}, 
+            {strokeStyle: "#cc3300", min: 40, max: 50}  
         ],
         renderTicks: {
             divisions: 10,
@@ -1502,11 +1686,11 @@
             fractionDigits: 0 
         },
         staticZones: [
-            {strokeStyle: "#33ffbd", min: 0, max: 20}, 
-            {strokeStyle: "#75ff33", min: 20, max: 40}, 
-            {strokeStyle: "#dbff33", min: 40, max: 60}, 
-            {strokeStyle: "#ffbd33", min: 60, max: 80}, 
-            {strokeStyle: "#ff0000", min: 80, max: 100}  
+            {strokeStyle: "#339900", min: 0, max: 20}, 
+            {strokeStyle: "#99cc33", min: 20, max: 40}, 
+            {strokeStyle: "#ffcc00", min: 40, max: 60}, 
+            {strokeStyle: "#ff9966", min: 60, max: 80}, 
+            {strokeStyle: "#cc3300", min: 80, max: 100}  
         ],
         renderTicks: {
             divisions: 10,
@@ -1531,6 +1715,52 @@
     gauge90.setMinValue(0); 
     gauge90.animationSpeed = 32;
     gauge90.set(100);
+
+    var opts100 = {
+        angle: 0.1, 
+        lineWidth: 0.26, 
+        radiusScale: 0.9,
+        pointer: {
+            length: 0.57, 
+            strokeWidth: 0.040, 
+            color: '#000000' 
+        },
+        staticLabels: {
+            font: "16px sans-serif", 
+            labels: [0, 20, 40, 60, 80, 100],  
+            color: "#000000", 
+            fractionDigits: 0 
+        },
+        staticZones: [
+            {strokeStyle: "#cc3300", min: 0, max: 20}, 
+            {strokeStyle: "#ff9966", min: 20, max: 40}, 
+            {strokeStyle: "#ffcc00", min: 40, max: 60}, 
+            {strokeStyle: "#99cc33", min: 60, max: 80}, 
+            {strokeStyle: "#339900", min: 80, max: 100}  
+        ],
+        renderTicks: {
+            divisions: 10,
+            divWidth: 1.1,
+            divLength: 0.7,
+            divColor: '#000000',
+            subDivisions: 3,
+            subLength: 0.5,
+            subWidth: 0.6,
+            subColor: '#000000'
+        },
+
+        limitMax: false,    
+        limitMin: false,    
+        highDpiSupport: true,    
+        
+    
+    };
+    var target100 = document.getElementById('gauge100'); 
+    var gauge100 = new Gauge(target100).setOptions(opts100); 
+    gauge100.maxValue = 100;
+    gauge100.setMinValue(0); 
+    gauge100.animationSpeed = 32;
+    gauge100.set(100);
 </script>
 <script type="text/javascript">
     $(document).ready(function(){
@@ -1601,6 +1831,7 @@
     display8 = segment("display8","#ff0000","#000000");
     display9 = segment("display9","#ff0000","#000000");
     display10 = segment("display10","#ff0000","#000000");
+    display11 = segment("display11","#ff0000","#000000");
   </script>
 <script type="text/javascript">
     var linechart = {
@@ -1746,6 +1977,7 @@
         subdomains:['mt0','mt1','mt2','mt3']
       }).addTo(map);
 </script>
+
 <!-- <script type="text/javascript">
     $(document).ready(function(){
         
@@ -1755,5 +1987,8 @@
 
     });
 </script> -->
+<script>
+    
+</script>
 </body>
 </html>
