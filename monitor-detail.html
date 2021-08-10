@@ -139,6 +139,22 @@
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 </div>
                 <a href="#" class="btn btn-primary ml-auto btn-icon" data-toggle="modal" data-target="#exampleModal"><i class="las la-plus"></i> New Visualiser</a>
+
+                <button id="edit" type="button" class="text-center ui-droppable btn btn-primary gridEdit-btn"  style="margin-right :1px;float:right;">
+                    <span class="icon md hydrated"></span>
+                    <i class="las la-edit"></i>
+                </button>
+
+                <button id="edit" type="button" class="text-center ui-droppable btn btn-primary gridDelete-btn"  style="margin-right :1px;float:right;">
+                    <span class="icon md hydrated"></span>
+                    <i class="las la-trash"></i>
+                </button>
+
+                <button id="edit" type="button" class="text-center ui-droppable btn btn-primary gridSave-btn"  style="margin-right :1px;float:right;">
+                    <span class="icon md hydrated"></span>
+                    <i class="las la-save"></i>
+                </button>
+
             </div>
             <div class="monitorsdetail-row">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -297,6 +313,7 @@
                                             </ul>
                                         </div>
                                      </div>
+                
                                      <canvas id="display2" class="segment-display2" width="300" height="180">
                                         Your browser is unfortunately not supported.
                                      </canvas>
@@ -358,13 +375,15 @@
                                         </div>
                                      </div>
                                      <canvas class="w-100" id="gauge340"></canvas>
-                                     <div class="canvas-value">
+                                     <div id="preview-textfield" class="preview-textfield"> </div>
+                                     <!--<div class="canvas-value">
                                          <canvas id="display5" class="segment-display2" width="100" height="50">
                                             Your browser is unfortunately not supported.
                                          </canvas>
-                                     </div>
+                                     </div>-->
                                 </div>
                             </div>
+
                             <div class="grid-stack-item" data-gs-x="0" data-gs-y="2" gs-w="4" gs-h="4">
                                 <div class="grid-stack-item-content rounded-lg bg-white shadow-sm dashboard-chart">
                                     <div class="head-withoption">
@@ -381,11 +400,12 @@
                                         </div>
                                      </div>
                                      <canvas class="w-100" id="gauge180"></canvas>
-                                     <div class="canvas-value">
+                                     <div id="preview-textfield2" class="preview-textfield"></div>
+                                     <!--<div class="canvas-value">
                                          <canvas id="display6" class="segment-display2" width="100" height="50">
                                             Your browser is unfortunately not supported.
                                          </canvas>
-                                     </div>
+                                     </div>-->
                                 </div>
                             </div>
                             <div class="grid-stack-item" data-gs-x="0" data-gs-y="2" gs-w="4" gs-h="4">
@@ -404,11 +424,12 @@
                                         </div>
                                      </div>
                                      <canvas class="w-100" id="gauge270"></canvas>
-                                     <div class="canvas-value">
+                                     <div id="preview-textfield3" class="preview-textfield"></div>
+                                     <!--<div class="canvas-value">
                                          <canvas id="display7" class="segment-display2" width="100" height="50">
                                             Your browser is unfortunately not supported.
                                          </canvas>
-                                     </div>
+                                     </div>-->
                                 </div>
                             </div>
                             <div class="grid-stack-item" data-gs-x="0" data-gs-y="2" gs-w="4" gs-h="4">
@@ -427,11 +448,12 @@
                                         </div>
                                      </div>
                                      <canvas class="w-100" id="gauge240"></canvas>
-                                     <div class="canvas-value">
+                                     <div id="preview-textfield4" class="preview-textfield"></div>
+                                     <!--<div class="canvas-value">
                                          <canvas id="display8" class="segment-display2" width="100" height="50">
                                             Your browser is unfortunately not supported.
                                          </canvas>
-                                     </div>
+                                     </div>-->
                                 </div>
                             </div>
                             <div class="grid-stack-item" data-gs-x="0" data-gs-y="2" gs-w="4" gs-h="4">
@@ -450,11 +472,12 @@
                                         </div>
                                      </div>
                                      <canvas class="w-100" id="gauge45"></canvas>
-                                     <div class="canvas-value">
+                                     <div id="preview-textfield5" class="preview-textfield"></div>
+                                     <!--<div class="canvas-value">
                                          <canvas id="display9" class="segment-display2" width="100" height="50">
                                             Your browser is unfortunately not supported.
                                          </canvas>
-                                     </div>
+                                     </div>-->
                                 </div>
                             </div>
                             <div class="grid-stack-item" data-gs-x="0" data-gs-y="2" gs-w="4" gs-h="4">
@@ -473,13 +496,15 @@
                                         </div>
                                      </div>
                                      <canvas class="w-100" id="gauge90"></canvas>
-                                     <div class="canvas-value">
+                                     <div id="preview-textfield6" class="preview-textfield"></div>
+                                     <!--<div class="canvas-value">
                                          <canvas id="display10" class="segment-display2" width="100" height="50">
                                             Your browser is unfortunately not supported.
                                          </canvas>
-                                     </div>
+                                     </div>-->
                                 </div>
                             </div>
+
                             <!-- <div class="grid-stack-item" data-gs-x="0" data-gs-y="2" gs-w="4" gs-h="4">
                                 <div class="grid-stack-item-content rounded-lg bg-white shadow-sm dashboard-chart">
                                     <div class="head-withoption">
@@ -617,6 +642,7 @@
                                           data-color-title="#000"
                                           data-color-units="#000"
                                           data-color-numbers="#000" 
+                                          data-font-Numbers-Weight="bold"
                                            
                                            
                                           data-value-box="true" 
@@ -699,6 +725,7 @@
                                             data-color-title="#fff"
                                             data-color-units="transparent" 
                                             data-color-numbers="#ffffff" 
+                                            data-font-Numbers-Weight="bold"
                                             data-color-needle-start="rgba(255, 255, 255, 1)" data-color-needle-end="rgba(255, 255, 255, 1)" 
                                             data-value-box="true" 
                                             data-animation-rule="bounce" 
@@ -745,11 +772,12 @@
                                         </div>
                                      </div>
                                      <canvas class="w-100" id="gauge100"></canvas>
-                                     <div class="canvas-value">
+                                     <div id="preview-textfield7" class="preview-textfield"></div>
+                                     <!--<div class="canvas-value">
                                          <canvas id="display11" class="segment-display2" width="100" height="50">
                                             Your browser is unfortunately not supported.
                                          </canvas>
-                                     </div>
+                                     </div>-->
                                 </div>
                             </div>
                             <div class="grid-stack-item" data-gs-x="0" data-gs-y="2" gs-w="4" gs-h="4">
@@ -817,6 +845,7 @@
                                           data-color-title="#000"
                                           data-color-units="#000"
                                           data-color-numbers="#000" 
+                                          data-font-Numbers-Weight="bold"
                                            
                                            
                                           data-value-box="true" 
@@ -899,6 +928,7 @@
                                             data-color-title="#fff"
                                             data-color-units="transparent" 
                                             data-color-numbers="#ffffff" 
+                                            data-font-Numbers-Weight="bold"
                                             data-color-needle-start="rgba(255, 255, 255, 1)" data-color-needle-end="rgba(255, 255, 255, 1)" 
                                             data-value-box="true" 
                                             data-animation-rule="bounce" 
@@ -1483,6 +1513,7 @@
     };
     var target340 = document.getElementById('gauge340'); // your canvas element
     var gauge340 = new Gauge(target340).setOptions(opts340); // create sexy gauge!
+    gauge340.setTextField(document.getElementById('preview-textfield'));
     gauge340.maxValue = 50; // set max gauge value
     gauge340.setMinValue(0);  // Prefer setter over gauge.minValue = 0
     gauge340.animationSpeed = 32; // set animation speed (32 is default value)
@@ -1529,6 +1560,7 @@
     };
     var target180 = document.getElementById('gauge180'); 
     var gauge180 = new Gauge(target180).setOptions(opts180); 
+    gauge180.setTextField(document.getElementById('preview-textfield2'));
     gauge180.maxValue = 100;
     gauge180.setMinValue(0); 
     gauge180.animationSpeed = 32;
@@ -1574,7 +1606,8 @@
     
     };
     var target270 = document.getElementById('gauge270'); 
-    var gauge270 = new Gauge(target270).setOptions(opts270); 
+    var gauge270 = new Gauge(target270).setOptions(opts270);
+    gauge270.setTextField(document.getElementById('preview-textfield3')); 
     gauge270.maxValue = 100;
     gauge270.setMinValue(0); 
     gauge270.animationSpeed = 32;
@@ -1620,6 +1653,7 @@
     };
     var target240 = document.getElementById('gauge240'); 
     var gauge240 = new Gauge(target240).setOptions(opts240); 
+    gauge240.setTextField(document.getElementById('preview-textfield4'));
     gauge240.maxValue = 100;
     gauge240.setMinValue(0); 
     gauge240.animationSpeed = 32;
@@ -1664,7 +1698,8 @@
     
     };
     var target45 = document.getElementById('gauge45'); 
-    var gauge45 = new Gauge(target45).setOptions(opts45); 
+    var gauge45 = new Gauge(target45).setOptions(opts45);
+    gauge45.setTextField(document.getElementById('preview-textfield5')); 
     gauge45.maxValue = 50;
     gauge45.setMinValue(0); 
     gauge45.animationSpeed = 32;
@@ -1711,6 +1746,7 @@
     };
     var target90 = document.getElementById('gauge90'); 
     var gauge90 = new Gauge(target90).setOptions(opts90); 
+    gauge90.setTextField(document.getElementById('preview-textfield6'));
     gauge90.maxValue = 100;
     gauge90.setMinValue(0); 
     gauge90.animationSpeed = 32;
@@ -1756,7 +1792,8 @@
     
     };
     var target100 = document.getElementById('gauge100'); 
-    var gauge100 = new Gauge(target100).setOptions(opts100); 
+    var gauge100 = new Gauge(target100).setOptions(opts100);
+    gauge100.setTextField(document.getElementById('preview-textfield7')); 
     gauge100.maxValue = 100;
     gauge100.setMinValue(0); 
     gauge100.animationSpeed = 32;
