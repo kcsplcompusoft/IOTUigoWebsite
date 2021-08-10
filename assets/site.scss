@@ -1498,6 +1498,43 @@ a.bg9:hover{background:#0b9492;}
 .modal-dialog {
 	margin: 3rem auto;
 }
+.preview-textfield {
+	text-align: center;
+	span{
+		text-align: center;
+		background-color: #000000;
+		border: 2px solid #4D4D4D;
+		color: #ff0000;
+		font-size: 30px;
+		margin: 0 auto;
+		padding: 1px 20px;
+		margin-top: 10px;
+		display: inline-block;
+		min-width: 100px;
+	}
+}
+.btn.btn-primary{
+	&.gridedit-btn, &.griddelete-btn, &.gridsave-btn{
+		padding: 11px 10px 11px 12px;  
+  		margin: 0 5px;
+		i{
+			font-size: 18px;
+			text-align: center;
+		}
+		&:hover {
+			background-color: #00B9B6;
+		}
+	}
+	&.gridedit-btn{
+		background-color: #2750a4;
+	}
+	&.griddelete-btn{
+		background-color: #cc3300;
+	}
+	&.gridsave-btn{
+		background-color: #339900;
+	}
+}
 
 @include desktop-big {
 	html{font-size:14px; line-height:20px;}
