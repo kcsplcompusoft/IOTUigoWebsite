@@ -14635,6 +14635,43 @@ a.bg9:hover {
   margin: 3rem auto;
 }
 
+.preview-textfield {
+  text-align: center;
+}
+.preview-textfield span {
+  text-align: center;
+  background-color: #000000;
+  border: 2px solid #4D4D4D;
+  color: #ff0000;
+  font-size: 30px;
+  margin: 0 auto;
+  padding: 1px 20px;
+  margin-top: 10px;
+  display: inline-block;
+  min-width: 100px;
+}
+
+.btn.btn-primary.gridedit-btn, .btn.btn-primary.griddelete-btn, .btn.btn-primary.gridsave-btn {
+  padding: 11px 10px 11px 12px;
+  margin: 0 5px;
+}
+.btn.btn-primary.gridedit-btn i, .btn.btn-primary.griddelete-btn i, .btn.btn-primary.gridsave-btn i {
+  font-size: 18px;
+  text-align: center;
+}
+.btn.btn-primary.gridedit-btn:hover, .btn.btn-primary.griddelete-btn:hover, .btn.btn-primary.gridsave-btn:hover {
+  background-color: #00B9B6;
+}
+.btn.btn-primary.gridedit-btn {
+  background-color: #2750a4;
+}
+.btn.btn-primary.griddelete-btn {
+  background-color: #cc3300;
+}
+.btn.btn-primary.gridsave-btn {
+  background-color: #339900;
+}
+
 @media (max-width: 1600px) {
   html {
     font-size: 14px;
