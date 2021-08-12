@@ -14654,10 +14654,21 @@ a.bg9:hover {
 .btn.btn-primary.gridedit-btn, .btn.btn-primary.griddelete-btn, .btn.btn-primary.gridsave-btn {
   padding: 11px 10px 11px 12px;
   margin: 0 5px;
+  border-radius: 5px;
+}
+@media (max-width: 1440px) {
+  .btn.btn-primary.gridedit-btn, .btn.btn-primary.griddelete-btn, .btn.btn-primary.gridsave-btn {
+    padding: 5px 10px 5px 12px;
+  }
 }
 .btn.btn-primary.gridedit-btn i, .btn.btn-primary.griddelete-btn i, .btn.btn-primary.gridsave-btn i {
   font-size: 18px;
   text-align: center;
+}
+@media (max-width: 1440px) {
+  .btn.btn-primary.gridedit-btn i, .btn.btn-primary.griddelete-btn i, .btn.btn-primary.gridsave-btn i {
+    font-size: 16px;
+  }
 }
 .btn.btn-primary.gridedit-btn:hover, .btn.btn-primary.griddelete-btn:hover, .btn.btn-primary.gridsave-btn:hover {
   background-color: #00B9B6;
