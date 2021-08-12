@@ -1517,9 +1517,16 @@ a.bg9:hover{background:#0b9492;}
 	&.gridedit-btn, &.griddelete-btn, &.gridsave-btn{
 		padding: 11px 10px 11px 12px;  
   		margin: 0 5px;
+		border-radius: 5px;
+		@include desktop{
+		  padding:5px 10px 5px 12px;
+		}
 		i{
 			font-size: 18px;
 			text-align: center;
+			@include desktop{
+				font-size: 16px;
+			}
 		}
 		&:hover {
 			background-color: #00B9B6;
