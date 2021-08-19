@@ -96,3 +96,20 @@ $font-size-base: 1rem; // Assumes the browser default, typically `16px`
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
 }
+
+@mixin Poppins-Light() {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+@mixin Poppins-Normal() {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+@mixin Poppins-Medium() {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+@mixin Poppins-Bold() {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
