@@ -1562,3 +1562,622 @@ a.bg9:hover{background:#0b9492;}
 	h2, .h2{@include fontrem(24px, 28px);}
 	.mb-30{margin-bottom:18px !important;}
 }
+
+
+.landing-page {
+	overflow: auto;
+	background: $color-white;
+	@include Poppins-Normal();
+	.container {
+		max-width: 1380px;
+	}
+}
+.title-block {
+	text-align: center;
+	padding: 45px 0;
+	max-width: 60%;
+	margin: 0 auto;
+	h2 {
+		@include Poppins-Bold();
+		@include fontrem(40px, 60px);
+		color:  $color-black;
+		text-transform: uppercase;
+	}
+	h3 {
+		@include Poppins-Light();
+		@include fontrem(25px, 45px);
+		color:  #17223B;
+	}
+	p {
+		@include fontrem(16px, 27px);
+		color: #7A7A7A;
+	}
+	@include phonewide {
+		padding: 35px 0;
+		max-width: 100%;
+		h2 {
+			@include fontrem(30px, 40px);
+		}
+		h3 {
+			@include fontrem(22px, 30px);
+		}
+	}
+	@include tabletwide {
+		max-width: 100%;
+		h2 {
+			@include fontrem(35px, 40px);
+		}
+		h3 {
+			@include fontrem(25px, 30px);
+		}
+	}
+}
+header {
+	background: url("images/header-banner.svg");
+	background-size: 100%;
+	padding: 30px 0;
+	@include tabletwide {
+		padding: 15px 0;
+	}
+	@include phonewide {
+		.header-top {
+			justify-content: center;
+		}
+		.logo {
+			text-align: center;
+		}
+	}
+	ul.landing-nav {
+		justify-content: flex-end;
+		padding: 0;
+		@include tabletwide {
+			justify-content: center;
+		}
+		li {
+		padding: 5px 15px;
+			a {
+				@include fontrem(13px, 19px);
+				color:  $color-white;
+			}
+		}
+	}
+	@include tabletwide {
+		.row.header-top div[class*="col-"]:nth-child(2) {
+			order: 3;
+		}
+	}
+	@include phonewide {
+		.row.header-top div[class*="col-"]:nth-child(2) {
+			order: unset;
+			margin: 12px 0;
+		}
+	}
+	.login-block {
+		a {
+			background: $primary_color;
+			@include fontrem(12px, 18px);
+			@include Poppins-Bold();
+			color:  $color-white;
+			border-radius: 10px;
+			padding: 10px 25px;
+			text-transform: uppercase;
+			color: $color-white;
+			img {
+				margin-left: 10px;
+			}
+		}
+		@include tabletwide {
+			justify-content: flex-end;
+			display: flex;
+			a {
+				margin: 0 10px;
+			}
+		}
+		@include phonewide {
+			justify-content: center;
+		}
+	}
+}
+.banner-block {
+	padding: 150px 0;
+	@include tabletwide {
+		padding: 80px 0;
+	}
+	@include phonewide {
+		padding: 40px 0 20px;
+	}
+	.banner-data {
+		color: $color-white;
+		h1 {
+			@include Poppins-Bold();
+			@include fontrem(61px, 73px);
+			text-transform: uppercase;
+			@include tabletwide {
+				@include fontrem(45px, 55px);
+			}
+			@include phonewide {
+				@include fontrem(40px, 50px);
+			}
+		}
+		p {
+			@include Poppins-Light();
+			@include fontrem(20px, 31px);
+			color: $color-white;
+			@include tabletwide {
+				@include fontrem(18px, 25px);
+			}
+			@include phonewide {
+				@include fontrem(15px, 22px);
+			}
+		}
+	}
+}
+.industry-type {
+	margin: 20px ​0 40px 0;
+	.industry-content {
+		background: $color-white;
+		border: 1px solid #868686;
+		box-sizing: border-box;
+		border-radius: 20px;
+		text-align: center;
+		padding: 40px;
+		max-width: 33%;
+		margin: 0 20px;
+		min-height: 410px;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		flex-direction: column;
+
+		&::nth-child(2) {
+			margin: 0 35px;
+		}
+		h3 {
+			@include Poppins-Bold();
+			@include fontrem(20px, 30px);
+			text-transform: uppercase;
+			color: $color-black;
+			margin: 50px 10px 10px;
+			@include phonewide {
+				@include fontrem(18px, 25px);
+			}
+		}
+		p {
+			@include fontrem(16px, 31px);
+			text-align: center;
+			color: #6F6F6F;
+		}
+		&.slick-slide.slick-current.slick-active {
+			border-color: #0A6871;
+		}
+		@include tablet {
+			padding: 20px;
+    		min-height: 360px;
+			img {
+				margin: 0 auto;
+			}
+		}
+	}
+	button.slick-prev.slick-arrow {
+		right: 33%;
+		@include tablet {
+			right: 0;
+		}
+	}
+	button.slick-next.slick-arrow {
+		left: 33%;
+		@include tablet {
+			left: 0;
+		}
+	}
+}
+.industry-count {
+	text-align: center;
+	margin: 50px 0 20px;
+	border-bottom: 1px solid #C0C0C0;
+	padding-bottom: 70px;
+	@include phonewide {
+		padding-bottom: 50px;
+		margin: 30px 0 10px;
+		div {
+			margin: 10px 0;
+		}
+	}
+	h3 {
+		@include Poppins-Bold();
+		@include fontrem(66px, 99px);
+		text-transform: uppercase;
+		color: #00B9B6;
+		@include phonewide {
+			@include fontrem(40px, 50px);
+		}
+	}
+	p {
+		@include Poppins-Bold();
+		@include fontrem(20px, 30px);
+		text-transform: uppercase;
+		color: $color-black;
+		margin: 0px 10px;
+		@include phonewide {
+			@include fontrem(18px, 25px);
+		}
+	}
+}
+.module-block {
+	padding-top: 10px;
+    padding-bottom: 80px;
+	.row {
+		align-items: center;
+		.module-content {
+			padding-left: 60px;
+			@include phonemedium {
+				padding-left: 15px;
+				padding-top: 20px;
+			}
+			h3 {
+				@include Poppins-Bold();
+				@include fontrem(45px, 104px);
+				color: #1F1F3C;
+				@include phonewide {
+					@include fontrem(35px, 45px);
+				}
+			}
+			p{
+				@include fontrem(16px, 27px);
+				color: #7A7A7A;
+			}
+		}
+	}
+	.module-slider {
+		button.slick-prev.slick-arrow {
+			top: 85%;
+			left: 68%;
+		}
+		button.slick-next.slick-arrow {
+			right: 34%;
+			top: 85%;
+		}
+		@include tabletwide {
+			button.slick-prev.slick-arrow {
+				top: 100%;
+				left: 68%;
+			}
+			button.slick-next.slick-arrow {
+				right: 34%;
+				top: 100%;
+			}
+		}
+		@include phonewide {
+			padding-bottom: 20px;
+			button.slick-prev.slick-arrow {
+				top: 100%;
+				left: 51%;
+				right: auto;
+			}
+			button.slick-next.slick-arrow {
+				top: 100%;
+				left: auto;
+				right: 51%;
+			}
+		}
+	}
+}
+.feature-block {
+	background: url("images/feature-back.svg");
+	padding:60px 0;
+	
+	@include phonewide {
+		padding:30px 0 40px 0;
+	}
+	.row {
+		align-items: center;
+	}
+	.feature-content {
+		@include Poppins-Normal();
+		@include fontrem(20px, 44px);
+		color: $color-white;
+		h2 {
+			@include Poppins-Normal();
+			@include fontrem(40px, 60px);
+			color: $color-white;
+			text-transform: uppercase;
+		}
+		p {
+			@include Poppins-Light();
+			@include fontrem(25px, 39px);
+			color: $color-white;
+			margin: 10px 0;
+		}
+		ul {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			padding-left: 20px;
+			li {
+				width: 47%;
+				list-style: disc;
+				@include Poppins-Light();
+				@include fontrem(20px, 44px);
+				color: $color-white;
+				@include phonewide {
+					@include fontrem(17px, 30px);
+				}
+			}
+		}
+	}
+	.feature-media {
+		img {
+			width: 100%;
+		}
+		@include phonewide {
+			margin-top: 20px;
+		}
+	}
+}
+.benefits-block {
+	.benefit-content {
+		background: $color-white;
+		border: 1px solid #0A6871;
+		box-sizing: border-box;
+		border-radius: 20px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		padding-bottom: 30px;
+		max-width: calc(25% - 20px);
+		margin: 10px auto;
+		
+		@include phonewide {
+			max-width: 45%;
+			flex: 0 0 45%;
+			flex-direction: column;
+		}
+		@include phone {
+			max-width: 96%;
+			flex: 0 0 96%;
+		}
+		img {
+			padding: 50px 0;
+			@include tabletwide {
+				padding: 10px 0;
+			}
+			@include phone {
+				padding: 30px 0;
+			}
+		}
+		p {
+			@include Poppins-Bold();
+			@include fontrem(20px, 30px);
+			color: $color-black;
+			text-align: center;
+			text-transform: uppercase;
+			margin: 0px 10px;
+			@include tabletwide {
+				@include fontrem(18px, 25px);
+			}
+		}
+	}
+}
+.use-cases-block {
+	padding: 40px 0 100px;
+	.cases-content {
+		h3 {
+			@include Poppins-Bold();
+			@include fontrem(45px, 104px);
+			color: #1F1F3C;
+			@include tabletwide {
+				@include fontrem(35px, 50px);
+			}
+		}
+		p {
+			@include Poppins-Normal();
+			@include fontrem(16px, 27px);
+			color: #7A7A7A;
+		}
+	}
+	.energy-marketing-slider {
+		@include phonewide {
+			padding-bottom: 30px;
+		}
+		.row {
+			align-items: center;
+		}
+		button.slick-arrow {
+			top: auto;
+			bottom: 0;
+			&.slick-next {
+				left: 0;
+			}
+			&.slick-prev {
+				left: 5%;
+			}
+		}
+		@include tabletwide {
+			button.slick-next.slick-arrow {
+				left: 0;
+				top: 100%;
+			}
+			button.slick-prev.slick-arrow {
+				left: 8%;
+				top: 100%;
+			}
+		}
+		@include phonemedium {
+			.cases-media {
+				margin-bottom: 30px;
+			}
+			button.slick-prev.slick-arrow {
+				right: 0;
+				left: auto;	
+			}
+		}
+		
+	} 
+}
+.call-to-action {
+	background: url(images/cta-back.svg);
+	background-repeat: repeat;
+	padding: 100px 0;
+	@include phonewide {
+		padding: 50px 0;
+	}
+	.call-to-action-content {
+		h2 {
+			@include Poppins-Bold();
+			@include fontrem(40px, 60px);
+			text-align: center;
+			text-transform: capitalize;
+			color: #0050A4;
+			@include phonewide {
+				@include fontrem(30px, 40px);
+			}
+		}
+		p {
+			@include Poppins-Light();
+			@include fontrem(20px, 40px);
+			text-align: center;
+			text-transform: capitalize;
+			text-align: center;
+			color: #17223B;
+			padding: 10px 0 25px 0;
+			@include phonewide {
+				padding: 10px 0 15px 0;
+			}
+		}
+		.call-to-button {
+			text-align: center;
+			a {
+				border-radius: 10px;
+				@include Poppins-Bold();
+				@include fontrem(20px, 30px);
+				text-align: center;
+				text-transform: uppercase;
+				color: $color-white;
+				padding: 14px 40px;
+					display: inline-block;
+				&.primary-btn {
+					background: #00B9B6;
+					margin-right: 10px;
+					&:hover {
+						background: #0050A4;
+					}
+					@include phonewide {
+						margin-right: auto;
+					}
+				}
+				&.blue-btn {
+					background: #0050A4;
+					&:hover {
+						background: #00B9B6;
+					}
+				}
+				@include phonewide {
+					display: block;
+					max-width: 250px;
+					margin: 10px auto;
+					padding: 10px;
+					@include fontrem(17px, 25px);
+				}
+			}
+		}
+	}
+		
+}
+.footer {
+	background: url(images/footer-bg.svg);
+	background-repeat: repeat;
+	padding: 100px 0;
+	color: $color-white;
+
+	.footer-logo {
+		p {
+			@include Poppins-Normal();
+			@include fontrem(16px, 24px);
+			text-align: center;
+			text-transform: capitalize;
+			color: $color-white;
+			margin-top: 40px;
+			@include phonewide {
+				margin-top: 20px;
+			}
+		}
+		
+	}
+	.footer-middle {
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			li {
+				width: 28%;
+				a {
+					@include Poppins-Normal();
+					@include fontrem(16px, 35px);
+					text-transform: capitalize;
+				}
+				@include phone {
+					width: 50%;
+				}
+			}
+		}
+		@include phonewide {
+			ul {
+				margin: 30px auto;
+			}
+		}
+	}
+	.contact-us {
+		h3 {
+			@include Poppins-Normal();
+			@include fontrem(20px, 30px);
+			text-transform: uppercase;
+			margin-bottom: 15px;
+		}
+		a {
+			@include Poppins-Bold();
+			@include fontrem(27px, 40px);
+			text-transform: uppercase;
+			@include tabletwide{
+				@include fontrem(15px, 25px);
+			}
+		}
+		@include phonewide {
+			a {
+				display: block;
+			}
+		}
+	}
+	@include phonewide {
+		div[class*="col-sm-"] {
+			max-width: 100%;
+			flex: 0 0 100%;
+		}	
+	}
+	@include phonewide {
+		padding: 50px 0;
+		div[class*="col-sm-"] { 
+			text-align: center;
+		}
+	}	
+}
+
+button.slick-next.slick-arrow,
+button.slick-prev.slick-arrow {
+    background-image: url(images/arrow.svg);
+    background-color: #0A6871;
+    font-size: 0;
+    width: 21px;
+    height: 18px;
+    border: 0;
+    padding: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+	z-index: 1;
+}
+button.slick-next.slick-arrow {
+    transform: rotate(180deg);
+}
