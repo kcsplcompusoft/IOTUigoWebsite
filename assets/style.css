@@ -14737,7 +14737,7 @@ a.bg9:hover {
   font-weight: 400;
 }
 .landing-page .container {
-  max-width: 1380px;
+  max-width: 1400px;
 }
 
 .title-block {
@@ -14804,6 +14804,7 @@ a.bg9:hover {
 header {
   background: url("images/header-banner.svg");
   background-size: 100%;
+  background-size: cover;
   padding: 30px 0;
 }
 @media (max-width: 1200px) {
@@ -14881,6 +14882,7 @@ header .login-block a img {
 
 .banner-block {
   padding: 150px 0;
+  align-items: center;
 }
 @media (max-width: 1200px) {
   .banner-block {
@@ -14940,8 +14942,19 @@ header .login-block a img {
   }
 }
 
+.industry-title {
+  background: url(images/dot-6.svg) no-repeat;
+  background-position: center left;
+}
+
+.industry-types-block {
+  background: url(images/dot-8.svg) no-repeat;
+  background-position: bottom right;
+}
+
 .industry-type {
-  margin: 20px ​0 40px 0;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 .industry-type .industry-content {
   background: #FFFFFF;
@@ -15014,6 +15027,11 @@ header .login-block a img {
   }
 }
 
+.industry-number {
+  background: url(images/round-back.svg) no-repeat;
+  background-position: left center;
+}
+
 .industry-count {
   text-align: center;
   margin: 50px 0 20px;
@@ -15066,6 +15084,8 @@ header .login-block a img {
 .module-block {
   padding-top: 10px;
   padding-bottom: 80px;
+  background: url(images/dotted.svg) no-repeat;
+  background-position: top right;
 }
 .module-block .row {
   align-items: center;
@@ -15453,6 +15473,9 @@ header .login-block a img {
   font-size: 1rem;
   line-height: 2.1875;
   text-transform: capitalize;
+}
+.footer .footer-middle ul li a:hover {
+  text-decoration: underline;
 }
 @media (max-width: 479px) {
   .footer .footer-middle ul li {
