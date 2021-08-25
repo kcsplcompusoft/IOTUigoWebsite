@@ -514,14 +514,14 @@ a.bg9:hover{background:#0b9492;}
 		.overview-card-bottom{
 			ul{
 				li{
-					width:auto; padding:0 12px;
+					width:auto; padding:0 7px;
 					.placeholder{opacity:0; visibility:hidden;}
 					.link-icon{opacity:1; visibility:visible; font-size:14px; }
 					@include desktop{
 						.link-icon{font-size:12px;}
 					}
 					@include tabletwide{
-						padding:0 9px;
+						padding:0 4px;
 					}
 				}
 			}
