@@ -12842,7 +12842,7 @@ a.bg9:hover {
 }
 .project-overview-card:hover .overview-card-bottom ul li {
   width: auto;
-  padding: 0 12px;
+  padding: 0 7px;
 }
 .project-overview-card:hover .overview-card-bottom ul li .placeholder {
   opacity: 0;
@@ -12860,7 +12860,7 @@ a.bg9:hover {
 }
 @media (max-width: 1200px) {
   .project-overview-card:hover .overview-card-bottom ul li {
-    padding: 0 9px;
+    padding: 0 4px;
   }
 }
 
