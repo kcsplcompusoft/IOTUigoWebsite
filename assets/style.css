@@ -9952,6 +9952,17 @@ select.custom-select:focus {
   outline: none;
 }
 
+.input-ico {
+  position: relative;
+}
+.input-ico i {
+  position: absolute;
+  right: 7px;
+  top: 9px;
+  font-size: 22px;
+  color: #000000;
+}
+
 .form-group {
   margin-bottom: 22px;
 }
@@ -14388,8 +14399,24 @@ a.bg9:hover {
   top: 50%;
   transform: translateY(-50%);
 }
+.userdetail-row .userdetail-right .userimg-close {
+  position: absolute;
+  cursor: pointer;
+  right: 5px;
+  top: 5px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 20px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 21px rgba(0, 0, 0, 0.25);
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  color: #000000;
+}
 .userdetail-row .userdetail-right .uploadimg {
   position: absolute;
+  cursor: pointer;
   left: 50%;
   margin-left: -22px;
   bottom: -22px;
@@ -14400,6 +14427,20 @@ a.bg9:hover {
   width: 44px;
   height: 44px;
   border-radius: 100%;
+}
+.userdetail-row .userdetail-right .uploadimg input[type=file] {
+  z-index: 100;
+  cursor: pointer;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.userdetail-row .userdetail-right .uploadimg span {
+  cursor: pointer;
 }
 @media (max-width: 767px) {
   .userdetail-row .userdetail-right .uploadimg {
