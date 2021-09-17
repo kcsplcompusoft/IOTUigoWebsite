@@ -11734,6 +11734,14 @@ select.custom-select:focus {
   }
 }
 
+.modal:nth-of-type(even) {
+  z-index: 1062 !important;
+}
+
+.modal-backdrop.show:nth-of-type(even) {
+  z-index: 1061 !important;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -12305,7 +12313,6 @@ a.bg9:hover {
   width: 18px;
   height: 18px;
   border: 1px solid #91A1BC;
-  display: block !important;
   position: static !important;
 }
 .table-filter .bootstrap-select .dropdown-menu ul li .check-mark:after {
@@ -12320,7 +12327,7 @@ a.bg9:hover {
 .table-filter .bootstrap-select .dropdown-menu ul li .check-mark + .text {
   margin: 0px;
   width: calc(100% - 20px);
-  padding-left: 10px;
+  padding-left: 0;
 }
 .table-filter .bootstrap-select .dropdown-menu ul li.active a {
   background: #E2E9F5;
@@ -12348,6 +12355,12 @@ a.bg9:hover {
     width: 5px;
     height: 10px;
   }
+}
+.table-filter .bootstrap-select.show-tick .dropdown-menu ul li .check-mark {
+  display: block;
+}
+.table-filter .bootstrap-select.show-tick .dropdown-menu ul li .check-mark + .text {
+  padding-left: 10px;
 }
 
 .common-datatable {
@@ -12446,6 +12459,7 @@ a.bg9:hover {
 }
 .common-datatable .dataTables_wrapper.no-footer .dataTables_scrollBody {
   border-bottom: none;
+  min-height: 300px;
 }
 .common-datatable .dataTables_filter {
   margin-left: 20px;
@@ -12557,8 +12571,6 @@ a.bg9:hover {
 .common-table.dataTable tbody tr td .item-icon-title-cell .item-menu .dropdown-menu {
   border: 1px solid #C8D2E2;
   left: auto !important;
-  top: 100% !important;
-  transform: none !important;
   right: 0px;
   float: none;
   padding: 8px 0;

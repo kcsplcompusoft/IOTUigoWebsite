@@ -243,10 +243,10 @@ a.bg9:hover{background:#0b9492;}
 				li{
 					a{padding:5px 15px; line-height:20px; font-size:14px; display:flex; align-items:flex-start; flex-wrap:wrap;}
 					.check-mark{
-						width:18px; height:18px; border:1px solid $border-color2; display:block !important; position:static !important;
+						width:18px; height:18px; border:1px solid $border-color2; position:static !important;
 						&:after{margin:0px 0 0 5px; width:6px; height:12px; border-width:0 2px 2px 0; opacity:0; visibility:hidden; transition:all 0.3s ease;}
 					}
-					.check-mark + .text{margin:0px; width:calc(100% - 20px); padding-left:10px;}
+					.check-mark + .text{margin:0px; width:calc(100% - 20px); padding-left:0;}
 					&.active{
 						a{background:$color-btnLight; color:$color-black;}
 					}
@@ -267,6 +267,10 @@ a.bg9:hover{background:#0b9492;}
 					}
 				}
 			}
+		}
+		&.show-tick{
+			.dropdown-menu ul li .check-mark{display: block;}
+			.dropdown-menu ul li .check-mark + .text{padding-left:10px;}
 		}
 	}
 }
@@ -306,7 +310,7 @@ a.bg9:hover{background:#0b9492;}
 			}
 		}
 	}
-	.dataTables_wrapper.no-footer .dataTables_scrollBody{border-bottom:none;}
+	.dataTables_wrapper.no-footer .dataTables_scrollBody{border-bottom:none; min-height: 300px;}
 	.dataTables_filter{margin-left:20px; padding-top:8px; margin-bottom:8px; float:none; text-align:left;}
 	&.filter-search-minus{
 		.dataTables_filter{float:none; padding:0; text-align:left; margin-top:-42px; margin-left:20px; margin-bottom:12px;}
@@ -364,7 +368,7 @@ a.bg9:hover{background:#0b9492;}
 						.item-menu{
 							position:relative; opacity:0; visibility:hidden; transition:all 0.3s ease;
 							.dropdown-menu{
-								border: 1px solid #C8D2E2; left:auto !important; top:100% !important; transform:none !important; right:0px; float:none; padding:8px 0; box-shadow: 0px 7px 11px rgba(42, 62, 97, 0.11); min-width:130px;
+								border: 1px solid #C8D2E2; left:auto !important; right:0px; float:none; padding:8px 0; box-shadow: 0px 7px 11px rgba(42, 62, 97, 0.11); min-width:130px;
 								@include desktop{
 									padding:5px 0;
 								}
