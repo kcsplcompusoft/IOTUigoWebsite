@@ -167,6 +167,12 @@
                                     <input type="text" name="" value="" class="form-control">
                                 </div>
                             </div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="form-group">
+                                    <label class="form-label" >Color</label>
+                                    <input type="text" name="" value="" id="hexInput" data-toggle="modal" data-target="#color-modal" class="form-control">
+                                </div>
+                            </div>
                             <div class="col-sm-6 col-md-9">
                                 <div class="form-group">
                                     <label class="form-label" >Description</label>
@@ -471,7 +477,18 @@
         
     </div>
 </div>
-
+<div class="modal fade color-modal" id="color-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="las la-times"></i></button>
+        </div>
+        <div class="modal-body">
+            <div class="pickerColor"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 <script src="assets/js/jquery-3.1.0.js"></script>
 <script src="assets/js/popper.min.js"></script>
@@ -480,6 +497,7 @@
 <script src="assets/js/bootstrap-datepicker.js"></script>
 <script src="assets/js/datatables.min.js"></script>
 <script src="assets/js/bootstrap-select.min.js"></script>
+<script src="assets/js/iro.min.js"></script>
 <script src="assets/js/custom.js"></script>
 <script>
     $(document).ready(function(){
@@ -504,6 +522,23 @@
             noneSelectedText: 'Recently added'
         });
         $('.boot-select .select').selectpicker();
+
+        var colorPicker = new iro.ColorPicker(".pickerColor", {
+        width: 280,
+        color: "rgb(255, 0, 0)",
+        borderWidth: 1,
+        borderColor: "#fff",
+        });
+
+        var hexInput = document.getElementById("hexInput");
+
+        colorPicker.on(["color:init", "color:change"], function(color){
+            hexInput.value = color.hexString;
+        });
+
+        hexInput.addEventListener('change', function() {
+            colorPicker.color.hexString = this.value;
+        });
     });
 </script>
 </body>

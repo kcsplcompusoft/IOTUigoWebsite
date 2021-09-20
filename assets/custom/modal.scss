@@ -150,9 +150,23 @@
     }
 }
 
-.modal:nth-of-type(even) {
-    z-index: 1062 !important;
+// // .modal:nth-of-type(even) {
+// //     z-index: 1062 !important;
+// // }
+.modal-backdrop.show + .modal-backdrop.show {
+     z-index: 1061;
 }
-.modal-backdrop.show:nth-of-type(even) {
-    z-index: 1061 !important;
+.color-modal{
+	.modal-dialog{
+		max-width: 340px;
+        .modal-body{
+            text-align: center;
+        }
+		.pickerColor{
+			margin: 0 auto;
+            display: inline-block;
+            vertical-align: top;
+            text-align: left;
+		}
+	}
 }
