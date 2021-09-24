@@ -2,7 +2,16 @@ select.custom-select{
     background:#fff url("images/arrow-down.svg") no-repeat right 15px center/14px 10px; border-radius:0px; font-size:14px; line-height:20px; border:none; color:$color-black;  box-shadow:none; width:100%; height:auto; border-radius:8px;  padding:10px 30px 10px 16px;
     &:focus{outline:none;}
 }
-
+.input-ico{
+    position: relative;
+    i{
+        position: absolute;
+        right: 7px;
+        top: 9px;
+        font-size:22px;
+        color: $color-black;
+    }
+}
 .form-group{
 	margin-bottom:22px;
     @include desktop{

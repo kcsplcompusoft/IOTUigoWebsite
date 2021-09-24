@@ -4,6 +4,7 @@ $info-leptop : 1359px;
 $info-tabletwide : 1200px;
 $info-tablet : 991px;
 $info-phonewide : 767px;
+$info-phonemedium : 600px;
 $info-phone :479px;
 
 // Max version
@@ -51,7 +52,11 @@ $info-phone :479px;
     @content;
   }
 }
-
+@mixin phonemedium {
+  @media (max-width: #{$info-phonemedium}) {
+    @content;
+  }
+}
 @mixin phone {
   @media (max-width: #{$info-phone}) {
     @content;
