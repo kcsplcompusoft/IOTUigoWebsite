@@ -59,7 +59,7 @@
 }
 
 .ticks > .tick {
-	width: 100%;
+	width: 70%;
 	height: 3%;
 	background: black;
 	margin-bottom: 300%;
@@ -549,7 +549,7 @@
 	font-size: -moz-calc(10pt * 1);
 	font-size: -o-calc(10pt * 1);
 	font-size: -ms-calc(10pt * 1);
-	font-size: calc(10pt * 1);
+	font-size: calc(9pt * 1);
 }
 
 .industrial.tank.size.two .tick > .scale,

@@ -232,12 +232,19 @@ a.bg9:hover{background:#0b9492;}
 			}
 		}
 		.dropdown-menu{
-			box-shadow:0px 4px 13px rgb(0 80 164 / 15%); border:none; border-radius:3px;
+			box-shadow:0px 4px 13px rgb(0 80 164 / 15%); border:none; border-radius:3px; width: 100%;
 			.bs-searchbox{
 				.form-control{
 					border:1px solid $border-color; box-shadow:none !important;
 					&:focus{ border-color:$color-Blue;}
 				}
+			}
+			.bs-searchbox + .inner{
+				max-height: 180px !important;
+				overflow: auto !important;
+			}
+			.dropdown-menu.inner{
+				width: auto;
 			}
 			ul{
 				li{
@@ -1164,7 +1171,7 @@ a.bg9:hover{background:#0b9492;}
 					}
 				}
 				&.thermometer{
-					height:calc(100px * 2); width:calc(15px * 2);
+					height:calc(100px * 2); width:calc(15px * 2.5);
 					.tick{
 						height:2% !important;
 						&:last-child > .scale{top:-195%}
