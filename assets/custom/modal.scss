@@ -170,3 +170,18 @@
 		}
 	}
 }
+.launch-modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 12px 10px 12px 10px;
+    border-top: 1px solid #D7E0EF;
+
+    .modal-succes-btn {
+        margin-right: 5px;
+    }
+
+    .btn.btn-primary.griddelete-btn {
+        padding: 12px 20px 12px;
+    }
+}
