@@ -113,7 +113,7 @@ a.bg9:hover{background:#0b9492;}
 			min-width:220px; margin-top:5px;
 		}
 		.dropdown-toggle{
-			box-shadow:0px 4px 13px rgb(0 80 164 / 15%) !important; 
+			box-shadow:0px 4px 13px rgba(0, 80, 164, 0.15) !important; 
 			@include phonewide{
 				height:30px; box-shadow:none !important;
 				&:after{
@@ -232,7 +232,7 @@ a.bg9:hover{background:#0b9492;}
 			}
 		}
 		.dropdown-menu{
-			box-shadow:0px 4px 13px rgb(0 80 164 / 15%); border:none; border-radius:3px; width: 100%;
+			box-shadow:0px 4px 13px rgba(0, 80, 164, 0.15); border:none; border-radius:3px; width: 100%;
 			.bs-searchbox{
 				.form-control{
 					border:1px solid $border-color; box-shadow:none !important;
@@ -242,9 +242,11 @@ a.bg9:hover{background:#0b9492;}
 			.bs-searchbox + .inner{
 				max-height: 180px !important;
 				overflow: auto !important;
+				width: 100%;
 			}
 			.dropdown-menu.inner{
 				width: auto;
+				display: inline-block;
 			}
 			ul{
 				li{
@@ -279,6 +281,12 @@ a.bg9:hover{background:#0b9492;}
 			.dropdown-menu ul li .check-mark{display: block;}
 			.dropdown-menu ul li .check-mark + .text{padding-left:10px;}
 		}
+	}
+}
+.autocomplete-items{
+	box-shadow: 0px 4px 13px rgba(0, 80, 164, 0.15); border-radius: 3px;
+	> div{
+		padding: 5px 0;
 	}
 }
 .common-datatable{
@@ -1500,7 +1508,7 @@ a.bg9:hover{background:#0b9492;}
 
 .modal-content {
 	border-radius: .3rem;		
-	box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 20%);
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 
 	.close {
 		span {

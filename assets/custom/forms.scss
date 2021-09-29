@@ -127,7 +127,7 @@ select.custom-select{
             }
         }
         .dropdown-menu{
-            box-shadow:0px 11px 10px rgb(0 80 164 / 15%); border:none; border-radius:3px; margin-top:0px;
+            box-shadow:0px 11px 10px rgba(0, 80, 164, 0.15); border:none; border-radius:3px; margin-top:0px;
             ul{
                 li{
                     a{padding:5px 15px; line-height:20px; font-size:14px;}
