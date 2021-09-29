@@ -12331,9 +12331,11 @@ a.bg9:hover {
 .table-filter .bootstrap-select .dropdown-menu .bs-searchbox + .inner {
   max-height: 180px !important;
   overflow: auto !important;
+  width: 100%;
 }
 .table-filter .bootstrap-select .dropdown-menu .dropdown-menu.inner {
   width: auto;
+  display: inline-block;
 }
 .table-filter .bootstrap-select .dropdown-menu ul li a {
   padding: 5px 15px;
@@ -12395,6 +12397,14 @@ a.bg9:hover {
 }
 .table-filter .bootstrap-select.show-tick .dropdown-menu ul li .check-mark + .text {
   padding-left: 10px;
+}
+
+.autocomplete-items {
+  box-shadow: 0px 4px 13px rgba(0, 80, 164, 0.15);
+  border-radius: 3px;
+}
+.autocomplete-items > div {
+  padding: 5px 0;
 }
 
 .common-datatable {
