@@ -9958,9 +9958,12 @@ select.custom-select:focus {
 .input-ico i {
   position: absolute;
   right: 7px;
-  top: 9px;
-  font-size: 22px;
+  top: 0;
+  font-size: 20px;
   color: #000000;
+  margin: auto;
+  bottom: 0;
+  height: 20px;
 }
 
 .form-group {
@@ -11751,6 +11754,20 @@ select.custom-select:focus {
   text-align: left;
 }
 
+.launch-modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 12px 10px 12px 10px;
+  border-top: 1px solid #D7E0EF;
+}
+.launch-modal-footer .modal-succes-btn {
+  margin-right: 5px;
+}
+.launch-modal-footer .btn.btn-primary.griddelete-btn {
+  padding: 12px 20px 12px;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -12302,6 +12319,7 @@ a.bg9:hover {
   box-shadow: 0px 4px 13px rgba(0, 80, 164, 0.15);
   border: none;
   border-radius: 3px;
+  width: 100%;
 }
 .table-filter .bootstrap-select .dropdown-menu .bs-searchbox .form-control {
   border: 1px solid #D7E0EF;
@@ -12309,6 +12327,15 @@ a.bg9:hover {
 }
 .table-filter .bootstrap-select .dropdown-menu .bs-searchbox .form-control:focus {
   border-color: #0050A4;
+}
+.table-filter .bootstrap-select .dropdown-menu .bs-searchbox + .inner {
+  max-height: 180px !important;
+  overflow: auto !important;
+  width: 100%;
+}
+.table-filter .bootstrap-select .dropdown-menu .dropdown-menu.inner {
+  width: auto;
+  display: inline-block;
 }
 .table-filter .bootstrap-select .dropdown-menu ul li a {
   padding: 5px 15px;
@@ -12370,6 +12397,14 @@ a.bg9:hover {
 }
 .table-filter .bootstrap-select.show-tick .dropdown-menu ul li .check-mark + .text {
   padding-left: 10px;
+}
+
+.autocomplete-items {
+  box-shadow: 0px 4px 13px rgba(0, 80, 164, 0.15);
+  border-radius: 3px;
+}
+.autocomplete-items > div {
+  padding: 5px 0;
 }
 
 .common-datatable {
@@ -14165,7 +14200,7 @@ a.bg9:hover {
 }
 .monitorsdetail-row .tab-content .tab-pane .industrial.thermometer {
   height: calc(100px * 2);
-  width: calc(15px * 2);
+  width: calc(15px * 2.5);
 }
 .monitorsdetail-row .tab-content .tab-pane .industrial.thermometer .tick {
   height: 2% !important;
