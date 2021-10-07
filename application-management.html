@@ -253,7 +253,7 @@
                             
                         </tr>
                         <tr>
-                            <td>UID0001</td>
+                            <td>AID0001</td>
                             <td><div class="item-icon-title-cell">
                                 <div class="item-title">IIOTEdgeV0.4_Stable_v2	</div>
                                 <div class="item-menu">
@@ -277,9 +277,9 @@
                             
                         </tr>
                         <tr>
-                            <td>UID0001</td>
+                            <td>CID0001</td>
                             <td><div class="item-icon-title-cell">
-                                <div class="item-title">IIOTEdgeV0.4_Stable_v2	</div>
+                                <div class="item-title">IIOTEdgeV0.4_Stable_v5	</div>
                                 <div class="item-menu">
                                     <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
                                         <i class="las la-ellipsis-h"></i>
@@ -301,9 +301,9 @@
                             
                         </tr>
                         <tr>
-                            <td>UID0001</td>
+                            <td>FID0001</td>
                             <td><div class="item-icon-title-cell">
-                                <div class="item-title">IIOTEdgeV0.4_Stable_v2	</div>
+                                <div class="item-title">IIOTEdgeV0.4_Stable_v9	</div>
                                 <div class="item-menu">
                                     <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
                                         <i class="las la-ellipsis-h"></i>
@@ -325,9 +325,9 @@
                             
                         </tr>
                         <tr>
-                            <td>UID0001</td>
+                            <td>HID0001</td>
                             <td><div class="item-icon-title-cell">
-                                <div class="item-title">IIOTEdgeV0.4_Stable_v2	</div>
+                                <div class="item-title">IIOTEdgeV0.4_Stable_v8	</div>
                                 <div class="item-menu">
                                     <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
                                         <i class="las la-ellipsis-h"></i>
@@ -349,9 +349,9 @@
                             
                         </tr>
                         <tr>
-                            <td>UID0001</td>
+                            <td>TID0001</td>
                             <td><div class="item-icon-title-cell">
-                                <div class="item-title">IIOTEdgeV0.4_Stable_v2	</div>
+                                <div class="item-title">IIOTEdgeV0.4_Stable_v6	</div>
                                 <div class="item-menu">
                                     <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
                                         <i class="las la-ellipsis-h"></i>
@@ -373,9 +373,9 @@
                             
                         </tr>
                         <tr>
-                            <td>UID0001</td>
+                            <td>EID0001</td>
                             <td><div class="item-icon-title-cell">
-                                <div class="item-title">IIOTEdgeV0.4_Stable_v2	</div>
+                                <div class="item-title">IIOTEdgeV0.4_Stable_v1	</div>
                                 <div class="item-menu">
                                     <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
                                         <i class="las la-ellipsis-h"></i>
@@ -501,6 +501,19 @@
 <script src="assets/js/custom.js"></script>
 <script>
     $(document).ready(function(){
+
+        function filterSearchWidth(){
+            setTimeout(function(){
+                var filterselect = $(".table-filter").width();
+                var filtersearch = $(".dataTables_filter").width();
+                var totalfwidth = filtersearch - filterselect;
+                $('.dataTables_filter').css( 'padding-right', filterselect );
+            }, 500);
+        }
+
+        $(window).on("load resize",function(){
+            filterSearchWidth()
+        });
         
         $('#appmanagement-table').DataTable( {
         "paging":   false,
@@ -508,7 +521,7 @@
             searchPlaceholder: "Filter by keyword"
         },
         "scrollX": true,
-        "ordering": false,
+        "ordering": true,
         "info":     false
         });
         

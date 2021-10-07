@@ -10350,6 +10350,10 @@ select.custom-select:focus {
 .step-btn a:hover {
   color: #00B9B6;
 }
+.step-btn a.disabled {
+  opacity: 0.65;
+  pointer-events: none;
+}
 @media (max-width: 1440px) {
   .step-btn {
     padding: 0px 0 20px;
@@ -12320,6 +12324,7 @@ a.bg9:hover {
   border: none;
   border-radius: 3px;
   width: 100%;
+  min-width: 100% !important;
 }
 .table-filter .bootstrap-select .dropdown-menu .bs-searchbox .form-control {
   border: 1px solid #D7E0EF;
@@ -12514,11 +12519,16 @@ a.bg9:hover {
 }
 .common-datatable.filter-search-minus .dataTables_filter {
   float: none;
+  width: 100%;
   padding: 0;
   text-align: left;
   margin-top: -42px;
-  margin-left: 20px;
+  margin-left: 0;
+  padding-left: 20px;
   margin-bottom: 12px;
+}
+.common-datatable.filter-search-minus .dataTables_filter label {
+  margin-right: 10px;
 }
 @media (max-width: 1440px) {
   .common-datatable.filter-search-minus .dataTables_filter {
@@ -12552,7 +12562,7 @@ a.bg9:hover {
   height: auto !important;
 }
 .common-table.dataTable thead tr td {
-  background: #E2E6ED;
+  background-color: #E2E6ED;
   height: auto !important;
   white-space: nowrap;
   padding: 15px 25px !important;
@@ -12769,6 +12779,7 @@ a.bg9:hover {
 .project-overview-card .overview-card-content {
   padding: 34px 90px 34px 24px;
   position: relative;
+  min-height: 190px;
 }
 .project-overview-card .overview-card-content h6 {
   padding: 0 0 16px;
@@ -12782,6 +12793,7 @@ a.bg9:hover {
 @media (max-width: 1440px) {
   .project-overview-card .overview-card-content {
     padding: 20px 75px 22px 18px;
+    min-height: 145px;
   }
   .project-overview-card .overview-card-content h6 {
     padding: 0 0 10px;
