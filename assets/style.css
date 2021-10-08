@@ -9796,6 +9796,26 @@ h3 {
   content: "";
 }
 
+.iot-company-info:before {
+  content: "";
+}
+
+.iot-device-status:before {
+  content: "";
+}
+
+.iot-fact-list:before {
+  content: "";
+}
+
+.iot-simulator-configuration:before {
+  content: "";
+}
+
+.iot-subscription:before {
+  content: "";
+}
+
 .row {
   margin-left: -15px;
   margin-right: -15px;
