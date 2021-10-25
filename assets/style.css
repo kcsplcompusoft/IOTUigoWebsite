@@ -12571,38 +12571,28 @@ a.bg9:hover {
 .common-datatable.no-search .dataTables_filter {
   display: none !important;
 }
-.common-datatable .dataTables_scroll .dataTables_scrollHead {
-  display: none !important;
-}
 
 .common-table.dataTable.no-footer {
   border-bottom: none;
 }
-.common-table.dataTable thead tr {
-  height: auto !important;
-}
 .common-table.dataTable thead tr td {
   background-color: #E2E6ED;
-  height: auto !important;
   white-space: nowrap;
-  padding: 15px 25px !important;
+  padding: 15px 25px;
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 1.3333333333;
   font-weight: 700;
   border: none;
-  border-bottom: 2px solid #91A1BC !important;
+  border-bottom: 2px solid #91A1BC;
 }
 @media (max-width: 1440px) {
   .common-table.dataTable thead tr td {
-    padding: 11px 8px !important;
+    padding: 11px 8px;
     font-size: 16px;
     font-size: 1rem;
     line-height: 1.375;
   }
-}
-.common-table.dataTable thead tr td > div {
-  height: auto !important;
 }
 .common-table.dataTable thead tr td .dataTables_sizing .table-checkbox {
   display: block;
