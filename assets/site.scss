@@ -365,7 +365,7 @@ a.bg9:hover{background:#0b9492;}
 				td{
 					background-color:#E2E6ED; white-space:nowrap; padding:15px 25px; @include fontrem(18px,24px); font-weight:700; border:none; border-bottom:2px solid $border-color2;
 					@include desktop{
-						padding:11px 8px; @include fontrem(16px,22px);
+						padding:11px 8px; padding-right: 20px !important; @include fontrem(16px,22px);
 					}
 					// > div{height:auto !important;}
 					.dataTables_sizing{
@@ -381,7 +381,7 @@ a.bg9:hover{background:#0b9492;}
 				td{
 					padding:5px 25px; white-space:nowrap; @include fontrem(14px,20px); font-weight:400;
 					@include desktop{
-						padding:5px 8px;
+						padding:5px 8px; padding-right: 20px !important;
 					}
 					.item-icon-title-cell{
 						display:flex; align-items:center; white-space:inherit;
@@ -565,6 +565,7 @@ a.bg9:hover{background:#0b9492;}
 	.project-overview-card{
 		.overview-card-content{
 			padding:25px 25px 15px;
+			min-height: 130px;
 			@include desktop{
 				padding:18px 18px 13px;
 			}
