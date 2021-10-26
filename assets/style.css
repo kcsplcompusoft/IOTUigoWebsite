@@ -12589,6 +12589,7 @@ a.bg9:hover {
 @media (max-width: 1440px) {
   .common-table.dataTable thead tr td {
     padding: 11px 8px;
+    padding-right: 20px !important;
     font-size: 16px;
     font-size: 1rem;
     line-height: 1.375;
@@ -12609,6 +12610,7 @@ a.bg9:hover {
 @media (max-width: 1440px) {
   .common-table.dataTable tbody tr td {
     padding: 5px 8px;
+    padding-right: 20px !important;
   }
 }
 .common-table.dataTable tbody tr td .item-icon-title-cell {
@@ -12960,6 +12962,7 @@ a.bg9:hover {
 }
 .monitors-row .project-overview-card .overview-card-content {
   padding: 25px 25px 15px;
+  min-height: 130px;
 }
 @media (max-width: 1440px) {
   .monitors-row .project-overview-card .overview-card-content {
