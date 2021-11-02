@@ -1129,6 +1129,20 @@
 <script src="assets/js/custom.js"></script>
 <script>
     $(document).ready(function(){
+
+        function filterSearchWidth(){
+            setTimeout(function(){
+                var filterselect = $(".table-filter").width();
+                var filtersearch = $(".dataTables_filter").width();
+                var totalfwidth = filtersearch - filterselect;
+                $('.dataTables_filter').css( 'padding-right', filterselect );
+            }, 500);
+        }
+
+        $(window).on("load resize",function(){
+            filterSearchWidth()
+        });
+
         $('#devices-table').DataTable( {
         "paging":   false,
         language: {

@@ -127,7 +127,16 @@ select.custom-select{
             }
         }
         .dropdown-menu{
-            box-shadow:0px 11px 10px rgba(0, 80, 164, 0.15); border:none; border-radius:3px; margin-top:0px;
+            box-shadow:0px 11px 10px rgba(0, 80, 164, 0.15); border:none; border-radius:3px; margin-top:0px; width: 100%; min-width: 100% !important;
+            .bs-searchbox + .inner{
+				max-height: 180px !important;
+				overflow: auto !important;
+				width: 100%;
+			}
+            .dropdown-menu.inner{
+				width: auto;
+				display: inline-block;
+			}
             ul{
                 li{
                     a{padding:5px 15px; line-height:20px; font-size:14px;}
