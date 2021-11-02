@@ -10218,6 +10218,17 @@ select.custom-select:focus {
   border: none;
   border-radius: 3px;
   margin-top: 0px;
+  width: 100%;
+  min-width: 100% !important;
+}
+.boot-select .bootstrap-select .dropdown-menu .bs-searchbox + .inner {
+  max-height: 180px !important;
+  overflow: auto !important;
+  width: 100%;
+}
+.boot-select .bootstrap-select .dropdown-menu .dropdown-menu.inner {
+  width: auto;
+  display: inline-block;
 }
 .boot-select .bootstrap-select .dropdown-menu ul li a {
   padding: 5px 15px;
@@ -12962,7 +12973,7 @@ a.bg9:hover {
 }
 .monitors-row .project-overview-card .overview-card-content {
   padding: 25px 25px 15px;
-  min-height: 130px;
+  min-height: 100px;
 }
 @media (max-width: 1440px) {
   .monitors-row .project-overview-card .overview-card-content {
