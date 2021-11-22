@@ -10050,6 +10050,9 @@ select.custom-select:focus {
     padding: 2px 10px;
   }
 }
+.form-group .form-control.is-invalid {
+  background-image: none;
+}
 .form-group input.form-control:read-only {
   background-color: #f2f5fa;
   cursor: not-allowed;
@@ -10397,7 +10400,7 @@ select.custom-select:focus {
 .switch-toggle {
   margin: 0;
   cursor: pointer;
-  display: flex;
+  display: inline-flex;
   align-items: center;
 }
 .switch-toggle input[type=checkbox] {
