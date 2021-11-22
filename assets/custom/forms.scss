@@ -38,6 +38,9 @@ select.custom-select{
         @include desktop{
             font-size:13px; padding:2px 10px
         }
+        &.is-invalid{
+            background-image:none;
+        }
     }
     input.form-control:read-only{
         background-color:$color-lightBlue; cursor: not-allowed; pointer-events:none;
@@ -203,7 +206,7 @@ select.custom-select{
     }
 }
 .switch-toggle{
-    margin:0; cursor:pointer; display:flex; align-items:center;
+    margin:0; cursor:pointer; display:inline-flex; align-items:center;
     input[type="checkbox"]{position:absolute; visibility:hidden; opacity:0;}
     i{
         font-style:normal;
