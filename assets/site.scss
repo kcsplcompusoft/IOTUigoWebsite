@@ -2223,12 +2223,36 @@ button.slick-next.slick-arrow {
 
 // KCS CSS START
 .package-container {
+	background: rgba(0, 80, 164, 0.05);
+	position: relative;
+	z-index: 1;
+	&::before {
+		background: $color-lightBlue;
+		content: '';
+		height: 32px;
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 100%;
+	}
+	&::after {
+		background: $color-lightBlue;
+		bottom: 0;
+		content: '';
+		height: 14px;
+		left: 0;
+		position: absolute;
+		right: 0;
+		width: 100%;
+	}
 	.package-overflow {
 		overflow-x: auto;
 		overflow-y: hidden;
+		position: relative;
+		z-index: 2;
 	}
 	.package-table {
-		background: rgba(0, 80, 164, 0.05);
 		-webkit-border-radius: 12px;
 		-ms-border-radius: 12px;
 		border-radius: 12px;
@@ -2251,7 +2275,11 @@ button.slick-next.slick-arrow {
 			border-left: solid 1px rgba(0, 0, 0, 0.1);
 			border-top: solid 1px rgba(0, 0, 0, 0.1);
 			padding: 1.5rem 4rem;
+			white-space: nowrap;
 			@include fontrem(20px, 30px);
+			@include phonewide {
+				padding: 1.5rem 2.5rem;
+			}
 			&:first-child {
 				border-top: 0 none
 			}
@@ -2263,10 +2291,16 @@ button.slick-next.slick-arrow {
 			}
 		}
 		&-card {
-			min-width: 245px;
+			min-width: 215px;
 			position: relative;
-			width: 20%;
+			width: 25%;
+			@include phonewide {
+				min-width: 150px;
+			}
 			&:first-child {
+				min-width: inherit;
+				width: inherit;
+				max-width: 215px;
 				.package-table-content {
 					-webkit-border-radius: 12px 0 0 12px;
 					-ms-border-radius: 12px 0 0 12px;
@@ -2274,6 +2308,7 @@ button.slick-next.slick-arrow {
 				}
 				.package-table-data {
 					border-color: transparent;
+					padding: 1.5rem 2rem;
 				}
 			}
 			&:nth-child(2) {
@@ -2318,7 +2353,12 @@ button.slick-next.slick-arrow {
 						background: rgba(255, 255, 255, 0.2);
 						font-size: 20px;
 						margin: 20px 0 -26px;
-						padding: 15px 60px;
+						padding: 15px 40px;
+						pointer-events: none;
+						@include phonewide {
+							font-size: 16px;
+							padding: 12px 20px;
+						}
 					}
 				}
 				&-content {
@@ -2334,5 +2374,4 @@ button.slick-next.slick-arrow {
 		}	
 	}
 }
-
 // KCS CSS END
