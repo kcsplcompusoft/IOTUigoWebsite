@@ -12236,10 +12236,20 @@ button.slick-next.slick-arrow {
       font-size: 30px;
       font-size: 1.875rem;
       line-height: 1.1666666667; }
+      @media (max-width: 1440px) {
+        .package-container .package-table-head .h2 {
+          font-size: 24px;
+          font-size: 1.5rem;
+          line-height: 1.25; } }
     .package-container .package-table-head .h5 {
       font-size: 20px;
       font-size: 1.25rem;
       line-height: 1.5; }
+      @media (max-width: 1440px) {
+        .package-container .package-table-head .h5 {
+          font-size: 18px;
+          font-size: 1.125rem;
+          line-height: 1.3333333333; } }
     .package-container .package-table-head .btn {
       padding: 12px 25px; }
       .package-container .package-table-head .btn-offset {
@@ -12252,9 +12262,12 @@ button.slick-next.slick-arrow {
       font-size: 20px;
       font-size: 1.25rem;
       line-height: 1.5; }
-      @media (max-width: 767px) {
+      @media (max-width: 1440px) {
         .package-container .package-table-data {
-          padding: 1.5rem 2.5rem; } }
+          padding: 1rem 2rem;
+          font-size: 16px;
+          font-size: 1rem;
+          line-height: 1.25; } }
       .package-container .package-table-data:first-child {
         border-top: 0 none; }
     .package-container .package-table-content {
@@ -12279,6 +12292,9 @@ button.slick-next.slick-arrow {
         .package-container .package-table-card:first-child .package-table-data {
           border-color: transparent;
           padding: 1.5rem 2rem; }
+          @media (max-width: 1440px) {
+            .package-container .package-table-card:first-child .package-table-data {
+              padding: 1rem 2rem; } }
       .package-container .package-table-card:nth-child(2) .content-box {
         -webkit-border-radius: 12px 0 0 12px;
         -ms-border-radius: 12px 0 0 12px;
@@ -12311,10 +12327,13 @@ button.slick-next.slick-arrow {
           margin: 20px 0 -26px;
           padding: 15px 40px;
           pointer-events: none; }
-          @media (max-width: 767px) {
+          @media (max-width: 1440px) {
             .package-container .package-table .active .package-table-head .btn {
-              font-size: 16px;
-              padding: 12px 20px; } }
+              font-size: 18px;
+              font-size: 1.125rem;
+              line-height: 1.1111111111;
+              margin-bottom: -18px;
+              padding: 12px 25px; } }
       .package-container .package-table .active .package-table-content {
         background: #00B9B6; }
       .package-container .package-table .active .package-table-data {
