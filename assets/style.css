@@ -12252,6 +12252,9 @@ button.slick-next.slick-arrow {
           line-height: 1.3333333333; } }
     .package-container .package-table-head .btn {
       padding: 12px 25px; }
+      @media (max-width: 991px) {
+        .package-container .package-table-head .btn {
+          padding: 8px 16px; } }
       .package-container .package-table-head .btn-offset {
         background: rgba(0, 185, 182, 0.3); }
     .package-container .package-table-data {
@@ -12275,10 +12278,10 @@ button.slick-next.slick-arrow {
       .package-container .package-table-content .content-box {
         background: #FFFFFF; }
     .package-container .package-table-card {
-      min-width: 215px;
+      min-width: 210px;
       position: relative;
       width: 25%; }
-      @media (max-width: 767px) {
+      @media (max-width: 991px) {
         .package-container .package-table-card {
           min-width: 150px; } }
       .package-container .package-table-card:first-child {
@@ -12332,7 +12335,7 @@ button.slick-next.slick-arrow {
               font-size: 18px;
               font-size: 1.125rem;
               line-height: 1.1111111111;
-              margin-bottom: -18px;
+              margin-bottom: -27px;
               padding: 12px 25px; } }
       .package-container .package-table .active .package-table-content {
         background: #00B9B6; }
