@@ -2272,6 +2272,9 @@ button.slick-next.slick-arrow {
 			}
 			.btn {
 				padding: 12px 25px;
+				@include tablet {
+					padding: 8px 16px;
+				}
 				&-offset {
 					background: rgba(0, 185, 182, 0.3);
 				}
@@ -2298,10 +2301,10 @@ button.slick-next.slick-arrow {
 			}
 		}
 		&-card {
-			min-width: 215px;
+			min-width: 210px;
 			position: relative;
 			width: 25%;
-			@include phonewide {
+			@include tablet {
 				min-width: 150px;
 			}
 			&:first-child {
@@ -2367,7 +2370,7 @@ button.slick-next.slick-arrow {
 						pointer-events: none;
 						@include desktop {
 							@include fontrem(18px, 20px);
-							margin-bottom: -18px;
+							margin-bottom: -27px;
 							padding: 12px 25px;
 						}
 					}
