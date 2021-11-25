@@ -2260,9 +2260,15 @@ button.slick-next.slick-arrow {
 		&-head {
 			.h2 {
 				@include fontrem(30px, 35px);
+				@include desktop {
+					@include fontrem(24px, 30px);
+				}
 			}
 			.h5 {
 				@include fontrem(20px, 30px);
+				@include desktop {
+					@include fontrem(18px, 24px);
+				}
 			}
 			.btn {
 				padding: 12px 25px;
@@ -2277,8 +2283,9 @@ button.slick-next.slick-arrow {
 			padding: 1.5rem 4rem;
 			white-space: nowrap;
 			@include fontrem(20px, 30px);
-			@include phonewide {
-				padding: 1.5rem 2.5rem;
+			@include desktop {
+				padding: 1rem 2rem;
+				@include fontrem(16px, 20px);
 			}
 			&:first-child {
 				border-top: 0 none
@@ -2309,6 +2316,9 @@ button.slick-next.slick-arrow {
 				.package-table-data {
 					border-color: transparent;
 					padding: 1.5rem 2rem;
+					@include desktop {
+						padding: 1rem 2rem;
+					}
 				}
 			}
 			&:nth-child(2) {
@@ -2355,9 +2365,10 @@ button.slick-next.slick-arrow {
 						margin: 20px 0 -26px;
 						padding: 15px 40px;
 						pointer-events: none;
-						@include phonewide {
-							font-size: 16px;
-							padding: 12px 20px;
+						@include desktop {
+							@include fontrem(18px, 20px);
+							margin-bottom: -18px;
+							padding: 12px 25px;
 						}
 					}
 				}
