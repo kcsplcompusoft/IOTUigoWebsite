@@ -12231,7 +12231,8 @@ button.slick-next.slick-arrow {
     -webkit-border-radius: 12px;
     -ms-border-radius: 12px;
     border-radius: 12px;
-    margin: 32px 0 14px; }
+    margin: 32px 0 14px;
+    padding: 0 27px; }
     .package-container .package-table-head .h2 {
       font-size: 30px;
       font-size: 1.875rem;
@@ -12312,7 +12313,7 @@ button.slick-next.slick-arrow {
       .package-container .package-table-card .hidden {
         visibility: hidden; }
     .package-container .package-table .active {
-      background: #00B9B6;
+      background: #0050A4;
       -webkit-border-radius: 8px;
       -ms-border-radius: 8px;
       border-radius: 8px;
@@ -12321,7 +12322,7 @@ button.slick-next.slick-arrow {
       margin: -32px 0 -14px;
       padding: 32px 0 14px; }
       .package-container .package-table .active .package-table-head {
-        background: #00B9B6; }
+        background: #0050A4; }
         .package-container .package-table .active .package-table-head .h2, .package-container .package-table .active .package-table-head .h5 {
           color: #FFFFFF; }
         .package-container .package-table .active .package-table-head .btn {
@@ -12338,10 +12339,23 @@ button.slick-next.slick-arrow {
               margin-bottom: -27px;
               padding: 12px 25px; } }
       .package-container .package-table .active .package-table-content {
-        background: #00B9B6; }
+        background: #0050A4; }
       .package-container .package-table .active .package-table-data {
-        border-color: #00B9B6; }
+        border-color: #0050A4; }
       .package-container .package-table .active .content-box {
-        background: #00B9B6; }
+        background: #0050A4; }
+  .package-container .package-customplan {
+    padding: 30px 27px 36px; }
+    .package-container .package-customplan-button .btn {
+      font-size: 26px;
+      font-size: 1.625rem;
+      line-height: 1.2307692308;
+      padding: 15px 40px; }
+      @media (max-width: 1440px) {
+        .package-container .package-customplan-button .btn {
+          font-size: 18px;
+          font-size: 1.125rem;
+          line-height: 1.1111111111;
+          padding: 12px 25px; } }
 
 /*# sourceMappingURL=style.css.map */
