@@ -2257,6 +2257,7 @@ button.slick-next.slick-arrow {
 		-ms-border-radius: 12px;
 		border-radius: 12px;
 		margin: 32px 0 14px;
+		padding: 0 27px;
 		&-head {
 			.h2 {
 				@include fontrem(30px, 35px);
@@ -2348,7 +2349,7 @@ button.slick-next.slick-arrow {
 			}
 		}
 		.active {
-			background: $primary_color;
+			background: $color-Blue;
 			-webkit-border-radius: 8px;
 			-ms-border-radius: 8px;
 			border-radius: 8px;
@@ -2358,7 +2359,7 @@ button.slick-next.slick-arrow {
 			padding: 32px 0 14px;
 			.package-table {
 				&-head {
-					background: $primary_color;
+					background: $color-Blue;
 					.h2, .h5 {
 						color: $color-white;			
 					}
@@ -2376,16 +2377,29 @@ button.slick-next.slick-arrow {
 					}
 				}
 				&-content {
-					background: $primary_color;				
+					background: $color-Blue;				
 				}
 				&-data {
-					border-color: $primary_color;
+					border-color: $color-Blue;
 				}
 			}
 			.content-box {
-				background: $primary_color;
+				background: $color-Blue;
 			}
 		}	
+	}
+	.package-customplan {
+		padding: 30px 27px 36px;
+		&-button {
+			.btn {
+				@include fontrem(26px, 32px);
+				padding: 15px 40px;
+				@include desktop {
+					@include fontrem(18px, 20px);
+					padding: 12px 25px;
+				}
+			}
+		}
 	}
 }
 // KCS CSS END

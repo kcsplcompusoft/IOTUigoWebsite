@@ -215,10 +215,58 @@
                         </div>
                     </div>
                 </div>
+                <div class="package-customplan d-sm-flex align-items-center">
+                    <div class="package-customplan-text mb-4 mb-sm-0">
+                        <h2 class="mb-2">Custom Plan</h2>
+                        <h6 class="font-weight-normal">No Found Any Suitable Plan? Define your own subscription plan!</h6>
+                    </div>
+                    <div class="package-customplan-button ml-auto">
+                        <a href="javascript:void(0);" data-toggle="modal" data-target="#customizeNow" class="btn btn-primary font-weight-bold text-nowrap">Customize Now</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+<div class="modal fade add-widgetModal" id="customizeNow" tabindex="-1" role="dialog" aria-labelledby="customizeNowLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h6 class="modal-title" id="customizeNowLabel">Customize Your Own Subscription Plan</h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body px-sm-5">
+                <div class="form-group">
+                    <label class="form-label">Required Days</label>
+                    <input type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Required Device Limit</label>
+                    <input type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Required User Limit</label>
+                    <input type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Required Site Limit</label>
+                    <input type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Required Data Limit</label>
+                    <input type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <a href="javascript:void(0);" class="btn btn-primary">Send Request</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script src="assets/js/jquery-3.1.0.js"></script>
 <script src="assets/js/popper.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
