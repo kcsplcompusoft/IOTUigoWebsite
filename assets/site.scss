@@ -1633,7 +1633,7 @@ a.bg9:hover{background:#0b9492;}
 	background: $color-white;
 	@include Poppins-Normal();
 	.container {
-		max-width: 1380px;
+		max-width: 1400px;
 	}
 }
 .title-block {
@@ -1679,6 +1679,7 @@ a.bg9:hover{background:#0b9492;}
 header {
 	background: url("images/header-banner.svg");
 	background-size: 100%;
+	background-size: cover;
 	padding: 30px 0;
 	@include tabletwide {
 		padding: 15px 0;
@@ -1744,6 +1745,7 @@ header {
 }
 .banner-block {
 	padding: 150px 0;
+	align-items: center;
 	@include tabletwide {
 		padding: 80px 0;
 	}
@@ -1776,8 +1778,20 @@ header {
 		}
 	}
 }
+.industry-title {
+    background: url(images/dot-6.svg) no-repeat;
+    background-position: center left;
+}
+.industry-types-block {
+	background: url(images/dot-8.svg) no-repeat;
+    background-position: bottom right;
+}
+
 .industry-type {
-	margin: 20px ​0 40px 0;
+	margin-top: 20px;
+	margin-bottom: 40px;
+	
+	
 	.industry-content {
 		background: $color-white;
 		border: 1px solid #868686;
@@ -1835,6 +1849,10 @@ header {
 		}
 	}
 }
+.industry-number {
+	background: url(images/round-back.svg) no-repeat;
+    background-position: left center;
+}
 .industry-count {
 	text-align: center;
 	margin: 50px 0 20px;
@@ -1870,6 +1888,9 @@ header {
 .module-block {
 	padding-top: 10px;
     padding-bottom: 80px;
+	background: url(images/dotted.svg) no-repeat;
+	background-position: top right;
+	
 	.row {
 		align-items: center;
 		.module-content {
@@ -2179,6 +2200,9 @@ header {
 					@include Poppins-Normal();
 					@include fontrem(16px, 35px);
 					text-transform: capitalize;
+					&:hover {
+						text-decoration: underline;
+					}
 				}
 				@include phone {
 					width: 50%;
