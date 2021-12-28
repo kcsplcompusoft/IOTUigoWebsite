@@ -16,7 +16,7 @@
 <div class="header">
     <button type="button" class="menu-toggle"><i class="las la-bars"></i></button>
     <div class="logo">
-        <img src="assets/images/logo.svg" alt="" title="">
+        <img src="assets/images/logo-wt.svg" alt="" title="">
     </div>
     <div class="breadcrum">
         <span><a href="#">Torrent Power</a></span>/
@@ -108,6 +108,9 @@
                     </ul>
                  </li>
                 <li><a href="#"><span class="menu-icon" ><i class="iot-reports" ></i></span><span class="menu-text" >Reports</span></a> </li>
+                <li><a href="#"><span class="menu-icon" ><i class="iot-fact-list" ></i></span><span class="menu-text" >Fact List</span></a> </li>
+                <li><a href="#"><span class="menu-icon" ><i class="iot-device-status" ></i></span><span class="menu-text" >Device Status Log</span></a> </li>
+                <li><a href="#"><span class="menu-icon" ><i class="iot-subscription" ></i></span><span class="menu-text" >Simulator Configuraiton</span></a> </li>
             </ul>
         </div>
         <div class="navigation-bottom">
@@ -165,6 +168,12 @@
                                 <div class="form-group">
                                     <label class="form-label" >File Type</label>
                                     <input type="text" name="" value="" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="form-group">
+                                    <label class="form-label" >Color</label>
+                                    <input type="text" name="" value="" id="hexInput" data-toggle="modal" data-target="#color-modal" class="form-control">
                                 </div>
                             </div>
                             <div class="col-sm-6 col-md-9">
@@ -236,7 +245,8 @@
                                         <li><a href="#"><i class="iot-download" ></i>Download</a></li>
                                         <li><a href="#"><i class="iot-device-key" ></i>Device Key</a></li>
                                         <li><a href="#"><i class="iot-email-log" ></i>Email Log</a></li>
-                                        
+                                        <li><a href="#"><i class="iot-company-info" ></i>Company Information</a></li>
+                                        <li><a href="#"><i class="iot-subscription" ></i>Subscription</a></li>
                                     </ul>
                                 </div>
                             </div> </td>
@@ -247,9 +257,34 @@
                             
                         </tr>
                         <tr>
-                            <td>UID0001</td>
+                            <td>AID0001</td>
                             <td><div class="item-icon-title-cell">
                                 <div class="item-title">IIOTEdgeV0.4_Stable_v2	</div>
+                                <div class="item-menu">
+                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                        <i class="las la-ellipsis-h"></i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
+                                        <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                        <li><a href="#"><i class="iot-download" ></i>Download</a></li>
+                                        <li><a href="#"><i class="iot-device-key" ></i>Device Key</a></li>
+                                        <li><a href="#"><i class="iot-email-log" ></i>Email Log</a></li>
+                                        <li><a href="#"><i class="iot-company-info" ></i>Company Information</a></li>
+                                        <li><a href="#"><i class="iot-subscription" ></i>Subscription</a></li>
+                                    </ul>
+                                </div>
+                            </div> </td>
+                            <td>Edge</td>
+                            <td>0.0.5</td>
+                            <td>Executable</td>
+                            <td>April 13, 2021, 9:04 a.m.</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>CID0001</td>
+                            <td><div class="item-icon-title-cell">
+                                <div class="item-title">IIOTEdgeV0.4_Stable_v5	</div>
                                 <div class="item-menu">
                                     <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
                                         <i class="las la-ellipsis-h"></i>
@@ -271,9 +306,9 @@
                             
                         </tr>
                         <tr>
-                            <td>UID0001</td>
+                            <td>FID0001</td>
                             <td><div class="item-icon-title-cell">
-                                <div class="item-title">IIOTEdgeV0.4_Stable_v2	</div>
+                                <div class="item-title">IIOTEdgeV0.4_Stable_v9	</div>
                                 <div class="item-menu">
                                     <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
                                         <i class="las la-ellipsis-h"></i>
@@ -295,9 +330,9 @@
                             
                         </tr>
                         <tr>
-                            <td>UID0001</td>
+                            <td>HID0001</td>
                             <td><div class="item-icon-title-cell">
-                                <div class="item-title">IIOTEdgeV0.4_Stable_v2	</div>
+                                <div class="item-title">IIOTEdgeV0.4_Stable_v8	</div>
                                 <div class="item-menu">
                                     <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
                                         <i class="las la-ellipsis-h"></i>
@@ -319,9 +354,9 @@
                             
                         </tr>
                         <tr>
-                            <td>UID0001</td>
+                            <td>TID0001</td>
                             <td><div class="item-icon-title-cell">
-                                <div class="item-title">IIOTEdgeV0.4_Stable_v2	</div>
+                                <div class="item-title">IIOTEdgeV0.4_Stable_v6	</div>
                                 <div class="item-menu">
                                     <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
                                         <i class="las la-ellipsis-h"></i>
@@ -343,33 +378,9 @@
                             
                         </tr>
                         <tr>
-                            <td>UID0001</td>
+                            <td>EID0001</td>
                             <td><div class="item-icon-title-cell">
-                                <div class="item-title">IIOTEdgeV0.4_Stable_v2	</div>
-                                <div class="item-menu">
-                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
-                                        <i class="las la-ellipsis-h"></i>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
-                                        <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
-                                        <li><a href="#"><i class="iot-download" ></i>Download</a></li>
-                                        <li><a href="#"><i class="iot-device-key" ></i>Device Key</a></li>
-                                        <li><a href="#"><i class="iot-email-log" ></i>Email Log</a></li>
-                                        
-                                    </ul>
-                                </div>
-                            </div> </td>
-                            <td>Edge</td>
-                            <td>0.0.5</td>
-                            <td>Executable</td>
-                            <td>April 13, 2021, 9:04 a.m.</td>
-                            
-                        </tr>
-                        <tr>
-                            <td>UID0001</td>
-                            <td><div class="item-icon-title-cell">
-                                <div class="item-title">IIOTEdgeV0.4_Stable_v2	</div>
+                                <div class="item-title">IIOTEdgeV0.4_Stable_v1	</div>
                                 <div class="item-menu">
                                     <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
                                         <i class="las la-ellipsis-h"></i>
@@ -471,7 +482,18 @@
         
     </div>
 </div>
-
+<div class="modal fade color-modal" id="color-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="las la-times"></i></button>
+        </div>
+        <div class="modal-body">
+            <div class="pickerColor"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 <script src="assets/js/jquery-3.1.0.js"></script>
 <script src="assets/js/popper.min.js"></script>
@@ -480,9 +502,23 @@
 <script src="assets/js/bootstrap-datepicker.js"></script>
 <script src="assets/js/datatables.min.js"></script>
 <script src="assets/js/bootstrap-select.min.js"></script>
+<script src="assets/js/iro.min.js"></script>
 <script src="assets/js/custom.js"></script>
 <script>
     $(document).ready(function(){
+
+        function filterSearchWidth(){
+            setTimeout(function(){
+                var filterselect = $(".table-filter").width();
+                var filtersearch = $(".dataTables_filter").width();
+                var totalfwidth = filtersearch - filterselect;
+                $('.dataTables_filter').css( 'padding-right', filterselect );
+            }, 500);
+        }
+
+        $(window).on("load resize",function(){
+            filterSearchWidth()
+        });
         
         $('#appmanagement-table').DataTable( {
         "paging":   false,
@@ -490,7 +526,7 @@
             searchPlaceholder: "Filter by keyword"
         },
         "scrollX": true,
-        "ordering": false,
+        "ordering": true,
         "info":     false
         });
         
@@ -504,6 +540,23 @@
             noneSelectedText: 'Recently added'
         });
         $('.boot-select .select').selectpicker();
+
+        var colorPicker = new iro.ColorPicker(".pickerColor", {
+        width: 280,
+        color: "rgb(255, 0, 0)",
+        borderWidth: 1,
+        borderColor: "#fff",
+        });
+
+        var hexInput = document.getElementById("hexInput");
+
+        colorPicker.on(["color:init", "color:change"], function(color){
+            hexInput.value = color.hexString;
+        });
+
+        hexInput.addEventListener('change', function() {
+            colorPicker.color.hexString = this.value;
+        });
     });
 </script>
 </body>

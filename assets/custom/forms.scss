@@ -2,7 +2,19 @@ select.custom-select{
     background:#fff url("images/arrow-down.svg") no-repeat right 15px center/14px 10px; border-radius:0px; font-size:14px; line-height:20px; border:none; color:$color-black;  box-shadow:none; width:100%; height:auto; border-radius:8px;  padding:10px 30px 10px 16px;
     &:focus{outline:none;}
 }
-
+.input-ico{
+    position: relative;
+    i{
+        position: absolute;
+        right: 7px;
+        top: 0;
+        font-size:20px;
+        color: $color-black;
+        margin: auto;
+        bottom: 0;
+        height: 20px;
+    }
+}
 .form-group{
 	margin-bottom:22px;
     @include desktop{
@@ -25,6 +37,9 @@ select.custom-select{
         &:-moz-placeholder{ color:$color-darkGrey; opacity:1;}
         @include desktop{
             font-size:13px; padding:2px 10px
+        }
+        &.is-invalid{
+            background-image:none;
         }
     }
     input.form-control:read-only{
@@ -115,7 +130,16 @@ select.custom-select{
             }
         }
         .dropdown-menu{
-            box-shadow:0px 11px 10px rgb(0 80 164 / 15%); border:none; border-radius:3px; margin-top:0px;
+            box-shadow:0px 11px 10px rgba(0, 80, 164, 0.15); border:none; border-radius:3px; margin-top:0px; width: 100%; min-width: 100% !important;
+            .bs-searchbox + .inner{
+				max-height: 180px !important;
+				overflow: auto !important;
+				width: 100%;
+			}
+            .dropdown-menu.inner{
+				width: auto;
+				display: inline-block;
+			}
             ul{
                 li{
                     a{padding:5px 15px; line-height:20px; font-size:14px;}
@@ -171,6 +195,10 @@ select.custom-select{
         &:last-child{padding-right:0px;}
         &.last-btn{border-left:1px solid $border-color;}
         &:hover{color:#00B9B6;}
+        &.disabled{
+            opacity: 0.65;
+            pointer-events: none;
+        }
     }
     @include desktop{
         padding:0px 0 20px;
@@ -178,7 +206,7 @@ select.custom-select{
     }
 }
 .switch-toggle{
-    margin:0; cursor:pointer; display:flex; align-items:center;
+    margin:0; cursor:pointer; display:inline-flex; align-items:center;
     input[type="checkbox"]{position:absolute; visibility:hidden; opacity:0;}
     i{
         font-style:normal;
