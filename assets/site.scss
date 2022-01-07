@@ -281,6 +281,11 @@ a.bg9:hover{background:#0b9492;}
 			.dropdown-menu ul li .check-mark{display: block;}
 			.dropdown-menu ul li .check-mark + .text{padding-left:10px;}
 		}
+		&.hide_search {
+			.bs-searchbox .form-control {
+				display: none
+			}
+		}
 	}
 }
 .autocomplete-items{
