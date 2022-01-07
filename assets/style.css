@@ -9711,109 +9711,109 @@ h3 {
 }
 
 .iot-download:before {
-  content: "";
+  content: "\e900";
 }
 
 .iot-configure:before {
-  content: "";
+  content: "\e901";
 }
 
 .iot-view:before {
-  content: "";
+  content: "\e902";
 }
 
 .iot-edit:before {
-  content: "";
+  content: "\e903";
 }
 
 .iot-delete:before {
-  content: "";
+  content: "\e904";
 }
 
 .iot-statistics:before {
-  content: "";
+  content: "\e905";
 }
 
 .iot-sites:before {
-  content: "";
+  content: "\e906";
 }
 
 .iot-eye:before {
-  content: "";
+  content: "\e907";
 }
 
 .iot-home:before {
-  content: "";
+  content: "\e908";
 }
 
 .iot-notification:before {
-  content: "";
+  content: "\e909";
 }
 
 .iot-startup:before {
-  content: "";
+  content: "\e90a";
 }
 
 .iot-wifi:before {
-  content: "";
+  content: "\e90b";
 }
 
 .iot-bell:before {
-  content: "";
+  content: "\e90c";
   color: #fff;
 }
 
 .iot-configuration:before {
-  content: "";
+  content: "\e90d";
 }
 
 .iot-information:before {
-  content: "";
+  content: "\e90e";
 }
 
 .iot-masters:before {
-  content: "";
+  content: "\e90f";
 }
 
 .iot-reports:before {
-  content: "";
+  content: "\e910";
 }
 
 .iot-search:before {
-  content: "";
+  content: "\e911";
   color: #0050a4;
 }
 
 .iot-device-key:before {
-  content: "";
+  content: "\e912";
 }
 
 .iot-email-log:before {
-  content: "";
+  content: "\e913";
 }
 
 .iot-Copy:before {
-  content: "";
+  content: "\e914";
 }
 
 .iot-company-info:before {
-  content: "";
+  content: "\e915";
 }
 
 .iot-device-status:before {
-  content: "";
+  content: "\e916";
 }
 
 .iot-fact-list:before {
-  content: "";
+  content: "\e917";
 }
 
 .iot-simulator-configuration:before {
-  content: "";
+  content: "\e918";
 }
 
 .iot-subscription:before {
-  content: "";
+  content: "\e919";
 }
 
 .row {
@@ -10277,7 +10277,7 @@ select.custom-select:focus {
   background: transparent;
 }
 .custom-checkbox > span:after {
-  content: "";
+  content: "\f00c";
   font-family: "Line Awesome Free";
   font-weight: 900;
   font-size: 34px;
@@ -10870,7 +10870,7 @@ select.custom-select:focus {
     display: block;
   }
   .sidebar-open .aside-navigation .navigation-bottom .la-angle-double-left:before {
-    content: "";
+    content: "\f101";
   }
   .sidebar-open .aside-navigation .navigation-bottom .powered-by {
     display: none;
@@ -12507,7 +12507,7 @@ a.bg9:hover {
   border-radius: 3px;
 }
 .common-datatable .table-checkbox span:before {
-  content: "";
+  content: "\f00c";
   font-family: "Line Awesome Free";
   position: absolute;
   left: 1px;
@@ -13637,7 +13637,7 @@ a.bg9:hover {
   background: #E2E6ED;
 }
 .wizard-block .wizard-left .nav-tabs li a.updated:before {
-  content: "";
+  content: "\f00c";
   font-family: "Line Awesome Free";
   font-weight: 900;
   font-size: 20px;
@@ -14254,7 +14254,7 @@ a.bg9:hover {
   height: 2% !important;
 }
 .monitorsdetail-row .tab-content .tab-pane .industrial.tank.size.two .tick .scale {
-  font-size: calc(6pt * 2);
+  font-size: 12pt;
   font-weight: 600;
 }
 .monitorsdetail-row .tab-content .tab-pane .industrial.tank {
@@ -14264,8 +14264,8 @@ a.bg9:hover {
   top: -238%;
 }
 .monitorsdetail-row .tab-content .tab-pane .industrial.thermometer {
-  height: calc(100px * 2);
-  width: calc(15px * 2.5);
+  height: 200px;
+  width: 37.5px;
 }
 .monitorsdetail-row .tab-content .tab-pane .industrial.thermometer .tick {
   height: 2% !important;
@@ -14286,7 +14286,7 @@ a.bg9:hover {
 }
 .monitorsdetail-row .tab-content .tab-pane .industrial.readout > .meter {
   text-align: center;
-  font-size: calc(48pt * 2);
+  font-size: 96pt;
   color: #0050A4 !important;
 }
 .monitorsdetail-row .tab-content .tab-pane .industrial.readout > .meter > .digit {
@@ -14298,7 +14298,7 @@ a.bg9:hover {
   background: -webkit-linear-gradient(top, #000000 17%, rgba(0, 0, 0, 0) 17%);
 }
 .monitorsdetail-row .tab-content .tab-pane .industrial.gauge .ticks > .tick > .scale {
-  font-size: calc(6pt * 2);
+  font-size: 12pt;
   font-weight: 600;
   top: 18%;
   margin-left: -5px;
@@ -14899,7 +14899,7 @@ a.bg9:hover {
   font-weight: 400;
 }
 .landing-page .container {
-  max-width: 1380px;
+  max-width: 1400px;
 }
 
 .title-block {
@@ -14966,6 +14966,7 @@ a.bg9:hover {
 header {
   background: url("images/header-banner.svg");
   background-size: 100%;
+  background-size: cover;
   padding: 30px 0;
 }
 @media (max-width: 1200px) {
@@ -15043,6 +15044,7 @@ header .login-block a img {
 
 .banner-block {
   padding: 150px 0;
+  align-items: center;
 }
 @media (max-width: 1200px) {
   .banner-block {
@@ -15102,8 +15104,19 @@ header .login-block a img {
   }
 }
 
+.industry-title {
+  background: url(images/dot-6.svg) no-repeat;
+  background-position: center left;
+}
+
+.industry-types-block {
+  background: url(images/dot-8.svg) no-repeat;
+  background-position: bottom right;
+}
+
 .industry-type {
-  margin: 20px ​0 40px 0;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 .industry-type .industry-content {
   background: #FFFFFF;
@@ -15176,6 +15189,11 @@ header .login-block a img {
   }
 }
 
+.industry-number {
+  background: url(images/round-back.svg) no-repeat;
+  background-position: left center;
+}
+
 .industry-count {
   text-align: center;
   margin: 50px 0 20px;
@@ -15228,6 +15246,8 @@ header .login-block a img {
 .module-block {
   padding-top: 10px;
   padding-bottom: 80px;
+  background: url(images/dotted.svg) no-repeat;
+  background-position: top right;
 }
 .module-block .row {
   align-items: center;
@@ -15615,6 +15635,9 @@ header .login-block a img {
   font-size: 1rem;
   line-height: 2.1875;
   text-transform: capitalize;
+}
+.footer .footer-middle ul li a:hover {
+  text-decoration: underline;
 }
 @media (max-width: 479px) {
   .footer .footer-middle ul li {
