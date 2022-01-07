@@ -9764,8 +9764,9 @@ a.bg9:hover {
       display: block; }
     .table-filter .bootstrap-select.show-tick .dropdown-menu ul li .check-mark + .text {
       padding-left: 10px; }
-  .table-filter .hide_search .bs-searchbox {
-    display: none; }
+
+.hide_search .bs-searchbox {
+  display: none; }
 
 .autocomplete-items {
   box-shadow: 0px 4px 13px rgba(0, 80, 164, 0.15);
