@@ -2424,7 +2424,6 @@ button.slick-next.slick-arrow {
 						font-size: 20px;
 						margin: 20px 0 -26px;
 						padding: 15px 40px;
-						pointer-events: none;
 						@include desktop {
 							@include fontrem(18px, 20px);
 							margin-bottom: -27px;
