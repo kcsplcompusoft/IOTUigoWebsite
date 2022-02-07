@@ -2340,11 +2340,11 @@ button.slick-next.slick-arrow {
 		&-data {
 			border-left: solid 1px rgba(0, 0, 0, 0.1);
 			border-top: solid 1px rgba(0, 0, 0, 0.1);
-			padding: 1.5rem 4rem;
+			padding: 1.5rem .5rem;
 			white-space: nowrap;
 			@include fontrem(20px, 30px);
 			@include desktop {
-				padding: 1rem 2rem;
+				padding: 1rem;
 				@include fontrem(16px, 20px);
 			}
 			&:first-child {
