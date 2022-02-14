@@ -15965,4 +15965,33 @@ button.slick-next.slick-arrow {
   padding-bottom: 35px;
 }
 
+.tooltip-view h4 {
+  padding: 0 12px;
+}
+.tooltip-view__popup {
+  position: absolute;
+  width: 600px;
+  left: 100%;
+  top: -50%;
+  padding: 10px 5px 0;
+  background-color: #fff;
+  border-radius: 0.3rem;
+  z-index: 9;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  display: none;
+}
+.tooltip-view .modal-view__row {
+  padding-top: 10px;
+}
+.tooltip-view:hover .tooltip-view__popup {
+  display: block;
+}
+.tooltip-view .modal-view__col {
+  padding-bottom: 10px;
+}
+
+.common-table tr.table-row__active td {
+  background: #f2f5fa;
+}
+
 /*# sourceMappingURL=style.css.map */
