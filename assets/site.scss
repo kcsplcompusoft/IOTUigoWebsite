@@ -2498,4 +2498,41 @@ button.slick-next.slick-arrow {
 		padding-bottom:35px;
 	}
 }
+.tooltip-view{
+	h4{
+		padding:0 12px;
+	}
+	&__popup{
+		position: absolute;
+		width:600px;
+		left:100%;
+		top:-50%;
+		padding:10px 5px 0;
+		background-color: #fff;
+		border-radius: 0.3rem;
+		z-index:9;
+		box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 20%);
+		display: none;
+	}
+	.modal-view__row{
+		padding-top:10px
+	}
+	&:hover{
+		.tooltip-view__popup{
+			display: block;
+		}
+	}
+	.modal-view__col{
+		padding-bottom:10px;
+	}
+}
+.common-table{
+	tr{
+		&.table-row__active{
+			td{
+				background: #f2f5fa;
+			}
+		}
+	}
+}
 // KCS CSS END
