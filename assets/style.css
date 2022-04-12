@@ -3015,7 +3015,7 @@ input[type=button].btn-block {
   min-width: 10rem;
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
-  font-size: 1rem;
+  font-size: 16px;
   color: #212529;
   text-align: left;
   list-style: none;
@@ -16029,6 +16029,13 @@ button.slick-next.slick-arrow {
 .common-table tbody tr.table-row__active td .item-icon-title-cell .item-menu {
   opacity: 1 !important;
   visibility: visible;
+}
+
+.grid-stack-item-content {
+  transition: all 0.3s ease-in-out;
+}
+.grid-stack-item-content:hover {
+  box-shadow: 0px 4px 13px rgba(0, 80, 164, 0.5) !important;
 }
 
 /*# sourceMappingURL=style.css.map */
