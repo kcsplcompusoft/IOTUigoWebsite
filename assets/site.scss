@@ -2566,4 +2566,11 @@ button.slick-next.slick-arrow {
 		}
 	}
 }
+.grid-stack-item-content {
+	transition: all 0.3s ease-in-out;
+	&:hover {
+		box-shadow: 0px 4px 13px rgb(0 80 164 / 50%) !important;
+	}
+}
+
 // KCS CSS END

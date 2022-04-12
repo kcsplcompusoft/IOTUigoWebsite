@@ -136,7 +136,7 @@ var __hasProp = {}.hasOwnProperty,
       if (generateScales) {
         inc = (this.scale_hi - this.scale_low) / (tickAmt - 1);
         for (i = _j = 0; 0 <= tickAmt ? _j <= tickAmt : _j >= tickAmt; i = _j += scaleFrequency) {
-          $(ticks[i]).append('<span class="scale">' + Math.floor((tickAmt - i - 1) * inc) + '</span>');
+          $(ticks[i]).append('<span class="scale">' + Math.floor((tickAmt - i - 1) * inc) + '000</span>');
         }
       }
     }
