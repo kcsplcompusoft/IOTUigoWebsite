@@ -208,7 +208,7 @@
                                         </div>
                                      </div>
                                     <div class="industrial tank size two" >
-                                        <span class="ticks" data-amount="8" data-scale-freq="2"></span>
+                                        <span class="ticks" data-amount="8" data-hi="10000" data-low="1000" data-scale-freq="2"></span>
                                         <div class="space"></div>
                                         <div class="meter"></div>
                                     </div>
@@ -230,7 +230,7 @@
                                         </div>
                                      </div>
                                      <div class="industrial thermometer size one">
-                                        <span class="ticks" data-amount="7" data-scale-freq="1"></span>
+                                        <span class="ticks" data-amount="6" data-scale-freq="1"></span>
                                         <div class="space"></div>
                                         <div class="meter danger"></div>
                                     </div>
@@ -399,9 +399,7 @@
                                             </ul>
                                         </div>
                                      </div>
-                                     <div class="resizecanvas">
-                                     <canvas class="resize" id="gauge180" height="375" width="750" ></canvas>
-                                     </div>
+                                     <canvas class="resize-canvas w-100" id="gauge180"></canvas>
                                      <div class="preview-textfield"><span id="preview-textfield2" ></span></div>
                                      <!--<div class="canvas-value">
                                          <canvas id="display6" class="segment-display2" width="100" height="50">
@@ -425,7 +423,7 @@
                                             </ul>
                                         </div>
                                      </div>
-                                     <canvas class="w-100" id="gauge270"></canvas>
+                                     <canvas class="resize-canvas w-100" id="gauge270"></canvas>
                                      <div class="preview-textfield"><span id="preview-textfield3" ></span></div>
                                      <!--<div class="canvas-value">
                                          <canvas id="display7" class="segment-display2" width="100" height="50">
@@ -449,7 +447,7 @@
                                             </ul>
                                         </div>
                                      </div>
-                                     <canvas class="w-100" id="gauge240"></canvas>
+                                     <canvas class="resize-canvas w-100" id="gauge240"></canvas>
                                      <div class="preview-textfield"><span id="preview-textfield4" ></span></div>
                                      <!--<div class="canvas-value">
                                          <canvas id="display8" class="segment-display2" width="100" height="50">
@@ -473,7 +471,7 @@
                                             </ul>
                                         </div>
                                      </div>
-                                     <canvas class="w-100" id="gauge45"></canvas>
+                                     <canvas class="resize-canvas w-100" id="gauge45"></canvas>
                                      <div class="preview-textfield"><span id="preview-textfield5"></span></div>
                                      <!--<div class="canvas-value">
                                          <canvas id="display9" class="segment-display2" width="100" height="50">
@@ -497,7 +495,7 @@
                                             </ul>
                                         </div>
                                      </div>
-                                     <canvas class="w-100" id="gauge90"></canvas>
+                                     <canvas class="resize-canvas w-100" id="gauge90"></canvas>
                                      <div class="preview-textfield"><span id="preview-textfield6"></span></div>
                                      <!--<div class="canvas-value">
                                          <canvas id="display10" class="segment-display2" width="100" height="50">
@@ -773,7 +771,7 @@
                                             </ul>
                                         </div>
                                      </div>
-                                     <canvas class="w-100" id="gauge100"></canvas>
+                                     <canvas class="resize-canvas w-100" id="gauge100"></canvas>
                                      <div class="preview-textfield"><span id="preview-textfield7"></span></div>
                                      <!--<div class="canvas-value">
                                          <canvas id="display11" class="segment-display2" width="100" height="50">
@@ -1499,333 +1497,351 @@
         });
 </script>
 <script type="text/javascript">
-    var opts340 = {
-        angle: -0.42, // The span of the gauge arc
-        lineWidth: 0.26, // The line thickness
-        radiusScale: 0.9, // Relative radius
-        pointer: {
-            length: 0.57, // // Relative to gauge radius
-            strokeWidth: 0.040, // The thickness
-            color: '#000000' // Fill color
-        },
-        staticLabels: {
-            font: "16px sans-serif",  // Specifies font
-            labels: [0, 10, 20, 30, 40, 50],  // Print labels at these values
-            color: "#000000",  // Optional: Label text color
-            fractionDigits: 0  // Optional: Numerical precision. 0=round off.
-        },
-        staticZones: [
-            {strokeStyle: "#339900", min: 0, max: 10}, // Red from 100 to 130
-            {strokeStyle: "#99cc33", min: 10, max: 20}, // Yellow
-            {strokeStyle: "#ffcc00", min: 20, max: 30}, // Green
-            {strokeStyle: "#ff9966", min: 30, max: 40}, // Yellow
-            {strokeStyle: "#cc3300", min: 40, max: 50}  // Red
-        ],
-        renderTicks: {
-            divisions: 10,
-            divWidth: 1.1,
-            divLength: 0.7,
-            divColor: '#000000',
-            subDivisions: 3,
-            subLength: 0.5,
-            subWidth: 0.6,
-            subColor: '#000000'
-        },
-        limitMax: false,     // If false, max value increases automatically if value > maxValue
-        limitMin: false,     // If true, the min value of the gauge will be fixed
-        highDpiSupport: true,     // High resolution support
+function responsiveCanvas(target){
+    $(".resize-canvas").each(function(e){
+
+        var parentWidth = $(this).parent().outerWidth() - 30;
+        var heightRatio = 0.5;
+        var parentHeight = parentWidth / 2;
+        // var parentHeight =  $(this).parent().outerHeight();
+        $(this).attr('width', parentWidth);
+        $(this).attr('height', parentHeight);
+    })
+        var opts340 = {
+            angle: -0.42, // The span of the gauge arc
+            lineWidth: 0.26, // The line thickness
+            radiusScale: 0.9, // Relative radius
+            pointer: {
+                length: 0.57, // // Relative to gauge radius
+                strokeWidth: 0.040, // The thickness
+                color: '#000000' // Fill color
+            },
+            staticLabels: {
+                font: "16px sans-serif",  // Specifies font
+                labels: [0, 10, 20, 30, 40, 50],  // Print labels at these values
+                color: "#000000",  // Optional: Label text color
+                fractionDigits: 0  // Optional: Numerical precision. 0=round off.
+            },
+            staticZones: [
+                {strokeStyle: "#339900", min: 0, max: 10}, // Red from 100 to 130
+                {strokeStyle: "#99cc33", min: 10, max: 20}, // Yellow
+                {strokeStyle: "#ffcc00", min: 20, max: 30}, // Green
+                {strokeStyle: "#ff9966", min: 30, max: 40}, // Yellow
+                {strokeStyle: "#cc3300", min: 40, max: 50}  // Red
+            ],
+            renderTicks: {
+                divisions: 10,
+                divWidth: 1.1,
+                divLength: 0.7,
+                divColor: '#000000',
+                subDivisions: 3,
+                subLength: 0.5,
+                subWidth: 0.6,
+                subColor: '#000000'
+            },
+            limitMax: false,     // If false, max value increases automatically if value > maxValue
+            limitMin: false,     // If true, the min value of the gauge will be fixed
+            highDpiSupport: true,     // High resolution support
+            
         
-    
-    };
-    var target340 = document.getElementById('gauge340'); // your canvas element
-    var gauge340 = new Gauge(target340).setOptions(opts340); // create sexy gauge!
-    gauge340.setTextField(document.getElementById('preview-textfield'));
-    gauge340.maxValue = 50; // set max gauge value
-    gauge340.setMinValue(0);  // Prefer setter over gauge.minValue = 0
-    gauge340.animationSpeed = 32; // set animation speed (32 is default value)
-    gauge340.set(50); // set actual value 
-    
-    
-    var opts180 = {
-        angle: 0, 
-        lineWidth: 0.26, 
-        radiusScale: 0.9,
-        pointer: {
-            length: 0.57, 
-            strokeWidth: 0.040, 
-            color: '#000000' 
-        },
-        staticLabels: {
-            font: "11px sans-serif", 
-            labels: [25000, 29000, 33000, 37000, 41000, 45000],  
-            color: "#000000", 
-            fractionDigits: 0 
-        },
-        staticZones: [
-            {strokeStyle: "#339900", min: 25000, max: 29000}, 
-            {strokeStyle: "#99cc33", min: 29000, max: 33000}, 
-            {strokeStyle: "#ffcc00", min: 33000, max: 37000}, 
-            {strokeStyle: "#ff9966", min: 37000, max: 41000}, 
-            {strokeStyle: "#cc3300", min: 41000, max: 45000}  
-        ],
-        renderTicks: {
-            divisions: 10,
-            divWidth: 1.1,
-            divLength: 0.7,
-            divColor: '#000000',
-            subDivisions: 3,
-            subLength: 0.5,
-            subWidth: 0.6,
-            subColor: '#000000'
-        },
-        limitMax: false,    
-        limitMin: false,    
-        highDpiSupport: true, 
-        width: 100,
-        height: 500,
-
+        };
+        var target340 = document.getElementById('gauge340'); // your canvas element
+        var gauge340 = new Gauge(target340).setOptions(opts340); // create sexy gauge!
+        gauge340.setTextField(document.getElementById('preview-textfield'));
+        gauge340.maxValue = 50; // set max gauge value
+        gauge340.setMinValue(0);  // Prefer setter over gauge.minValue = 0
+        gauge340.animationSpeed = 32; // set animation speed (32 is default value)
+        gauge340.set(50); // set actual value 
         
-    
-    };
-    var target180 = document.getElementById('gauge180'); 
-    var gauge180 = new Gauge(target180).setOptions(opts180); 
-    gauge180.setTextField(document.getElementById('preview-textfield2'));
-    gauge180.maxValue = 45000;
-    gauge180.setMinValue(25000); 
-    gauge180.animationSpeed = 32;
-    gauge180.set(38208);
-
-    var opts270 = {
-        angle: -0.3, 
-        lineWidth: 0.26, 
-        radiusScale: 0.9,
-        pointer: {
-            length: 0.57, 
-            strokeWidth: 0.040, 
-            color: '#000000' 
-        },
-        staticLabels: {
-            font: "12px sans-serif", 
-            labels: [25000, 29000, 33000, 37000, 41000, 45000],  
-            color: "#000000", 
-            fractionDigits: 0 
-        },
-        staticZones: [
-            {strokeStyle: "#339900", min: 25000, max: 29000}, 
-            {strokeStyle: "#99cc33", min: 29000, max: 33000}, 
-            {strokeStyle: "#ffcc00", min: 33000, max: 37000}, 
-            {strokeStyle: "#ff9966", min: 37000, max: 41000}, 
-            {strokeStyle: "#cc3300", min: 41000, max: 45000}  
-        ],
-        renderTicks: {
-            divisions: 10,
-            divWidth: 1.1,
-            divLength: 0.7,
-            divColor: '#000000',
-            subDivisions: 3,
-            subLength: 0.5,
-            subWidth: 0.6,
-            subColor: '#000000'
-        },
-        limitMax: false,    
-        limitMin: false,    
-        highDpiSupport: true,    
         
-    
-    };
-    var target270 = document.getElementById('gauge270'); 
-    var gauge270 = new Gauge(target270).setOptions(opts270);
-    gauge270.setTextField(document.getElementById('preview-textfield3')); 
-    gauge270.maxValue = 45000;
-    gauge270.setMinValue(25000); 
-    gauge270.animationSpeed = 32;
-    gauge270.set(38208);
-
-    var opts240 = {
-        angle: -0.2, 
-        lineWidth: 0.26, 
-        radiusScale: 0.9,
-        pointer: {
-            length: 0.57, 
-            strokeWidth: 0.040, 
-            color: '#000000' 
-        },
-        staticLabels: {
-            font: "16px sans-serif", 
-            labels: [0, 20, 40, 60, 80, 100],  
-            color: "#000000", 
-            fractionDigits: 0 
-        },
-        staticZones: [
-            {strokeStyle: "#339900", min: 0, max: 20}, 
-            {strokeStyle: "#99cc33", min: 20, max: 40}, 
-            {strokeStyle: "#ffcc00", min: 40, max: 60}, 
-            {strokeStyle: "#ff9966", min: 60, max: 80}, 
-            {strokeStyle: "#cc3300", min: 80, max: 100}  
-        ],
-        renderTicks: {
-            divisions: 10,
-            divWidth: 1.1,
-            divLength: 0.7,
-            divColor: '#000000',
-            subDivisions: 3,
-            subLength: 0.5,
-            subWidth: 0.6,
-            subColor: '#000000'
-        },
-        limitMax: false,    
-        limitMin: false,    
-        highDpiSupport: true,    
+        var opts180 = {
+            angle: 0, 
+            lineWidth: 0.26, 
+            radiusScale: 0.9,
+            pointer: {
+                length: 0.57, 
+                strokeWidth: 0.040, 
+                color: '#000000' 
+            },
+            staticLabels: {
+                font: "1rem sans-serif", 
+                labels: [0, 20, 40, 60, 80, 100],  
+                color: "#000000", 
+                fractionDigits: 0 
+            },
+            staticZones: [
+                {strokeStyle: "#339900", min: 0, max: 20}, 
+                {strokeStyle: "#99cc33", min: 20, max: 40}, 
+                {strokeStyle: "#ffcc00", min: 40, max: 60}, 
+                {strokeStyle: "#ff9966", min: 60, max: 80}, 
+                {strokeStyle: "#cc3300", min: 80, max: 100}  
+            ],
+            renderTicks: {
+                divisions: 10,
+                divWidth: 1.1,
+                divLength: 0.7,
+                divColor: '#000000',
+                subDivisions: 3,
+                subLength: 0.5,
+                subWidth: 0.6,
+                subColor: '#000000'
+            },
+            limitMax: false,    
+            limitMin: false,    
+            highDpiSupport: true,    
+            
         
-    
-    };
-    var target240 = document.getElementById('gauge240'); 
-    var gauge240 = new Gauge(target240).setOptions(opts240); 
-    gauge240.setTextField(document.getElementById('preview-textfield4'));
-    gauge240.maxValue = 100;
-    gauge240.setMinValue(0); 
-    gauge240.animationSpeed = 32;
-    gauge240.set(100);
-
-    var opts45 = {
-        angle: 0.3, 
-        lineWidth: 0.26, 
-        radiusScale: 0.9,
-        pointer: {
-            length: 0.57, 
-            strokeWidth: 0.040, 
-            color: '#000000' 
-        },
-        staticLabels: {
-            font: "16px sans-serif", 
-            labels: [0, 10, 20, 30, 40, 50],  
-            color: "#000000", 
-            fractionDigits: 0 
-        },
-        staticZones: [
-            {strokeStyle: "#339900", min: 0, max: 10}, 
-            {strokeStyle: "#99cc33", min: 10, max: 20}, 
-            {strokeStyle: "#ffcc00", min: 20, max: 30}, 
-            {strokeStyle: "#ff9966", min: 30, max: 40}, 
-            {strokeStyle: "#cc3300", min: 40, max: 50}  
-        ],
-        renderTicks: {
-            divisions: 10,
-            divWidth: 1.1,
-            divLength: 0.7,
-            divColor: '#000000',
-            subDivisions: 3,
-            subLength: 0.5,
-            subWidth: 0.6,
-            subColor: '#000000'
-        },
-        limitMax: false,    
-        limitMin: false,    
-        highDpiSupport: true,    
+        };
+        var target180 = document.getElementById('gauge180'); 
+        var gauge180 = new Gauge(target180).setOptions(opts180); 
+        gauge180.setTextField(document.getElementById('preview-textfield2'));
+        gauge180.maxValue = 100;
+        gauge180.setMinValue(0); 
+        gauge180.animationSpeed = 32;
+        gauge180.set(100);
         
-    
-    };
-    var target45 = document.getElementById('gauge45'); 
-    var gauge45 = new Gauge(target45).setOptions(opts45);
-    gauge45.setTextField(document.getElementById('preview-textfield5')); 
-    gauge45.maxValue = 50;
-    gauge45.setMinValue(0); 
-    gauge45.animationSpeed = 32;
-    gauge45.set(50);
-
-    var opts90 = {
-        angle: 0.1, 
-        lineWidth: 0.26, 
-        radiusScale: 0.9,
-        pointer: {
-            length: 0.57, 
-            strokeWidth: 0.040, 
-            color: '#000000' 
-        },
-        staticLabels: {
-            font: "16px sans-serif", 
-            labels: [0, 20, 40, 60, 80, 100],  
-            color: "#000000", 
-            fractionDigits: 0 
-        },
-        staticZones: [
-            {strokeStyle: "#339900", min: 0, max: 20}, 
-            {strokeStyle: "#99cc33", min: 20, max: 40}, 
-            {strokeStyle: "#ffcc00", min: 40, max: 60}, 
-            {strokeStyle: "#ff9966", min: 60, max: 80}, 
-            {strokeStyle: "#cc3300", min: 80, max: 100}  
-        ],
-        renderTicks: {
-            divisions: 10,
-            divWidth: 1.1,
-            divLength: 0.7,
-            divColor: '#000000',
-            subDivisions: 3,
-            subLength: 0.5,
-            subWidth: 0.6,
-            subColor: '#000000'
-        },
-
-        limitMax: false,    
-        limitMin: false,    
-        highDpiSupport: true,    
         
-    
-    };
-    var target90 = document.getElementById('gauge90'); 
-    var gauge90 = new Gauge(target90).setOptions(opts90); 
-    gauge90.setTextField(document.getElementById('preview-textfield6'));
-    gauge90.maxValue = 100;
-    gauge90.setMinValue(0); 
-    gauge90.animationSpeed = 32;
-    gauge90.set(100);
 
-    var opts100 = {
-        angle: 0.1, 
-        lineWidth: 0.26, 
-        radiusScale: 0.9,
-        pointer: {
-            length: 0.57, 
-            strokeWidth: 0.040, 
-            color: '#000000' 
-        },
-        staticLabels: {
-            font: "16px sans-serif", 
-            labels: [0, 20, 40, 60, 80, 100],  
-            color: "#000000", 
-            fractionDigits: 0 
-        },
-        staticZones: [
-            {strokeStyle: "#cc3300", min: 0, max: 20}, 
-            {strokeStyle: "#ff9966", min: 20, max: 40}, 
-            {strokeStyle: "#ffcc00", min: 40, max: 60}, 
-            {strokeStyle: "#99cc33", min: 60, max: 80}, 
-            {strokeStyle: "#339900", min: 80, max: 100}  
-        ],
-        renderTicks: {
-            divisions: 10,
-            divWidth: 1.1,
-            divLength: 0.7,
-            divColor: '#000000',
-            subDivisions: 3,
-            subLength: 0.5,
-            subWidth: 0.6,
-            subColor: '#000000'
-        },
 
-        limitMax: false,    
-        limitMin: false,    
-        highDpiSupport: true,    
+        var opts270 = {
+            angle: -0.3, 
+            lineWidth: 0.26, 
+            radiusScale: 0.9,
+            pointer: {
+                length: 0.57, 
+                strokeWidth: 0.040, 
+                color: '#000000' 
+            },
+            staticLabels: {
+                font: "16px sans-serif", 
+                labels: [0, 20, 40, 60, 80, 100],  
+                color: "#000000", 
+                fractionDigits: 0 
+            },
+            staticZones: [
+                {strokeStyle: "#339900", min: 0, max: 20}, 
+                {strokeStyle: "#99cc33", min: 20, max: 40}, 
+                {strokeStyle: "#ffcc00", min: 40, max: 60}, 
+                {strokeStyle: "#ff9966", min: 60, max: 80}, 
+                {strokeStyle: "#cc3300", min: 80, max: 100}  
+            ],
+            renderTicks: {
+                divisions: 10,
+                divWidth: 1.1,
+                divLength: 0.7,
+                divColor: '#000000',
+                subDivisions: 3,
+                subLength: 0.5,
+                subWidth: 0.6,
+                subColor: '#000000'
+            },
+            limitMax: false,    
+            limitMin: false,    
+            highDpiSupport: true,    
+            
         
+        };
+        var target270 = document.getElementById('gauge270'); 
+        var gauge270 = new Gauge(target270).setOptions(opts270);
+        gauge270.setTextField(document.getElementById('preview-textfield3')); 
+        gauge270.maxValue = 100;
+        gauge270.setMinValue(0); 
+        gauge270.animationSpeed = 32;
+        gauge270.set(100);
+
+        var opts240 = {
+            angle: -0.2, 
+            lineWidth: 0.26, 
+            radiusScale: 0.9,
+            pointer: {
+                length: 0.57, 
+                strokeWidth: 0.040, 
+                color: '#000000' 
+            },
+            staticLabels: {
+                font: "16px sans-serif", 
+                labels: [0, 20, 40, 60, 80, 100],  
+                color: "#000000", 
+                fractionDigits: 0 
+            },
+            staticZones: [
+                {strokeStyle: "#339900", min: 0, max: 20}, 
+                {strokeStyle: "#99cc33", min: 20, max: 40}, 
+                {strokeStyle: "#ffcc00", min: 40, max: 60}, 
+                {strokeStyle: "#ff9966", min: 60, max: 80}, 
+                {strokeStyle: "#cc3300", min: 80, max: 100}  
+            ],
+            renderTicks: {
+                divisions: 10,
+                divWidth: 1.1,
+                divLength: 0.7,
+                divColor: '#000000',
+                subDivisions: 3,
+                subLength: 0.5,
+                subWidth: 0.6,
+                subColor: '#000000'
+            },
+            limitMax: false,    
+            limitMin: false,    
+            highDpiSupport: true,    
+            
+        
+        };
+        var target240 = document.getElementById('gauge240'); 
+        var gauge240 = new Gauge(target240).setOptions(opts240); 
+        gauge240.setTextField(document.getElementById('preview-textfield4'));
+        gauge240.maxValue = 100;
+        gauge240.setMinValue(0); 
+        gauge240.animationSpeed = 32;
+        gauge240.set(100);
+
+        var opts45 = {
+            angle: 0.3, 
+            lineWidth: 0.26, 
+            radiusScale: 0.9,
+            pointer: {
+                length: 0.57, 
+                strokeWidth: 0.040, 
+                color: '#000000' 
+            },
+            staticLabels: {
+                font: "16px sans-serif", 
+                labels: [0, 10, 20, 30, 40, 50],  
+                color: "#000000", 
+                fractionDigits: 0 
+            },
+            staticZones: [
+                {strokeStyle: "#339900", min: 0, max: 10}, 
+                {strokeStyle: "#99cc33", min: 10, max: 20}, 
+                {strokeStyle: "#ffcc00", min: 20, max: 30}, 
+                {strokeStyle: "#ff9966", min: 30, max: 40}, 
+                {strokeStyle: "#cc3300", min: 40, max: 50}  
+            ],
+            renderTicks: {
+                divisions: 10,
+                divWidth: 1.1,
+                divLength: 0.7,
+                divColor: '#000000',
+                subDivisions: 3,
+                subLength: 0.5,
+                subWidth: 0.6,
+                subColor: '#000000'
+            },
+            limitMax: false,    
+            limitMin: false,    
+            highDpiSupport: true,    
+            
+        
+        };
+        var target45 = document.getElementById('gauge45'); 
+        var gauge45 = new Gauge(target45).setOptions(opts45);
+        gauge45.setTextField(document.getElementById('preview-textfield5')); 
+        gauge45.maxValue = 50;
+        gauge45.setMinValue(0); 
+        gauge45.animationSpeed = 32;
+        gauge45.set(50);
+
+        var opts90 = {
+            angle: 0.1, 
+            lineWidth: 0.26, 
+            radiusScale: 0.9,
+            pointer: {
+                length: 0.57, 
+                strokeWidth: 0.040, 
+                color: '#000000' 
+            },
+            staticLabels: {
+                font: "16px sans-serif", 
+                labels: [0, 20, 40, 60, 80, 100],  
+                color: "#000000", 
+                fractionDigits: 0 
+            },
+            staticZones: [
+                {strokeStyle: "#339900", min: 0, max: 20}, 
+                {strokeStyle: "#99cc33", min: 20, max: 40}, 
+                {strokeStyle: "#ffcc00", min: 40, max: 60}, 
+                {strokeStyle: "#ff9966", min: 60, max: 80}, 
+                {strokeStyle: "#cc3300", min: 80, max: 100}  
+            ],
+            renderTicks: {
+                divisions: 10,
+                divWidth: 1.1,
+                divLength: 0.7,
+                divColor: '#000000',
+                subDivisions: 3,
+                subLength: 0.5,
+                subWidth: 0.6,
+                subColor: '#000000'
+            },
+
+            limitMax: false,    
+            limitMin: false,    
+            highDpiSupport: true,    
+            
+        
+        };
+        var target90 = document.getElementById('gauge90'); 
+        var gauge90 = new Gauge(target90).setOptions(opts90); 
+        gauge90.setTextField(document.getElementById('preview-textfield6'));
+        gauge90.maxValue = 100;
+        gauge90.setMinValue(0); 
+        gauge90.animationSpeed = 32;
+        gauge90.set(100);
+
+        var opts100 = {
+            angle: 0.1, 
+            lineWidth: 0.26, 
+            radiusScale: 0.9,
+            pointer: {
+                length: 0.57, 
+                strokeWidth: 0.040, 
+                color: '#000000' 
+            },
+            staticLabels: {
+                font: "16px sans-serif", 
+                labels: [0, 20, 40, 60, 80, 100],  
+                color: "#000000", 
+                fractionDigits: 0 
+            },
+            staticZones: [
+                {strokeStyle: "#cc3300", min: 0, max: 20}, 
+                {strokeStyle: "#ff9966", min: 20, max: 40}, 
+                {strokeStyle: "#ffcc00", min: 40, max: 60}, 
+                {strokeStyle: "#99cc33", min: 60, max: 80}, 
+                {strokeStyle: "#339900", min: 80, max: 100}  
+            ],
+            renderTicks: {
+                divisions: 10,
+                divWidth: 1.1,
+                divLength: 0.7,
+                divColor: '#000000',
+                subDivisions: 3,
+                subLength: 0.5,
+                subWidth: 0.6,
+                subColor: '#000000'
+            },
+
+            limitMax: false,    
+            limitMin: false,    
+            highDpiSupport: true,    
+            
+        
+        };
+        var target100 = document.getElementById('gauge100'); 
+        var gauge100 = new Gauge(target100).setOptions(opts100);
+        gauge100.setTextField(document.getElementById('preview-textfield7')); 
+        gauge100.maxValue = 100;
+        gauge100.setMinValue(0); 
+        gauge100.animationSpeed = 32;
+        gauge100.set(100);
+
     
-    };
-    var target100 = document.getElementById('gauge100'); 
-    var gauge100 = new Gauge(target100).setOptions(opts100);
-    gauge100.setTextField(document.getElementById('preview-textfield7')); 
-    gauge100.maxValue = 100;
-    gauge100.setMinValue(0); 
-    gauge100.animationSpeed = 32;
-    gauge100.set(100);
+        
+    }
+    responsiveCanvas(); 
+    $(window).resize(function(){
+        responsiveCanvas();
+    });
 </script>
 <script type="text/javascript">
     $(document).ready(function(){
@@ -1841,6 +1857,9 @@
 
                 setInterval(function() {
                     $(".industrial.tank, .industrial.thermometer, .industrial.gauge").each(function() {
+                        $(this).industrial(Math.floor(Math.random()*100));
+                    });
+                    $(".industrial.thermometer").each(function() {
                         $(this).industrial(Math.floor(Math.random()*100));
                     });
                     $(".industrial.led").each(function() {

@@ -87,13 +87,13 @@ var __hasProp = {}.hasOwnProperty,
     return LEDController;
 
   })(BooleanController);
-  TankController = (function(_super) {
+  ThermoController = (function(_super) {
 
-    __extends(TankController, _super);
+    __extends(ThermoController, _super);
 
-    function TankController(element, options) {
+    function ThermoController(element, options) {
       var $ticks, dist, generateScales, generateTicks, i, inc, scaleFrequency, tickAmt, tickHeight, ticks, _i, _j, _ref, _ref1, _ref2, _ref3;
-      TankController.__super__.constructor.apply(this, arguments);
+      ThermoController.__super__.constructor.apply(this, arguments);
       this.tick_height = this.options.tick_height;
       $ticks = this.$element.children(".ticks");
       if ($ticks.length <= 0) {
@@ -136,21 +136,95 @@ var __hasProp = {}.hasOwnProperty,
       if (generateScales) {
         inc = (this.scale_hi - this.scale_low) / (tickAmt - 1);
         for (i = _j = 0; 0 <= tickAmt ? _j <= tickAmt : _j >= tickAmt; i = _j += scaleFrequency) {
-          $(ticks[i]).append('<span class="scale">' + Math.floor((tickAmt - i - 1) * inc) + '000</span>');
+          $(ticks[i]).append('<span class="scale">' + Math.floor((tickAmt - i - 1) * inc) + '</span>');
+        }
+      }
+    }
+
+    ThermoController.prototype.setValue = function(val) {
+      var adjusted;
+      ThermoController.__super__.setValue.apply(this, arguments);
+      adjusted = 100 - (val / (this.scale_hi - this.scale_low)) * 100;
+      return this.$element.children(".space").css("height", adjusted + "%");
+    };
+
+    return ThermoController;
+
+  })(NumericController);
+
+  /* thermometer controller */
+  TankController = (function(_super) {
+
+    __extends(TankController, _super);
+
+    function TankController(element, options) {
+      var $ticks, dist, generateScales, generateTicks, i, inc, scaleFrequency, tickAmt, tickHeight, ticks, _i, _j, _ref, _ref1, _ref2, _ref3, scaleHi, scaleLow;
+      TankController.__super__.constructor.apply(this, arguments);
+      this.tick_height = this.options.tick_height;
+      $ticks = this.$element.children(".ticks");
+      scaleHi = $ticks.data('hi');
+      scaleLow = $ticks.data('low');
+      //console.log(scaleLow, scaleHi);
+      if ($ticks.length <= 0) {
+        return;
+      }
+      tickHeight = 3;
+      generateTicks = true;
+      generateScales = true;
+      tickAmt = 0;
+      if (this.tick_height !== void 0) {
+        tickHeight = this.tick_height;
+      } else if ($ticks.data('height') !== void 0) {
+        tickHeight = $ticks.data('height');
+      }
+      if ($ticks.children(".tick").length >= 2) {
+        generateTicks = false;
+      } else if ((_ref = this.tick_amt) !== (void 0) && _ref !== 0 && _ref !== 1) {
+        tickAmt = this.tick_amt;
+      } else if ((_ref1 = $ticks.data('amount')) !== (void 0) && _ref1 !== 0 && _ref1 !== 1) {
+        tickAmt = $ticks.data('amount');
+      } else {
+        return;
+      }
+      if ((_ref2 = $ticks.data('scale-freq')) !== (void 0) && _ref2 !== 0) {
+        scaleFrequency = $ticks.data('scale-freq');
+      } else if (((_ref3 = this.tick_scale_frequency) !== (void 0) && _ref3 !== 0) && this.tick_scale === true) {
+        scaleFrequency = this.tick_scale_frequency;
+      } else {
+        generateScales = false;
+      }
+      if (generateTicks) {
+        for (i = _i = 1; _i <= tickAmt; i = _i += 1) {
+          $ticks.append('<div class="tick"></div>');
+        }
+      }
+      ticks = $ticks.children(".tick");
+      ticks.css("height", tickHeight + "%");
+      dist = this.calcDist(ticks.length, tickHeight);
+      ticks.css("margin-bottom", dist + "%");
+      if (generateScales) {
+        inc = (scaleHi -scaleLow) / (tickAmt - 1);
+        for (i = _j = 0; 0 <= tickAmt ? _j <= tickAmt : _j >= tickAmt; i = _j += scaleFrequency) {
+          $(ticks[i]).append('<span class="scale">' + Math.floor((tickAmt - i - 1) * inc) + '</span>');
         }
       }
     }
 
     TankController.prototype.setValue = function(val) {
-      var adjusted;
+      var adjusted,scaleHi, scaleLow;
+      $ticks = this.$element.children(".ticks");
+      scaleHi = $ticks.data('hi');
+      scaleLow = $ticks.data('low');
+      //console.log(scaleLow, scaleHi);
       TankController.__super__.setValue.apply(this, arguments);
-      adjusted = 100 - (val / (this.scale_hi - this.scale_low)) * 100;
+      adjusted = 100 - (val / (scaleHi - scaleLow)) * 100;
       return this.$element.children(".space").css("height", adjusted + "%");
     };
 
     return TankController;
 
   })(NumericController);
+
   GaugeController = (function(_super) {
 
     __extends(GaugeController, _super);
@@ -292,8 +366,10 @@ var __hasProp = {}.hasOwnProperty,
       CtlClass = void 0;
       switch ($this.attr("class").split(" ")[1]) {
         case "tank":
-        case "thermometer":
           CtlClass = TankController;
+          break;
+        case "thermometer":
+          CtlClass = ThermoController;
           break;
         case "gauge":
           CtlClass = GaugeController;
