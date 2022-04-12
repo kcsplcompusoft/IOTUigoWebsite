@@ -168,7 +168,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr class="table-row__active">
                             <td>DTP0001</td>
                             <td><div class="item-icon-title-cell">
                                 <div class="item-title">GPCB-GSFCL-LeafDevice2</div>
@@ -179,6 +179,9 @@
                                     <ul class="dropdown-menu">
                                         <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
                                         <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                        <li id="tooltip-view" class="tooltip-view">
+                                            <a href="#" data-toggle="modal" data-target="#processview"><i class="iot-view" ></i>View</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div> </td>
@@ -200,6 +203,9 @@
                                     <ul class="dropdown-menu">
                                         <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
                                         <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                        <li class="tooltip-view">
+                                            <a href="#" data-toggle="modal" data-target="#processview"><i class="iot-view" ></i>View</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div> </td>
@@ -221,6 +227,7 @@
                                     <ul class="dropdown-menu">
                                         <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
                                         <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                        <li><a href="#"><i class="iot-view" ></i>View</a></li>
                                     </ul>
                                 </div>
                             </div> </td>
@@ -242,6 +249,9 @@
                                     <ul class="dropdown-menu">
                                         <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
                                         <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                        <li class="tooltip-view">
+                                            <a href="#" data-toggle="modal" data-target="#processview"><i class="iot-view" ></i>View</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div> </td>
@@ -263,6 +273,7 @@
                                     <ul class="dropdown-menu">
                                         <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
                                         <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                        <li><a href="#"><i class="iot-view" ></i>View</a></li>
                                     </ul>
                                 </div>
                             </div> </td>
@@ -284,6 +295,9 @@
                                     <ul class="dropdown-menu">
                                         <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
                                         <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                        <li class="tooltip-view">
+                                            <a href="#" data-toggle="modal" data-target="#processview"><i class="iot-view" ></i>View</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div> </td>
@@ -351,6 +365,160 @@
         </div>
     </div>
 </div>
+<!-- Right slide popup S -->
+<div id="tooltip-view__popup" class="tooltip-view__popup">
+    <div class="tooltip-view__popup-wrap">
+        <button type="button" class="close tooltip-view__popup-close" data-dismiss="modal" aria-label="Close"><i class="las la-times"></i></button>
+        <h4><i class="iot-view"></i>Company Details View</h4>
+        <div class="modal-view__row row">
+            <div class="modal-view__col col-6 col-sm-6 col-md-4">
+                <h5 class="modal-view__title">Device Id:</h5>
+                <div>DTP0001</div>
+            </div>
+            <div class="modal-view__col col-6 col-sm-6 col-md-4">
+                <h5 class="modal-view__title">Device Unique Name</h5>
+                <div>GPCB-GSFCL-LeafDevice2</div>
+            </div>
+            <div class="modal-view__col col-6 col-sm-6 col-md-4">
+                <h5 class="modal-view__title">Device Type</h5>
+                <div>Gateway</div>
+            </div>
+            <div class="modal-view__col col-6 col-sm-6 col-md-4">
+                <h5 class="modal-view__title">Mac Address</h5>
+                <div>4c:ed:fb:b7:1c:19</div>
+            </div>
+            <div class="modal-view__col col-6 col-sm-6 col-md-4">
+                <h5 class="modal-view__title">Product ID</h5>
+                <div>LD:1221</div>
+            </div>
+            <div class="modal-view__col col-6 col-sm-6 col-md-4">
+                <h5 class="modal-view__title">Vendor ID</h5>
+                <div>VD:1221</div>
+            </div>
+            <div class="modal-view__col col-6 col-sm-6 col-md-4">
+                <h5 class="modal-view__title">Manufacture ID</h5>
+                <div>LD:1221</div>
+            </div>
+            <div class="modal-view__col col-6 col-sm-6 col-md-4">
+                <h5 class="modal-view__title">Date & Time</h5>
+                <div>Oct. 15, 2020, 10:39 p.m.</div>
+            </div>
+            <div class="modal-view__col col-6 col-sm-6 col-md-4">
+                <h5 class="modal-view__title">Device Id:</h5>
+                <div>DTP0001</div>
+            </div>
+            <div class="modal-view__col col-6 col-sm-6 col-md-4">
+                <h5 class="modal-view__title">Device Unique Name</h5>
+                <div>GPCB-GSFCL-LeafDevice2</div>
+            </div>
+            <div class="modal-view__col col-6 col-sm-6 col-md-4">
+                <h5 class="modal-view__title">Device Type</h5>
+                <div>Gateway</div>
+            </div>
+            <div class="modal-view__col col-6 col-sm-6 col-md-4">
+                <h5 class="modal-view__title">Mac Address</h5>
+                <div>4c:ed:fb:b7:1c:19</div>
+            </div>
+            <div class="modal-view__col col-6 col-sm-6 col-md-4">
+                <h5 class="modal-view__title">Product ID</h5>
+                <div>LD:1221</div>
+            </div>
+            <div class="modal-view__col col-6 col-sm-6 col-md-4">
+                <h5 class="modal-view__title">Vendor ID</h5>
+                <div>VD:1221</div>
+            </div>
+            <div class="modal-view__col col-6 col-sm-6 col-md-4">
+                <h5 class="modal-view__title">Manufacture ID</h5>
+                <div>LD:1221</div>
+            </div>
+            <div class="modal-view__col col-6 col-sm-6 col-md-4">
+                <h5 class="modal-view__title">Date & Time</h5>
+                <div>Oct. 15, 2020, 10:39 p.m.</div>
+            </div>
+            <div class="modal-view__col col-6 col-sm-6 col-md-4">
+                <h5 class="modal-view__title">Device Id:</h5>
+                <div>DTP0001</div>
+            </div>
+            <div class="modal-view__col col-6 col-sm-6 col-md-4">
+                <h5 class="modal-view__title">Device Unique Name</h5>
+                <div>GPCB-GSFCL-LeafDevice2</div>
+            </div>
+            <div class="modal-view__col col-6 col-sm-6 col-md-4">
+                <h5 class="modal-view__title">Device Type</h5>
+                <div>Gateway</div>
+            </div>
+            <div class="modal-view__col col-6 col-sm-6 col-md-4">
+                <h5 class="modal-view__title">Mac Address</h5>
+                <div>4c:ed:fb:b7:1c:19</div>
+            </div>
+            <div class="modal-view__col col-6 col-sm-6 col-md-4">
+                <h5 class="modal-view__title">Product ID</h5>
+                <div>LD:1221</div>
+            </div>
+            <div class="modal-view__col col-6 col-sm-6 col-md-4">
+                <h5 class="modal-view__title">Vendor ID</h5>
+                <div>VD:1221</div>
+            </div>
+            <div class="modal-view__col col-6 col-sm-6 col-md-4">
+                <h5 class="modal-view__title">Manufacture ID</h5>
+                <div>LD:1221</div>
+            </div>
+            <div class="modal-view__col col-6 col-sm-6 col-md-4">
+                <h5 class="modal-view__title">Date & Time</h5>
+                <div>Oct. 15, 2020, 10:39 p.m.</div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Right slide popup E -->
+<!-- Popup S -->
+<!-- <div class="modal fade completed-modal processview" id="processview" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="las la-times"></i></button>
+        </div>
+        <div class="modal-body">
+            <h4>Company Details View</h4>
+            <div class="modal-view__row">
+                <div class="modal-view__col col-6 col-sm-6 col-md-4">
+                    <h5 class="modal-view__title">Device Id:</h5>
+                    <div>DTP0001</div>
+                </div>
+                <div class="modal-view__col col-6 col-sm-6 col-md-4">
+                    <h5 class="modal-view__title">Device Unique Name</h5>
+                    <div>GPCB-GSFCL-LeafDevice2</div>
+                </div>
+                <div class="modal-view__col col-6 col-sm-6 col-md-4">
+                    <h5 class="modal-view__title">Device Type</h5>
+                    <div>Gateway</div>
+                </div>
+                <div class="modal-view__col col-6 col-sm-6 col-md-4">
+                    <h5 class="modal-view__title">Mac Address</h5>
+                    <div>4c:ed:fb:b7:1c:19</div>
+                </div>
+                <div class="modal-view__col col-6 col-sm-6 col-md-4">
+                    <h5 class="modal-view__title">Product ID</h5>
+                    <div>LD:1221</div>
+                </div>
+                <div class="modal-view__col col-6 col-sm-6 col-md-4">
+                    <h5 class="modal-view__title">Vendor ID</h5>
+                    <div>VD:1221</div>
+                </div>
+                <div class="modal-view__col col-6 col-sm-6 col-md-4">
+                    <h5 class="modal-view__title">Manufacture ID</h5>
+                    <div>LD:1221</div>
+                </div>
+                <div class="modal-view__col col-6 col-sm-6 col-md-4">
+                    <h5 class="modal-view__title">Date & Time</h5>
+                    <div>Oct. 15, 2020, 10:39 p.m.</div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+<!-- Popup E -->
 <script src="assets/js/jquery-3.1.0.js"></script>
 <script src="assets/js/popper.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
@@ -378,6 +546,16 @@
             noneSelectedText: 'Recently Updated'
         });
         $('.boot-select .select').selectpicker();
+    });
+    $(window).on("load", function(){
+        $(".tooltip-view").hover(function(){
+            $("#tooltip-view__popup").addClass("tooltip-slide-in");
+        }, function(){
+            $("#tooltip-view__popup").removeClass("tooltip-slide-in");
+        });
+        $(".tooltip-view__popup-close").on('click', function(){
+            $("#tooltip-view__popup").removeClass("tooltip-slide-in");
+        })
     });
 </script>
 </body>

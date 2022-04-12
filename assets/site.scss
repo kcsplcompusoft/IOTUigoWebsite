@@ -2483,4 +2483,94 @@ button.slick-next.slick-arrow {
 		}
 	}
 }
+
+.modal-view{
+	&__row{
+		display: flex;
+		flex-wrap: wrap;
+		border-top: 1px solid #BFCADE;
+		padding-top:35px;
+	}
+	&__title{
+		@include fontrem(18px);
+	}
+	&__col{
+		padding-bottom:35px;
+	}
+}
+.tooltip-view{
+	&__popup{
+		position: fixed;
+		width:50%;
+		height: 100vh;
+		right:-100%;
+		top:0;
+		padding:30px 30px 0;
+		background-color: #fff;
+		z-index:9;
+		box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 20%);
+		transition: all .5s ease-in;
+		&.tooltip-slide-in{
+			right:0;
+		}
+		@include tabletwide { 
+			width:55%;
+			overflow-y: scroll;
+		}
+		@include phonewide{
+			width:100%;
+		}
+		.close{
+			position: absolute;
+			right:30px;
+			top:35px;
+			width:21px;
+			height:21px;
+			display: none;
+			@include phonewide{
+				display: block;
+			}
+		}
+		h4{
+			padding:0 0 20px;
+			font-weight: 700;
+			border-bottom: 1px solid #D7E0EF;
+			display: flex;
+			align-items: center;
+			i{
+				margin-right:20px;
+				color: #00B9B6;
+			}
+		}
+		.modal-view__row{
+			padding-top:20px;
+			border:none
+		}
+		.modal-view__col{
+			padding-bottom:30px;
+		}
+	}
+}
+.common-table{
+	tbody{
+		tr{
+			&.table-row__active{
+				td{
+					background: #f2f5fa;
+					.item-icon-title-cell .item-menu{
+						opacity: 1 !important;
+						visibility: visible;
+					}
+				}
+			}
+		}
+	}
+}
+.grid-stack-item-content {
+	transition: all 0.3s ease-in-out;
+	&:hover {
+		box-shadow: 0px 4px 13px rgb(0 80 164 / 50%) !important;
+	}
+}
+
 // KCS CSS END
