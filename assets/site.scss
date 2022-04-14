@@ -2584,8 +2584,47 @@ button.slick-next.slick-arrow {
 .grid-stack-item-content {
 	transition: all 0.3s ease-in-out;
 	&:hover {
-		box-shadow: 0px 4px 13px rgb(0 80 164 / 50%) !important;
+		box-shadow: 0px 4px 35px rgb(0 80 164 / 50%) !important;
 	}
+}
+
+.forgot-password{
+	display: flex;
+	justify-content: space-between;
+	&__tips{
+		width:22px;
+		height:22px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		position: relative;
+		i{
+			@include fontrem(22px, 22px);
+			display: flex;
+			justify-content: flex-end;
+			color: $color-darkGrey;
+		}
+		&:hover{
+			.forgot-password__tips-detail{
+				display: block;
+			}
+		}
+	}
+	&__tips-detail{
+		display: none;
+		position: absolute;
+		right:0;
+		width:350px;
+		padding:10px;
+		top:22px;
+		background-color:$color-white;
+		border:solid 1px $color-lightGrey;
+		border-radius: 4px;
+		@include fontrem(12px, 14px);
+	}
+}
+.asteriskField{
+	color: $color-error;
 }
 
 // KCS CSS END
