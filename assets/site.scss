@@ -67,7 +67,7 @@ a.bg9:hover{background:#0b9492;}
 		}
 	}
 	.login-form{
-		max-width:595px; margin:0 auto; padding:35px 44px;
+		max-width:595px; margin:0 auto; padding:25px 44px 35px;
 		.form-group{margin-bottom:30px;}
 		.btn-row .btn{@include fontrem(20px); line-height:20px; padding:16px 20px 17px; font-weight:900; width:100%;}
 		@include desktop{
@@ -80,6 +80,21 @@ a.bg9:hover{background:#0b9492;}
 	.create-accopunt{
 		padding:65px 0 0;
 		a{@include fontrem(20px, 24px); font-weight:900;  color:$color-black;}
+	}
+	.from-title{
+		text-align: center;
+		padding-bottom: 40px;
+		color: #0050A4;
+	}
+	.login-link-row{
+		padding-bottom: 20px;
+		text-align: right;
+		a{
+			font-weight: 700;
+		}
+		a:hover{
+			color: #00B9B6;
+		}
 	}
 }
 .content-wrapper{
@@ -396,7 +411,7 @@ a.bg9:hover{background:#0b9492;}
 							&.in-active{color:#F90909;}
 						}
 						.item-menu{
-							position:relative; opacity:0; visibility:hidden; transition:all 0.3s ease;
+							position:relative; opacity:1; visibility:visible; transition:all 0.3s ease;
 							.dropdown-menu{
 								border: 1px solid #C8D2E2; left:auto !important; right:0px; float:none; padding:8px 0; box-shadow: 0px 7px 11px rgba(42, 62, 97, 0.11); min-width:130px;
 								@include desktop{

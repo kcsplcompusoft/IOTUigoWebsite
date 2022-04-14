@@ -9711,109 +9711,109 @@ h3 {
 }
 
 .iot-download:before {
-  content: "\e900";
+  content: "";
 }
 
 .iot-configure:before {
-  content: "\e901";
+  content: "";
 }
 
 .iot-view:before {
-  content: "\e902";
+  content: "";
 }
 
 .iot-edit:before {
-  content: "\e903";
+  content: "";
 }
 
 .iot-delete:before {
-  content: "\e904";
+  content: "";
 }
 
 .iot-statistics:before {
-  content: "\e905";
+  content: "";
 }
 
 .iot-sites:before {
-  content: "\e906";
+  content: "";
 }
 
 .iot-eye:before {
-  content: "\e907";
+  content: "";
 }
 
 .iot-home:before {
-  content: "\e908";
+  content: "";
 }
 
 .iot-notification:before {
-  content: "\e909";
+  content: "";
 }
 
 .iot-startup:before {
-  content: "\e90a";
+  content: "";
 }
 
 .iot-wifi:before {
-  content: "\e90b";
+  content: "";
 }
 
 .iot-bell:before {
-  content: "\e90c";
+  content: "";
   color: #fff;
 }
 
 .iot-configuration:before {
-  content: "\e90d";
+  content: "";
 }
 
 .iot-information:before {
-  content: "\e90e";
+  content: "";
 }
 
 .iot-masters:before {
-  content: "\e90f";
+  content: "";
 }
 
 .iot-reports:before {
-  content: "\e910";
+  content: "";
 }
 
 .iot-search:before {
-  content: "\e911";
+  content: "";
   color: #0050a4;
 }
 
 .iot-device-key:before {
-  content: "\e912";
+  content: "";
 }
 
 .iot-email-log:before {
-  content: "\e913";
+  content: "";
 }
 
 .iot-Copy:before {
-  content: "\e914";
+  content: "";
 }
 
 .iot-company-info:before {
-  content: "\e915";
+  content: "";
 }
 
 .iot-device-status:before {
-  content: "\e916";
+  content: "";
 }
 
 .iot-fact-list:before {
-  content: "\e917";
+  content: "";
 }
 
 .iot-simulator-configuration:before {
-  content: "\e918";
+  content: "";
 }
 
 .iot-subscription:before {
-  content: "\e919";
+  content: "";
 }
 
 .row {
@@ -10277,7 +10277,7 @@ select.custom-select:focus {
   background: transparent;
 }
 .custom-checkbox > span:after {
-  content: "\f00c";
+  content: "";
   font-family: "Line Awesome Free";
   font-weight: 900;
   font-size: 34px;
@@ -10870,7 +10870,7 @@ select.custom-select:focus {
     display: block;
   }
   .sidebar-open .aside-navigation .navigation-bottom .la-angle-double-left:before {
-    content: "\f101";
+    content: "";
   }
   .sidebar-open .aside-navigation .navigation-bottom .powered-by {
     display: none;
@@ -12010,7 +12010,7 @@ a.bg9:hover {
 .login-page .login-form {
   max-width: 595px;
   margin: 0 auto;
-  padding: 35px 44px;
+  padding: 25px 44px 35px;
 }
 .login-page .login-form .form-group {
   margin-bottom: 30px;
@@ -12047,6 +12047,21 @@ a.bg9:hover {
   line-height: 1.2;
   font-weight: 900;
   color: #000000;
+}
+.login-page .from-title {
+  text-align: center;
+  padding-bottom: 40px;
+  color: #0050A4;
+}
+.login-page .login-link-row {
+  padding-bottom: 20px;
+  text-align: right;
+}
+.login-page .login-link-row a {
+  font-weight: 700;
+}
+.login-page .login-link-row a:hover {
+  color: #00B9B6;
 }
 
 .content-wrapper {
@@ -12511,7 +12526,7 @@ a.bg9:hover {
   border-radius: 3px;
 }
 .common-datatable .table-checkbox span:before {
-  content: "\f00c";
+  content: "";
   font-family: "Line Awesome Free";
   position: absolute;
   left: 1px;
@@ -12648,8 +12663,8 @@ a.bg9:hover {
 }
 .common-table.dataTable tbody tr td .item-icon-title-cell .item-menu {
   position: relative;
-  opacity: 0;
-  visibility: hidden;
+  opacity: 1;
+  visibility: visible;
   transition: all 0.3s ease;
 }
 .common-table.dataTable tbody tr td .item-icon-title-cell .item-menu .dropdown-menu {
@@ -13641,7 +13656,7 @@ a.bg9:hover {
   background: #E2E6ED;
 }
 .wizard-block .wizard-left .nav-tabs li a.updated:before {
-  content: "\f00c";
+  content: "";
   font-family: "Line Awesome Free";
   font-weight: 900;
   font-size: 20px;
@@ -14258,7 +14273,7 @@ a.bg9:hover {
   height: 2% !important;
 }
 .monitorsdetail-row .tab-content .tab-pane .industrial.tank.size.two .tick .scale {
-  font-size: 12pt;
+  font-size: calc(6pt * 2);
   font-weight: 600;
 }
 .monitorsdetail-row .tab-content .tab-pane .industrial.tank {
@@ -14268,8 +14283,8 @@ a.bg9:hover {
   top: -238%;
 }
 .monitorsdetail-row .tab-content .tab-pane .industrial.thermometer {
-  height: 200px;
-  width: 37.5px;
+  height: calc(100px * 2);
+  width: calc(15px * 2.5);
 }
 .monitorsdetail-row .tab-content .tab-pane .industrial.thermometer .tick {
   height: 2% !important;
@@ -14290,7 +14305,7 @@ a.bg9:hover {
 }
 .monitorsdetail-row .tab-content .tab-pane .industrial.readout > .meter {
   text-align: center;
-  font-size: 96pt;
+  font-size: calc(48pt * 2);
   color: #0050A4 !important;
 }
 .monitorsdetail-row .tab-content .tab-pane .industrial.readout > .meter > .digit {
@@ -14302,7 +14317,7 @@ a.bg9:hover {
   background: -webkit-linear-gradient(top, #000000 17%, rgba(0, 0, 0, 0) 17%);
 }
 .monitorsdetail-row .tab-content .tab-pane .industrial.gauge .ticks > .tick > .scale {
-  font-size: 12pt;
+  font-size: calc(6pt * 2);
   font-weight: 600;
   top: 18%;
   margin-left: -5px;
