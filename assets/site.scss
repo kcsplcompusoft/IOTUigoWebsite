@@ -459,6 +459,14 @@ a.bg9:hover{background:#0b9492;}
 						}
 					}
 				}
+				&.edit-active{
+					td{
+						background:$color-lightBlue;
+						.item-icon-title-cell{
+							.item-menu{opacity:1; visibility:visible;}
+						}
+					}
+				}
 			}
 			
 		}
@@ -498,6 +506,16 @@ a.bg9:hover{background:#0b9492;}
 	@include phonewide{
 		.col-md-4{width:100%;}
 	}
+	.project-overview-card{
+		position: relative;
+		padding-bottom:81px;
+		.overview-card-bottom{
+			position: absolute;
+			bottom:0;
+			left:0;
+			width:100%;
+		}
+	}
 }
 .company-statistic-page{
 	.col-md-8{
@@ -524,6 +542,10 @@ a.bg9:hover{background:#0b9492;}
 	margin-bottom:30px; width:100%;
 	@include desktop{
 		margin-bottom:20px;
+	}
+	&__inactive{
+		opacity: 0.5;
+		pointer-events: none;
 	}
 	.overview-card-content{
 		padding:34px 90px 34px 24px; position:relative; min-height: 190px;
@@ -2614,13 +2636,30 @@ button.slick-next.slick-arrow {
 		display: none;
 		position: absolute;
 		right:0;
-		width:350px;
+		width:410px;
 		padding:10px;
-		top:22px;
+		top:32px;
 		background-color:$color-white;
 		border:solid 1px $color-lightGrey;
 		border-radius: 4px;
 		@include fontrem(12px, 14px);
+		&::before{
+			content:" ";
+			position: absolute;
+			right: 3px; 
+			top: -8px;
+			border: solid 0 #ccc;
+			border-width: 1px 0 0 1px;
+			width: 14px;
+			height: 14px;
+			transform: rotate(45deg);
+			background: #fff;
+			content: '';
+		}
+		ul{
+			padding-left:15px;
+			list-style: disc;
+		}
 	}
 }
 .asteriskField{
