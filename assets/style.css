@@ -10676,6 +10676,11 @@ select.custom-select:focus {
 .aside-navigation .navbar ul li > a .menu-icon i {
   color: #000000;
   font-size: 22px;
+  display: block;
+  width: 22px;
+  height: 22px;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 .aside-navigation .navbar ul li > a .menu-icon i svg {
   display: block;
@@ -11867,6 +11872,9 @@ button:focus {
 
 .shadow-sm {
   box-shadow: 0px 4px 13px rgba(0, 80, 164, 0.15) !important;
+}
+.shadow-sm:hover {
+  box-shadow: 0px 4px 13px rgba(0, 185, 182, 0.25) !important;
 }
 
 .rounded-lg {
@@ -16000,6 +16008,13 @@ button.slick-next.slick-arrow {
 .modal-view__col {
   padding-bottom: 35px;
 }
+.modal-view__col div {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  height: 24px;
+  width: 100%;
+}
 
 .tooltip-view__popup {
   position: fixed;
@@ -16131,6 +16146,62 @@ button.slick-next.slick-arrow {
 
 .asteriskField {
   color: #D94B7E;
+}
+
+/* Ripple effect */
+.ripple {
+  background-position: center;
+  transition: background 0.8s;
+}
+
+.ripple:hover {
+  background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+}
+
+.ripple:active {
+  background-color: #6eb9f7;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.iot-dashboard-ico {
+  background: url(images/dashboard-ico.svg);
+}
+.iot-company-management-ico {
+  background: url(images/company-management-ico.svg);
+}
+.iot-configurations-ico {
+  background: url(images/configurations-ico.svg);
+}
+.iot-pie-chart-ico {
+  background: url(images/pie-chart-ico.svg);
+}
+.iot-asset-configuration-ico {
+  background: url(images/asset-configuration-ico.svg);
+}
+.iot-template-master-ico {
+  background: url(images/template-master-ico.svg);
+}
+.iot-user-management-ico {
+  background: url(images/user-management-ico.svg);
+}
+.iot-rule-engine-ico {
+  background: url(images/rule-engine-ico.svg);
+}
+.iot-fact-list-ico {
+  background: url(images/fact-list-ico.svg);
+}
+.iot-smtp-config-ico {
+  background: url(images/smtp-config-ico.svg);
+}
+.iot-simulator-config-ico {
+  background: url(images/simulator-config-ico.svg);
+}
+.iot-company-server-ico {
+  background: url(images/company-server-ico.svg);
+}
+.iot-downloads-ico {
+  background: url(images/downloads-ico.svg);
 }
 
 /*# sourceMappingURL=style.css.map */
