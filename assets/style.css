@@ -9711,109 +9711,109 @@ h3 {
 }
 
 .iot-download:before {
-  content: "";
+  content: "\e900";
 }
 
 .iot-configure:before {
-  content: "";
+  content: "\e901";
 }
 
 .iot-view:before {
-  content: "";
+  content: "\e902";
 }
 
 .iot-edit:before {
-  content: "";
+  content: "\e903";
 }
 
 .iot-delete:before {
-  content: "";
+  content: "\e904";
 }
 
 .iot-statistics:before {
-  content: "";
+  content: "\e905";
 }
 
 .iot-sites:before {
-  content: "";
+  content: "\e906";
 }
 
 .iot-eye:before {
-  content: "";
+  content: "\e907";
 }
 
 .iot-home:before {
-  content: "";
+  content: "\e908";
 }
 
 .iot-notification:before {
-  content: "";
+  content: "\e909";
 }
 
 .iot-startup:before {
-  content: "";
+  content: "\e90a";
 }
 
 .iot-wifi:before {
-  content: "";
+  content: "\e90b";
 }
 
 .iot-bell:before {
-  content: "";
+  content: "\e90c";
   color: #fff;
 }
 
 .iot-configuration:before {
-  content: "";
+  content: "\e90d";
 }
 
 .iot-information:before {
-  content: "";
+  content: "\e90e";
 }
 
 .iot-masters:before {
-  content: "";
+  content: "\e90f";
 }
 
 .iot-reports:before {
-  content: "";
+  content: "\e910";
 }
 
 .iot-search:before {
-  content: "";
+  content: "\e911";
   color: #0050a4;
 }
 
 .iot-device-key:before {
-  content: "";
+  content: "\e912";
 }
 
 .iot-email-log:before {
-  content: "";
+  content: "\e913";
 }
 
 .iot-Copy:before {
-  content: "";
+  content: "\e914";
 }
 
 .iot-company-info:before {
-  content: "";
+  content: "\e915";
 }
 
 .iot-device-status:before {
-  content: "";
+  content: "\e916";
 }
 
 .iot-fact-list:before {
-  content: "";
+  content: "\e917";
 }
 
 .iot-simulator-configuration:before {
-  content: "";
+  content: "\e918";
 }
 
 .iot-subscription:before {
-  content: "";
+  content: "\e919";
 }
 
 .row {
@@ -9920,11 +9920,11 @@ h3 {
   }
 }
 .btn.btn-primary {
-  background-color: #00B9B6;
+  background-color: #206bb2;
   color: #FFFFFF;
 }
 .btn.btn-primary:hover {
-  background-color: #206bb2;
+  background-color: #00B9B6;
   color: #FFFFFF;
 }
 .btn.btn-secondary {
@@ -10277,7 +10277,7 @@ select.custom-select:focus {
   background: transparent;
 }
 .custom-checkbox > span:after {
-  content: "";
+  content: "\f00c";
   font-family: "Line Awesome Free";
   font-weight: 900;
   font-size: 34px;
@@ -10676,6 +10676,11 @@ select.custom-select:focus {
 .aside-navigation .navbar ul li > a .menu-icon i {
   color: #000000;
   font-size: 22px;
+  display: block;
+  width: 22px;
+  height: 22px;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 .aside-navigation .navbar ul li > a .menu-icon i svg {
   display: block;
@@ -10870,7 +10875,7 @@ select.custom-select:focus {
     display: block;
   }
   .sidebar-open .aside-navigation .navigation-bottom .la-angle-double-left:before {
-    content: "";
+    content: "\f101";
   }
   .sidebar-open .aside-navigation .navigation-bottom .powered-by {
     display: none;
@@ -11868,6 +11873,9 @@ button:focus {
 .shadow-sm {
   box-shadow: 0px 4px 13px rgba(0, 80, 164, 0.15) !important;
 }
+.shadow-sm:hover {
+  box-shadow: 0px 4px 13px rgba(0, 185, 182, 0.25) !important;
+}
 
 .rounded-lg {
   border-radius: 12px !important;
@@ -12526,7 +12534,7 @@ a.bg9:hover {
   border-radius: 3px;
 }
 .common-datatable .table-checkbox span:before {
-  content: "";
+  content: "\f00c";
   font-family: "Line Awesome Free";
   position: absolute;
   left: 1px;
@@ -12763,6 +12771,13 @@ a.bg9:hover {
   opacity: 1;
   visibility: visible;
 }
+.common-table.dataTable tbody tr.edit-active td {
+  background: #f2f5fa;
+}
+.common-table.dataTable tbody tr.edit-active td .item-icon-title-cell .item-menu {
+  opacity: 1;
+  visibility: visible;
+}
 .common-table .td {
   width: 15px;
 }
@@ -12799,6 +12814,16 @@ a.bg9:hover {
   .site-page .col-md-4 {
     width: 100%;
   }
+}
+.site-page .project-overview-card {
+  position: relative;
+  padding-bottom: 81px;
+}
+.site-page .project-overview-card .overview-card-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 .company-statistic-page .col-md-8 .col-md-3 {
@@ -12846,6 +12871,10 @@ a.bg9:hover {
   .project-overview-card {
     margin-bottom: 20px;
   }
+}
+.project-overview-card__inactive {
+  opacity: 0.5;
+  pointer-events: none;
 }
 .project-overview-card .overview-card-content {
   padding: 34px 90px 34px 24px;
@@ -13656,7 +13685,7 @@ a.bg9:hover {
   background: #E2E6ED;
 }
 .wizard-block .wizard-left .nav-tabs li a.updated:before {
-  content: "";
+  content: "\f00c";
   font-family: "Line Awesome Free";
   font-weight: 900;
   font-size: 20px;
@@ -14273,7 +14302,7 @@ a.bg9:hover {
   height: 2% !important;
 }
 .monitorsdetail-row .tab-content .tab-pane .industrial.tank.size.two .tick .scale {
-  font-size: calc(6pt * 2);
+  font-size: 12pt;
   font-weight: 600;
 }
 .monitorsdetail-row .tab-content .tab-pane .industrial.tank {
@@ -14283,8 +14312,8 @@ a.bg9:hover {
   top: -238%;
 }
 .monitorsdetail-row .tab-content .tab-pane .industrial.thermometer {
-  height: calc(100px * 2);
-  width: calc(15px * 2.5);
+  height: 200px;
+  width: 37.5px;
 }
 .monitorsdetail-row .tab-content .tab-pane .industrial.thermometer .tick {
   height: 2% !important;
@@ -14305,7 +14334,7 @@ a.bg9:hover {
 }
 .monitorsdetail-row .tab-content .tab-pane .industrial.readout > .meter {
   text-align: center;
-  font-size: calc(48pt * 2);
+  font-size: 96pt;
   color: #0050A4 !important;
 }
 .monitorsdetail-row .tab-content .tab-pane .industrial.readout > .meter > .digit {
@@ -14317,7 +14346,7 @@ a.bg9:hover {
   background: -webkit-linear-gradient(top, #000000 17%, rgba(0, 0, 0, 0) 17%);
 }
 .monitorsdetail-row .tab-content .tab-pane .industrial.gauge .ticks > .tick > .scale {
-  font-size: calc(6pt * 2);
+  font-size: 12pt;
   font-weight: 600;
   top: 18%;
   margin-left: -5px;
@@ -15979,6 +16008,13 @@ button.slick-next.slick-arrow {
 .modal-view__col {
   padding-bottom: 35px;
 }
+.modal-view__col div {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  height: 24px;
+  width: 100%;
+}
 
 .tooltip-view__popup {
   position: fixed;
@@ -16050,7 +16086,122 @@ button.slick-next.slick-arrow {
   transition: all 0.3s ease-in-out;
 }
 .grid-stack-item-content:hover {
-  box-shadow: 0px 4px 13px rgba(0, 80, 164, 0.5) !important;
+  box-shadow: 0px 4px 35px rgba(0, 80, 164, 0.5) !important;
+}
+
+.forgot-password {
+  display: flex;
+  justify-content: space-between;
+}
+.forgot-password__tips {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+.forgot-password__tips i {
+  font-size: 22px;
+  font-size: 1.375rem;
+  line-height: 1;
+  display: flex;
+  justify-content: flex-end;
+  color: #4D4D4D;
+}
+.forgot-password__tips:hover .forgot-password__tips-detail {
+  display: block;
+}
+.forgot-password__tips-detail {
+  display: none;
+  position: absolute;
+  right: 0;
+  width: 410px;
+  padding: 10px;
+  top: 32px;
+  background-color: #FFFFFF;
+  border: solid 1px #CCCCCC;
+  border-radius: 4px;
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1.1666666667;
+}
+.forgot-password__tips-detail::before {
+  content: " ";
+  position: absolute;
+  right: 3px;
+  top: -8px;
+  border: solid 0 #ccc;
+  border-width: 1px 0 0 1px;
+  width: 14px;
+  height: 14px;
+  transform: rotate(45deg);
+  background: #fff;
+  content: "";
+}
+.forgot-password__tips-detail ul {
+  padding-left: 15px;
+  list-style: disc;
+}
+
+.asteriskField {
+  color: #D94B7E;
+}
+
+/* Ripple effect */
+.ripple {
+  background-position: center;
+  transition: background 0.8s;
+}
+
+.ripple:hover {
+  background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+}
+
+.ripple:active {
+  background-color: #6eb9f7;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.iot-dashboard-ico {
+  background: url(images/dashboard-ico.svg);
+}
+.iot-company-management-ico {
+  background: url(images/company-management-ico.svg);
+}
+.iot-configurations-ico {
+  background: url(images/configurations-ico.svg);
+}
+.iot-pie-chart-ico {
+  background: url(images/pie-chart-ico.svg);
+}
+.iot-asset-configuration-ico {
+  background: url(images/asset-configuration-ico.svg);
+}
+.iot-template-master-ico {
+  background: url(images/template-master-ico.svg);
+}
+.iot-user-management-ico {
+  background: url(images/user-management-ico.svg);
+}
+.iot-rule-engine-ico {
+  background: url(images/rule-engine-ico.svg);
+}
+.iot-fact-list-ico {
+  background: url(images/fact-list-ico.svg);
+}
+.iot-smtp-config-ico {
+  background: url(images/smtp-config-ico.svg);
+}
+.iot-simulator-config-ico {
+  background: url(images/simulator-config-ico.svg);
+}
+.iot-company-server-ico {
+  background: url(images/company-server-ico.svg);
+}
+.iot-downloads-ico {
+  background: url(images/downloads-ico.svg);
 }
 
 /*# sourceMappingURL=style.css.map */

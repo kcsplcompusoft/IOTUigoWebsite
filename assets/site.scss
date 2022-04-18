@@ -22,7 +22,12 @@ a:focus {outline: none;}
 ol, ul {list-style: none; margin:0px;}
 img{max-width:100%;}
 button:focus{outline:none;}
-.shadow-sm{box-shadow: 0px 4px 13px rgba(0, 80, 164, 0.15) !important;}
+.shadow-sm{
+	box-shadow: 0px 4px 13px rgba(0, 80, 164, 0.15) !important;
+	&:hover{
+		box-shadow: 0px 4px 13px rgba(0, 185, 182, 0.25) !important;
+	}
+}
 .rounded-lg{border-radius: 12px !important;} 
 .rounded-sm{border-radius: 8px !important;}
 .rounded-md{border-radius:4px !important;}
@@ -459,6 +464,14 @@ a.bg9:hover{background:#0b9492;}
 						}
 					}
 				}
+				&.edit-active{
+					td{
+						background:$color-lightBlue;
+						.item-icon-title-cell{
+							.item-menu{opacity:1; visibility:visible;}
+						}
+					}
+				}
 			}
 			
 		}
@@ -498,6 +511,16 @@ a.bg9:hover{background:#0b9492;}
 	@include phonewide{
 		.col-md-4{width:100%;}
 	}
+	.project-overview-card{
+		position: relative;
+		padding-bottom:81px;
+		.overview-card-bottom{
+			position: absolute;
+			bottom:0;
+			left:0;
+			width:100%;
+		}
+	}
 }
 .company-statistic-page{
 	.col-md-8{
@@ -524,6 +547,10 @@ a.bg9:hover{background:#0b9492;}
 	margin-bottom:30px; width:100%;
 	@include desktop{
 		margin-bottom:20px;
+	}
+	&__inactive{
+		opacity: 0.5;
+		pointer-events: none;
 	}
 	.overview-card-content{
 		padding:34px 90px 34px 24px; position:relative; min-height: 190px;
@@ -2511,6 +2538,13 @@ button.slick-next.slick-arrow {
 	}
 	&__col{
 		padding-bottom:35px;
+		div{
+			text-overflow: ellipsis;
+			white-space: nowrap;
+  			overflow: hidden;
+			height:24px;
+			width:100%;
+		}
 	}
 }
 .tooltip-view{
@@ -2584,8 +2618,121 @@ button.slick-next.slick-arrow {
 .grid-stack-item-content {
 	transition: all 0.3s ease-in-out;
 	&:hover {
-		box-shadow: 0px 4px 13px rgb(0 80 164 / 50%) !important;
+		box-shadow: 0px 4px 35px rgb(0 80 164 / 50%) !important;
 	}
 }
 
+.forgot-password{
+	display: flex;
+	justify-content: space-between;
+	&__tips{
+		width:22px;
+		height:22px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		position: relative;
+		i{
+			@include fontrem(22px, 22px);
+			display: flex;
+			justify-content: flex-end;
+			color: $color-darkGrey;
+		}
+		&:hover{
+			.forgot-password__tips-detail{
+				display: block;
+			}
+		}
+	}
+	&__tips-detail{
+		display: none;
+		position: absolute;
+		right:0;
+		width:410px;
+		padding:10px;
+		top:32px;
+		background-color:$color-white;
+		border:solid 1px $color-lightGrey;
+		border-radius: 4px;
+		@include fontrem(12px, 14px);
+		&::before{
+			content:" ";
+			position: absolute;
+			right: 3px; 
+			top: -8px;
+			border: solid 0 #ccc;
+			border-width: 1px 0 0 1px;
+			width: 14px;
+			height: 14px;
+			transform: rotate(45deg);
+			background: #fff;
+			content: '';
+		}
+		ul{
+			padding-left:15px;
+			list-style: disc;
+		}
+	}
+}
+.asteriskField{
+	color: $color-error;
+}
+
+/* Ripple effect */
+.ripple {
+	background-position: center;
+	transition: background 0.8s;
+  }
+  .ripple:hover {
+	background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+  }
+  .ripple:active {
+	background-color: #6eb9f7;
+	background-size: 100%;
+	transition: background 0s;
+  }
+
+.iot{
+	&-dashboard-ico{
+		background: url(images/dashboard-ico.svg);
+	}
+	&-company-management-ico{
+		background: url(images/company-management-ico.svg);
+	}
+	&-configurations-ico{
+		background: url(images/configurations-ico.svg);
+	}
+	&-pie-chart-ico{
+		background: url(images/pie-chart-ico.svg);
+	}
+	&-asset-configuration-ico{
+		background: url(images/asset-configuration-ico.svg);
+	}
+	&-template-master-ico{
+		background: url(images/template-master-ico.svg);
+	}
+	&-user-management-ico{
+		background: url(images/user-management-ico.svg);
+	}
+	&-rule-engine-ico{
+		background: url(images/rule-engine-ico.svg);
+	}
+	&-fact-list-ico{
+		background: url(images/fact-list-ico.svg);
+	}
+	&-smtp-config-ico{
+		background: url(images/smtp-config-ico.svg);
+	}
+	&-simulator-config-ico{
+		background: url(images/simulator-config-ico.svg);
+	}
+	&-company-server-ico{
+		background: url(images/company-server-ico.svg);
+	}
+	&-downloads-ico{
+		background: url(images/downloads-ico.svg);
+	}
+	
+}
+  
 // KCS CSS END
