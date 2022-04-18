@@ -12763,6 +12763,13 @@ a.bg9:hover {
   opacity: 1;
   visibility: visible;
 }
+.common-table.dataTable tbody tr.edit-active td {
+  background: #f2f5fa;
+}
+.common-table.dataTable tbody tr.edit-active td .item-icon-title-cell .item-menu {
+  opacity: 1;
+  visibility: visible;
+}
 .common-table .td {
   width: 15px;
 }
@@ -12799,6 +12806,16 @@ a.bg9:hover {
   .site-page .col-md-4 {
     width: 100%;
   }
+}
+.site-page .project-overview-card {
+  position: relative;
+  padding-bottom: 81px;
+}
+.site-page .project-overview-card .overview-card-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 .company-statistic-page .col-md-8 .col-md-3 {
@@ -12846,6 +12863,10 @@ a.bg9:hover {
   .project-overview-card {
     margin-bottom: 20px;
   }
+}
+.project-overview-card__inactive {
+  opacity: 0.5;
+  pointer-events: none;
 }
 .project-overview-card .overview-card-content {
   padding: 34px 90px 34px 24px;
@@ -16080,15 +16101,32 @@ button.slick-next.slick-arrow {
   display: none;
   position: absolute;
   right: 0;
-  width: 350px;
+  width: 410px;
   padding: 10px;
-  top: 22px;
+  top: 32px;
   background-color: #FFFFFF;
   border: solid 1px #CCCCCC;
   border-radius: 4px;
   font-size: 12px;
   font-size: 0.75rem;
   line-height: 1.1666666667;
+}
+.forgot-password__tips-detail::before {
+  content: " ";
+  position: absolute;
+  right: 3px;
+  top: -8px;
+  border: solid 0 #ccc;
+  border-width: 1px 0 0 1px;
+  width: 14px;
+  height: 14px;
+  transform: rotate(45deg);
+  background: #fff;
+  content: "";
+}
+.forgot-password__tips-detail ul {
+  padding-left: 15px;
+  list-style: disc;
 }
 
 .asteriskField {
