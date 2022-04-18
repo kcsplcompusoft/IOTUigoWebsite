@@ -22,7 +22,12 @@ a:focus {outline: none;}
 ol, ul {list-style: none; margin:0px;}
 img{max-width:100%;}
 button:focus{outline:none;}
-.shadow-sm{box-shadow: 0px 4px 13px rgba(0, 80, 164, 0.15) !important;}
+.shadow-sm{
+	box-shadow: 0px 4px 13px rgba(0, 80, 164, 0.15) !important;
+	&:hover{
+		box-shadow: 0px 4px 13px rgba(0, 185, 182, 0.25) !important;
+	}
+}
 .rounded-lg{border-radius: 12px !important;} 
 .rounded-sm{border-radius: 8px !important;}
 .rounded-md{border-radius:4px !important;}
@@ -2533,6 +2538,13 @@ button.slick-next.slick-arrow {
 	}
 	&__col{
 		padding-bottom:35px;
+		div{
+			text-overflow: ellipsis;
+			white-space: nowrap;
+  			overflow: hidden;
+			height:24px;
+			width:100%;
+		}
 	}
 }
 .tooltip-view{
@@ -2666,4 +2678,61 @@ button.slick-next.slick-arrow {
 	color: $color-error;
 }
 
+/* Ripple effect */
+.ripple {
+	background-position: center;
+	transition: background 0.8s;
+  }
+  .ripple:hover {
+	background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+  }
+  .ripple:active {
+	background-color: #6eb9f7;
+	background-size: 100%;
+	transition: background 0s;
+  }
+
+.iot{
+	&-dashboard-ico{
+		background: url(images/dashboard-ico.svg);
+	}
+	&-company-management-ico{
+		background: url(images/company-management-ico.svg);
+	}
+	&-configurations-ico{
+		background: url(images/configurations-ico.svg);
+	}
+	&-pie-chart-ico{
+		background: url(images/pie-chart-ico.svg);
+	}
+	&-asset-configuration-ico{
+		background: url(images/asset-configuration-ico.svg);
+	}
+	&-template-master-ico{
+		background: url(images/template-master-ico.svg);
+	}
+	&-user-management-ico{
+		background: url(images/user-management-ico.svg);
+	}
+	&-rule-engine-ico{
+		background: url(images/rule-engine-ico.svg);
+	}
+	&-fact-list-ico{
+		background: url(images/fact-list-ico.svg);
+	}
+	&-smtp-config-ico{
+		background: url(images/smtp-config-ico.svg);
+	}
+	&-simulator-config-ico{
+		background: url(images/simulator-config-ico.svg);
+	}
+	&-company-server-ico{
+		background: url(images/company-server-ico.svg);
+	}
+	&-downloads-ico{
+		background: url(images/downloads-ico.svg);
+	}
+	
+}
+  
 // KCS CSS END

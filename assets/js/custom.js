@@ -44,4 +44,6 @@ $(document).ready(function(){
 		  $("#noFile").text(filename.replace("C:\\fakepath\\", "")); 
 		}
 	  });
+
+	/* Button ripple effect */
 });
