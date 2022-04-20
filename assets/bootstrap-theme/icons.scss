@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'iot';
-  src:  url('bootstrap-theme/fonts/iot.eot?ghnyee');
-  src:  url('bootstrap-theme/fonts/iot.eot?ghnyee#iefix') format('embedded-opentype'),
-    url('bootstrap-theme/fonts/iot.ttf?ghnyee') format('truetype'),
-    url('bootstrap-theme/fonts/iot.woff?ghnyee') format('woff'),
-    url('bootstrap-theme/fonts/iot.svg?ghnyee#iot') format('svg');
+  src:  url('bootstrap-theme/fonts/iot.eot?ttgubx');
+  src:  url('bootstrap-theme/fonts/iot.eot?ttgubx#iefix') format('embedded-opentype'),
+    url('bootstrap-theme/fonts/iot.ttf?ttgubx') format('truetype'),
+    url('bootstrap-theme/fonts/iot.woff?ttgubx') format('woff'),
+    url('bootstrap-theme/fonts/iot.svg?ttgubx#iot') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -110,4 +110,10 @@
 }
 .iot-success-ico:before {
   content: "\e91b";
+}
+.iot-manage-roles:before {
+  content: "\e91c";
+}
+.iot-inactive-small:before {
+  content: "\e91d";
 }

@@ -2585,15 +2585,14 @@ button.slick-next.slick-arrow {
 			}
 		}
 		h4{
-			padding:0 0 20px;
 			font-weight: 700;
-			border-bottom: 1px solid #D7E0EF;
 			display: flex;
 			align-items: center;
+			margin:0;
 			i{
-				margin-right:20px;
 				color: #00B9B6;
 			}
+
 		}
 		.modal-view__row{
 			padding-top:20px;
@@ -2601,6 +2600,34 @@ button.slick-next.slick-arrow {
 		}
 		.modal-view__col{
 			padding-bottom:30px;
+		}
+	}
+	&__title{
+		margin-left:20px;
+	}
+	&__popup-head{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 1px solid #D7E0EF;
+		padding-bottom: 20px;
+	}
+	&__company-img{
+		display: flex;
+		align-items: center;
+		max-height:90%;
+		overflow: hidden;
+		img{
+			max-height:100%;
+		}
+	}
+	&__user-img{
+		width:58px;
+		height:58px;
+		border-radius: 100%;
+		overflow: hidden;
+		img{
+			width:100%;
 		}
 	}
 }
