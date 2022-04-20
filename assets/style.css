@@ -12214,11 +12214,14 @@ a.bg9:hover {
   }
 }
 
-.title-head {
-  padding-bottom: 20px;
-}
 .title-head p {
   padding: 8px 0 0;
+}
+.title-head h6 {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 25px;
+  font-size: 1.5625rem;
+  line-height: 1.2;
 }
 @media (max-width: 1440px) {
   .title-head {
@@ -16276,6 +16279,12 @@ button.slick-next.slick-arrow {
 .iot-downloads-ico {
   background: url(images/downloads-ico.svg);
 }
+.iot-subscription-ico {
+  background: url(images/subscription.svg);
+}
+.iot-company-info-ico {
+  background: url(images/company-info.svg);
+}
 
 /* Toast */
 .toast {
@@ -16291,8 +16300,9 @@ button.slick-next.slick-arrow {
   backdrop-filter: blur(10px);
   opacity: 0;
   position: fixed;
-  right: 20px;
-  bottom: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 9;
 }
 .toast.bg-success {
