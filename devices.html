@@ -179,6 +179,8 @@
                                     <ul class="dropdown-menu">
                                         <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
                                         <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                        <li><a href="#"><i class="iot-inactive-small"></i>Inactive</a></li>
+                                        <li><a href="#"><i class="iot-manage-roles"></i>Manage Users</a></li>
                                         <li id="tooltip-view" class="tooltip-view">
                                             <a href="#" data-toggle="modal" data-target="#processview"><i class="iot-view" ></i>View</a>
                                         </li>
@@ -366,10 +368,23 @@
     </div>
 </div>
 <!-- Right slide popup S -->
-<div id="tooltip-view__popup" class="tooltip-view__popup" style="right:0;">
+<div id="tooltip-view__popup" class="tooltip-view__popup">
     <div class="tooltip-view__popup-wrap">
         <button type="button" class="close tooltip-view__popup-close" data-dismiss="modal" aria-label="Close"><i class="las la-times"></i></button>
-        <h4><i class="iot-view"></i>Company Details View</h4>
+        <div class="tooltip-view__popup-head">
+            <h4>
+                <div class="tooltip-view__user-img">
+                    <img src="assets/images/user-default-ico.svg" />
+                </div>
+                <!-- <div class="tooltip-view__company-img">
+                    <img src="assets/images/company-default-ico.svg" />
+                </div> -->
+                <div class="tooltip-view__title">Company Details View</div>
+            </h4>
+            <div class="tooltip-view__company-img">
+                <img src="assets/images/mitsubishi.png" />
+            </div>
+        </div>
         <div class="modal-view__row row">
             <div class="modal-view__col col-6 col-sm-6 col-md-4">
                 <h5 class="modal-view__title">Device Id:</h5>
