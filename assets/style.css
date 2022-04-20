@@ -9690,8 +9690,8 @@ h3 {
 }
 @font-face {
   font-family: "iot";
-  src: url("bootstrap-theme/fonts/iot.eot?arzjnu");
-  src: url("bootstrap-theme/fonts/iot.eot?arzjnu#iefix") format("embedded-opentype"), url("bootstrap-theme/fonts/iot.ttf?arzjnu") format("truetype"), url("bootstrap-theme/fonts/iot.woff?arzjnu") format("woff"), url("bootstrap-theme/fonts/iot.svg?arzjnu#iot") format("svg");
+  src: url("bootstrap-theme/fonts/iot.eot?ghnyee");
+  src: url("bootstrap-theme/fonts/iot.eot?ghnyee#iefix") format("embedded-opentype"), url("bootstrap-theme/fonts/iot.ttf?ghnyee") format("truetype"), url("bootstrap-theme/fonts/iot.woff?ghnyee") format("woff"), url("bootstrap-theme/fonts/iot.svg?ghnyee#iot") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -9814,6 +9814,14 @@ h3 {
 
 .iot-subscription:before {
   content: "\e919";
+}
+
+.iot-fail-ico:before {
+  content: "\e91a";
+}
+
+.iot-success-ico:before {
+  content: "\e91b";
 }
 
 .row {
@@ -11872,9 +11880,10 @@ button:focus {
 
 .shadow-sm {
   box-shadow: 0px 4px 13px rgba(0, 80, 164, 0.15) !important;
+  border: solid 2px #fff;
 }
 .shadow-sm:hover {
-  box-shadow: 0px 4px 13px rgba(0, 185, 182, 0.25) !important;
+  border: solid 2px #0050A4;
 }
 
 .rounded-lg {
@@ -12617,7 +12626,8 @@ a.bg9:hover {
   border-bottom: none;
 }
 .common-table.dataTable thead tr td {
-  background-color: #E2E6ED;
+  background-color: #004286;
+  color: #FFFFFF;
   white-space: nowrap;
   padding: 15px 25px;
   font-size: 18px;
@@ -12625,7 +12635,7 @@ a.bg9:hover {
   line-height: 1.3333333333;
   font-weight: 700;
   border: none;
-  border-bottom: 2px solid #91A1BC;
+  border-bottom: 2px solid #00B9B6;
 }
 @media (max-width: 1440px) {
   .common-table.dataTable thead tr td {
@@ -12709,6 +12719,7 @@ a.bg9:hover {
   font-size: 20px;
   font-size: 1.25rem;
   margin-right: 10px;
+  color: #00B9B6;
 }
 @media (max-width: 1440px) {
   .common-table.dataTable tbody tr td .item-icon-title-cell .item-menu .dropdown-menu li a {
@@ -16167,6 +16178,9 @@ button.slick-next.slick-arrow {
 .iot-dashboard-ico {
   background: url(images/dashboard-ico.svg);
 }
+.iot-masters-ico {
+  background: url(images/masters-ico.svg);
+}
 .iot-company-management-ico {
   background: url(images/company-management-ico.svg);
 }
@@ -16202,6 +16216,77 @@ button.slick-next.slick-arrow {
 }
 .iot-downloads-ico {
   background: url(images/downloads-ico.svg);
+}
+
+/* Toast */
+.toast {
+  max-width: 500px;
+  overflow: hidden;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: #333;
+  background: #CBF3DB;
+  background-clip: padding-box;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 9;
+}
+.toast.bg-success {
+  background: #CBF3DB !important;
+  border: 1px solid #00B74A;
+}
+.toast.showing {
+  opacity: 1;
+}
+.toast.show {
+  display: block;
+  opacity: 1;
+}
+.toast.hide {
+  display: none;
+}
+.toast .toast-header {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  color: #333;
+  background-clip: padding-box;
+  border-bottom: none;
+  padding: 0;
+}
+.toast .toast-header strong {
+  display: flex;
+  align-items: center;
+}
+.toast .toast-header i {
+  color: #00B74A;
+}
+.toast .toast-header button.close {
+  color: #000;
+  opacity: 0.7;
+}
+.toast.bg-failure {
+  background: #FFEBE6 !important;
+  border: 1px solid #EEBBAF;
+}
+.toast.bg-failure .toast-header i {
+  color: #d42747;
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1.1666666667;
+}
+.toast .toast-body {
+  padding: 0;
+  color: #333;
+  margin-top: 8px;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.2857142857;
 }
 
 /*# sourceMappingURL=style.css.map */

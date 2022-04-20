@@ -12,6 +12,33 @@
 </head>
 
 <body>
+    <div class="toast notification bg-success fade show" role="alert" aria-live="assertive" aria-atomic="true" data-delay="500000" style="display: block;">
+        <div class="toast-header">
+            <strong class="mr-auto">
+                <i class="iot-success-ico mr-2" aria-hidden="true"></i>
+                Success
+            </strong>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+        </div>
+        <div class="toast-body">
+            Record saved successfull by user: Mr.Abc
+        </div>
+    </div>
+    <!-- <div class="toast notification bg-failure fade show" role="alert" aria-live="assertive" aria-atomic="true" data-delay="500000" style="display: none;">
+        <div class="toast-header">
+            <stron g class="mr-auto">
+                <i class="iot-fail-ico mr-2" aria-hidden="true"></i>Failed to upload file
+            </strong>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+        </div>
+        <div class="toast-body">
+            Fail to save record. Fail to save file.
+        </div>
+    </div> -->
 <div class="header">
     <button type="button" class="menu-toggle"><i class="las la-bars"></i></button>
     <div class="logo">
@@ -72,18 +99,20 @@
         <div class="navbar">
             <ul>
                 <li><a href="dashboard.html" class="active"><span class="menu-icon" ><i class="iot-dashboard-ico" ></i></span><span class="menu-text" >Dashboard</span></a> </li>
-                <li><a href=""><span class="menu-icon" ><i class="iot-dashboard-ico" ></i></span><span class="menu-text">Dashboard</span></a> </li>
+                <li><a href="" ><span class="menu-icon" ><i class="iot-masters-ico" ></i></span><span class="menu-text">Masters</span></a> </li>
                 <li><a href="" ><span class="menu-icon" ><i class="iot-company-management-ico" ></i></span><span class="menu-text" >Company Management</span></a> </li>
-                <li><a href="" ><span class="menu-icon" ><i class="iot-configurations-ico" ></i></span><span class="menu-text" >Configurations</span></a> </li>
-                <li><a href="" ><span class="menu-icon" ><i class="iot-pie-chart-ico" ></i></span><span class="menu-text" >Pie Chart</span></a> </li>
-                <li><a href="" ><span class="menu-icon" ><i class="iot-pie-chart-ico" ></i></span><span class="menu-text" >Pie Chart</span></a> </li>
-                <li><a href="" ><span class="menu-icon" ><i class="iot-pie-chart-ico" ></i></span><span class="menu-text" >Pie Chart</span></a> </li>
-                <li><a href="" ><span class="menu-icon" ><i class="iot-pie-chart-ico" ></i></span><span class="menu-text" >Pie Chart</span></a> </li>
-                <li><a href="" ><span class="menu-icon" ><i class="iot-pie-chart-ico" ></i></span><span class="menu-text" >Pie Chart</span></a> </li>
-                <li><a href="" ><span class="menu-icon" ><i class="iot-pie-chart-ico" ></i></span><span class="menu-text" >Pie Chart</span></a> </li>
-                <li><a href="" ><span class="menu-icon" ><i class="iot-pie-chart-ico" ></i></span><span class="menu-text" >Pie Chart</span></a> </li>
+                <li><a href="" ><span class="menu-icon" ><i class="iot-asset-configuration-ico" ></i></span><span class="menu-text" >Asset Configurations</span></a> </li>
+                <li><a href="" ><span class="menu-icon" ><i class="iot-template-master-ico" ></i></span><span class="menu-text" >Template Master</span></a> </li>
+                <li><a href="" ><span class="menu-icon" ><i class="iot-user-management-ico" ></i></span><span class="menu-text" >User Management</span></a> </li>
+                <li><a href="" ><span class="menu-icon" ><i class="iot-rule-engine-ico" ></i></span><span class="menu-text" >Rule Engine</span></a> </li>
+                <li><a href="" ><span class="menu-icon" ><i class="iot-fact-list-ico" ></i></span><span class="menu-text" >Fact List</span></a> </li>
+                <li><a href="" ><span class="menu-icon" ><i class="iot-pie-chart-ico" ></i></span><span class="menu-text" >Staticstics</span></a> </li>
+                <li><a href="" ><span class="menu-icon" ><i class="iot-smtp-config-ico" ></i></span><span class="menu-text" >Email SMTP Configuration</span></a> </li>
+                <li><a href="" ><span class="menu-icon" ><i class="iot-simulator-config-ico" ></i></span><span class="menu-text" >Simulator Configuration</span></a> </li>
+                <li><a href="" ><span class="menu-icon" ><i class="iot-company-server-ico" ></i></span><span class="menu-text" >Company Server</span></a> </li>
+                <li><a href="" ><span class="menu-icon" ><i class="iot-downloads-ico" ></i></span><span class="menu-text" >Downloads</span></a> </li>
             </ul>
-            {# <ul>
+            <!-- <ul>
                 <li><a href="dashboard.html" class="active"  ><span class="menu-icon" ><i class="iot-dashboard-ico" ></i></span><span class="menu-text" >Dashboard</span></a> </li>
                 <li><a href="devices.html" ><span class="menu-icon" ><i class="iot-wifi" ></i></span><span class="menu-text" >Devices</span></a> </li>
                 <li><a href="device-deployment.html"><span class="menu-icon" ><i class="iot-startup" ></i></span><span class="menu-text" >Device Deployment</span></a> </li>
@@ -120,7 +149,7 @@
                     </ul>
                  </li>
                 <li><a href="#"><span class="menu-icon" ><i class="iot-reports" ></i></span><span class="menu-text" >Reports</span></a> </li>
-            </ul> #}
+            </ul> -->
         </div>
         <div class="navigation-bottom">
             <div class="powered-by text-center">
