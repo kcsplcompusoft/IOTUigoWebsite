@@ -158,13 +158,10 @@ var __hasProp = {}.hasOwnProperty,
     __extends(TankController, _super);
 
     function TankController(element, options) {
-      var $ticks, dist, generateScales, generateTicks, i, inc, scaleFrequency, tickAmt, tickHeight, ticks, _i, _j, _ref, _ref1, _ref2, _ref3, scaleHi, scaleLow;
+      var $ticks, dist, generateScales, generateTicks, i, inc, scaleFrequency, tickAmt, tickHeight, ticks, _i, _j, _ref, _ref1, _ref2, _ref3;
       TankController.__super__.constructor.apply(this, arguments);
       this.tick_height = this.options.tick_height;
       $ticks = this.$element.children(".ticks");
-      scaleHi = $ticks.data('hi');
-      scaleLow = $ticks.data('low');
-      //console.log(scaleLow, scaleHi);
       if ($ticks.length <= 0) {
         return;
       }
@@ -203,7 +200,7 @@ var __hasProp = {}.hasOwnProperty,
       dist = this.calcDist(ticks.length, tickHeight);
       ticks.css("margin-bottom", dist + "%");
       if (generateScales) {
-        inc = (scaleHi -scaleLow) / (tickAmt - 1);
+        inc = (this.scale_hi - this.scale_low) / (tickAmt - 1);
         for (i = _j = 0; 0 <= tickAmt ? _j <= tickAmt : _j >= tickAmt; i = _j += scaleFrequency) {
           $(ticks[i]).append('<span class="scale">' + Math.floor((tickAmt - i - 1) * inc) + '</span>');
         }
@@ -211,13 +208,9 @@ var __hasProp = {}.hasOwnProperty,
     }
 
     TankController.prototype.setValue = function(val) {
-      var adjusted,scaleHi, scaleLow;
-      $ticks = this.$element.children(".ticks");
-      scaleHi = $ticks.data('hi');
-      scaleLow = $ticks.data('low');
-      //console.log(scaleLow, scaleHi);
+      var adjusted;
       TankController.__super__.setValue.apply(this, arguments);
-      adjusted = 100 - (val / (scaleHi - scaleLow)) * 100;
+      adjusted = 100 - (val / (this.scale_hi - this.scale_low)) * 100;
       return this.$element.children(".space").css("height", adjusted + "%");
     };
 
