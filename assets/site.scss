@@ -27,7 +27,7 @@ button:focus{outline:none;}
 	border:solid 2px #fff;
 	&:hover{
 		// box-shadow: 0px 4px 13px rgba(0, 185, 182, 0.25) !important;
-		border:solid 2px #0050A4;
+		// border:solid 2px #0050A4;
 	}
 }
 .rounded-lg{border-radius: 12px !important;} 
@@ -107,7 +107,12 @@ a.bg9:hover{background:#0b9492;}
 .content-wrapper{
 	display:flex; flex-grow:1; flex-direction:row;
 	.content-block{width:calc(100% - 295px); height:calc(100vh - 91px); overflow:auto; margin-top:5px;}
-	.work-space{padding:30px 30px;}
+	.work-space{
+		padding:30px 30px;
+		h5{
+			padding-bottom:30px;
+		}
+	}
 	@include desktop-big{
 		.work-space{padding:20px 25px;}
 	}
@@ -145,7 +150,6 @@ a.bg9:hover{background:#0b9492;}
 					padding:5px 30px 6px 13px; font-size:12px;
 				}
 			}
-			
 		}
 		.dropdown-menu{
 			margin-top:-5px; border-radius:0 0 3px 3px; padding-top:4px;
@@ -160,9 +164,10 @@ a.bg9:hover{background:#0b9492;}
 	}
 }
 .title-head{
+	padding-bottom:30px;
 	p{padding:8px 0 0;}
 	h6{
-		color: rgba(0, 0, 0, 0.5);
+		color: rgba(0, 0, 0, 1);
 		@include fontrem(25px, 30px);
 	}
 	@include desktop{
@@ -355,7 +360,7 @@ a.bg9:hover{background:#0b9492;}
 			}
 		}
 	}
-	.dataTables_wrapper.no-footer .dataTables_scrollBody{border-bottom:none; min-height: 300px;}
+	.dataTables_wrapper.no-footer .dataTables_scrollBody{border-bottom:none; min-height:100px;}
 	.dataTables_filter{margin-left:20px; padding-top:8px; margin-bottom:8px; float:none; text-align:left;}
 	&.filter-search-minus{
 		.dataTables_filter{
@@ -393,7 +398,7 @@ a.bg9:hover{background:#0b9492;}
 			tr{
 				// height:auto !important;
 				td{
-					background-color:#004286; color: $color-white; white-space:nowrap; padding:15px 25px; @include fontrem(18px,24px); font-weight:700; border:none; border-bottom:2px solid $primary_color;
+					background-color:#004286; color: $color-white; white-space:nowrap; padding:12px 19px 10px; @include fontrem(15px,20px); font-weight:500; border:none; border-bottom:2px solid $primary_color;
 					@include desktop{
 						padding:11px 8px; padding-right: 20px !important; @include fontrem(16px,22px);
 					}
@@ -552,6 +557,7 @@ a.bg9:hover{background:#0b9492;}
 }
 .project-overview-card{
 	margin-bottom:30px; width:100%;
+	transition: all 0.3s;
 	@include desktop{
 		margin-bottom:20px;
 	}
@@ -621,6 +627,8 @@ a.bg9:hover{background:#0b9492;}
 		}
 	}
 	&:hover{
+		border:solid 2px #0050A4;
+		transition: all 0.3s;
 		.overview-card-bottom{
 			ul{
 				li{
@@ -838,8 +846,11 @@ a.bg9:hover{background:#0b9492;}
 				img{border-radius:8px; height:200px; object-fit:cover; width:100%;}
 			}
 		}
-		.col-lg-9{
-			flex:0 0 69%; max-width:69%; padding-top:15px; position:relative;
+		&__detail{
+			&.col-lg-9{
+				flex:0 0 69%; max-width:69%;
+			}
+			padding-top:15px; position:relative;
 			@include desktop-big{
 				padding-top:0px;
 			}
@@ -2867,14 +2878,5 @@ button.slick-next.slick-arrow {
 		@include fontrem(14px, 18px);
 	}
   }
-  
-#rolerights-table_wrapper{
-  	.dataTables_scrollHeadInner{
-		width:100% !important;
-		.dataTable{
-			width:100% !important;
-		}
-	}
-}
   
 // KCS CSS END
