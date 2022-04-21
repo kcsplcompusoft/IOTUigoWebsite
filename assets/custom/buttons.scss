@@ -31,10 +31,10 @@
 		}
 	}
 	&.btn-primary{
-		background-color:$secondary_color;
+		background-color:$primary_color;
 		color:$color-white;
 		&:hover{
-			background-color:$primary_color;
+			background-color:$secondary_color;
 			color:$color-white;
 		}
 	}
