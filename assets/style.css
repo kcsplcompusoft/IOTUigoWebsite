@@ -9690,8 +9690,8 @@ h3 {
 }
 @font-face {
   font-family: "iot";
-  src: url("bootstrap-theme/fonts/iot.eot?ttgubx");
-  src: url("bootstrap-theme/fonts/iot.eot?ttgubx#iefix") format("embedded-opentype"), url("bootstrap-theme/fonts/iot.ttf?ttgubx") format("truetype"), url("bootstrap-theme/fonts/iot.woff?ttgubx") format("woff"), url("bootstrap-theme/fonts/iot.svg?ttgubx#iot") format("svg");
+  src: url("bootstrap-theme/fonts/iot.eot?3aue9p");
+  src: url("bootstrap-theme/fonts/iot.eot?3aue9p#iefix") format("embedded-opentype"), url("bootstrap-theme/fonts/iot.ttf?3aue9p") format("truetype"), url("bootstrap-theme/fonts/iot.woff?3aue9p") format("woff"), url("bootstrap-theme/fonts/iot.svg?3aue9p#iot") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -9830,6 +9830,14 @@ h3 {
 
 .iot-inactive-small:before {
   content: "\e91d";
+}
+
+.iot-info:before {
+  content: "\e91e";
+}
+
+.iot-warning:before {
+  content: "\e91f";
 }
 
 .row {
@@ -16300,9 +16308,8 @@ button.slick-next.slick-arrow {
   backdrop-filter: blur(10px);
   opacity: 0;
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  right: 10px;
+  bottom: 10px;
   z-index: 9;
 }
 .toast.bg-success {
@@ -16348,6 +16355,26 @@ button.slick-next.slick-arrow {
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 1.1666666667;
+}
+.toast.bg-information {
+  background: #D1F3FF !important;
+  border: 1px solid #33B5E5;
+}
+.toast.bg-information .toast-header i {
+  color: #33B5E5;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.1111111111;
+}
+.toast.bg-warning {
+  background: #FFEBC2 !important;
+  border: 1px solid #FFBB33;
+}
+.toast.bg-warning .toast-header i {
+  color: #FFBB33;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.1111111111;
 }
 .toast .toast-body {
   padding: 0;

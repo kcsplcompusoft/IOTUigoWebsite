@@ -2789,9 +2789,8 @@ button.slick-next.slick-arrow {
 	backdrop-filter: blur(10px);
 	opacity: 0;
 	position: fixed;
-	top:50%;
-	left:50%;
-	transform: translate(-50%, -50%);
+	right:10px;
+	bottom:10px;
 	z-index:9;
 	&.bg-success{
 		background: #CBF3DB !important;
@@ -2836,6 +2835,26 @@ button.slick-next.slick-arrow {
 			i{
 				color: #d42747;
 				@include fontrem(24px, 28px);
+			}
+		}
+	}
+	&.bg-information{
+		background: #D1F3FF !important;
+		border: 1px solid #33B5E5;
+		.toast-header {
+			i{
+				color: #33B5E5;
+				@include fontrem(18px, 20px);
+			}
+		}
+	}
+	&.bg-warning{
+		background: #FFEBC2 !important;
+		border: 1px solid #FFBB33;
+		.toast-header {
+			i{
+				color: #FFBB33;
+				@include fontrem(18px, 20px);
 			}
 		}
 	}
