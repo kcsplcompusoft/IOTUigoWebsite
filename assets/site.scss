@@ -262,7 +262,7 @@ a.bg9:hover{background:#0b9492;}
 			}
 		}
 		.dropdown-menu{
-			box-shadow:0px 4px 13px rgba(0, 80, 164, 0.15); border:none; border-radius:3px; width: 100%; min-width: 100% !important;
+			box-shadow:0px 4px 13px rgba(0, 0, 0, 0.50); border:none; border-radius:3px; width: 100%; min-width: 100% !important;
 			.bs-searchbox{
 				.form-control{
 					border:1px solid $border-color; box-shadow:none !important;
@@ -2878,5 +2878,5 @@ button.slick-next.slick-arrow {
 		@include fontrem(14px, 18px);
 	}
   }
-  
+
 // KCS CSS END
