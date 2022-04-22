@@ -10089,6 +10089,7 @@ select.custom-select:focus {
 }
 .form-group input.form-control:focus {
   border-color: #0050A4;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
 .form-group select.custom-select {
   border: 1px solid #D7E0EF;
@@ -10692,11 +10693,18 @@ select.custom-select:focus {
 }
 .aside-navigation .navbar ul li {
   position: relative;
+  transition: all 0.3s;
+}
+.aside-navigation .navbar ul li:hover {
+  background: #DBE5F6;
+}
+.aside-navigation .navbar ul li:hover > a {
+  color: #0050A4;
 }
 .aside-navigation .navbar ul li > a {
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.5714285714;
   color: #000000;
   position: relative;
   transform: all 0.3s ease;
@@ -10720,7 +10728,7 @@ select.custom-select:focus {
   display: block;
   padding-right: 23px;
   padding-top: 3px;
-  width: 49px;
+  width: 36px;
 }
 .aside-navigation .navbar ul li > a .menu-icon i {
   color: #000000;
@@ -10745,9 +10753,6 @@ select.custom-select:focus {
   .aside-navigation .navbar ul li > a .menu-icon svg {
     width: 20px;
   }
-}
-.aside-navigation .navbar ul li > a:hover {
-  background: #E2E9F5;
 }
 .aside-navigation .navbar ul li > a.active {
   color: #0050A4;
@@ -10793,19 +10798,22 @@ select.custom-select:focus {
   }
 }
 .aside-navigation .navbar ul li .sub-menu {
-  background: #E2E6ED;
-  padding: 10px 0px 10px 69px;
+  background: #ECF1FA;
+  padding: 10px 0px 10px 53px;
   display: none;
 }
 @media (max-width: 1440px) {
   .aside-navigation .navbar ul li .sub-menu {
-    padding: 10px 0px 10px 39px;
+    padding: 10px 0px 10px 53px;
   }
+}
+.aside-navigation .navbar ul li .sub-menu li:hover {
+  background: none;
 }
 .aside-navigation .navbar ul li .sub-menu li a {
   font-size: 14px;
   line-height: 20px;
-  font-weight: 500;
+  font-weight: 400;
   background: none !important;
   color: #000000;
   padding: 5px 10px;
@@ -12432,7 +12440,7 @@ a.bg9:hover {
   }
 }
 .table-filter .bootstrap-select .dropdown-menu {
-  box-shadow: 0px 4px 13px rgba(0, 80, 164, 0.15);
+  box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.5);
   border: none;
   border-radius: 3px;
   width: 100%;
