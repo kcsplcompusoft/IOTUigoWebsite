@@ -2700,7 +2700,7 @@ button.slick-next.slick-arrow {
 		background-color:$color-white;
 		border:solid 1px $color-lightGrey;
 		border-radius: 4px;
-		@include fontrem(12px, 14px);
+		@include fontrem(13px, 16px);
 		&::before{
 			content:" ";
 			position: absolute;
@@ -2867,6 +2867,7 @@ button.slick-next.slick-arrow {
 			i{
 				color: #FFBB33;
 				@include fontrem(18px, 20px);
+				transform:rotateX(180deg);
 			}
 		}
 	}

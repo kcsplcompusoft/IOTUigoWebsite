@@ -16221,9 +16221,9 @@ button.slick-next.slick-arrow {
   background-color: #FFFFFF;
   border: solid 1px #CCCCCC;
   border-radius: 4px;
-  font-size: 12px;
-  font-size: 0.75rem;
-  line-height: 1.1666666667;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 1.2307692308;
 }
 .forgot-password__tips-detail::before {
   content: " ";
@@ -16393,6 +16393,7 @@ button.slick-next.slick-arrow {
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 1.1111111111;
+  transform: rotateX(180deg);
 }
 .toast .toast-body {
   padding: 0;
