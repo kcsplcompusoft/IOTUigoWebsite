@@ -73,9 +73,9 @@
                     }
                 }
                 .sub-menu{
-                    background:#ECF1FA; padding:10px 0px 10px 53px; display:none;
+                    background:#ECF1FA; padding:10px 0px 10px 24px; display:none;
                     @include desktop{
-                        padding:10px 0px 10px 53px;
+                        padding:10px 0px 10px 24px;
                     }
                     li{
                         &:hover{
@@ -84,6 +84,9 @@
                         a{
                             font-size:14px; line-height:20px; font-weight:400; background:none !important; color:$color-black; padding:5px 10px; display:block;
                             &:hover, &.active{ color:$color-Blue;}
+                            i{
+                                margin-right:15px;
+                            }
                         }
                         @include desktop{
                             a{padding:3px 10px; font-size:12px;}
@@ -91,6 +94,10 @@
                     }
                 }
                 &.show-submenu{
+                    a{
+                        color: #0050A4;
+                    }
+                    background: #DBE5F6;
                     .submenu-arrow{transform:rotate(90deg);}
                     .sub-menu{display:block;}
                 }
@@ -127,8 +134,10 @@
                     li{
                         a{
                             padding:6px 12px;
+                            justify-content: center;
                             .menu-icon{
                                 padding-right:0px; text-align:center;
+                                width:auto;
                                 svg{margin:0 auto;}
                             } 
                             .menu-text{display:none;}
