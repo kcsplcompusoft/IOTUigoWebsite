@@ -602,7 +602,7 @@ a.bg9:hover{background:#0b9492;}
 				.placeholder{width:8px; height:8px; display:block; position:absolute; left:0; top:50%; transition:0.3s ease 0s; transform:translateY(-50%); border-radius:100%; background:$color-grey;}
 				.link-icon{
 					opacity:0; font-size:0px; visibility:hidden; transition:opacity 0.3s ease 0.03s;
-					span{padding:6px 0 0; display:block;}
+					span{padding:6px 0 0; display:block;transition: all 0.3s;}
 					&:hover{
 						span{color:$primary_color;}
 					}
@@ -1016,7 +1016,7 @@ a.bg9:hover{background:#0b9492;}
 			.step-head{
 				display:flex; flex-wrap:wrap; padding:0 0 30px; align-items:center;
 				.step-count{@include fontrem(25px); line-height:26px; color:$color-black; font-weight:400; padding-right:22px; }
-				h5{line-height:26px; border-left:1px solid $color-black; padding-left:25px;}
+				h5{line-height:26px; border-left:1px solid $color-black; padding-left:25px;padding-bottom:0;}
 				@include desktop{
 					padding:0 0 18px;
 					.step-count{@include fontrem(22px); line-height:24px;}
@@ -2878,6 +2878,114 @@ button.slick-next.slick-arrow {
 		margin-top:8px;
 		@include fontrem(14px, 18px);
 	}
+  }
+
+  /* Jscrollpane */
+  .jspContainer
+  {
+	  overflow: hidden;
+	  position: relative;
+  }
+  
+  .jspPane
+  {
+	  position: absolute;
+  }
+  
+  .jspVerticalBar
+  {
+	  background:transparent;
+	  height: 100%;
+	  position: absolute;
+	  right: 2px;
+	  top: 0;
+	  width: 5px;
+	  border-radius: 5px;
+  }
+  
+  .jspHorizontalBar
+  {
+	  
+	  bottom: 0;
+	  height: 16px;
+	  left: 0;
+	  position: absolute;
+	  width: 100%;
+  }
+  
+  .jspCap
+  {
+	  display: none;
+  }
+  
+  .jspHorizontalBar .jspCap
+  {
+	  float: left;
+  }
+  
+  .jspTrack
+  {
+	  background: transparent;
+	  position: relative;
+	  border-radius: 5px;
+  }
+  
+  .jspDrag
+  {
+	  background: rgba(0,80, 164, 0.1);
+	  cursor: pointer;
+	  left: 0;
+	  position: relative;
+	  top: 0;
+	  border-radius:5px;
+  }
+  
+  .jspHorizontalBar .jspTrack,
+  .jspHorizontalBar .jspDrag
+  {
+	  float: left;
+	  height: 100%;
+  }
+  
+  .jspArrow
+  {
+	background: rgba(0,80, 164, 0.1);
+	  cursor: pointer;
+		  direction: ltr;
+	  display: block;
+	  margin: 0;
+	  padding: 0;
+	  text-indent: -20000px;
+  }
+  
+  .jspDisabled
+  {
+	  background: #80808d;
+	  cursor: default;
+  }
+  
+  .jspVerticalBar .jspArrow
+  {
+	  height: 16px;
+  }
+  
+  .jspHorizontalBar .jspArrow
+  {
+	  float: left;
+	  height: 100%;
+	  width: 5px;
+  }
+  
+  .jspVerticalBar .jspArrow:focus
+  {
+	  outline: none;
+  }
+  
+  .jspCorner
+  {
+	
+	  float: left;
+	  height: 100%;
   }
 
 // KCS CSS END
