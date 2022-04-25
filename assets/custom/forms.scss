@@ -200,6 +200,20 @@ select.custom-select{
             pointer-events: none;
         }
     }
+    button{
+        @include fontrem(18px,22px); color:#636363; font-weight:500; padding:10px 28px;
+        &:last-child{padding-right:0px;}
+        &.last-btn{outline:none;
+            border: none;
+            background: transparent;
+            border-left:1px solid $border-color;
+        }
+        &:hover{color:#00B9B6;}
+        &.disabled{
+            opacity: 0.65;
+            pointer-events: none;
+        }
+    }
     @include desktop{
         padding:0px 0 20px;
         a{padding:6px 20px;}

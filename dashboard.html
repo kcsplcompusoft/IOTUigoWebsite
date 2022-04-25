@@ -49,9 +49,9 @@
         <span>Sabarmati , Ahmedabad</span>
     </div>
     <div class="header-right ml-auto">
-        <div class="search-btn"><input type="text" class="search-input" placeholder="Search..."> <button type="button" class="btn btn-light mr-0 btn-sm rounded-sm" ><i class="iot-search" ></i></button></div>
+        <div class="search-btn"><input type="text" class="search-input" placeholder="Search..."> <button type="button" class="btn btn-light mr-0 btn-sm rounded-sm ripple" ><i class="iot-search" ></i></button></div>
         <div class="bell-btn">
-            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-primary btn-sm rounded-sm" ><i class="iot-bell" ></i> <span class="dot" ></span></button>
+            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-primary btn-sm rounded-sm ripple" ><i class="iot-bell" ></i> <span class="dot" ></span></button>
             <div class="dropdown-menu">
                 <div class="notification-row">
                     <div class="notification-colum">
@@ -74,7 +74,7 @@
             </div>
         </div>
         <div class="mr-btn">
-            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-light btn-sm rounded-sm" ><span class="text" >MR</span></button>
+            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-light btn-sm rounded-sm ripple ripple" ><span class="text" >MR</span></button>
             <div class="dropdown-menu">
                 <p class="companyname" >Torrent Power Pvt Ltd</p>
                 <div class="userprofile-row">
@@ -96,11 +96,25 @@
     <div class="navigation-overlay"></div>
     <div class="aside-navigation">
         <div class="corner-shap"></div>
-        <div class="navbar">
+        <div class="navbar scroll-pane">
             <ul>
                 <li><a href="dashboard.html" class="active" title="Dashboard"><span class="menu-icon" ><i class="iot-dashboard-ico" ></i></span><span class="menu-text" >Dashboard</span></a> </li>
                 <li><a href="" title="Masters"><span class="menu-icon"><i class="iot-masters-ico" ></i></span><span class="menu-text">Masters</span></a> </li>
-                <li><a href="" title="Company Management"><span class="menu-icon"><i class="iot-company-management-ico" ></i></span><span class="menu-text" >Company Management</span></a> </li>
+                <li><a href="" title="Company Management"><span class="menu-icon"><i class="iot-company-management-ico" ></i></span><span class="menu-text" >Company Management</span></a><i class="submenu-arrow las la-angle-right" ></i>
+                    <ul class="sub-menu">
+                        <li><a href="#"><i class="las la-angle-right"></i> Industry Type</a></li>
+                        <li><a href="#"><i class="las la-angle-right"></i> Site Category</a></li>
+                        <li><a href="#"><i class="las la-angle-right"></i> Department Category</a></li>
+                        <li><a href="#"><i class="las la-angle-right"></i> User Type</a></li>
+                        <li><a href="#"><i class="las la-angle-right"></i> Zones</a></li>
+                        <li><a href="#"><i class="las la-angle-right"></i> Document Type</a></li>
+                        <li><a href="#"><i class="las la-angle-right"></i> Alert Type</a></li>
+                        <li><a href="#"><i class="las la-angle-right"></i> Protocols</a></li>
+                        <li><a href="#"><i class="las la-angle-right"></i> Parameter</a></li>
+                        <li><a href="#"><i class="las la-angle-right"></i> Unit</a></li>
+                        <li><a href="#"><i class="las la-angle-right"></i> Connector</a></li>
+                    </ul>
+                </li>
                 <li><a href="" title="Asset Configurations"><span class="menu-icon"><i class="iot-asset-configuration-ico" ></i></span><span class="menu-text" >Asset Configurations</span></a> </li>
                 <li><a href="" title="Template Master"><span class="menu-icon"><i class="iot-template-master-ico" ></i></span><span class="menu-text" >Template Master</span></a> </li>
                 <li><a href="" title="User Management"><span class="menu-icon"><i class="iot-user-management-ico" ></i></span><span class="menu-text" >User Management</span></a> </li>
@@ -325,6 +339,8 @@
 <script src="assets/js/slick.js"></script>
 <script src="assets/js/bootstrap-datepicker.js"></script>
 <script src="assets/js/bootstrap-select.min.js"></script>
+<script src="assets/js/mousewheel.js"></script>
+<script src="assets/js/jscrollpane.min.js"></script>
 <script>
     window.Promise ||
       document.write(
@@ -344,6 +360,11 @@
 <script src="assets/js/vue-apexcharts.js"></script>
 <script src="assets/js/custom.js"></script>
 <script>
+    /* JSCrollpane */
+    $(window).on("load resize", function(){
+        $('.scroll-pane').jScrollPane();
+    });
+
     $(document).ready(function(){
         $('.boot-select .select').selectpicker();
 

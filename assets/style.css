@@ -9885,6 +9885,13 @@ h3 {
   padding-left: 0;
 }
 
+button {
+  outline: none;
+  border: none;
+  background: transparent;
+  transition: all 0.3s;
+}
+
 .btn {
   font-size: 12px;
   background: none;
@@ -9944,11 +9951,11 @@ h3 {
   }
 }
 .btn.btn-primary {
-  background-color: #00B9B6;
+  background-color: #206bb2;
   color: #FFFFFF;
 }
 .btn.btn-primary:hover {
-  background-color: #206bb2;
+  background-color: #00B9B6;
   color: #FFFFFF;
 }
 .btn.btn-secondary {
@@ -10413,6 +10420,30 @@ select.custom-select:focus {
   opacity: 0.65;
   pointer-events: none;
 }
+.step-btn button {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.2222222222;
+  color: #636363;
+  font-weight: 500;
+  padding: 10px 28px;
+}
+.step-btn button:last-child {
+  padding-right: 0px;
+}
+.step-btn button.last-btn {
+  outline: none;
+  border: none;
+  background: transparent;
+  border-left: 1px solid #D7E0EF;
+}
+.step-btn button:hover {
+  color: #00B9B6;
+}
+.step-btn button.disabled {
+  opacity: 0.65;
+  pointer-events: none;
+}
 @media (max-width: 1440px) {
   .step-btn {
     padding: 0px 0 20px;
@@ -10799,12 +10830,12 @@ select.custom-select:focus {
 }
 .aside-navigation .navbar ul li .sub-menu {
   background: #ECF1FA;
-  padding: 10px 0px 10px 53px;
+  padding: 10px 0px 10px 24px;
   display: none;
 }
 @media (max-width: 1440px) {
   .aside-navigation .navbar ul li .sub-menu {
-    padding: 10px 0px 10px 53px;
+    padding: 10px 0px 10px 24px;
   }
 }
 .aside-navigation .navbar ul li .sub-menu li:hover {
@@ -10822,11 +10853,20 @@ select.custom-select:focus {
 .aside-navigation .navbar ul li .sub-menu li a:hover, .aside-navigation .navbar ul li .sub-menu li a.active {
   color: #0050A4;
 }
+.aside-navigation .navbar ul li .sub-menu li a i {
+  margin-right: 15px;
+}
 @media (max-width: 1440px) {
   .aside-navigation .navbar ul li .sub-menu li a {
     padding: 3px 10px;
     font-size: 12px;
   }
+}
+.aside-navigation .navbar ul li.show-submenu {
+  background: #DBE5F6;
+}
+.aside-navigation .navbar ul li.show-submenu a {
+  color: #0050A4;
 }
 .aside-navigation .navbar ul li.show-submenu .submenu-arrow {
   transform: rotate(90deg);
@@ -10891,10 +10931,12 @@ select.custom-select:focus {
   }
   .sidebar-open .aside-navigation .navbar ul li a {
     padding: 6px 12px;
+    justify-content: center;
   }
   .sidebar-open .aside-navigation .navbar ul li a .menu-icon {
     padding-right: 0px;
     text-align: center;
+    width: auto;
   }
   .sidebar-open .aside-navigation .navbar ul li a .menu-icon svg {
     margin: 0 auto;
@@ -13048,6 +13090,7 @@ a.bg9:hover {
 .project-overview-card .overview-card-bottom ul li .link-icon span {
   padding: 6px 0 0;
   display: block;
+  transition: all 0.3s;
 }
 .project-overview-card .overview-card-bottom ul li .link-icon:hover span {
   color: #00B9B6;
@@ -13844,6 +13887,7 @@ a.bg9:hover {
   line-height: 26px;
   border-left: 1px solid #000000;
   padding-left: 25px;
+  padding-bottom: 0;
 }
 @media (max-width: 1440px) {
   .wizard-block .wizard-right .tab-pane .step-head {
@@ -16402,6 +16446,97 @@ button.slick-next.slick-arrow {
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1.2857142857;
+}
+
+/* Jscrollpane */
+.jspContainer {
+  overflow: hidden;
+  position: relative;
+}
+
+.jspPane {
+  position: absolute;
+}
+
+.jspVerticalBar {
+  background: transparent;
+  height: 100%;
+  position: absolute;
+  right: 2px;
+  top: 0;
+  width: 5px;
+  border-radius: 5px;
+}
+
+.jspHorizontalBar {
+  bottom: 0;
+  height: 16px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.jspCap {
+  display: none;
+}
+
+.jspHorizontalBar .jspCap {
+  float: left;
+}
+
+.jspTrack {
+  background: transparent;
+  position: relative;
+  border-radius: 5px;
+}
+
+.jspDrag {
+  background: rgba(0, 80, 164, 0.1);
+  cursor: pointer;
+  left: 0;
+  position: relative;
+  top: 0;
+  border-radius: 5px;
+}
+
+.jspHorizontalBar .jspTrack,
+.jspHorizontalBar .jspDrag {
+  float: left;
+  height: 100%;
+}
+
+.jspArrow {
+  background: rgba(0, 80, 164, 0.1);
+  cursor: pointer;
+  direction: ltr;
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-indent: -20000px;
+}
+
+.jspDisabled {
+  background: #80808d;
+  cursor: default;
+}
+
+.jspVerticalBar .jspArrow {
+  height: 16px;
+}
+
+.jspHorizontalBar .jspArrow {
+  float: left;
+  height: 100%;
+  width: 5px;
+}
+
+.jspVerticalBar .jspArrow:focus {
+  outline: none;
+}
+
+.jspCorner {
+  float: left;
+  height: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
