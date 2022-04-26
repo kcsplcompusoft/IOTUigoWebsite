@@ -68,20 +68,76 @@
     <div class="navigation-overlay"></div>
     <div class="aside-navigation">
         <div class="corner-shap"></div>
-        <div class="navbar">
+        <div class="navbar scroll-pane">
             <ul>
-                <li><a href="company-home.html" ><span class="menu-icon" ><i class="iot-sites" ></i></span><span class="menu-text" >Sites</span></a> </li>
-                <li><a href="company-statistics.html"><span class="menu-icon pt-0" >
-                    <i><svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 0.961548V24.0385H24.0769" stroke="black" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M3.46344 14.0688H7.79036V23.8404H3.46344V14.0688ZM10.375 10.1423H14.7019V23.8404H10.375V10.1423ZM17.2865 4.69376H21.6134V23.8404H17.2865V4.69376Z" stroke="black" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg></i>
-                </span><span class="menu-text" >Statistics</span></a> </li>
-                <li><a href="company-info.html" class="active" ><span class="menu-icon" ><i class="iot-information" ></i></span><span class="menu-text" >Company Information</span></a> </li>
-                <li><a href="#"><span class="menu-icon" ><i class="iot-masters" ></i></span><span class="menu-text" >Masters</span></a> </li>
-                <li><a href="#"><span class="menu-icon" ><i class="iot-configuration" ></i></span><span class="menu-text" >Configurations</span></a> </li>
-                <li><a href="#"><span class="menu-icon" ><i class="iot-reports" ></i></span><span class="menu-text" >Reports</span></a> </li>
+                <li><a href="dashboard.html" class="active" title="Dashboard"><span class="menu-icon" ><i class="iot-dashboard-ico" ></i></span><span class="menu-text" >Dashboard</span></a> </li>
+                <li><a href="" title="Masters"><span class="menu-icon"><i class="iot-masters-ico" ></i></span><span class="menu-text">Masters</span></a> </li>
+                <li><a href="" title="Company Management"><span class="menu-icon"><i class="iot-company-management-ico" ></i></span><span class="menu-text" >Company Management</span></a><i class="submenu-arrow las la-angle-right" ></i>
+                    <ul class="sub-menu">
+                        <li><a href="#"><i class="las la-angle-right"></i> Industry Type</a></li>
+                        <li><a href="#"><i class="las la-angle-right"></i> Site Category</a></li>
+                        <li><a href="#"><i class="las la-angle-right"></i> Department Category</a></li>
+                        <li><a href="#"><i class="las la-angle-right"></i> User Type</a></li>
+                        <li><a href="#"><i class="las la-angle-right"></i> Zones</a></li>
+                        <li><a href="#"><i class="las la-angle-right"></i> Document Type</a></li>
+                        <li><a href="#"><i class="las la-angle-right"></i> Alert Type</a></li>
+                        <li><a href="#"><i class="las la-angle-right"></i> Protocols</a></li>
+                        <li><a href="#"><i class="las la-angle-right"></i> Parameter</a></li>
+                        <li><a href="#"><i class="las la-angle-right"></i> Unit</a></li>
+                        <li><a href="#"><i class="las la-angle-right"></i> Connector</a></li>
+                    </ul>
+                </li>
+                <li><a href="" title="Asset Configurations"><span class="menu-icon"><i class="iot-asset-configuration-ico" ></i></span><span class="menu-text" >Asset Configurations</span></a> </li>
+                <li><a href="" title="Template Master"><span class="menu-icon"><i class="iot-template-master-ico" ></i></span><span class="menu-text" >Template Master</span></a> </li>
+                <li><a href="" title="User Management"><span class="menu-icon"><i class="iot-user-management-ico" ></i></span><span class="menu-text" >User Management</span></a> </li>
+                <li><a href="rule-engine.html" title="Rule Engine"><span class="menu-icon"><i class="iot-rule-engine-ico" ></i></span><span class="menu-text" >Rule Engine</span></a> </li>
+                <li><a href="" title="Fact List"><span class="menu-icon" ><i class="iot-fact-list-ico" ></i></span><span class="menu-text" >Fact List</span></a> </li>
+                <li><a href="monitor.html" title="Staticstics"><span class="menu-icon" ><i class="iot-pie-chart-ico" ></i></span><span class="menu-text" >Staticstics</span></a> </li>
+                <li><a href="" title="Email SMTP Configuration"><span class="menu-icon" ><i class="iot-smtp-config-ico" ></i></span><span class="menu-text" >Email SMTP Configuration</span></a> </li>
+                <li><a href="" title="Simulator Configuration"><span class="menu-icon" ><i class="iot-simulator-config-ico" ></i></span><span class="menu-text" >Simulator Configuration</span></a> </li>
+                <li><a href="" title="Company Server"><span class="menu-icon" ><i class="iot-company-server-ico" ></i></span><span class="menu-text" >Company Server</span></a> </li>
+                <li><a href="" title="Companby Info"><span class="menu-icon" ><i class="iot-company-info-ico" ></i></span><span class="menu-text" >Companby Info</span></a> </li>
+                <li><a href="" title="Subscription"><span class="menu-icon" ><i class="iot-subscription-ico" ></i></span><span class="menu-text">Subscription</span></a> </li>
+                <li><a href="" title="Downloads"><span class="menu-icon" ><i class="iot-downloads-ico" ></i></span><span class="menu-text" >Downloads</span></a> </li>
             </ul>
+            <!-- <ul>
+                <li><a href="dashboard.html" class="active"  ><span class="menu-icon" ><i class="iot-dashboard-ico" ></i></span><span class="menu-text" >Dashboard</span></a> </li>
+                <li><a href="devices.html" ><span class="menu-icon" ><i class="iot-wifi" ></i></span><span class="menu-text" >Devices</span></a> </li>
+                <li><a href="device-deployment.html"><span class="menu-icon" ><i class="iot-startup" ></i></span><span class="menu-text" >Device Deployment</span></a> </li>
+                <li><a href="monitor.html"><span class="menu-icon" ><i class="iot-eye" ></i></span><span class="menu-text" >Monitors</span></a> </li>
+                <li><a href="rule-engine.html"><span class="menu-icon" ><i class="iot-notification" ></i></span><span class="menu-text" >Rule Engine</span></a> </li>
+                <li>
+                    <a href="#"><span class="menu-icon" ><i class="iot-masters" ></i></span><span class="menu-text" >Masters</span></a> <i class="submenu-arrow las la-angle-right" ></i>
+                    <ul class="sub-menu">
+                        <li><a href="#">Industry Type</a></li>
+                        <li><a href="#">Site Category</a></li>
+                        <li><a href="#">Department Category</a></li>
+                        <li><a href="#">User Type</a></li>
+                        <li><a href="#">Zones</a></li>
+                        <li><a href="#">Document Type</a></li>
+                        <li><a href="#">Alert Type</a></li>
+                        <li><a href="#">Protocols</a></li>
+                        <li><a href="#">Parameter</a></li>
+                        <li><a href="#">Unit</a></li>
+                        <li><a href="#">Connector</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><span class="menu-icon" ><i class="iot-configuration" ></i></span><span class="menu-text" >Configurations</span></a> <i class="submenu-arrow las la-angle-right" ></i>
+                    <ul class="sub-menu">
+                        <li><a href="#">Menu Configurations</a></li>
+                        <li><a href="#">System Configuraiton</a></li>
+                        <li><a href="#">SMTP Email Configuration</a></li>
+                        <li><a href="application-management.html">Application Management</a></li>
+                        <li><a href="#">Simulator</a></li>
+                        <li><a href="user-management.html">User Management</a></li>
+                        <li><a href="#">Roles & Rights</a></li>
+                        <li><a href="#">Monitor Bundle</a></li>
+                        <li><a href="#">Monitor Widget</a></li>
+                    </ul>
+                 </li>
+                <li><a href="#"><span class="menu-icon" ><i class="iot-reports" ></i></span><span class="menu-text" >Reports</span></a> </li>
+            </ul> -->
         </div>
         <div class="navigation-bottom">
             <div class="powered-by text-center">
@@ -158,12 +214,47 @@
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/slick.js"></script>
 <script src="assets/js/bootstrap-datepicker.js"></script>
+<script src="assets/js/mousewheel.js"></script>
+<script src="assets/js/jscrollpane.min.js"></script>
 <script src="assets/js/custom.js"></script>
 <script>
-    $(document).ready(function(){
-        
-       
-    });
+    $(function()
+	    {
+            $('.scroll-pane').each(
+                function()
+                {
+                    $(this).jScrollPane(
+                        {
+                            autoReinitialise: true,
+                            animateScroll: true,
+                            resizeSensor: true
+                        }
+                    );
+                    var api = $(this).data('jsp');
+                    var throttleTimeout;
+                    $(window).bind(
+                        'resize',
+                        function()
+                        {
+                            // IE fires multiple resize events while you are dragging the browser window which
+                            // causes it to crash if you try to update the scrollpane on every one. So we need
+                            // to throttle it to fire a maximum of once every 50 milliseconds...
+                            if (!throttleTimeout) {
+                                throttleTimeout = setTimeout(
+                                    function()
+                                    {
+                                        api.reinitialise();
+                                        throttleTimeout = null;
+                                    },
+                                    50
+                                );
+                            }
+                        }
+                    );
+                }
+            );
+        }
+    );
 </script>
 </body>
 </html>
