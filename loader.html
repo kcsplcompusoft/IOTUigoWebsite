@@ -12,6 +12,9 @@
 </head>
 
 <body>
+    <div class="loader">
+        <div class="loader__wrap">Loading...</div>
+    </div>
 <div class="header">
     <button type="button" class="menu-toggle"><i class="las la-bars"></i></button>
     <div class="logo">
@@ -239,7 +242,7 @@
                                 <label for="id_country_name" class="requiredField">
                                     Country Name<span class="asteriskField">*</span>
                                 </label>
-                                    <select name="country_name" class="selectpicker">
+                                    <select name="country_name" class="selectpicker form-control" required id="id_country_name">
                                         <option value="" selected>--------</option>
                                         <option value="AF">Afghanistan</option>
                                         <option value="AX">Åland Islands</option>
@@ -514,43 +517,38 @@
 <script>
     /* JSCrollpane */
     $(function()
-	    {
-            $('.scroll-pane').each(
-                function()
-                {
-                    $(this).jScrollPane(
-                        {
-                            autoReinitialise: true,
-                            animateScroll: true,
-                            resizeSensor: true
-                        }
-                    );
-                    var api = $(this).data('jsp');
-                    var throttleTimeout;
-                    $(window).bind(
-                        'resize',
-                        function()
-                        {
-                            // IE fires multiple resize events while you are dragging the browser window which
-                            // causes it to crash if you try to update the scrollpane on every one. So we need
-                            // to throttle it to fire a maximum of once every 50 milliseconds...
-                            if (!throttleTimeout) {
-                                throttleTimeout = setTimeout(
-                                    function()
-                                    {
-                                        api.reinitialise();
-                                        throttleTimeout = null;
-                                    },
-                                    50
-                                );
-                            }
-                        }
-                    );
-                }
-            );
-        }
-    );
-    $(window).on("load", function(){
+			{
+				$('.scroll-pane').each(
+					function()
+					{
+						$(this).jScrollPane(
+							{
+								showArrows: $(this).is('.arrow')
+							}
+						);
+						var api = $(this).data('jsp');
+						var throttleTimeout;
+						$(window, ".aside-navigation").bind(
+							'resize',
+							function()
+							{
+								if (!throttleTimeout) {
+									throttleTimeout = setTimeout(
+										function()
+										{
+											api.reinitialise();
+											throttleTimeout = null;
+										},
+										50
+									);
+								}
+							}
+						);
+					}
+				)
+
+			});
+    $(document).ready(function(){
         $('.boot-select .select').selectpicker();
     });
 </script>
