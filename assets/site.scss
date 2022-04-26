@@ -428,6 +428,8 @@ a.bg9:hover{background:#0b9492;}
 							position:relative; opacity:1; visibility:visible; transition:all 0.3s ease;
 							.dropdown-menu{
 								border: 1px solid #C8D2E2; left:auto !important; right:0px; float:none; padding:8px 0; box-shadow: 0px 7px 11px rgba(42, 62, 97, 0.11); min-width:130px;
+								left: 0 !important;
+								right: 0;
 								@include desktop{
 									padding:5px 0;
 								}
@@ -2881,111 +2883,207 @@ button.slick-next.slick-arrow {
   }
 
   /* Jscrollpane */
-  .jspContainer
-  {
-	  overflow: hidden;
-	  position: relative;
-  }
-  
-  .jspPane
-  {
-	  position: absolute;
-  }
-  
-  .jspVerticalBar
-  {
-	  background:transparent;
-	  height: 100%;
-	  position: absolute;
-	  right: 2px;
-	  top: 0;
-	  width: 5px;
-	  border-radius: 5px;
-  }
-  
-  .jspHorizontalBar
-  {
-	  
-	  bottom: 0;
-	  height: 16px;
-	  left: 0;
-	  position: absolute;
-	  width: 100%;
-  }
-  
-  .jspCap
-  {
-	  display: none;
-  }
-  
-  .jspHorizontalBar .jspCap
-  {
-	  float: left;
-  }
-  
-  .jspTrack
-  {
-	  background: transparent;
-	  position: relative;
-	  border-radius: 5px;
-  }
-  
-  .jspDrag
-  {
-	  background: rgba(0,80, 164, 0.1);
-	  cursor: pointer;
-	  left: 0;
-	  position: relative;
-	  top: 0;
-	  border-radius:5px;
-  }
-  
-  .jspHorizontalBar .jspTrack,
-  .jspHorizontalBar .jspDrag
-  {
-	  float: left;
-	  height: 100%;
-  }
-  
-  .jspArrow
-  {
-	background: rgba(0,80, 164, 0.1);
-	  cursor: pointer;
-		  direction: ltr;
-	  display: block;
-	  margin: 0;
-	  padding: 0;
-	  text-indent: -20000px;
-  }
-  
-  .jspDisabled
-  {
-	  background: #80808d;
-	  cursor: default;
-  }
-  
-  .jspVerticalBar .jspArrow
-  {
-	  height: 16px;
-  }
-  
-  .jspHorizontalBar .jspArrow
-  {
-	  float: left;
-	  height: 100%;
-	  width: 5px;
-  }
-  
-  .jspVerticalBar .jspArrow:focus
-  {
-	  outline: none;
-  }
-  
-  .jspCorner
-  {
-	
-	  float: left;
-	  height: 100%;
-  }
+.jspContainer
+{
+	overflow: hidden;
+	position: relative;
+}
 
+.jspPane
+{
+	position: absolute;
+}
+
+.jspVerticalBar
+{
+	background:transparent;
+	height: 100%;
+	position: absolute;
+	right: 2px;
+	top: 0;
+	width: 5px;
+	border-radius: 5px;
+}
+
+.jspHorizontalBar
+{
+	
+	bottom: 0;
+	height: 16px;
+	left: 0;
+	position: absolute;
+	width: 100%;
+}
+
+.jspCap
+{
+	display: none;
+}
+
+.jspHorizontalBar .jspCap
+{
+	float: left;
+}
+
+.jspTrack
+{
+	background: transparent;
+	position: relative;
+	border-radius: 5px;
+}
+
+.jspDrag
+{
+	background: rgba(0,80, 164, 0.1);
+	cursor: pointer;
+	left: 0;
+	position: relative;
+	top: 0;
+	border-radius:5px;
+}
+
+.jspHorizontalBar .jspTrack,
+.jspHorizontalBar .jspDrag
+{
+	float: left;
+	height: 100%;
+}
+
+.jspArrow
+{
+	background: rgba(0,80, 164, 0.1);
+	cursor: pointer;
+	direction: ltr;
+	display: block;
+	margin: 0;
+	padding: 0;
+	text-indent: -20000px;
+}
+
+.jspDisabled
+{
+	background: #80808d;
+	cursor: default;
+}
+
+.jspVerticalBar .jspArrow
+{
+	height: 16px;
+}
+
+.jspHorizontalBar .jspArrow
+{
+	float: left;
+	height: 100%;
+	width: 5px;
+}
+
+.jspVerticalBar .jspArrow:focus
+{
+	outline: none;
+}
+
+.jspCorner
+{
+	float: left;
+	height: 100%;
+}
+.scroll-pane
+{
+	width: 100%;
+	height: 200px;
+	overflow: auto;
+	
+}
+.horizontal-only
+{
+	height: auto;
+	max-height: 200px;
+}
+
+/* Loader */
+.loader{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left:0;
+	top:0;
+	z-index:9999;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&::before{
+		content:' ';
+		position: fixed;
+		left:0;
+		top:0;
+		width:100%;
+		height:100%;
+		background: rgba(0,0,0,0.4);
+	}
+	&__wrap{
+		font-size: 10px;
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		text-indent: -9999em;
+		-webkit-animation: load5 1.1s infinite ease;
+		animation: load5 1.1s infinite ease;
+	}
+}
+	
+@-webkit-keyframes load5 {
+	0%,
+	100% {
+		box-shadow: 0em -2.6em 0em 0em #000000, 1.8em -1.8em 0 0em rgba(0,0,0, 0.2), 2.5em 0em 0 0em rgba(0,0,0, 0.2), 1.75em 1.75em 0 0em rgba(0,0,0, 0.2), 0em 2.5em 0 0em rgba(0,0,0, 0.2), -1.8em 1.8em 0 0em rgba(0,0,0, 0.2), -2.6em 0em 0 0em rgba(0,0,0, 0.5), -1.8em -1.8em 0 0em rgba(0,0,0, 0.7);
+	}
+	12.5% {
+		box-shadow: 0em -2.6em 0em 0em rgba(0,0,0, 0.7), 1.8em -1.8em 0 0em #000000, 2.5em 0em 0 0em rgba(0,0,0, 0.2), 1.75em 1.75em 0 0em rgba(0,0,0, 0.2), 0em 2.5em 0 0em rgba(0,0,0, 0.2), -1.8em 1.8em 0 0em rgba(0,0,0, 0.2), -2.6em 0em 0 0em rgba(0,0,0, 0.2), -1.8em -1.8em 0 0em rgba(0,0,0, 0.5);
+	}
+	25% {
+		box-shadow: 0em -2.6em 0em 0em rgba(0,0,0, 0.5), 1.8em -1.8em 0 0em rgba(0,0,0, 0.7), 2.5em 0em 0 0em #000000, 1.75em 1.75em 0 0em rgba(0,0,0, 0.2), 0em 2.5em 0 0em rgba(0,0,0, 0.2), -1.8em 1.8em 0 0em rgba(0,0,0, 0.2), -2.6em 0em 0 0em rgba(0,0,0, 0.2), -1.8em -1.8em 0 0em rgba(0,0,0, 0.2);
+	}
+	37.5% {
+		box-shadow: 0em -2.6em 0em 0em rgba(0,0,0, 0.2), 1.8em -1.8em 0 0em rgba(0,0,0, 0.5), 2.5em 0em 0 0em rgba(0,0,0, 0.7), 1.75em 1.75em 0 0em #000000, 0em 2.5em 0 0em rgba(0,0,0, 0.2), -1.8em 1.8em 0 0em rgba(0,0,0, 0.2), -2.6em 0em 0 0em rgba(0,0,0, 0.2), -1.8em -1.8em 0 0em rgba(0,0,0, 0.2);
+	}
+	50% {
+		box-shadow: 0em -2.6em 0em 0em rgba(0,0,0, 0.2), 1.8em -1.8em 0 0em rgba(0,0,0, 0.2), 2.5em 0em 0 0em rgba(0,0,0, 0.5), 1.75em 1.75em 0 0em rgba(0,0,0, 0.7), 0em 2.5em 0 0em #000000, -1.8em 1.8em 0 0em rgba(0,0,0, 0.2), -2.6em 0em 0 0em rgba(0,0,0, 0.2), -1.8em -1.8em 0 0em rgba(0,0,0, 0.2);
+	}
+	62.5% {
+		box-shadow: 0em -2.6em 0em 0em rgba(0,0,0, 0.2), 1.8em -1.8em 0 0em rgba(0,0,0, 0.2), 2.5em 0em 0 0em rgba(0,0,0, 0.2), 1.75em 1.75em 0 0em rgba(0,0,0, 0.5), 0em 2.5em 0 0em rgba(0,0,0, 0.7), -1.8em 1.8em 0 0em #000000, -2.6em 0em 0 0em rgba(0,0,0, 0.2), -1.8em -1.8em 0 0em rgba(0,0,0, 0.2);
+	}
+	75% {
+		box-shadow: 0em -2.6em 0em 0em rgba(0,0,0, 0.2), 1.8em -1.8em 0 0em rgba(0,0,0, 0.2), 2.5em 0em 0 0em rgba(0,0,0, 0.2), 1.75em 1.75em 0 0em rgba(0,0,0, 0.2), 0em 2.5em 0 0em rgba(0,0,0, 0.5), -1.8em 1.8em 0 0em rgba(0,0,0, 0.7), -2.6em 0em 0 0em #000000, -1.8em -1.8em 0 0em rgba(0,0,0, 0.2);
+	}
+	87.5% {
+		box-shadow: 0em -2.6em 0em 0em rgba(0,0,0, 0.2), 1.8em -1.8em 0 0em rgba(0,0,0, 0.2), 2.5em 0em 0 0em rgba(0,0,0, 0.2), 1.75em 1.75em 0 0em rgba(0,0,0, 0.2), 0em 2.5em 0 0em rgba(0,0,0, 0.2), -1.8em 1.8em 0 0em rgba(0,0,0, 0.5), -2.6em 0em 0 0em rgba(0,0,0, 0.7), -1.8em -1.8em 0 0em #000000;
+	}
+}
+@keyframes load5 {
+	0%,
+	100% {
+		box-shadow: 0em -2.6em 0em 0em #000000, 1.8em -1.8em 0 0em rgba(0,0,0, 0.2), 2.5em 0em 0 0em rgba(0,0,0, 0.2), 1.75em 1.75em 0 0em rgba(0,0,0, 0.2), 0em 2.5em 0 0em rgba(0,0,0, 0.2), -1.8em 1.8em 0 0em rgba(0,0,0, 0.2), -2.6em 0em 0 0em rgba(0,0,0, 0.5), -1.8em -1.8em 0 0em rgba(0,0,0, 0.7);
+	}
+	12.5% {
+		box-shadow: 0em -2.6em 0em 0em rgba(0,0,0, 0.7), 1.8em -1.8em 0 0em #000000, 2.5em 0em 0 0em rgba(0,0,0, 0.2), 1.75em 1.75em 0 0em rgba(0,0,0, 0.2), 0em 2.5em 0 0em rgba(0,0,0, 0.2), -1.8em 1.8em 0 0em rgba(0,0,0, 0.2), -2.6em 0em 0 0em rgba(0,0,0, 0.2), -1.8em -1.8em 0 0em rgba(0,0,0, 0.5);
+	}
+	25% {
+		box-shadow: 0em -2.6em 0em 0em rgba(0,0,0, 0.5), 1.8em -1.8em 0 0em rgba(0,0,0, 0.7), 2.5em 0em 0 0em #000000, 1.75em 1.75em 0 0em rgba(0,0,0, 0.2), 0em 2.5em 0 0em rgba(0,0,0, 0.2), -1.8em 1.8em 0 0em rgba(0,0,0, 0.2), -2.6em 0em 0 0em rgba(0,0,0, 0.2), -1.8em -1.8em 0 0em rgba(0,0,0, 0.2);
+	}
+	37.5% {
+		box-shadow: 0em -2.6em 0em 0em rgba(0,0,0, 0.2), 1.8em -1.8em 0 0em rgba(0,0,0, 0.5), 2.5em 0em 0 0em rgba(0,0,0, 0.7), 1.75em 1.75em 0 0em #000000, 0em 2.5em 0 0em rgba(0,0,0, 0.2), -1.8em 1.8em 0 0em rgba(0,0,0, 0.2), -2.6em 0em 0 0em rgba(0,0,0, 0.2), -1.8em -1.8em 0 0em rgba(0,0,0, 0.2);
+	}
+	50% {
+		box-shadow: 0em -2.6em 0em 0em rgba(0,0,0, 0.2), 1.8em -1.8em 0 0em rgba(0,0,0, 0.2), 2.5em 0em 0 0em rgba(0,0,0, 0.5), 1.75em 1.75em 0 0em rgba(0,0,0, 0.7), 0em 2.5em 0 0em #000000, -1.8em 1.8em 0 0em rgba(0,0,0, 0.2), -2.6em 0em 0 0em rgba(0,0,0, 0.2), -1.8em -1.8em 0 0em rgba(0,0,0, 0.2);
+	}
+	62.5% {
+		box-shadow: 0em -2.6em 0em 0em rgba(0,0,0, 0.2), 1.8em -1.8em 0 0em rgba(0,0,0, 0.2), 2.5em 0em 0 0em rgba(0,0,0, 0.2), 1.75em 1.75em 0 0em rgba(0,0,0, 0.5), 0em 2.5em 0 0em rgba(0,0,0, 0.7), -1.8em 1.8em 0 0em #000000, -2.6em 0em 0 0em rgba(0,0,0, 0.2), -1.8em -1.8em 0 0em rgba(0,0,0, 0.2);
+	}
+	75% {
+		box-shadow: 0em -2.6em 0em 0em rgba(0,0,0, 0.2), 1.8em -1.8em 0 0em rgba(0,0,0, 0.2), 2.5em 0em 0 0em rgba(0,0,0, 0.2), 1.75em 1.75em 0 0em rgba(0,0,0, 0.2), 0em 2.5em 0 0em rgba(0,0,0, 0.5), -1.8em 1.8em 0 0em rgba(0,0,0, 0.7), -2.6em 0em 0 0em #000000, -1.8em -1.8em 0 0em rgba(0,0,0, 0.2);
+	}
+	87.5% {
+		box-shadow: 0em -2.6em 0em 0em rgba(0,0,0, 0.2), 1.8em -1.8em 0 0em rgba(0,0,0, 0.2), 2.5em 0em 0 0em rgba(0,0,0, 0.2), 1.75em 1.75em 0 0em rgba(0,0,0, 0.2), 0em 2.5em 0 0em rgba(0,0,0, 0.2), -1.8em 1.8em 0 0em rgba(0,0,0, 0.5), -2.6em 0em 0 0em rgba(0,0,0, 0.7), -1.8em -1.8em 0 0em #000000;
+	}
+}
 // KCS CSS END
