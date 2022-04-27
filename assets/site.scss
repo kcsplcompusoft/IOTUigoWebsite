@@ -2592,11 +2592,23 @@ button.slick-next.slick-arrow {
 		}
 		.close{
 			position: absolute;
-			right:30px;
-			top:35px;
-			width:21px;
-			height:21px;
-			display: none;
+			left:-30px;
+			top:0;
+			width:30px;
+			height:30px;
+			background: #fff;
+			box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 20%);
+			@include tabletwide {
+				right:0;
+				top:0;
+				width:25px;
+				height:25px;
+				left:auto;
+				box-shadow:none;
+				background-color: transparent;
+				opacity: 1;
+				
+			}
 			@include phonewide{
 				display: block;
 			}
