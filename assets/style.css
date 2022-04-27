@@ -9690,8 +9690,8 @@ h3 {
 }
 @font-face {
   font-family: "iot";
-  src: url("bootstrap-theme/fonts/iot.eot?3aue9p");
-  src: url("bootstrap-theme/fonts/iot.eot?3aue9p#iefix") format("embedded-opentype"), url("bootstrap-theme/fonts/iot.ttf?3aue9p") format("truetype"), url("bootstrap-theme/fonts/iot.woff?3aue9p") format("woff"), url("bootstrap-theme/fonts/iot.svg?3aue9p#iot") format("svg");
+  src: url("bootstrap-theme/fonts/iot.eot?qftmrw");
+  src: url("bootstrap-theme/fonts/iot.eot?qftmrw#iefix") format("embedded-opentype"), url("bootstrap-theme/fonts/iot.ttf?qftmrw") format("truetype"), url("bootstrap-theme/fonts/iot.woff?qftmrw") format("woff"), url("bootstrap-theme/fonts/iot.svg?qftmrw#iot") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -9838,6 +9838,10 @@ h3 {
 
 .iot-warning:before {
   content: "\e91f";
+}
+
+.iot-active:before {
+  content: "\e920";
 }
 
 .row {
@@ -12853,6 +12857,9 @@ a.bg9:hover {
   .common-table.dataTable tbody tr td .item-icon-title-cell .item-menu.active-itemmenu .dropdown-menu .switch-toggle {
     margin: 4px auto;
   }
+}
+.common-table.dataTable tbody tr td .item-icon-title-cell .item-menu.item-menu-main .dropdown-menu {
+  left: auto !important;
 }
 .common-table.dataTable tbody tr td .item-icon-title-cell .item-menu-click {
   background: none;
@@ -16371,6 +16378,9 @@ button.slick-next.slick-arrow {
 }
 .iot-company-info-ico {
   background: url(images/company-info.svg);
+}
+.iot-edit-ico {
+  background: url(images/edit-ico.svg);
 }
 
 /* Toast */

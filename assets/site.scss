@@ -458,6 +458,11 @@ a.bg9:hover{background:#0b9492;}
 									}
 								}
 							}
+							&.item-menu-main{
+								.dropdown-menu{
+									left: auto !important;
+								}	
+							}
 						}
 						.item-menu-click{
 							background:none; width:32px; height:32px; border-radius:3px; text-align:center; border:none; display:block; margin:0px; color:$border-color2; line-height:1; font-size:26px;
@@ -2800,6 +2805,9 @@ button.slick-next.slick-arrow {
 	}
 	&-company-info-ico{
 		background: url(images/company-info.svg);
+	}
+	&-edit-ico{
+		background: url(images/edit-ico.svg);
 	}
 }
 
