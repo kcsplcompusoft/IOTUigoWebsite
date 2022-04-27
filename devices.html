@@ -211,7 +211,7 @@
                                         <li><a href="#"><i class="iot-edit" ></i>Edit</a></li>
                                         <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
                                         <li><a href="#"><i class="iot-inactive-small"></i>Inactive</a></li>
-                                        <li><a href="#"><i class="iot-manage-roles"></i>Manage Users</a></li>
+                                        <li><a href="#"><i class="iot-manage-roles"></i>Manage&nbsp;Users</a></li>
                                         <li id="tooltip-view" class="tooltip-view">
                                             <a href="#" data-toggle="modal" data-target="#processview"><i class="iot-view" ></i>View</a>
                                         </li>
@@ -596,10 +596,10 @@
         $('.boot-select .select').selectpicker();
     });
     $(window).on("load", function(){
-        $(".tooltip-view").hover(function(){
+        $(".tooltip-view").click(function(){
             $("#tooltip-view__popup").addClass("tooltip-slide-in");
-        }, function(){
-            $("#tooltip-view__popup").removeClass("tooltip-slide-in");
+        // }, function(){
+        //     $("#tooltip-view__popup").removeClass("tooltip-slide-in");
         });
         $(".tooltip-view__popup-close").on('click', function(){
             $("#tooltip-view__popup").removeClass("tooltip-slide-in");
