@@ -349,7 +349,7 @@ a.bg9:hover{background:#0b9492;}
 		input[type="checkbox"]{position:absolute; opacity:0; visibility:hidden;}
 		span{
 			position:absolute; left:0; top:0px; background:$color-white; border:1px solid #97A4BA; width:22px; height:22px; border-radius:3px;
-			&:before{content:"\f00c"; font-family:'Line Awesome Free'; position:absolute; left:1px; top:2px; opacity:0; visibility:hidden; transition:all 0.3s ease; font-weight:900; color:$secondary_color; font-size:16px; line-height:16px;}
+			&:before{content:"\f00c"; font-family:'Line Awesome Free'; position:absolute; left:2px; top:2px; opacity:0; visibility:hidden; transition:all 0.3s ease; font-weight:900; color:$secondary_color; font-size:16px; line-height:16px;}
 		}
 		input[type="checkbox"]:checked ~ span:before{opacity:1; visibility:visible;}
 		@include desktop{
@@ -1416,11 +1416,23 @@ a.bg9:hover{background:#0b9492;}
 				}
 			}
 			.rolerights-table{
+				.dataTables_scroll{
+					.dataTables_scrollBody{
+						thead{
+							tr{
+								visibility: collapse;
+							}
+						}
+					}
+				}
 				.common-table.dataTable{
 					thead{
 						tr td{
 							padding:10px 25px !important;
 							text-align: center;
+							&:first-child{
+								text-align: left;
+							}
 							@include desktop{
 								padding:7px 8px !important;
 							}

@@ -11185,6 +11185,17 @@ select.custom-select:focus {
   right: -3px;
   top: -4px;
 }
+.header .header-right .bell-btn .dot__number {
+  width: 24px;
+  height: 24px;
+  color: #FFFFFF;
+  font-size: 12px;
+  right: -6px;
+  top: -7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .header .header-right .bell-btn .dropdown-menu {
   width: 300px;
   right: 0px !important;
@@ -12648,7 +12659,7 @@ a.bg9:hover {
   content: "\f00c";
   font-family: "Line Awesome Free";
   position: absolute;
-  left: 1px;
+  left: 2px;
   top: 2px;
   opacity: 0;
   visibility: hidden;
@@ -14624,9 +14635,15 @@ a.bg9:hover {
     margin-top: 6px;
   }
 }
+.usermanage-page .wizard-right .tab-pane .rolerights-table .dataTables_scroll .dataTables_scrollBody thead tr {
+  visibility: collapse;
+}
 .usermanage-page .wizard-right .tab-pane .rolerights-table .common-table.dataTable thead tr td {
   padding: 10px 25px !important;
   text-align: center;
+}
+.usermanage-page .wizard-right .tab-pane .rolerights-table .common-table.dataTable thead tr td:first-child {
+  text-align: left;
 }
 @media (max-width: 1440px) {
   .usermanage-page .wizard-right .tab-pane .rolerights-table .common-table.dataTable thead tr td {
