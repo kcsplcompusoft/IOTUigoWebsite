@@ -398,7 +398,7 @@ a.bg9:hover{background:#0b9492;}
 			tr{
 				// height:auto !important;
 				td{
-					background-color:#004286; color: $color-white; white-space:nowrap; padding:12px 19px 10px; @include fontrem(15px,20px); font-weight:500; border:none; border-bottom:2px solid $primary_color;
+					background-color:#E2E6ED;white-space:nowrap; padding:12px 19px 10px; @include fontrem(15px,20px); font-weight:500; border:none; border-bottom:2px solid #91A1BC;
 					@include desktop{
 						padding:11px 8px; padding-right: 20px !important; @include fontrem(16px,22px);
 					}

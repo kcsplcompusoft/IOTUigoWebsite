@@ -12739,8 +12739,7 @@ a.bg9:hover {
   border-bottom: none;
 }
 .common-table.dataTable thead tr td {
-  background-color: #004286;
-  color: #FFFFFF;
+  background-color: #E2E6ED;
   white-space: nowrap;
   padding: 12px 19px 10px;
   font-size: 15px;
@@ -12748,7 +12747,7 @@ a.bg9:hover {
   line-height: 1.3333333333;
   font-weight: 500;
   border: none;
-  border-bottom: 2px solid #00B9B6;
+  border-bottom: 2px solid #91A1BC;
 }
 @media (max-width: 1440px) {
   .common-table.dataTable thead tr td {
