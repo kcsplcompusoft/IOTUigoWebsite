@@ -83,7 +83,20 @@
         }
         .bell-btn{
             position:relative;
-            .dot{width:12px; height:12px; border:2px solid $color-white; background:#F90909; border-radius:100%; position:absolute; right:-3px; top:-4px;}
+            .dot{
+                width:12px; height:12px; border:2px solid $color-white; background:#F90909; border-radius:100%; position:absolute; right:-3px; top:-4px;
+                &__number{
+                    width:24px;
+                    height:24px;
+                    color:$color-white;
+                    font-size:12px;
+                    right:-6px;
+                    top:-7px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
             .dropdown-menu{
                 width:300px; right:0px !important; top:calc(100% + 10px) !important; left:auto !important; float:none; transform:translate3d(0px, 0px, 0px) !important;
                 @include phonewide{
