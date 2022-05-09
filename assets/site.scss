@@ -3118,4 +3118,30 @@ button.slick-next.slick-arrow {
 		box-shadow: 0em -2.6em 0em 0em rgba(0,0,0, 0.2), 1.8em -1.8em 0 0em rgba(0,0,0, 0.2), 2.5em 0em 0 0em rgba(0,0,0, 0.2), 1.75em 1.75em 0 0em rgba(0,0,0, 0.2), 0em 2.5em 0 0em rgba(0,0,0, 0.2), -1.8em 1.8em 0 0em rgba(0,0,0, 0.5), -2.6em 0em 0 0em rgba(0,0,0, 0.7), -1.8em -1.8em 0 0em #000000;
 	}
 }
+
+.monitor-list-row{
+	.project-overview-card{
+		position: relative;
+		padding-bottom:159px;
+		.monitorcard-list{
+			position: absolute;
+			bottom:56px;
+			left:0;
+			width:100%;
+		}
+		.overview-card-bottom{
+			position: absolute;
+			bottom:0;
+			left:0;
+			width:100%;
+		}
+	}
+}
+.scroll-top{
+	position: fixed;
+    bottom: 0px;
+    right: 50px;
+    font-size: 38px;
+    color: #91A1BC;
+}
 // KCS CSS END

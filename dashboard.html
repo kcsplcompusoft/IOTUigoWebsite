@@ -46,10 +46,13 @@
     </div>
     <div class="breadcrum">
         <span><a href="#">Torrent Power</a></span>/
-        <span>Sabarmati , Ahmedabad</span>
+        <span>Sabarmati, Ahmedabad</span>
     </div>
     <div class="header-right ml-auto">
-        <div class="search-btn"><input type="text" class="search-input" placeholder="Search..."> <button type="button" class="btn btn-light mr-0 btn-sm rounded-sm ripple" ><i class="iot-search" ></i></button></div>
+        <button class="expand-collpase btn btn-light btn-sm rounded-sm ripple" title="Expand" onclick="go_full_screen()">
+            <i class="las la-expand"></i>
+        </button>
+        <div class="search-btn"><input type="text" class="search-input" placeholder="Search..."> <button type="button" class="btn btn-light mr-0 cple" ><i class="iot-search" ></i></button></div>
         <div class="bell-btn">
             <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-primary btn-sm rounded-sm ripple" ><i class="iot-bell" ></i> <span class="dot" ></span></button>
             <div class="dropdown-menu">
@@ -76,13 +79,13 @@
         <div class="mr-btn">
             <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-light btn-sm rounded-sm ripple ripple" ><span class="text" >MR</span></button>
             <div class="dropdown-menu">
-                <p class="companyname" >Torrent Power Pvt Ltd</p>
                 <div class="userprofile-row">
                     <div class="userprofile-pic"><span class="text" >MR</span></div>
                     <div class="userprofile-text">
                         <h4>Michal Rana</h4>
                         <p>micrana@gmail.com</p>
                         <ul class="userprofile-link">
+                            <li><a href="#">My Profile</a></li>
                             <li><a href="#">My Profile</a></li>
                         </ul>
                     </div>
@@ -332,6 +335,9 @@
             </div>
         </div>
     </div>
+</div>
+<div class="scroll-top">
+    <i class="las la-arrow-circle-up"></i>
 </div>
 <script src="assets/js/jquery-3.1.0.js"></script>
 <script src="assets/js/popper.min.js"></script>
