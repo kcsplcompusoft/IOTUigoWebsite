@@ -47,3 +47,27 @@ $(document).ready(function(){
 
 	/* Button ripple effect */
 });
+// $(".scroll-top").on('click', function() {
+// 	var scrollHeight = $(".content-block").height();
+// 	var scrollPosition = $(".content-block").height() + $(".content-block").scrollTop();
+// 	console.log(scrollHeight, scrollPosition);
+// 	if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
+// 	    // when scroll to bottom of the page
+// 		$(".content-block").animate({ scrollTop: 0 }, "slow");
+// 	}
+	
+//   });
+
+/* Full screen */
+function go_full_screen(){
+    var elem = document.documentElement;
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.msRequestFullscreen) {
+      elem.msRequestFullscreen();
+    } else if (elem.mozRequestFullScreen) {
+      elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) {
+      elem.webkitRequestFullscreen();
+    }
+}
