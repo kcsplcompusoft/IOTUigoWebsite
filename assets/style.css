@@ -11321,7 +11321,7 @@ select.custom-select:focus {
 .header .header-right .mr-btn .userprofile-row {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 20px 30px;
+  padding: 30px 20px 30px;
 }
 @media (max-width: 767px) {
   .header .header-right .mr-btn .userprofile-row {
@@ -16675,6 +16675,30 @@ button.slick-next.slick-arrow {
   87.5% {
     box-shadow: 0em -2.6em 0em 0em rgba(0, 0, 0, 0.2), 1.8em -1.8em 0 0em rgba(0, 0, 0, 0.2), 2.5em 0em 0 0em rgba(0, 0, 0, 0.2), 1.75em 1.75em 0 0em rgba(0, 0, 0, 0.2), 0em 2.5em 0 0em rgba(0, 0, 0, 0.2), -1.8em 1.8em 0 0em rgba(0, 0, 0, 0.5), -2.6em 0em 0 0em rgba(0, 0, 0, 0.7), -1.8em -1.8em 0 0em #000000;
   }
+}
+.monitor-list-row .project-overview-card {
+  position: relative;
+  padding-bottom: 159px;
+}
+.monitor-list-row .project-overview-card .monitorcard-list {
+  position: absolute;
+  bottom: 56px;
+  left: 0;
+  width: 100%;
+}
+.monitor-list-row .project-overview-card .overview-card-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 0px;
+  right: 50px;
+  font-size: 38px;
+  color: #91A1BC;
 }
 
 /*# sourceMappingURL=style.css.map */
