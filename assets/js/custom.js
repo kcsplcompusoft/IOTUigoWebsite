@@ -47,16 +47,17 @@ $(document).ready(function(){
 
 	/* Button ripple effect */
 });
-// $(".scroll-top").on('click', function() {
-// 	var scrollHeight = $(".content-block").height();
-// 	var scrollPosition = $(".content-block").height() + $(".content-block").scrollTop();
-// 	console.log(scrollHeight, scrollPosition);
-// 	if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
-// 	    // when scroll to bottom of the page
-// 		$(".content-block").animate({ scrollTop: 0 }, "slow");
-// 	}
-	
-//   });
+
+$(".content-block").on('scroll', function () {
+	if ($(this).scrollTop()) {
+		$('#backtotop').fadeIn();
+	} else {
+		$('#backtotop').fadeOut();
+	}
+});
+$("#backtotop").on('click', function () {
+	$(".content-block").animate({ scrollTop: 0 });
+});
 
 /* Full screen */
 function go_full_screen(){
@@ -71,3 +72,4 @@ function go_full_screen(){
       elem.webkitRequestFullscreen();
     }
 }
+
