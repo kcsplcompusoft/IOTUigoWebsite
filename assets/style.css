@@ -10848,12 +10848,13 @@ select.custom-select:focus {
   background: none;
 }
 .aside-navigation .navbar ul li .sub-menu li a {
+  position: relative;
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
   background: none !important;
   color: #000000;
-  padding: 5px 10px;
+  padding: 5px 10px 5px 43px;
   display: block;
 }
 .aside-navigation .navbar ul li .sub-menu li a:hover, .aside-navigation .navbar ul li .sub-menu li a.active {
@@ -10861,6 +10862,9 @@ select.custom-select:focus {
 }
 .aside-navigation .navbar ul li .sub-menu li a i {
   margin-right: 15px;
+  position: absolute;
+  left: 8px;
+  top: 6px;
 }
 @media (max-width: 1440px) {
   .aside-navigation .navbar ul li .sub-menu li a {
