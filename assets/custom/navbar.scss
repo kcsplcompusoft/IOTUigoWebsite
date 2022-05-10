@@ -82,10 +82,14 @@
                             background: none;
                         }
                         a{
-                            font-size:14px; line-height:20px; font-weight:400; background:none !important; color:$color-black; padding:5px 10px; display:block;
+                            position: relative;
+                            font-size:14px; line-height:20px; font-weight:400; background:none !important; color:$color-black; padding:5px 10px 5px 43px; display:block;
                             &:hover, &.active{ color:$color-Blue;}
                             i{
                                 margin-right:15px;
+                                position: absolute;
+                                left:8px;
+                                top:6px;
                             }
                         }
                         @include desktop{
