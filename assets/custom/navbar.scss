@@ -64,6 +64,10 @@
                     @include desktop{
                         padding:4px 30px 4px 15px;
                         &:before{right:9px; top:16px;}
+                       
+                    }
+                    @include desktop{
+                        @include fontrem(16px, 22px);
                     }
                 }
                 .submenu-arrow{
@@ -90,10 +94,14 @@
                                 position: absolute;
                                 left:8px;
                                 top:6px;
+                                @include desktop{
+                                    left:-4px;
+                                    top:10px;
+                                }
                             }
                         }
                         @include desktop{
-                            a{padding:3px 10px; font-size:12px;}
+                            a{padding:5px 10px 5px 26px;font-size:12px;}
                         }
                     }
                 }
