@@ -16718,6 +16718,11 @@ button.slick-next.slick-arrow {
   right: 50px;
   font-size: 38px;
   color: #91A1BC;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.scroll-top:hover {
+  color: #09ABA8;
 }
 
 /*# sourceMappingURL=style.css.map */
