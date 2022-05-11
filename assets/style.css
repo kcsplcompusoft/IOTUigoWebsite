@@ -10814,6 +10814,13 @@ select.custom-select:focus {
     top: 16px;
   }
 }
+@media (max-width: 1440px) {
+  .aside-navigation .navbar ul li > a {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.375;
+  }
+}
 .aside-navigation .navbar ul li .submenu-arrow {
   width: 28px;
   height: 28px;
@@ -10867,8 +10874,14 @@ select.custom-select:focus {
   top: 6px;
 }
 @media (max-width: 1440px) {
+  .aside-navigation .navbar ul li .sub-menu li a i {
+    left: -4px;
+    top: 10px;
+  }
+}
+@media (max-width: 1440px) {
   .aside-navigation .navbar ul li .sub-menu li a {
-    padding: 3px 10px;
+    padding: 5px 10px 5px 26px;
     font-size: 12px;
   }
 }
@@ -13333,6 +13346,7 @@ a.bg9:hover {
   display: flex;
   text-align: center;
   padding: 0 0 4px;
+  flex-wrap: wrap;
 }
 @media (max-width: 1440px) {
   .statistic-box .user-list {
@@ -13356,6 +13370,7 @@ a.bg9:hover {
   overflow: hidden;
   background: #E2E9F5;
   font-weight: 700;
+  margin-bottom: 10px;
 }
 .statistic-box .user-list li img {
   width: 100%;
