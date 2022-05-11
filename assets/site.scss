@@ -741,7 +741,7 @@ a.bg9:hover{background:#0b9492;}
 		.title{color:$color-black;}
 	}
 	.user-list{
-		display:flex; text-align:center; padding:0 0 4px;
+		display:flex; text-align:center; padding:0 0 4px; flex-wrap: wrap;
 		@include desktop{
 			padding:0px; margin-top:-8px;
 		}
@@ -749,7 +749,7 @@ a.bg9:hover{background:#0b9492;}
 			margin-top:0px;
 		}
 		li{
-			width:50px; height:50px; margin-right:10px; line-height:50px; text-align:center; color:$color-Blue; border-radius:8px; overflow:hidden; background:$color-btnLight; font-weight:700;
+			width:50px; height:50px; margin-right:10px; line-height:50px; text-align:center; color:$color-Blue; border-radius:8px; overflow:hidden; background:$color-btnLight; font-weight:700;margin-bottom:10px;
 			img{width:100%; height:100%; display:block; object-fit:cover;}
 			&.more-link{ display:block; background:$color-Blue; color:$color-white; }
 			@include desktop-big{
