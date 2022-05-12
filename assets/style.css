@@ -12708,7 +12708,7 @@ a.bg9:hover {
 }
 .common-datatable .dataTables_wrapper.no-footer .dataTables_scrollBody {
   border-bottom: none;
-  min-height: 100px;
+  min-height: 280px;
 }
 .common-datatable .dataTables_filter {
   margin-left: 20px;
