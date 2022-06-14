@@ -14455,6 +14455,7 @@ a.bg9:hover {
   margin-top: 0px !important;
 }
 .monitorsdetail-row .tab-content .tab-pane .industrial {
+  background: transparent;
   margin: 0 auto;
   box-shadow: none;
 }
@@ -14486,6 +14487,19 @@ a.bg9:hover {
   top: 50%;
   transform: translateY(-50%);
   margin-top: -20px;
+  width: 100%;
+}
+.monitorsdetail-row .tab-content .tab-pane .industrial.led .meter {
+  margin: auto;
+}
+.monitorsdetail-row .tab-content .tab-pane .industrial.led .meter-title {
+  text-align: center;
+  margin-top: 10px;
+}
+.monitorsdetail-row .tab-content .tab-pane .industrial.led .meter-measurement {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 .monitorsdetail-row .tab-content .tab-pane .industrial.readout {
   width: 100% !important;
