@@ -1275,6 +1275,7 @@ a.bg9:hover{background:#0b9492;}
 			}
 			.map-home{margin-top:0px !important;}
 			.industrial{
+				background: transparent;
 				margin:0 auto; box-shadow:none;
 				&.tank.size.two{
 					.tick{
@@ -1298,6 +1299,19 @@ a.bg9:hover{background:#0b9492;}
 				}
 				&.led{
 					position:relative; top:50%; transform:translateY(-50%); margin-top:-20px;
+					width:100%;
+					.meter{
+						margin:auto;
+					}
+					.meter-title{
+						text-align: center;
+						margin-top:10px;
+					}
+					.meter-measurement{
+						display: flex;
+						justify-content: space-between;
+						margin-top:20px;
+					}
 				}
 				&.readout{
 					width:100% !important; padding-top:24px; background:#E2E9F5;
@@ -2647,6 +2661,12 @@ button.slick-next.slick-arrow {
 		.modal-view__col{
 			padding-bottom:30px;
 		}
+	}
+	&__popup-wrap{
+		max-height: 100%;
+		overflow-y: auto;
+		max-width: 100%;
+		overflow-x: hidden;
 	}
 	&__title{
 		margin-left:20px;
