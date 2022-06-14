@@ -2597,6 +2597,7 @@ button.slick-next.slick-arrow {
 		z-index:9;
 		box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 20%);
 		transition: all .5s ease-in;
+		overflow-y: auto;
 		&.tooltip-slide-in{
 			right:0;
 		}
