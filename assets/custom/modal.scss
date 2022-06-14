@@ -1,4 +1,8 @@
 .modal{
+    .modal-content{
+        max-height: 90%;
+        overflow-y: auto;
+    }
     &.rightview-modal{
         .modal-dialog{
             margin:0; width:1500px; height:100%; overflow:auto; max-width: 100%; float: right; background: $color-white; transform:translate(100px, 0px);
