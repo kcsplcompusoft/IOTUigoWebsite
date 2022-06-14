@@ -592,7 +592,7 @@
 	width: calc(25px * 1);
 }
 
-.industrial.led.size.two {
+.industrial.led.size.two .meter{
 	height: -webkit-calc(25px * 2);
 	height: -moz-calc(25px * 2);
 	height: -o-calc(25px * 2);
