@@ -16194,7 +16194,6 @@ button.slick-next.slick-arrow {
   z-index: 9;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   transition: all 0.5s ease-in;
-  overflow-y: auto;
 }
 .tooltip-view__popup.tooltip-slide-in {
   right: 0;
@@ -16251,6 +16250,12 @@ button.slick-next.slick-arrow {
 }
 .tooltip-view__popup .modal-view__col {
   padding-bottom: 30px;
+}
+.tooltip-view__popup-wrap {
+  max-height: 100%;
+  overflow-y: auto;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 .tooltip-view__title {
   margin-left: 20px;

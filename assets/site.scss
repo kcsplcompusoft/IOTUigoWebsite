@@ -2597,7 +2597,6 @@ button.slick-next.slick-arrow {
 		z-index:9;
 		box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 20%);
 		transition: all .5s ease-in;
-		overflow-y: auto;
 		&.tooltip-slide-in{
 			right:0;
 		}
@@ -2648,6 +2647,12 @@ button.slick-next.slick-arrow {
 		.modal-view__col{
 			padding-bottom:30px;
 		}
+	}
+	&__popup-wrap{
+		max-height: 100%;
+		overflow-y: auto;
+		max-width: 100%;
+		overflow-x: hidden;
 	}
 	&__title{
 		margin-left:20px;
