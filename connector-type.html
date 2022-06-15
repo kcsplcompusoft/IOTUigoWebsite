@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Statistics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="assets/line-awesome.css" rel="stylesheet" type="text/css">
+    <link href="assets/datatables.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/bootstrap-select.css" rel="stylesheet" type="text/css">
+    <link href="assets/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="header">
+    <button type="button" class="menu-toggle"><i class="las la-bars"></i></button>
+    <div class="logo">
+        <img src="assets/images/logo-wt.svg" alt="" title="">
+    </div>
+    <div class="breadcrum">
+    </div>
+    <div class="header-right ml-auto">
+        <div class="search-btn"><input type="text" class="search-input" placeholder="Search..."> <button type="button" class="btn btn-light mr-0 btn-sm rounded-sm ripple" ><i class="iot-search" ></i></button></div>
+        <div class="bell-btn">
+            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-primary btn-sm rounded-sm ripple" ><i class="iot-bell" ></i> <span class="dot" ></span></button>
+            <div class="dropdown-menu">
+                <div class="notification-row">
+                    <div class="notification-colum">
+                        <h5>Luanch Admin</h5>
+                        <p>Just see the my new admin!</p>
+                        <span>9:30 AM</span>
+                    </div>
+                    <div class="notification-colum">
+                        <h5>Luanch Admin</h5>
+                        <p>Just see the my new admin!</p>
+                        <span>9:30 AM</span>
+                    </div>
+                    <div class="notification-colum">
+                        <h5>Luanch Admin</h5>
+                        <p>Just see the my new admin!</p>
+                        <span>9:30 AM</span>
+                    </div>
+                </div>
+                <a href="#" class="viewall-notification">Check all notifications <i class="las la-angle-right" ></i></a>
+            </div>
+        </div>
+        <div class="mr-btn">
+            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-light btn-sm rounded-sm ripple" ><span class="text" >MR</span></button>
+            <div class="dropdown-menu">
+                <p class="companyname" >Torrent Power Pvt Ltd</p>
+                <div class="userprofile-row">
+                    <div class="userprofile-pic"><span class="text" >MR</span></div>
+                    <div class="userprofile-text">
+                        <h4>Michal Rana</h4>
+                        <p>micrana@gmail.com</p>
+                        <ul class="userprofile-link">
+                            <li><a href="#">My Profile</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#" class="userprofile-logout">Logout</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-wrapper">
+    <div class="navigation-overlay"></div>
+    <div class="aside-navigation">
+        <div class="corner-shap"></div>
+        <div class="navbar scroll-pane">
+            <ul>
+                <li><a href="dashboard.html" class="active" title="Dashboard"><span class="menu-icon" ><i class="iot-dashboard-ico" ></i></span><span class="menu-text" >Dashboard</span></a> </li>
+                <li><a href="" title="Masters"><span class="menu-icon"><i class="iot-masters-ico" ></i></span><span class="menu-text">Masters</span></a> </li>
+                <li><a href="" title="Company Management"><span class="menu-icon"><i class="iot-company-management-ico" ></i></span><span class="menu-text" >Company Management</span></a><i class="submenu-arrow las la-angle-right" ></i>
+                    <ul class="sub-menu">
+                        <li><a href="#"><i class="las la-angle-right"></i> Industry Type</a></li>
+                        <li><a href="#"><i class="las la-angle-right"></i> Site Category</a></li>
+                        <li><a href="#"><i class="las la-angle-right"></i> Department Category</a></li>
+                        <li><a href="#"><i class="las la-angle-right"></i> User Type</a></li>
+                        <li><a href="#"><i class="las la-angle-right"></i> Zones</a></li>
+                        <li><a href="#"><i class="las la-angle-right"></i> Document Type</a></li>
+                        <li><a href="#"><i class="las la-angle-right"></i> Alert Type</a></li>
+                        <li><a href="#"><i class="las la-angle-right"></i> Protocols</a></li>
+                        <li><a href="#"><i class="las la-angle-right"></i> Parameter</a></li>
+                        <li><a href="#"><i class="las la-angle-right"></i> Unit</a></li>
+                        <li><a href="#"><i class="las la-angle-right"></i> Connector</a></li>
+                    </ul>
+                </li>
+                <li><a href="" title="Asset Configurations"><span class="menu-icon"><i class="iot-asset-configuration-ico" ></i></span><span class="menu-text" >Asset Configurations</span></a> </li>
+                <li><a href="" title="Template Master"><span class="menu-icon"><i class="iot-template-master-ico" ></i></span><span class="menu-text" >Template Master</span></a> </li>
+                <li><a href="" title="User Management"><span class="menu-icon"><i class="iot-user-management-ico" ></i></span><span class="menu-text" >User Management</span></a> </li>
+                <li><a href="rule-engine.html" title="Rule Engine"><span class="menu-icon"><i class="iot-rule-engine-ico" ></i></span><span class="menu-text" >Rule Engine</span></a> </li>
+                <li><a href="" title="Fact List"><span class="menu-icon" ><i class="iot-fact-list-ico" ></i></span><span class="menu-text" >Fact List</span></a> </li>
+                <li><a href="monitor.html" title="Staticstics"><span class="menu-icon" ><i class="iot-pie-chart-ico" ></i></span><span class="menu-text" >Staticstics</span></a> </li>
+                <li><a href="" title="Email SMTP Configuration"><span class="menu-icon" ><i class="iot-smtp-config-ico" ></i></span><span class="menu-text" >Email SMTP Configuration</span></a> </li>
+                <li><a href="" title="Simulator Configuration"><span class="menu-icon" ><i class="iot-simulator-config-ico" ></i></span><span class="menu-text" >Simulator Configuration</span></a> </li>
+                <li><a href="" title="Company Server"><span class="menu-icon" ><i class="iot-company-server-ico" ></i></span><span class="menu-text" >Company Server</span></a> </li>
+                <li><a href="" title="Companby Info"><span class="menu-icon" ><i class="iot-company-info-ico" ></i></span><span class="menu-text" >Companby Info</span></a> </li>
+                <li><a href="" title="Subscription"><span class="menu-icon" ><i class="iot-subscription-ico" ></i></span><span class="menu-text">Subscription</span></a> </li>
+                <li><a href="" title="Downloads"><span class="menu-icon" ><i class="iot-downloads-ico" ></i></span><span class="menu-text" >Downloads</span></a> </li>
+            </ul>
+            <!-- <ul>
+                <li><a href="dashboard.html" class="active"  ><span class="menu-icon" ><i class="iot-dashboard-ico" ></i></span><span class="menu-text" >Dashboard</span></a> </li>
+                <li><a href="devices.html" ><span class="menu-icon" ><i class="iot-wifi" ></i></span><span class="menu-text" >Devices</span></a> </li>
+                <li><a href="device-deployment.html"><span class="menu-icon" ><i class="iot-startup" ></i></span><span class="menu-text" >Device Deployment</span></a> </li>
+                <li><a href="monitor.html"><span class="menu-icon" ><i class="iot-eye" ></i></span><span class="menu-text" >Monitors</span></a> </li>
+                <li><a href="rule-engine.html"><span class="menu-icon" ><i class="iot-notification" ></i></span><span class="menu-text" >Rule Engine</span></a> </li>
+                <li>
+                    <a href="#"><span class="menu-icon" ><i class="iot-masters" ></i></span><span class="menu-text" >Masters</span></a> <i class="submenu-arrow las la-angle-right" ></i>
+                    <ul class="sub-menu">
+                        <li><a href="#">Industry Type</a></li>
+                        <li><a href="#">Site Category</a></li>
+                        <li><a href="#">Department Category</a></li>
+                        <li><a href="#">User Type</a></li>
+                        <li><a href="#">Zones</a></li>
+                        <li><a href="#">Document Type</a></li>
+                        <li><a href="#">Alert Type</a></li>
+                        <li><a href="#">Protocols</a></li>
+                        <li><a href="#">Parameter</a></li>
+                        <li><a href="#">Unit</a></li>
+                        <li><a href="#">Connector</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><span class="menu-icon" ><i class="iot-configuration" ></i></span><span class="menu-text" >Configurations</span></a> <i class="submenu-arrow las la-angle-right" ></i>
+                    <ul class="sub-menu">
+                        <li><a href="#">Menu Configurations</a></li>
+                        <li><a href="#">System Configuraiton</a></li>
+                        <li><a href="#">SMTP Email Configuration</a></li>
+                        <li><a href="application-management.html">Application Management</a></li>
+                        <li><a href="#">Simulator</a></li>
+                        <li><a href="user-management.html">User Management</a></li>
+                        <li><a href="#">Roles & Rights</a></li>
+                        <li><a href="#">Monitor Bundle</a></li>
+                        <li><a href="#">Monitor Widget</a></li>
+                    </ul>
+                 </li>
+                <li><a href="#"><span class="menu-icon" ><i class="iot-reports" ></i></span><span class="menu-text" >Reports</span></a> </li>
+            </ul> -->
+        </div>
+        <div class="navigation-bottom">
+            <div class="powered-by text-center">
+                <p>Powered By</p>
+                <img src="assets/images/kcs-logo.svg" alt="" title="">
+            </div>
+            <a href="Javascript:void(0);" class="navigation-toggle"><span class="toggle-icon" ><i class="las la-angle-double-left"></i></span></a>
+        </div>
+    </div>
+    <div class="content-block">
+        <div class="work-space device-page">
+            <div class="d-flex align-items-center title-head">
+                <h6 class="pb-0" >Connector Type</h6>
+            </div>
+            <div class="common-datatable filter-search-minus filter-paging">
+                <div class="datatable-head">
+                    <div class="table-filter table-filter-paging">
+                        <select class="selectpicker alert-select">
+                            <option selected >1</option>
+                            <option>5</option>
+                            <option>10</option>
+                            <option>20</option>
+                        </select>
+                    </div>
+                </div>
+                <table id="ruleengine-table" class="common-table" style="width:100%">
+                    <thead>
+                        <tr>
+                            <td>ID</td>
+                            <td>Device Rule Name</td>
+                            <td>Added By</td>
+                            <td>Created on</td>
+                            <td>Alerts</td>
+                            <td>Status</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>DTP0001</td>
+                            <td><div class="item-icon-title-cell">
+                                <div class="item-title">HIL ETP BOD Rule Engine 1</div>
+                                <div class="item-menu">
+                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                        <i class="las la-ellipsis-h"></i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="rule-designer.html"><i class="iot-edit" ></i>Edit</a></li>
+                                        <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                    </ul>
+                                </div>
+                            </div> </td>
+                            <td>Sanket Shah</td>
+                            <td>Feb. 22, 2021, 12:16 p.m.</td>
+                            <td>3</td>
+                            <td><div class="item-icon-title-cell">
+                                <div class="item-title active">Active</div>
+                                <div class="item-menu active-itemmenu">
+                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                        <i class="las la-ellipsis-h"></i>
+                                    </button>
+                                    <div class="dropdown-menu stophide">
+                                        <h4>Set Device as</h4>
+                                        <label class="switch-toggle">
+                                            <input type="checkbox" name="" value=""> <span></span>
+                                        </label>
+                                        <p>Device is Active now</p>
+                                    </div>
+                                </div>
+                            </div></td>
+                        </tr>
+                        <tr class="edit-active">
+                            <td>DTP0001</td>
+                            <td><div class="item-icon-title-cell">
+                                <div class="item-title">HIL ETP BOD Rule Engine 1</div>
+                                <div class="item-menu">
+                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                        <i class="las la-ellipsis-h"></i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="rule-designer.html"><i class="iot-edit" ></i>Edit</a></li>
+                                        <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                    </ul>
+                                </div>
+                            </div> </td>
+                            <td>Sanket Shah</td>
+                            <td>Feb. 22, 2021, 12:16 p.m.</td>
+                            <td>3</td>
+                            <td><div class="item-icon-title-cell">
+                                <div class="item-title active">Active</div>
+                                <div class="item-menu active-itemmenu">
+                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                        <i class="las la-ellipsis-h"></i>
+                                    </button>
+                                    <div class="dropdown-menu stophide">
+                                        <h4>Set Device as</h4>
+                                        <label class="switch-toggle">
+                                            <input type="checkbox" name="" value=""> <span></span>
+                                        </label>
+                                        <p>Device is Active now</p>
+                                    </div>
+                                </div>
+                            </div></td>
+                        </tr>
+                        <tr>
+                            <td>DTP0001</td>
+                            <td><div class="item-icon-title-cell">
+                                <div class="item-title">HIL ETP BOD Rule Engine 1</div>
+                                <div class="item-menu">
+                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                        <i class="las la-ellipsis-h"></i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="rule-designer.html"><i class="iot-edit" ></i>Edit</a></li>
+                                        <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                    </ul>
+                                </div>
+                            </div> </td>
+                            <td>Sanket Shah</td>
+                            <td>Feb. 22, 2021, 12:16 p.m.</td>
+                            <td>3</td>
+                            <td><div class="item-icon-title-cell">
+                                <div class="item-title in-active">In Active</div>
+                                <div class="item-menu active-itemmenu">
+                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                        <i class="las la-ellipsis-h"></i>
+                                    </button>
+                                    <div class="dropdown-menu stophide">
+                                        <h4>Set Device as</h4>
+                                        <label class="switch-toggle">
+                                            <input type="checkbox" name="" value=""> <span></span>
+                                        </label>
+                                        <p>Device is Active now</p>
+                                    </div>
+                                </div>
+                            </div></td>
+                        </tr>
+                        <tr>
+                            <td>DTP0001</td>
+                            <td><div class="item-icon-title-cell">
+                                <div class="item-title">HIL ETP BOD Rule Engine 1</div>
+                                <div class="item-menu">
+                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                        <i class="las la-ellipsis-h"></i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="rule-designer.html"><i class="iot-edit" ></i>Edit</a></li>
+                                        <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                    </ul>
+                                </div>
+                            </div> </td>
+                            <td>Sanket Shah</td>
+                            <td>Feb. 22, 2021, 12:16 p.m.</td>
+                            <td>3</td>
+                            <td><div class="item-icon-title-cell">
+                                <div class="item-title active">Active</div>
+                                <div class="item-menu active-itemmenu">
+                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                        <i class="las la-ellipsis-h"></i>
+                                    </button>
+                                    <div class="dropdown-menu stophide">
+                                        <h4>Set Device as</h4>
+                                        <label class="switch-toggle">
+                                            <input type="checkbox" name="" value=""> <span></span>
+                                        </label>
+                                        <p>Device is Active now</p>
+                                    </div>
+                                </div>
+                            </div></td>
+                        </tr>
+                        <tr>
+                            <td>DTP0001</td>
+                            <td><div class="item-icon-title-cell">
+                                <div class="item-title">HIL ETP BOD Rule Engine 1</div>
+                                <div class="item-menu">
+                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                        <i class="las la-ellipsis-h"></i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="rule-designer.html"><i class="iot-edit" ></i>Edit</a></li>
+                                        <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                    </ul>
+                                </div>
+                            </div> </td>
+                            <td>Sanket Shah</td>
+                            <td>Feb. 22, 2021, 12:16 p.m.</td>
+                            <td>3</td>
+                            <td><div class="item-icon-title-cell">
+                                <div class="item-title in-active">In Active</div>
+                                <div class="item-menu active-itemmenu">
+                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                        <i class="las la-ellipsis-h"></i>
+                                    </button>
+                                    <div class="dropdown-menu stophide">
+                                        <h4>Set Device as</h4>
+                                        <label class="switch-toggle">
+                                            <input type="checkbox" name="" value=""> <span></span>
+                                        </label>
+                                        <p>Device is Active now</p>
+                                    </div>
+                                </div>
+                            </div></td>
+                        </tr>
+                        <tr>
+                            <td>DTP0001</td>
+                            <td><div class="item-icon-title-cell">
+                                <div class="item-title">HIL ETP BOD Rule Engine 1</div>
+                                <div class="item-menu">
+                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                        <i class="las la-ellipsis-h"></i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="rule-designer.html"><i class="iot-edit" ></i>Edit</a></li>
+                                        <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                    </ul>
+                                </div>
+                            </div> </td>
+                            <td>Sanket Shah</td>
+                            <td>Feb. 22, 2021, 12:16 p.m.</td>
+                            <td>3</td>
+                            <td><div class="item-icon-title-cell">
+                                <div class="item-title active">Active</div>
+                                <div class="item-menu">
+                                    <button type="button" class="item-menu-click" >
+                                        <i class="las la-ellipsis-h"></i>
+                                    </button>
+                                </div>
+                            </div></td>
+                        </tr>
+                        <tr>
+                            <td>DTP0001</td>
+                            <td><div class="item-icon-title-cell">
+                                <div class="item-title">HIL ETP BOD Rule Engine 1</div>
+                                <div class="item-menu">
+                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                        <i class="las la-ellipsis-h"></i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="rule-designer.html"><i class="iot-edit" ></i>Edit</a></li>
+                                        <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                    </ul>
+                                </div>
+                            </div> </td>
+                            <td>Sanket Shah</td>
+                            <td>Feb. 22, 2021, 12:16 p.m.</td>
+                            <td>3</td>
+                            <td><div class="item-icon-title-cell">
+                                <div class="item-title active">Active</div>
+                                <div class="item-menu">
+                                    <button type="button" class="item-menu-click" >
+                                        <i class="las la-ellipsis-h"></i>
+                                    </button>
+                                </div>
+                            </div></td>
+                        </tr>
+                        <tr>
+                            <td>DTP0001</td>
+                            <td><div class="item-icon-title-cell">
+                                <div class="item-title">HIL ETP BOD Rule Engine 1</div>
+                                <div class="item-menu">
+                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="item-menu-click" >
+                                        <i class="las la-ellipsis-h"></i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="rule-designer.html"><i class="iot-edit" ></i>Edit</a></li>
+                                        <li><a href="#"><i class="iot-delete" ></i>Delete</a></li>
+                                    </ul>
+                                </div>
+                            </div> </td>
+                            <td>Sanket Shah</td>
+                            <td>Feb. 22, 2021, 12:16 p.m.</td>
+                            <td>3</td>
+                            <td><div class="item-icon-title-cell">
+                                <div class="item-title active">Active</div>
+                                <div class="item-menu">
+                                    <button type="button" class="item-menu-click" >
+                                        <i class="las la-ellipsis-h"></i>
+                                    </button>
+                                </div>
+                            </div></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+        
+        
+    </div>
+</div>
+
+<script src="assets/js/jquery-3.1.0.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/slick.js"></script>
+<script src="assets/js/bootstrap-datepicker.js"></script>
+<script src="assets/js/datatables.min.js"></script>
+<script src="assets/js/bootstrap-select.min.js"></script>
+<script src="assets/js/mousewheel.js"></script>
+<script src="assets/js/jscrollpane.min.js"></script>
+<script src="assets/js/custom.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#ruleengine-table').DataTable( {
+        "paging":   false,
+        language: {
+            searchPlaceholder: "Filter by keyword"
+        },
+        "scrollX": true,
+        "ordering": false,
+        "info":     false
+        });
+        
+        $('.alert-select').selectpicker();
+        $('.boot-select .select').selectpicker();
+    });
+    /* JSCrollpane */
+    $(function()
+	    {
+            $('.scroll-pane').each(
+                function()
+                {
+                    $(this).jScrollPane(
+                        {
+                            autoReinitialise: true,
+                            animateScroll: true,
+                            resizeSensor: true
+                        }
+                    );
+                    var api = $(this).data('jsp');
+                    var throttleTimeout;
+                    $(window).bind(
+                        'resize',
+                        function()
+                        {
+                            // IE fires multiple resize events while you are dragging the browser window which
+                            // causes it to crash if you try to update the scrollpane on every one. So we need
+                            // to throttle it to fire a maximum of once every 50 milliseconds...
+                            if (!throttleTimeout) {
+                                throttleTimeout = setTimeout(
+                                    function()
+                                    {
+                                        api.reinitialise();
+                                        throttleTimeout = null;
+                                    },
+                                    50
+                                );
+                            }
+                        }
+                    );
+                }
+            );
+        }
+    );
+</script>
+</body>
+</html>
