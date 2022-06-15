@@ -10499,7 +10499,7 @@ select.custom-select:focus {
   font-style: normal;
 }
 .switch-toggle i.active {
-  margin-right: 7px;
+  margin-left: 7px;
   color: #45AB21;
 }
 .switch-toggle i.inactive {
@@ -12606,6 +12606,14 @@ a.bg9:hover {
 .table-filter .bootstrap-select.show-tick .dropdown-menu ul li .check-mark + .text {
   padding-left: 10px;
 }
+.table-filter.table-filter-paging .bootstrap-select {
+  width: 60px !important;
+  border-right: 1px solid #D3DDEE;
+  border-left: 0;
+}
+.table-filter.table-filter-paging .bootstrap-select .dropdown-toggle .filter-option {
+  padding-left: 0;
+}
 
 .hide_search .bs-searchbox {
   display: none;
@@ -12753,6 +12761,19 @@ a.bg9:hover {
 @media (max-width: 767px) {
   .common-datatable.filter-search-minus .dataTables_filter {
     margin-top: 0px;
+  }
+}
+.common-datatable.filter-paging .dataTables_filter {
+  padding-left: 90px;
+}
+@media (max-width: 991px) {
+  .common-datatable.filter-paging .dataTables_filter {
+    padding-left: 70px;
+  }
+}
+@media (max-width: 767px) {
+  .common-datatable.filter-paging .dataTables_filter {
+    margin-top: -36px;
   }
 }
 .common-datatable.no-search .dataTables_filter {
@@ -12925,6 +12946,7 @@ a.bg9:hover {
 }
 .common-table.dataTable tbody tr.edit-active td {
   background: #f2f5fa;
+  font-weight: 700;
 }
 .common-table.dataTable tbody tr.edit-active td .item-icon-title-cell .item-menu {
   opacity: 1;
@@ -16305,6 +16327,7 @@ button.slick-next.slick-arrow {
 
 .common-table tbody tr.table-row__active td {
   background: #f2f5fa;
+  font-weight: 700;
 }
 .common-table tbody tr.table-row__active td .item-icon-title-cell .item-menu {
   opacity: 1 !important;

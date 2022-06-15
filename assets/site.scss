@@ -315,6 +315,18 @@ a.bg9:hover{background:#0b9492;}
 			.dropdown-menu ul li .check-mark + .text{padding-left:10px;}
 		}
 	}
+	&.table-filter-paging{
+		.bootstrap-select{
+			width:60px !important;
+			border-right: 1px solid #D3DDEE;
+			border-left: 0;
+			.dropdown-toggle{
+				.filter-option{
+					padding-left:0;
+				}
+			}
+		}
+	}
 }
 .hide_search {
 	.bs-searchbox {
@@ -365,6 +377,7 @@ a.bg9:hover{background:#0b9492;}
 	}
 	.dataTables_wrapper.no-footer .dataTables_scrollBody{border-bottom:none; min-height:280px;}
 	.dataTables_filter{margin-left:20px; padding-top:8px; margin-bottom:8px; float:none; text-align:left;}
+
 	&.filter-search-minus{
 		.dataTables_filter{
 			float:none; width: 100%; padding:0; text-align:left; margin-top:-42px; margin-left:0; padding-left: 20px; margin-bottom:12px;
@@ -380,6 +393,17 @@ a.bg9:hover{background:#0b9492;}
 		}
 		@include phonewide{
 			.dataTables_filter{margin-top:0px;}
+		}
+	}
+	&.filter-paging{
+		.dataTables_filter{
+			padding-left: 90px;
+			@include tablet{
+				padding-left: 70px;
+			}
+			@include phonewide{
+				margin-top: -36px;
+			}
 		}
 	}
 	&.no-search{
@@ -489,6 +513,7 @@ a.bg9:hover{background:#0b9492;}
 				&.edit-active{
 					td{
 						background:$color-lightBlue;
+						font-weight: 700;
 						.item-icon-title-cell{
 							.item-menu{opacity:1; visibility:visible;}
 						}
@@ -2706,6 +2731,7 @@ button.slick-next.slick-arrow {
 			&.table-row__active{
 				td{
 					background: #f2f5fa;
+					font-weight: 700;
 					.item-icon-title-cell .item-menu{
 						opacity: 1 !important;
 						visibility: visible;
