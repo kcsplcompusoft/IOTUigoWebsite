@@ -153,6 +153,9 @@ a.bg9:hover{background:#0b9492;}
 		}
 		.dropdown-menu{
 			margin-top:-5px; border-radius:0 0 3px 3px; padding-top:4px;
+			&.inner{
+				overflow:hidden;
+			}
 		}
 	}
 	@include desktop{
@@ -2857,7 +2860,7 @@ button.slick-next.slick-arrow {
 	position: fixed;
 	right:10px;
 	bottom:10px;
-	z-index:9;
+	z-index:999;
 	&.bg-success{
 		background: #CBF3DB !important;
 		border: 1px solid #00B74A;
