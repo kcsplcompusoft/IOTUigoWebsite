@@ -12294,6 +12294,9 @@ a.bg9:hover {
   border-radius: 0 0 3px 3px;
   padding-top: 4px;
 }
+.page-head .custom-select .dropdown-menu.inner, .page-head .boot-select .bootstrap-select .dropdown-menu.inner {
+  overflow: hidden;
+}
 @media (max-width: 1440px) {
   .page-head {
     padding: 8px 20px 12px !important;
@@ -16458,7 +16461,7 @@ button.slick-next.slick-arrow {
   position: fixed;
   right: 10px;
   bottom: 10px;
-  z-index: 9;
+  z-index: 999;
 }
 .toast.bg-success {
   background: #CBF3DB !important;
