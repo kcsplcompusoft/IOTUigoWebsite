@@ -239,7 +239,7 @@ select.custom-select{
     input[type="checkbox"]{position:absolute; visibility:hidden; opacity:0;}
     i{
         font-style:normal;
-        &.active{margin-right:7px; color:#45AB21;}
+        &.active{margin-left:7px; color:#45AB21;}
         &.inactive{margin-left:7px; color:#c81f1f;}
     }
     span{
