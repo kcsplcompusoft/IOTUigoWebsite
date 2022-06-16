@@ -327,15 +327,6 @@ a.bg9:hover{background:#0b9492;}
 		width:60px !important;
 			border-right: 1px solid #D3DDEE;
 			border-left: 0;
-		@include desktop{
-			width:213px !important;
-		}
-		@include tablet{
-			width:170px !important;
-		}
-		@include phonewide{
-			width:145px !important; margin-bottom:7px;
-		}
 		.dropdown-toggle{
 			background:$color-white; border-radius:0px; padding:0px; height:30px;
 			&:focus{outline:none !important;}

@@ -12628,22 +12628,6 @@ a.bg9:hover {
   border-right: 1px solid #D3DDEE;
   border-left: 0;
 }
-@media (max-width: 1440px) {
-  .table-filter-paging .bootstrap-select {
-    width: 213px !important;
-  }
-}
-@media (max-width: 991px) {
-  .table-filter-paging .bootstrap-select {
-    width: 170px !important;
-  }
-}
-@media (max-width: 767px) {
-  .table-filter-paging .bootstrap-select {
-    width: 145px !important;
-    margin-bottom: 7px;
-  }
-}
 .table-filter-paging .bootstrap-select .dropdown-toggle {
   background: #FFFFFF;
   border-radius: 0px;
