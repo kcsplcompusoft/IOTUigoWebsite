@@ -16919,4 +16919,17 @@ button.slick-next.slick-arrow {
   color: #09ABA8;
 }
 
+.expand-collpase i {
+  pointer-events: none;
+}
+.expand-collpase .la-compress {
+  display: none;
+}
+.expand-collpase.ex-active .la-compress {
+  display: block;
+}
+.expand-collpase.ex-active .la-expand {
+  display: none;
+}
+
 /*# sourceMappingURL=style.css.map */
