@@ -12624,8 +12624,9 @@ a.bg9:hover {
   border-radius: 0px;
 }
 .table-filter-paging .bootstrap-select {
-  border-left: 1px solid #D3DDEE;
-  width: 330px !important;
+  width: 60px !important;
+  border-right: 1px solid #D3DDEE;
+  border-left: 0;
 }
 @media (max-width: 1440px) {
   .table-filter-paging .bootstrap-select {
@@ -12661,6 +12662,7 @@ a.bg9:hover {
   line-height: 20px;
   border: none;
   color: #000000;
+  padding-left: 0;
 }
 .table-filter-paging .bootstrap-select .dropdown-toggle:after {
   background: url("images/arrow-down.svg") no-repeat left top;
