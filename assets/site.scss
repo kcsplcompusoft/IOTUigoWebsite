@@ -324,7 +324,9 @@ a.bg9:hover{background:#0b9492;}
 	.custom-select{ border-left:1px solid #D3DDEE; width:330px; padding:5px 30px 5px 13px; box-shadow:none; border-radius:0px;}
 	
 	.bootstrap-select{
-		border-left:1px solid #D3DDEE; width:330px !important;
+		width:60px !important;
+			border-right: 1px solid #D3DDEE;
+			border-left: 0;
 		@include desktop{
 			width:213px !important;
 		}
@@ -340,6 +342,7 @@ a.bg9:hover{background:#0b9492;}
 			.filter-option-inner{padding-right:0px;}
 			.filter-option{
 				padding:5px 30px 5px 13px; font-size:14px; line-height:20px; border:none; color:$color-black;
+				padding-left:0;
 			}
 			&:after{
 				background:url("images/arrow-down.svg") no-repeat left top; display:block; position:absolute; top:12px; right:11px; margin:0px; background-size:100% auto; width:14px; height:10px; border:none;
