@@ -12605,13 +12605,172 @@ a.bg9:hover {
 .table-filter .bootstrap-select.show-tick .dropdown-menu ul li .check-mark + .text {
   padding-left: 10px;
 }
-.table-filter.table-filter-paging .bootstrap-select {
-  width: 60px !important;
-  border-right: 1px solid #D3DDEE;
-  border-left: 0;
+
+.table-filter-paging {
+  display: flex;
+  position: relative;
+  z-index: 5;
 }
-.table-filter.table-filter-paging .bootstrap-select .dropdown-toggle .filter-option {
+@media (max-width: 767px) {
+  .table-filter-paging {
+    flex-wrap: wrap;
+  }
+}
+.table-filter-paging .custom-select {
+  border-left: 1px solid #D3DDEE;
+  width: 330px;
+  padding: 5px 30px 5px 13px;
+  box-shadow: none;
+  border-radius: 0px;
+}
+.table-filter-paging .bootstrap-select {
+  border-left: 1px solid #D3DDEE;
+  width: 330px !important;
+}
+@media (max-width: 1440px) {
+  .table-filter-paging .bootstrap-select {
+    width: 213px !important;
+  }
+}
+@media (max-width: 991px) {
+  .table-filter-paging .bootstrap-select {
+    width: 170px !important;
+  }
+}
+@media (max-width: 767px) {
+  .table-filter-paging .bootstrap-select {
+    width: 145px !important;
+    margin-bottom: 7px;
+  }
+}
+.table-filter-paging .bootstrap-select .dropdown-toggle {
+  background: #FFFFFF;
+  border-radius: 0px;
+  padding: 0px;
+  height: 30px;
+}
+.table-filter-paging .bootstrap-select .dropdown-toggle:focus {
+  outline: none !important;
+}
+.table-filter-paging .bootstrap-select .dropdown-toggle .filter-option-inner {
+  padding-right: 0px;
+}
+.table-filter-paging .bootstrap-select .dropdown-toggle .filter-option {
+  padding: 5px 30px 5px 13px;
+  font-size: 14px;
+  line-height: 20px;
+  border: none;
+  color: #000000;
+}
+.table-filter-paging .bootstrap-select .dropdown-toggle:after {
+  background: url("images/arrow-down.svg") no-repeat left top;
+  display: block;
+  position: absolute;
+  top: 12px;
+  right: 11px;
+  margin: 0px;
+  background-size: 100% auto;
+  width: 14px;
+  height: 10px;
+  border: none;
+}
+@media (max-width: 991px) {
+  .table-filter-paging .bootstrap-select .dropdown-toggle {
+    height: 26px;
+  }
+  .table-filter-paging .bootstrap-select .dropdown-toggle .filter-option {
+    padding: 3px 22px 3px 8px;
+    font-size: 11px;
+  }
+  .table-filter-paging .bootstrap-select .dropdown-toggle:after {
+    top: 11px;
+    right: 7px;
+    width: 11px;
+  }
+}
+.table-filter-paging .bootstrap-select .dropdown-menu {
+  box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 3px;
+  width: 100%;
+  min-width: 100% !important;
+}
+.table-filter-paging .bootstrap-select .dropdown-menu .bs-searchbox .form-control {
+  border: 1px solid #D7E0EF;
+  box-shadow: none !important;
+}
+.table-filter-paging .bootstrap-select .dropdown-menu .bs-searchbox .form-control:focus {
+  border-color: #0050A4;
+}
+.table-filter-paging .bootstrap-select .dropdown-menu .bs-searchbox + .inner {
+  max-height: 180px !important;
+  overflow: auto !important;
+  width: 100%;
+}
+.table-filter-paging .bootstrap-select .dropdown-menu .dropdown-menu.inner {
+  width: auto;
+  display: inline-block;
+}
+.table-filter-paging .bootstrap-select .dropdown-menu ul li a {
+  padding: 5px 15px;
+  line-height: 20px;
+  font-size: 14px;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.table-filter-paging .bootstrap-select .dropdown-menu ul li .check-mark {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #91A1BC;
+  position: static !important;
+}
+.table-filter-paging .bootstrap-select .dropdown-menu ul li .check-mark:after {
+  margin: 0px 0 0 5px;
+  width: 6px;
+  height: 12px;
+  border-width: 0 2px 2px 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+.table-filter-paging .bootstrap-select .dropdown-menu ul li .check-mark + .text {
+  margin: 0px;
+  width: calc(100% - 20px);
   padding-left: 0;
+}
+.table-filter-paging .bootstrap-select .dropdown-menu ul li.active a {
+  background: #E2E9F5;
+  color: #000000;
+}
+.table-filter-paging .bootstrap-select .dropdown-menu ul li.disabled .check-mark {
+  opacity: 0;
+}
+.table-filter-paging .bootstrap-select .dropdown-menu ul li.selected .check-mark:after {
+  opacity: 1;
+  visibility: visible;
+}
+@media (max-width: 1440px) {
+  .table-filter-paging .bootstrap-select .dropdown-menu ul li a {
+    font-size: 13px;
+    padding: 4px 15px;
+  }
+  .table-filter-paging .bootstrap-select .dropdown-menu ul li .check-mark {
+    width: 16px;
+    height: 16px;
+    margin: 2px 0 0;
+  }
+  .table-filter-paging .bootstrap-select .dropdown-menu ul li .check-mark:after {
+    margin: 1px 0 0 5px;
+    width: 5px;
+    height: 10px;
+  }
+}
+.table-filter-paging .bootstrap-select.show-tick .dropdown-menu ul li .check-mark {
+  display: block;
+}
+.table-filter-paging .bootstrap-select.show-tick .dropdown-menu ul li .check-mark + .text {
+  padding-left: 10px;
 }
 
 .hide_search .bs-searchbox {
