@@ -2713,6 +2713,7 @@ button.slick-next.slick-arrow {
 		@include tabletwide { 
 			width:55%;
 			overflow-y: scroll;
+			padding-bottom: 0;
 		}
 		@include phonewide{
 			width:100%;
@@ -2769,6 +2770,16 @@ button.slick-next.slick-arrow {
 		}
 		.jspHorizontalBar{
 			display: none;
+		}
+		.jspVerticalBar{
+			@include tabletwide {
+				display: none;
+			}
+		}
+		.jspContainer{
+			@include tabletwide {
+				height: 100% !important;
+			}
 		}
 	}
 	&__title{

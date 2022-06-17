@@ -16385,6 +16385,7 @@ button.slick-next.slick-arrow {
   .tooltip-view__popup {
     width: 55%;
     overflow-y: scroll;
+    padding-bottom: 0;
   }
 }
 @media (max-width: 767px) {
@@ -16446,6 +16447,16 @@ button.slick-next.slick-arrow {
 }
 .tooltip-view__popup-wrap .jspHorizontalBar {
   display: none;
+}
+@media (max-width: 1200px) {
+  .tooltip-view__popup-wrap .jspVerticalBar {
+    display: none;
+  }
+}
+@media (max-width: 1200px) {
+  .tooltip-view__popup-wrap .jspContainer {
+    height: 100% !important;
+  }
 }
 .tooltip-view__title {
   margin-left: 20px;
