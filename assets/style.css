@@ -16372,7 +16372,7 @@ button.slick-next.slick-arrow {
   height: 100vh;
   right: -100%;
   top: 0;
-  padding: 30px 30px 0;
+  padding: 30px;
   background-color: #fff;
   z-index: 9;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
@@ -16439,6 +16439,13 @@ button.slick-next.slick-arrow {
   overflow-y: auto;
   max-width: 100%;
   overflow-x: hidden;
+  height: 100% !important;
+}
+.tooltip-view__popup-wrap .jspPane {
+  padding-right: 30px !important;
+}
+.tooltip-view__popup-wrap .jspHorizontalBar {
+  display: none;
 }
 .tooltip-view__title {
   margin-left: 20px;

@@ -2702,7 +2702,7 @@ button.slick-next.slick-arrow {
 		height: 100vh;
 		right:-100%;
 		top:0;
-		padding:30px 30px 0;
+		padding:30px;
 		background-color: #fff;
 		z-index:9;
 		box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 20%);
@@ -2763,6 +2763,13 @@ button.slick-next.slick-arrow {
 		overflow-y: auto;
 		max-width: 100%;
 		overflow-x: hidden;
+		height: 100% !important;
+		.jspPane{
+			padding-right: 30px !important;
+		}
+		.jspHorizontalBar{
+			display: none;
+		}
 	}
 	&__title{
 		margin-left:20px;
