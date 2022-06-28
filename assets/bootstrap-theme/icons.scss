@@ -24,7 +24,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.iot-add-sub:before {
+  content: "\e919";
+}
+.iot-add:before {
+  content: "\e921";
+}
 .iot-download:before {
   content: "\e900";
 }
