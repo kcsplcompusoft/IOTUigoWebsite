@@ -130,7 +130,7 @@ select.custom-select{
             }
         }
         .dropdown-menu{
-            box-shadow:0px 11px 10px rgba(0, 80, 164, 0.15); border:none; border-radius:3px; margin-top:0px; width: 100%; min-width: 100% !important;
+            /*box-shadow:0px 11px 10px rgba(0, 80, 164, 0.15);*/ border:none; border-radius:3px; margin-top:0px; width: 100%; min-width: 100% !important;
             overflow:auto;
             .bs-searchbox + .inner{
 				max-height: 180px !important;
@@ -284,5 +284,79 @@ select.custom-select{
             .file-select-button{font-size:12px;}
             .file-select-name{width:calc(100% - 83px);}
         }
+    }
+}
+.conditions-actions{
+    &.form-card{
+        padding-bottom: 25px;
+        margin-bottom: 8px;
+    }
+    .form-group{
+        margin: 0;
+        label{
+            margin:0;
+            padding:0;
+        }
+    }
+    .selectpicker{
+        width:95px;
+    }
+    .col-auto{
+       
+    }
+    .btn-group{
+        border-left:solid 1px $border-color2;
+        margin-left: 15px;
+        padding-left:0;
+        .btn{
+            background:none;
+            color: $color-black;
+            font-size: 16px;
+            padding:0;
+            margin-left:25px;
+            flex: none;
+            i{
+                margin-right:12px;
+                color: $primary_color;
+            }
+            &:hover{
+                color: $primary_color;
+                transition: all 0.3s;
+            }
+        }
+    }
+}
+.action-delete{
+    color: $primary_color;
+    font-size:20px;
+    margin-left:14px;
+}
+.condition{
+    &.form-card{
+        padding:0;
+    }
+    .form-group{
+        margin:0;
+    }
+    &__wrap{
+        border-bottom: solid 1px #D7E0EF;
+        padding: 25px 35px 28px
+    }
+    &__main{
+        padding-bottom: 25px;
+    }
+    &__sub{
+        padding: 35px 42px;
+        border-bottom: solid 1px #D7E0EF;
+    }
+    &__sub-wrap{
+        border-radius: 8px !important;
+        border: solid 1px #D7E0EF;
+        padding: 1px;
+        background: #FBFCFF;
+    }
+    &__sub-head{
+        background-color: $color-lightBlue;
+        padding: 26px 20px;
     }
 }
