@@ -31,6 +31,7 @@
                     background: #DBE5F6;
                     > a{
                         color: #0050A4;
+                        font-weight:700;
                     }
                 }
                 > a{
@@ -88,12 +89,29 @@
                         a{
                             position: relative;
                             font-size:14px; line-height:20px; font-weight:400; background:none !important; color:$color-black; padding:5px 10px 5px 43px; display:block;
-                            &:hover, &.active{ color:$color-Blue;}
+                            &.active{
+                                &::before{
+                                    display: none;
+                                }
+                            }
+                            &:hover, &.active{ 
+                                color:$color-Blue;
+                                font-weight:700;
+                                i{
+                                    border-color: $color-Blue;
+                                }
+                            }
                             i{
                                 margin-right:15px;
                                 position: absolute;
                                 left:8px;
                                 top:6px;
+                                border:solid 1px $color-black;
+                                border-radius: 15px;
+                                height:15px;
+                                width:15px;
+                                font-size: 13px;
+                                line-height:14px;
                                 @include desktop{
                                     left:-4px;
                                     top:10px;
