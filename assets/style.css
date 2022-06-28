@@ -10259,7 +10259,6 @@ select.custom-select:focus {
   margin-top: 0px;
   width: 100%;
   min-width: 100% !important;
-  max-height: 300px !important;
   overflow: auto;
 }
 .boot-select .bootstrap-select .dropdown-menu .bs-searchbox + .inner {
@@ -10270,6 +10269,10 @@ select.custom-select:focus {
 .boot-select .bootstrap-select .dropdown-menu .dropdown-menu.inner {
   width: auto;
   display: inline-block;
+}
+.boot-select .bootstrap-select .dropdown-menu .dropdown-menu.overflow {
+  width: auto;
+  display: block;
 }
 .boot-select .bootstrap-select .dropdown-menu ul li a {
   padding: 5px 15px;
@@ -10737,6 +10740,7 @@ select.custom-select:focus {
 }
 .aside-navigation .navbar ul li:hover > a {
   color: #0050A4;
+  font-weight: 700;
 }
 .aside-navigation .navbar ul li > a {
   font-size: 14px;
@@ -10863,14 +10867,27 @@ select.custom-select:focus {
   padding: 5px 10px 5px 43px;
   display: block;
 }
+.aside-navigation .navbar ul li .sub-menu li a.active::before {
+  display: none;
+}
 .aside-navigation .navbar ul li .sub-menu li a:hover, .aside-navigation .navbar ul li .sub-menu li a.active {
   color: #0050A4;
+  font-weight: 700;
+}
+.aside-navigation .navbar ul li .sub-menu li a:hover i, .aside-navigation .navbar ul li .sub-menu li a.active i {
+  border-color: #0050A4;
 }
 .aside-navigation .navbar ul li .sub-menu li a i {
   margin-right: 15px;
   position: absolute;
   left: 8px;
   top: 6px;
+  border: solid 1px #000000;
+  border-radius: 15px;
+  height: 15px;
+  width: 15px;
+  font-size: 13px;
+  line-height: 14px;
 }
 @media (max-width: 1440px) {
   .aside-navigation .navbar ul li .sub-menu li a i {
@@ -16948,6 +16965,15 @@ button.slick-next.slick-arrow {
 }
 .expand-collpase.ex-active .la-expand {
   display: none;
+}
+
+.userimg-close {
+  position: absolute;
+  top: 0;
+}
+
+.body-new-pass {
+  overflow: auto;
 }
 
 /*# sourceMappingURL=style.css.map */
