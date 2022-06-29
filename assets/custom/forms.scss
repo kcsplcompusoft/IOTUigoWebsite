@@ -290,9 +290,16 @@ select.custom-select{
     &.form-card{
         padding-bottom: 25px;
         margin-bottom: 8px;
+        box-shadow: 0px 4px 13px rgba(0, 80, 164, 0.15);
+        @include desktop{
+            padding-bottom:18px;
+        }
     }
     .form-group{
         margin: 0;
+        @include phonemedium{
+            margin-bottom:10px;
+        }
         label{
             margin:0;
             padding:0;
@@ -308,6 +315,14 @@ select.custom-select{
         border-left:solid 1px $border-color2;
         margin-left: 15px;
         padding-left:0;
+        display:flex;
+        align-items: center;
+        @include tablet{
+            border:none;
+            margin-top:15px;
+            margin-left:0;
+            flex-wrap:wrap;
+        }
         .btn{
             background:none;
             color: $color-black;
@@ -315,6 +330,14 @@ select.custom-select{
             padding:0;
             margin-left:25px;
             flex: none;
+            &:first-child{
+                @include tablet{
+                    margin-left:0;
+                }
+            }
+            @include tabletwide{
+                font-size:14px;
+            }
             i{
                 margin-right:12px;
                 color: $primary_color;
@@ -322,6 +345,14 @@ select.custom-select{
             &:hover{
                 color: $primary_color;
                 transition: all 0.3s;
+            }
+        }
+    }
+    &.actions{
+        .btn-group{
+            border:none;
+            .btn{
+                margin: 0;
             }
         }
     }
@@ -334,29 +365,81 @@ select.custom-select{
 .condition{
     &.form-card{
         padding:0;
+        margin-bottom:8px;
+        box-shadow: 0px 4px 13px rgba(0, 80, 164, 0.15);
     }
     .form-group{
         margin:0;
+        @include phonemedium{
+            margin-bottom: 15px;
+        }
     }
     &__wrap{
         border-bottom: solid 1px #D7E0EF;
-        padding: 25px 35px 28px
+        padding: 25px 35px 28px;
+        @include tabletwide{
+            padding: 20px;
+        }
+        @include phonemedium{
+            padding-bottom: 0;
+        }
     }
     &__main{
         padding-bottom: 25px;
     }
     &__sub{
         padding: 35px 42px;
-        border-bottom: solid 1px #D7E0EF;
+        @include tabletwide{
+            padding: 25px 30px;
+        }
+        @include phonewide{
+            padding: 25px 15px;
+        }
+        .btn-group{
+            .btn{
+                @include phonemedium{
+                    width:100%;
+                    text-align: left;;
+                }
+                &:last-child{
+                    @include phonemedium{
+                        margin-left:0;
+                        margin-top:10px;
+                    }
+                }
+            }
+        }
+        // border-bottom: solid 1px #D7E0EF;
     }
     &__sub-wrap{
         border-radius: 8px !important;
         border: solid 1px #D7E0EF;
-        padding: 1px;
+        padding: 1px 1px 20px;
         background: #FBFCFF;
+        & > .condition__wrap{
+            border:none;
+            padding: 0 20px;
+            margin-top:20px;
+            &:nth-last-child(2){
+                padding-bottom: 0;
+            }
+        }
+        .condition__sub-wrap{
+            margin: 20px 20px 0 20px;
+            @include phonemedium{
+                margin: 20px 15px 0 15px;
+            }
+        }
+        .btn-group{
+            margin-left:15px;
+            @include phonemedium{
+                margin-top:0;
+            }
+        }
     }
     &__sub-head{
         background-color: $color-lightBlue;
-        padding: 26px 20px;
+        padding: 11px 20px;
+        margin-bottom:10px;
     }
 }
