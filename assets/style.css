@@ -9690,8 +9690,8 @@ h3 {
 }
 @font-face {
   font-family: "iot";
-  src: url("bootstrap-theme/fonts/iot.eot?qftmrw");
-  src: url("bootstrap-theme/fonts/iot.eot?qftmrw#iefix") format("embedded-opentype"), url("bootstrap-theme/fonts/iot.ttf?qftmrw") format("truetype"), url("bootstrap-theme/fonts/iot.woff?qftmrw") format("woff"), url("bootstrap-theme/fonts/iot.svg?qftmrw#iot") format("svg");
+  src: url("bootstrap-theme/fonts/iot.eot?ge2gmc");
+  src: url("bootstrap-theme/fonts/iot.eot?ge2gmc#iefix") format("embedded-opentype"), url("bootstrap-theme/fonts/iot.ttf?ge2gmc") format("truetype"), url("bootstrap-theme/fonts/iot.woff?ge2gmc") format("woff"), url("bootstrap-theme/fonts/iot.svg?ge2gmc#iot") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -9708,6 +9708,10 @@ h3 {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-circle-arrow:before {
+  content: "\e922";
 }
 
 .iot-add-sub:before {
@@ -11059,13 +11063,14 @@ select.custom-select:focus {
   margin-right: 15px;
   position: absolute;
   left: 8px;
-  top: 6px;
+  top: 7px;
   border: solid 1px #000000;
   border-radius: 15px;
   height: 15px;
   width: 15px;
-  font-size: 13px;
-  line-height: 14px;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
 }
 @media (max-width: 1440px) {
   .aside-navigation .navbar ul li .sub-menu li a i {
