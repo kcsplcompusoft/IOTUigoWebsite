@@ -12660,7 +12660,7 @@ a.bg9:hover {
   border-left: 1px solid #D3DDEE;
   width: 330px !important;
 }
-@media (max-width: 1440px) {
+@media (max-width: 1600px) {
   .table-filter .bootstrap-select {
     width: 213px !important;
   }
@@ -17109,7 +17109,7 @@ button.slick-next.slick-arrow {
 }
 .monitor-list-row .project-overview-card {
   position: relative;
-  padding-bottom: 159px;
+  padding-bottom: 186px;
 }
 .monitor-list-row .project-overview-card .monitorcard-list {
   position: absolute;
