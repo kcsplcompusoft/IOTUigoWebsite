@@ -239,7 +239,7 @@ a.bg9:hover{background:#0b9492;}
 	
 	.bootstrap-select{
 		border-left:1px solid #D3DDEE; width:330px !important;
-		@include desktop{
+		@include desktop-big{
 			width:213px !important;
 		}
 		@include tablet{
@@ -3257,7 +3257,7 @@ button.slick-next.slick-arrow {
 .monitor-list-row{
 	.project-overview-card{
 		position: relative;
-		padding-bottom:159px;
+		padding-bottom:186px;
 		.monitorcard-list{
 			position: absolute;
 			bottom:56px;
