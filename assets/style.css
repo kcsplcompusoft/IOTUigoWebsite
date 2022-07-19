@@ -10420,24 +10420,26 @@ select.custom-select:focus {
   align-items: center;
   padding: 10px 0 20px;
 }
-.step-btn a {
+.step-btn a, .step-btn input {
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 1.2222222222;
   color: #636363;
   font-weight: 500;
   padding: 10px 28px;
+  border: none;
+  background-color: transparent;
 }
-.step-btn a:last-child {
+.step-btn a:last-child, .step-btn input:last-child {
   padding-right: 0px;
 }
-.step-btn a.last-btn {
+.step-btn a.last-btn, .step-btn input.last-btn {
   border-left: 1px solid #D7E0EF;
 }
-.step-btn a:hover {
+.step-btn a:hover, .step-btn input:hover {
   color: #00B9B6;
 }
-.step-btn a.disabled {
+.step-btn a.disabled, .step-btn input.disabled {
   opacity: 0.65;
   pointer-events: none;
 }
@@ -11075,7 +11077,7 @@ select.custom-select:focus {
 @media (max-width: 1440px) {
   .aside-navigation .navbar ul li .sub-menu li a i {
     left: -4px;
-    top: 10px;
+    top: 7px;
   }
 }
 @media (max-width: 1440px) {
@@ -16739,6 +16741,7 @@ button.slick-next.slick-arrow {
   font-size: 13px;
   font-size: 0.8125rem;
   line-height: 1.2307692308;
+  z-index: 1;
 }
 .forgot-password__tips-detail::before {
   content: " ";
@@ -17157,6 +17160,25 @@ button.slick-next.slick-arrow {
 
 .body-new-pass {
   overflow: auto;
+}
+
+.password-information {
+  display: flex;
+  align-items: center;
+}
+.password-information .forgot-password__tips {
+  margin-left: auto;
+}
+
+.userdetail-left .invalid-feedback {
+  display: block;
+}
+
+.multi-dropdown {
+  display: flex;
+}
+.multi-dropdown .selectpicker:last-child {
+  margin-left: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

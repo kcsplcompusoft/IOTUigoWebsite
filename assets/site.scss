@@ -2867,6 +2867,8 @@ button.slick-next.slick-arrow {
 		border:solid 1px $color-lightGrey;
 		border-radius: 4px;
 		@include fontrem(13px, 16px);
+		z-index: 1;
+
 		&::before{
 			content:" ";
 			position: absolute;
@@ -3308,4 +3310,28 @@ button.slick-next.slick-arrow {
 .body-new-pass{
 	overflow: auto;
 }
+.password-information {
+	display: flex;
+	align-items: center;
+
+	.forgot-password__tips {
+		margin-left: auto;
+	}
+}
+.userdetail-left {
+	.invalid-feedback {
+		display: block;
+	}
+}
+.multi-dropdown {
+	display: flex;
+
+	.selectpicker {
+		&:last-child {
+			margin-left: 10px;
+		}
+	}
+	
+}
+
 // KCS CSS END
