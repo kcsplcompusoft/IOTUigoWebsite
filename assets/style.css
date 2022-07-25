@@ -10222,6 +10222,106 @@ select.custom-select:focus {
     height: 10px;
   }
 }
+.condition-drop .bootstrap-select {
+  width: 100% !important;
+  padding: 0px;
+  margin: 0;
+  height: auto;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+.condition-drop .bootstrap-select .dropdown-toggle {
+  background: #FFFFFF !important;
+  outline: none !important;
+  height: 42px;
+  border-radius: 4px;
+  border: 1px solid #D7E0EF !important;
+}
+@media (max-width: 1440px) {
+  .condition-drop .bootstrap-select .dropdown-toggle {
+    height: 28px;
+  }
+  .condition-drop .bootstrap-select .dropdown-toggle:after {
+    top: 10px;
+    right: 10px;
+    width: 12px;
+  }
+}
+.condition-drop .bootstrap-select .dropdown-toggle:focus {
+  outline: none !important;
+}
+.condition-drop .bootstrap-select .dropdown-toggle .filter-option {
+  padding: 10px 30px 10px 13px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+}
+.condition-drop .bootstrap-select .dropdown-toggle .filter-option .filter-option-inner {
+  padding-right: 0px;
+}
+@media (max-width: 1440px) {
+  .condition-drop .bootstrap-select .dropdown-toggle .filter-option {
+    font-size: 13px;
+    line-height: 22px;
+    padding: 2px 30px 2px 10px;
+  }
+}
+.condition-drop .bootstrap-select .dropdown-toggle:after {
+  background: url("images/arrow-down.svg") no-repeat left top;
+  display: block;
+  position: absolute;
+  top: 16px;
+  right: 13px;
+  margin: 0px;
+  background-size: 100% auto;
+  width: 14px;
+  height: 10px;
+  border: none;
+}
+.condition-drop .bootstrap-select .dropdown-menu {
+  /*box-shadow:0px 11px 10px rgba(0, 80, 164, 0.15);*/
+  border: none;
+  border-radius: 3px;
+  margin-top: 0px;
+  width: 100%;
+  min-width: 100% !important;
+  overflow: auto;
+}
+.condition-drop .bootstrap-select .dropdown-menu .bs-searchbox + .inner {
+  max-height: 180px !important;
+  overflow: auto !important;
+  width: 100%;
+}
+.condition-drop .bootstrap-select .dropdown-menu .dropdown-menu.inner {
+  width: auto;
+  display: inline-block;
+}
+.condition-drop .bootstrap-select .dropdown-menu .dropdown-menu.overflow {
+  width: auto;
+  display: block;
+}
+.condition-drop .bootstrap-select .dropdown-menu ul li a {
+  padding: 5px 15px;
+  line-height: 20px;
+  font-size: 14px;
+}
+.condition-drop .bootstrap-select .dropdown-menu ul li.active a {
+  background: #E2E9F5;
+  color: #000000;
+}
+@media (max-width: 1440px) {
+  .condition-drop .bootstrap-select .dropdown-menu ul li a {
+    font-size: 13px;
+    padding: 4px 13px;
+  }
+}
+@media (max-width: 767px) {
+  .condition-drop .bootstrap-select .dropdown-menu ul li a {
+    font-size: 12px;
+  }
+}
+
 .boot-select .bootstrap-select {
   padding: 0px;
   margin: 0;
