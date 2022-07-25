@@ -168,6 +168,8 @@
         <div class="work-space device-page">
             <h5 class="pb-3" >Conditions and Actions Demo</h5>
             <div class="bg-white form-card conditions-actions">
+
+                
                 <div class="d-flex block-withbtn align-items-end">
                     <div class="row row-md">
                         <div class="col-sm-auto d-flex align-items-center">
@@ -184,12 +186,64 @@
                             </div>
                         </div>
                         <div class="col col-sm-12 col-md btn-group">
-                            <button class="btn"><i class="iot-add"></i>Add Condition</button>
+                            <button class="btn addcondition-click"><i class="iot-add"></i>Add Condition</button>
                             <button class="btn"><i class="iot-add-sub"></i>Add Sub Condition</button>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="bg-white form-card ">
+                <div class="condition__wrap main_add_condition_content" style="display: none;">
+                  <div class="row">
+                    <div class="col-sm-4 col-md-3">
+                       <label for="id_device_id" class="requiredField"> Asset <span class="asteriskField">*</span>
+                        </label>
+                        <div class="boot-select form-group condition-drop">
+                          <select name="device_id" class="form-control" title="Select Asset" required id="id_device_id">
+                            <option value="" selected>---------</option>
+                            <option value="3">Motor(xyz)</option>
+                          </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-md-3">
+                        <label for="id_device_sensor_id" class="requiredField"> Sensor <span class="asteriskField">*</span>
+                        </label>
+                        <div class="boot-select form-group condition-drop">
+                          <select name="device_sensor_id" class="form-control" title="Select Sensor" required id="id_device_sensor_id">
+                            <option value="" selected>---------</option>
+                          </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-md-3">
+                        <label for="id_condition" class=" requiredField"> Condition <span class="asteriskField">*</span>
+                        </label>
+                        <div class="boot-select form-group condition-drop">
+                          <select name="condition" class="form-control" required id="id_condition">
+                            <option value="" selected>---------</option>
+                            <option value="&gt;">Greater Than</option>
+                            <option value="&lt;">Less Than</option>
+                            <option value="&gt;=">Greater Than Equal</option>
+                            <option value="&lt;=">Less Than Equal</option>
+                            <option value="==">Equal</option>
+                            <option value="!=">Not Equal</option>
+                          </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-md-3">
+                      <label class="form-label">Threshold Value</label>
+                      <div class="form-group d-flex align-items-center">
+                        <input type="text" class="form-control" />
+                        <a href="" class="action-delete main_add_condition_remove">
+                          <i class="iot-delete"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="append_main_condition"></div>
+            </div>
+              
             <div class="bg-white form-card condition">
                 <div class="condition__wrap">
                     <div class="row">
@@ -874,6 +928,13 @@
             noneSelectedText: 'Gateway Status'
         });
         $('.boot-select .select').selectpicker();
+        $(".addcondition-click").click(function(){
+            var gethtml = $(".main_add_condition_content").html();
+            $(".append_main_condition").append(gethtml);
+            $('.append_main_condition .condition-drop select').selectpicker();
+        });
+        
+
     });
     /* JSCrollpane */
     $(function()
@@ -913,6 +974,7 @@
             );
         }
     );
+
 </script>
 </body>
 </html>
