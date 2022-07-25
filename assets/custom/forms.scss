@@ -112,6 +112,61 @@ select.custom-select{
         
     }
     
+    
+}
+.condition-drop {
+    .bootstrap-select{
+        width:100% !important; padding:0px; margin:0; height:auto; background:none; border:none; box-shadow:none;
+        .dropdown-toggle{
+            background:$color-white !important; outline:none !important; height:42px; border-radius:4px; border:1px solid $border-color !important;
+            @include desktop{
+                height:28px;
+                &:after{top:10px; right:10px; width:12px;}
+            }
+            &:focus{outline:none !important;}
+            .filter-option{
+                padding:10px 30px 10px 13px; font-size:16px; line-height:22px; color:$color-black;
+                .filter-option-inner{padding-right:0px;}
+                @include desktop{
+                    font-size:13px; line-height:22px; padding:2px 30px 2px 10px;
+                }
+            }
+            &:after{
+                background:url("images/arrow-down.svg") no-repeat left top; display:block; position:absolute; top:16px; right:13px; margin:0px; background-size:100% auto; width:14px; height:10px; border:none;
+            }
+        }
+        .dropdown-menu{
+            /*box-shadow:0px 11px 10px rgba(0, 80, 164, 0.15);*/ border:none; border-radius:3px; margin-top:0px; width: 100%; min-width: 100% !important;
+            overflow:auto;
+            .bs-searchbox + .inner{
+				max-height: 180px !important;
+				overflow: auto !important;
+				width: 100%;
+			}
+            .dropdown-menu.inner{
+				width: auto;
+				display: inline-block;
+			}
+            .dropdown-menu.overflow{
+				width: auto;
+				display: block;
+			}
+            ul{
+                li{
+                    a{padding:5px 15px; line-height:20px; font-size:14px;}
+                    &.active{
+                        a{background:$color-btnLight; color:$color-black;}
+                    }
+                    @include desktop{
+                        a{font-size:13px; padding:4px 13px;}
+                    }
+                    @include phonewide{
+                        a{font-size:12px;}
+                    }
+                }
+            }
+        }
+    }
 }
 .boot-select{
     .bootstrap-select{
