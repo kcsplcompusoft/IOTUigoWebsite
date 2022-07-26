@@ -132,7 +132,7 @@ select.custom-select{
                 }
             }
             &:after{
-                background:url("images/arrow-down.svg") no-repeat left top; display:block; position:absolute; top:16px; right:13px; margin:0px; background-size:100% auto; width:14px; height:10px; border:none;
+                background:url("images/arrow-down.svg") no-repeat left top; display:block; position:absolute; top: 0; bottom:0; right:9px; margin:0px; background-size:100% auto; width:14px; height:10px; border:none; margin: auto; 
             }
         }
         .dropdown-menu{
